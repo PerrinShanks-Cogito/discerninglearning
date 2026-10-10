@@ -1,0 +1,11 @@
+# Main menu. Order here is the order in the header.
+- title: My Approach
+  url: /my-approach/
+- title: Data Discoveries
+  url: /data-discoveries/
+- title: Videos
+  url: /video-2/
+- title: Midlife Musings
+  url: /blog/
+- title: About
+  url: /about/

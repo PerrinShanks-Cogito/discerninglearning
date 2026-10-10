@@ -1,0 +1,15 @@
+---
+title: Midlife Musings
+description: Meandering, mid-life musings from a reflective soul looking for sanity.
+wide: true
+permalink: /blog/
+redirect_from:
+  - /blog-2/
+  - /blog-3/
+---
+<div class="grid grid--wide">
+  {% for post in site.data.musings %}
+    {% include musing-card.html post=post %}
+  {% endfor %}
+</div>
+<p class="note">These posts are hosted on the original WordPress blog.</p>
