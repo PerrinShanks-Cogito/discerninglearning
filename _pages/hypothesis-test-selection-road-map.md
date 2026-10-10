@@ -13,7 +13,7 @@ Through the years I have enjoyed and then largely forgotten lots of statistics c
 
 ![Hypothesis Test Selection Road Map](/assets/images/uploads/2025/07/hypothesis-test-selection-road-map-1.png)
 
-We start with our our Y (output) which is a function of our Xs (inputs). Once you have defined them you can select the appropriate test for your hypothesis and remember if the **p is low then the null must go (> 0.05)**
+We start with our our Y (output) which is a function of our Xs (inputs). Once you have defined them you can select the appropriate test for your hypothesis and remember if the **p is low then the null must go (< 0.05)**
 
 ![YequalsX](/assets/images/uploads/2025/07/yequalsx.png)
 
