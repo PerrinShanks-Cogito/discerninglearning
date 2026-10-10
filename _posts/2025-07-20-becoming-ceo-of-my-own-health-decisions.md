@@ -27,9 +27,9 @@ Going back in time to when I decided to have this procedure I could definitely h
 
 The information I wanted I got from the following form created by [Digital consent | Concentric Health](https://concentric.health/) an hour before the surgery. My research would have gone much more easily if I had this information weeks before:
 
-![1]({{ '/assets/images/uploads/2025/07/1.png' | relative_url }})
-![2]({{ '/assets/images/uploads/2025/07/2.png' | relative_url }})
-![3]({{ '/assets/images/uploads/2025/07/3.png' | relative_url }})
+![1](/assets/images/uploads/2025/07/1.png)
+![2](/assets/images/uploads/2025/07/2.png)
+![3](/assets/images/uploads/2025/07/3.png)
 
 Here are the questions I will ask of future consultants about any procedure:
 

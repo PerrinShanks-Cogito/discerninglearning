@@ -46,6 +46,10 @@ About page uses your own intro text from the site.
   ```
 
   Optionally add an `excerpt:` line for the summary shown on the blog cards.
+- Add images with a plain path from the repo root, e.g.
+  `![Alt text](/assets/images/my-picture.png)`. They show in GitHub's file
+  preview, and `_plugins/asset_baseurl.rb` fixes the path when the site is
+  built for GitHub Pages.
 - The menu is in `_data/navigation.yml`.
 - Site title, author and tagline are in `_config.yml`.
 - Styles are in `assets/css/main.scss`.

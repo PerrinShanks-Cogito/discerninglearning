@@ -18,7 +18,7 @@ My initial analysis looked at the following:
 
 I decided to use the 5Di User Centred Learning approach developed by Nick Shackleton-Jones:
 
-![Nick]({{ '/assets/images/uploads/2022/03/b9b37-nick.png' | relative_url }})
+![Nick](/assets/images/uploads/2022/03/b9b37-nick.png)
 
 *[Stuff you can use… – Shackleton Consulting (shackleton-consulting.com)](https://shackleton-consulting.com/stuff-you-can-use/)*
 

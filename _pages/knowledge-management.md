@@ -12,7 +12,7 @@ A SAAS contact centre technology provider approached me to help with the followi
 
 The solution I implemented was a centralised knowledge hub that aimed to cut support calls and paid for itself by reducing the training required in the onboarding process, here’s how it looks:
 
-![KnowledgeHub-Opening-page-1]({{ '/assets/images/uploads/2022/03/2451e-knowledgehub-opening-page-1.png' | relative_url }})
+![KnowledgeHub-Opening-page-1](/assets/images/uploads/2022/03/2451e-knowledgehub-opening-page-1.png)
 
 ---
 
@@ -91,19 +91,19 @@ The client opted for the fastest implementation option which used software they 
 
 - One search across all documentation, content structured and categorised for fast relevant search results, access to support team if unable to find what you need
 
-![KH-Search]({{ '/assets/images/uploads/2022/03/084a9-kh-search.png' | relative_url }})
+![KH-Search](/assets/images/uploads/2022/03/084a9-kh-search.png)
 
 - Content arranged by the type of user (administrator, standard, technical)
 
-![KH-User]({{ '/assets/images/uploads/2022/03/988b3-kh-user.png' | relative_url }})
+![KH-User](/assets/images/uploads/2022/03/988b3-kh-user.png)
 
 - Templated article layout:
 
-![KH-Article]({{ '/assets/images/uploads/2022/03/a1ea4-kh-article.png' | relative_url }})
+![KH-Article](/assets/images/uploads/2022/03/a1ea4-kh-article.png)
 
 - Step by step guides for getting started and curated video content:
 
-![KH-Getting-started]({{ '/assets/images/uploads/2022/03/0ccb6-kh-getting-started.png' | relative_url }})
+![KH-Getting-started](/assets/images/uploads/2022/03/0ccb6-kh-getting-started.png)
 
 - Contextual help
 - Responsive design viewable on any device
