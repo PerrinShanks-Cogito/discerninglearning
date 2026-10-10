@@ -1,0 +1,38 @@
+name: Fetch WordPress images
+
+# Downloads the images used by the migrated pages and posts from
+# perrinshanks.com and commits them to assets/images/uploads/.
+# Runs automatically when the image list changes, or on demand from the
+# Actions tab ("Run workflow"). Does nothing once all images are committed.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/wp-images.txt
+      - scripts/fetch-images.sh
+      - .github/workflows/fetch-images.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-images-${{ github.ref }}
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download images
+        run: ./scripts/fetch-images.sh
+      - name: Commit images
+        run: |
+          git add assets/images
+          if git diff --cached --quiet; then
+            echo "No new images to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Add images from WordPress"
+          git push

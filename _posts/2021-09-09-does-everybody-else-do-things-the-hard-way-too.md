@@ -39,7 +39,7 @@ My focus is different ways of having my mind blown rather than different ways I 
 
 Even if you know where you want to go there is plenty that can stop you particularly a natural human belief in unworthiness or powerlessness. Robert Fritz calls this structural conflict which everybody feels but it also drives creative tension pulling you towards your vision the two forces act like two elastic bands pulling you in different directions:
 
-![Acheivement]({{ '/assets/images/uploads/2022/03/61207-acheivement.jpg' | relative_url }})
+![Acheivement]({{ '/assets/images/uploads/2022/03/a5955-acheivement.jpg' | relative_url }})
 
 *Peter Senge – the Fifth Discipline*
 

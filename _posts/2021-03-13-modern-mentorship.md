@@ -14,7 +14,7 @@ Last year I started freelancing and for the first time in my professional career
 
 [Harold Jarche’s PKM model](https://jarche.com/pkm/) divides our people networks into 3 groups as shown below. For me mentors in formal programs like the one I participated in fall into the Communities of Practice group but they can also be in the Work Teams or Social Networks group.
 
-![JarchePKM]({{ '/assets/images/uploads/2022/03/390da-jarchepkm.png' | relative_url }})
+![JarchePKM]({{ '/assets/images/uploads/2022/03/016d2-jarchepkm.png' | relative_url }})
 
 ## Developing Work Team Mentors
 
@@ -45,7 +45,7 @@ A useful technique from [David Clutterbuck](https://davidclutterbuckpartnership.
 - A **stepping in** perspective is a question looking at the issue from my perspective
 - A **stepping out** perspective is a question looking at the issue from other peoples perspective
 
-![stepping-in]({{ '/assets/images/uploads/2022/03/5c646-stepping-in.png' | relative_url }})
+![stepping-in]({{ '/assets/images/uploads/2022/03/8f773-stepping-in.png' | relative_url }})
 
 *<https://davidclutterbuckpartnership.com/>*
 

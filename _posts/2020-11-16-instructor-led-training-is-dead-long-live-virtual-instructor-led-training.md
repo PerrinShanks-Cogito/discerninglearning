@@ -19,7 +19,7 @@ Virtual instructor-led training (VILT) is a useful medium that has been around f
 
 **Reverses** – its properties when pushed to its limits
 
-![VILT-McLuhan-Tetrad]({{ '/assets/images/uploads/2022/03/c3a1f-vilt-mcluhan-tetrad.png' | relative_url }})
+![VILT-McLuhan-Tetrad]({{ '/assets/images/uploads/2022/03/7ff64-vilt-mcluhan-tetrad.png' | relative_url }})
 
 Virtual instructor-led training is often misused, and we risk losing public support for it when social distancing is eased. The short-term advantages of the technology are easy to see but by using the tetrad to analyse the other effects we can mitigate some of the less favourable long-term effects.
 
