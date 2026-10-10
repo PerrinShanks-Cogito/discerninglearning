@@ -17,13 +17,13 @@ To be fair I defy anyone to read Should I Eat Meat? by Valclav Smil or Jonathan 
 
 From a purely environmental standpoint almost all farming is bad news:
 
-![what-are-the-environmental-impacts-of-agriculture-800&#215;518-1]({{ '/assets/images/uploads/2022/04/what-are-the-environmental-impacts-of-agriculture-800x518-1.png' | relative_url }})
+![what-are-the-environmental-impacts-of-agriculture-800&#215;518-1](/assets/images/uploads/2022/04/what-are-the-environmental-impacts-of-agriculture-800x518-1.png)
 
 *[Our World in Data](https://ourworldindata.org/environmental-impacts-of-food)*
 
 Meat is particularly bad:
 
-![greenhouse-gases-2]({{ '/assets/images/uploads/2022/04/greenhouse-gases-2.png' | relative_url }})
+![greenhouse-gases-2](/assets/images/uploads/2022/04/greenhouse-gases-2.png)
 
 *[Our World in Data](https://ourworldindata.org/explorers/food-footprints?facet=none&country=Bananas~Beef+%28beef+herd%29~Beef+%28dairy+herd%29~Cheese~Eggs~Lamb+%26+Mutton~Milk~Maize~Nuts~Pig+Meat~Peas~Potatoes~Poultry+Meat~Rice~Tomatoes~Wheat+%26+Rye~Tofu+%28soybeans%29~Prawns+%28farmed%29&hideControls=true&Environmental+impact=Carbon+footprint&Metric=Per+kilogram&By+stage+of+supply+chain=false)*
 

@@ -11,15 +11,15 @@ permalink: /hypothesis-test-selection-road-map/
 
 Through the years I have enjoyed and then largely forgotten lots of statistics courses. An excellent Lean Six Sigma course I did recently at the [Lean Enabled Group](https://www.lean-enabled.co.uk/) did much to remind me. I have reproduced their ‘Hypothesis test selection road map’ to help cement some of the most common tests in my brain. There is further explanation underneath.
 
-![Hypothesis Test Selection Road Map]({{ '/assets/images/uploads/2025/07/hypothesis-test-selection-road-map-1.png' | relative_url }})
+![Hypothesis Test Selection Road Map](/assets/images/uploads/2025/07/hypothesis-test-selection-road-map-1.png)
 
 We start with our our Y (output) which is a function of our Xs (inputs). Once you have defined them you can select the appropriate test for your hypothesis and remember if the **p is low then the null must go (> 0.05)**
 
-![YequalsX]({{ '/assets/images/uploads/2025/07/yequalsx.png' | relative_url }})
+![YequalsX](/assets/images/uploads/2025/07/yequalsx.png)
 
 Each can be a different type of data:
 
-![image]({{ '/assets/images/uploads/2025/07/image.png' | relative_url }})
+![image](/assets/images/uploads/2025/07/image.png)
 
 Data can be an **Attribute** (also referred to as discrete) or **Continuous** (also referred to as variable).
 
@@ -27,7 +27,7 @@ Within the data there are **Factors:** X’s that can influence the output Y’s
 
 ## Type I and Type II Errors in Hypothesis testing
 
-![ErrorTypesHypothesisTesting]({{ '/assets/images/uploads/2025/07/errortypeshypothesistesting.png' | relative_url }})
+![ErrorTypesHypothesisTesting](/assets/images/uploads/2025/07/errortypeshypothesistesting.png)
 
 **Type I error or Alpha Error (False Positive):** We reject the null hypothesis when it’s true. <br>
 **Example 1** Legal process: null is the person is innocent and the error is we incorrectly imprison an innocent person.<br>
@@ -40,7 +40,7 @@ We accept the null when it’s actually false. <br>
 
 Sometimes errors can occur because the sample is too small, **Power analysis** can help with selecting an appropriate sample size however we do not always have the information we need. Power is the probability of rejecting the null hypothesis correctly
 
-![image]({{ '/assets/images/uploads/2025/07/image-1.png' | relative_url }})
+![image](/assets/images/uploads/2025/07/image-1.png)
 
 ## Common assumptions for hypothesis tests
 
