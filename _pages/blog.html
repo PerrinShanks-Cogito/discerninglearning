@@ -7,9 +7,15 @@ redirect_from:
   - /blog-2/
   - /blog-3/
 ---
+<p class="category-links">
+  Topics:
+  {% for category in site.categories %}
+    <a href="{{ '/category/' | append: category[0] | downcase | append: '/' | relative_url }}">{{ category[0] }} ({{ category[1].size }})</a>
+  {% endfor %}
+  &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>
+</p>
 <div class="grid grid--wide">
-  {% for post in site.data.musings %}
+  {% for post in site.posts %}
     {% include musing-card.html post=post %}
   {% endfor %}
 </div>
-<p class="note">These posts are hosted on the original WordPress blog.</p>

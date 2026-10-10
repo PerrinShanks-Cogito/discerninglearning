@@ -12,16 +12,14 @@ lang: en-GB
 url: ""
 baseurl: ""
 
-# The blog posts still live on WordPress; teaser links point here.
-musings_base_url: "https://perrinshanks.com"
-
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
 
-permalink: pretty
+# Same post URLs as WordPress, e.g. /2022/06/19/toastmasters-as-a-community-of-practice/
+permalink: /:year/:month/:day/:title/
 
 include:
   - _pages
@@ -39,9 +37,15 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-feed
 
 defaults:
   - scope:
       path: ""
     values:
       layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

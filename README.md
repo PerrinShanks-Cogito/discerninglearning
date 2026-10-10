@@ -17,10 +17,13 @@ It can be hosted on **Netlify** or **GitHub Pages**; the code lives here on GitH
 | Hypothesis test selection road map | `/hypothesis-test-selection-road-map/` | `_pages/hypothesis-test-selection-road-map.md` |
 | Statistics Glossary | `/statistics-glossary/` | `_pages/statistics-glossary.md` |
 | Videos | `/video-2/` | `_pages/video.html` |
-| Midlife Musings | `/blog/` | `_pages/blog.html` + `_data/musings.yml` |
+| Midlife Musings (blog index) | `/blog/` | `_pages/blog.html` |
+| Blog posts (17) | `/YYYY/MM/DD/slug/` | `_posts/` |
+| Category archives | `/category/analytics/` etc. | `_pages/category/` |
 | About | `/about/` | `_pages/about.md` |
 
-URLs match the WordPress ones, so existing links keep working. The old
+URLs match the WordPress ones (pages and posts), so existing links keep
+working. There is also an RSS feed at `/feed.xml`. The old
 `/blog-2/`, `/blog-3/` and `/colibri-wp/` pages redirect to their new homes.
 
 Not migrated: the template placeholder **Contact** page (sample address and
@@ -29,13 +32,20 @@ email), the empty **Test** and **Blog 2** pages, and the H5P **xAPI Test** and
 plugin. The original About page was also a template placeholder, so the new
 About page uses your own intro text from the site.
 
-**Blog posts** are not part of this migration. The Midlife Musings page lists
-the latest posts and links to them on WordPress (`musings_base_url` in
-`_config.yml`).
-
 ## Editing
 
 - Pages are Markdown files in `_pages/`. Edit the text and commit.
+- To write a new blog post, add `_posts/YYYY-MM-DD-your-title.md` starting
+  with front matter like:
+
+  ```yaml
+  ---
+  title: "My new post"
+  categories: [Reflections]
+  ---
+  ```
+
+  Optionally add an `excerpt:` line for the summary shown on the blog cards.
 - The menu is in `_data/navigation.yml`.
 - Site title, author and tagline are in `_config.yml`.
 - Styles are in `assets/css/main.scss`.
@@ -88,7 +98,7 @@ Then open http://localhost:4000.
 
 ## Moving perrinshanks.com off WordPress
 
-If you point perrinshanks.com at the new site, first commit the images (above)
-and decide what to do with the blog posts, because the Midlife Musings links
-point at perrinshanks.com. Either keep the blog on a WordPress subdomain and
-update `musings_base_url`, or migrate the posts into Jekyll's `_posts/` folder.
+All published pages and posts are now here, with the same URLs. Commit the
+images first (see above), then point the perrinshanks.com DNS at Netlify or
+GitHub Pages. Comments and email subscriptions from WordPress are not carried
+over.

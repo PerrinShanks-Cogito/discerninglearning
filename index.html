@@ -49,7 +49,7 @@ redirect_from:
 <section class="section wrap">
   <h2 class="section__title">Latest from Midlife Musings</h2>
   <div class="grid">
-    {% for post in site.data.musings limit: 3 %}
+    {% for post in site.posts limit: 3 %}
       {% include musing-card.html post=post %}
     {% endfor %}
   </div>

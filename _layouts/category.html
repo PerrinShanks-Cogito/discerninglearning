@@ -1,0 +1,11 @@
+---
+layout: page
+wide: true
+---
+{% assign posts = site.categories[page.category] %}
+<div class="grid grid--wide">
+  {% for post in posts %}
+    {% include musing-card.html post=post %}
+  {% endfor %}
+</div>
+<p><a href="{{ '/blog/' | relative_url }}">All musings &rarr;</a></p>

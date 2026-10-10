@@ -200,3 +200,18 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+// Blog posts
+.post-meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--measure);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.post-nav a:last-child { text-align: right; }
+.prose em > a, .prose p > em:only-child { color: var(--muted); }
+.category-links { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; }
