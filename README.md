@@ -55,8 +55,11 @@ About page uses your own intro text from the site.
 Images are stored under `assets/images/uploads/`. `scripts/fetch-images.sh`
 downloads any missing ones from the WordPress site (the list is in
 `scripts/wp-images.txt`), and both deploy setups run it on every build.
-**Run it once yourself and commit the images** so the site no longer depends
-on WordPress:
+The **Fetch WordPress images** GitHub Action does this for you: it runs the
+script on GitHub and commits any missing images. It runs automatically when
+the image list changes, and you can start it any time from the repo's
+**Actions** tab → **Fetch WordPress images** → **Run workflow**. To do it by
+hand instead:
 
 ```sh
 ./scripts/fetch-images.sh
