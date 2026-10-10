@@ -1,0 +1,51 @@
+# Site settings — edit these to change what appears across the site.
+title: Discerning Learning
+author: Perrin Shanks
+tagline: Xperience better with Perrin Shanks
+description: >-
+  Systems trainer and instructional designer Perrin Shanks — case studies in
+  learning design, data discoveries and midlife musings.
+lang: en-GB
+
+# Leave url/baseurl empty for Netlify or a custom domain. The GitHub Pages
+# workflow sets baseurl automatically for project sites (e.g. /discerninglearning).
+url: ""
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+
+# Same post URLs as WordPress, e.g. /2022/06/19/toastmasters-as-a-community-of-practice/
+permalink: /:year/:month/:day/:title/
+
+include:
+  - _pages
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - netlify.toml
+  - scripts/
+  - vendor/
+  - .devcontainer/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

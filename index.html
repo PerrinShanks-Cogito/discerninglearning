@@ -1,0 +1,57 @@
+---
+layout: default
+title: Discerning Learning
+redirect_from:
+  - /colibri-wp/
+---
+<section class="hero">
+  <div class="wrap">
+    <p class="hero__kicker">{{ site.author }}</p>
+    <h1 class="hero__title">Discerning learning</h1>
+    <p class="hero__lede">I have spent the last 15 years helping customers succeed with amazing game changing software across a range of industries.</p>
+    <p class="hero__lede">I am a systems trainer &amp; instructional designer with a passion for getting the most out of technology. Below are some examples of my work.</p>
+    <p><a class="button" href="{{ '/my-approach/' | relative_url }}">See my approach</a></p>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="section__title">Case studies</h2>
+  <div class="grid">
+    <a class="card card--link" href="{{ '/knowledge-management/' | relative_url }}">
+      <h3 class="card__title">Design Thinking</h3>
+      <p>A centralised knowledge hub that cut support calls and paid for itself by reducing onboarding training.</p>
+    </a>
+    <a class="card card--link" href="{{ '/5-moments-of-learning-need/' | relative_url }}">
+      <h3 class="card__title">5 Moments of Learning Need</h3>
+      <p>Rolling out electronic health record training to 22,000 healthcare staff through a team of trainers.</p>
+    </a>
+    <a class="card card--link" href="{{ '/no-training-training/' | relative_url }}">
+      <h3 class="card__title">No Training Training</h3>
+      <p>Getting 3,000 companies productive from go-live with resources rather than courses.</p>
+    </a>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="section__title">Data discoveries</h2>
+  <div class="grid">
+    <a class="card card--link" href="{{ '/hypothesis-test-selection-road-map/' | relative_url }}">
+      <h3 class="card__title">Hypothesis test selection road map</h3>
+      <p>Choosing the right test for your Ys and Xs, plus Type I and Type II errors.</p>
+    </a>
+    <a class="card card--link" href="{{ '/statistics-glossary/' | relative_url }}">
+      <h3 class="card__title">Statistics Glossary</h3>
+      <p>An A&ndash;Z of statistics and Lean Six Sigma terms, from ANOVA to the Weibull distribution.</p>
+    </a>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="section__title">Latest from Midlife Musings</h2>
+  <div class="grid">
+    {% for post in site.posts limit: 3 %}
+      {% include musing-card.html post=post %}
+    {% endfor %}
+  </div>
+  <p><a href="{{ '/blog/' | relative_url }}">More musings &rarr;</a></p>
+</section>

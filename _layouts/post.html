@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="page wrap">
+  <header class="page-header">
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time>
+      {% for category in page.categories %}
+        &middot; <a href="{{ '/category/' | append: category | downcase | append: '/' | relative_url }}">{{ category }}</a>
+      {% endfor %}
+    </p>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <nav class="post-nav" aria-label="More posts">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>{% endif %}
+  </nav>
+</article>
