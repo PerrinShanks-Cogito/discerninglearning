@@ -7,7 +7,7 @@
   --text: #1d1f24;
   --muted: #5b6070;
   --border: #e1e4ea;
-  --accent: #113af5;
+  --accent: #866a00;      /* dark gold: links and buttons; 5.2:1 on white */
   --accent-text: #ffffff;
   --hero-bg: #14161c;
   --hero-text: #fff952;
@@ -23,8 +23,8 @@
     --text: #e8eaee;
     --muted: #a0a6b4;
     --border: #2c3039;
-    --accent: #7d95ff;
-    --accent-text: #0d1020;
+    --accent: #fff952;    /* the hero yellow */
+    --accent-text: #14161c;
     --hero-bg: #0b0c0f;
   }
 }
