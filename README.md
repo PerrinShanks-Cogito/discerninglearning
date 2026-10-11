@@ -13,9 +13,9 @@ It can be hosted on **Netlify** or **GitHub Pages**; the code lives here on GitH
 | Design Thinking | `/knowledge-management/` | `_pages/knowledge-management.md` |
 | 5 Moments of Learning Need | `/5-moments-of-learning-need/` | `_pages/5-moments-of-learning-need.md` |
 | No Training Training | `/no-training-training/` | `_pages/no-training-training.md` |
-| Data Discoveries | `/data-discoveries/` | `_pages/data-discoveries.md` |
-| Hypothesis test selection road map | `/hypothesis-test-selection-road-map/` | `_pages/hypothesis-test-selection-road-map.md` |
-| Statistics Glossary | `/statistics-glossary/` | `_pages/statistics-glossary.md` |
+| Data Work (was Data Discoveries) | `/data-work/` | `_pages/data-work.html` |
+| Hypothesis test selection road map | `/hypothesis-test-selection-road-map/` | `_data_work/` |
+| Statistics Glossary | `/statistics-glossary/` | `_data_work/` |
 | Videos | `/video-2/` | `_pages/video.html` |
 | Midlife Musings (blog index) | `/blog/` | `_pages/blog.html` |
 | Blog posts (17) | `/YYYY/MM/DD/slug/` | `_posts/` |
@@ -24,7 +24,8 @@ It can be hosted on **Netlify** or **GitHub Pages**; the code lives here on GitH
 
 URLs match the WordPress ones (pages and posts), so existing links keep
 working. There is also an RSS feed at `/feed.xml`. The old
-`/blog-2/`, `/blog-3/` and `/colibri-wp/` pages redirect to their new homes.
+`/blog-2/`, `/blog-3/`, `/colibri-wp/` and `/data-discoveries/` pages redirect
+to their new homes.
 
 Not migrated: the template placeholder **Contact** page (sample address and
 email), the empty **Test** and **Blog 2** pages, and the H5P **xAPI Test** and
@@ -46,6 +47,10 @@ About page uses your own intro text from the site.
   ```
 
   Optionally add an `excerpt:` line for the summary shown on the blog cards.
+- Data Work entries work the same way: add
+  `_data_work/YYYY-MM-DD-your-title.md` with a `title:`. Add a
+  `description:` line for the summary on the cards. The newest three are
+  shown on the home page and all of them on `/data-work/`.
 - Add images with a plain path from the repo root, e.g.
   `![Alt text](/assets/images/my-picture.png)`. They show in GitHub's file
   preview, and `_plugins/asset_baseurl.rb` fixes the path when the site is
@@ -61,12 +66,15 @@ About page uses your own intro text from the site.
 
 You can write in Word and let GitHub do the rest — no commands needed.
 
-1. On GitHub, open the `word` folder (or `word/pages` for a page rather than
-   a blog post) and choose **Add file → Upload files**.
+1. On GitHub, open the folder for what you're writing and choose
+   **Add file → Upload files**:
+   - `word` for a **blog post** (Midlife Musings)
+   - `word/data-work` for a **Data Work** entry
+   - `word/pages` for a stand-alone **page**
 2. Drag in your `.docx` and click **Commit changes**.
 
 The **Convert Word documents** GitHub Action then runs Pandoc on GitHub's
-servers, turns the document into Markdown in `_posts/` (or `_pages/`), saves
+servers, turns the document into Markdown in `_posts/`, `_data_work/` or `_pages/`, saves
 any pictures under `assets/images/uploads/word/`, and commits the result.
 GitHub Pages redeploys automatically afterwards (and Netlify rebuilds on the
 new commit). Watch progress on the repo's **Actions** tab.

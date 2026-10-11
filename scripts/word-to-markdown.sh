@@ -3,6 +3,7 @@
 #
 #   word/My post.docx               -> _posts/<today>-my-post.md
 #   word/2025-07-04-My post.docx    -> _posts/2025-07-04-my-post.md
+#   word/data-work/My study.docx    -> _data_work/<today>-my-study.md
 #   word/pages/My page.docx         -> _pages/my-page.md  (URL /my-page/)
 #
 # Images in the document go to assets/images/uploads/word/<slug>/.
@@ -38,12 +39,17 @@ for src in "$@"; do
   case "$src" in
     word/pages/*) kind=page; out="_pages/$slug.md" ;;
     *)
+      # Blog posts and Data Work entries are dated files in their folder.
       kind=post
-      existing=$(find _posts -name "*-$slug.md" | sort | head -n1)
+      case "$src" in
+        word/data-work/*) dir=_data_work ;;
+        *) dir=_posts ;;
+      esac
+      existing=$(find "$dir" -name "*-$slug.md" 2>/dev/null | sort | head -n1)
       if [ -z "$date" ] && [ -n "$existing" ]; then
         out=$existing
       else
-        out="_posts/${date:-$(date -u +%F)}-$slug.md"
+        out="$dir/${date:-$(date -u +%F)}-$slug.md"
       fi
       ;;
   esac
