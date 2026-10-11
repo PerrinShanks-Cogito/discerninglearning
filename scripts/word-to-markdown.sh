@@ -3,6 +3,7 @@
 #
 #   word/My post.docx               -> _posts/<today>-my-post.md
 #   word/2025-07-04-My post.docx    -> _posts/2025-07-04-my-post.md
+#   word/my-approach/My case.docx   -> _my_approach/<today>-my-case.md
 #   word/data-work/My study.docx    -> _data_work/<today>-my-study.md
 #   word/pages/My page.docx         -> _pages/my-page.md  (URL /my-page/)
 #
@@ -39,9 +40,10 @@ for src in "$@"; do
   case "$src" in
     word/pages/*) kind=page; out="_pages/$slug.md" ;;
     *)
-      # Blog posts and Data Work entries are dated files in their folder.
+      # Blog posts, My Approach and Data Work entries are dated files in their folder.
       kind=post
       case "$src" in
+        word/my-approach/*) dir=_my_approach ;;
         word/data-work/*) dir=_data_work ;;
         *) dir=_posts ;;
       esac

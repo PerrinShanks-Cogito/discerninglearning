@@ -19,21 +19,14 @@ redirect_from:
 </section>
 
 <section class="section wrap">
-  <h2 class="section__title">Case studies</h2>
+  <h2 class="section__title">My approach</h2>
   <div class="grid">
-    <a class="card card--link" href="{{ '/knowledge-management/' | relative_url }}">
-      <h3 class="card__title">Design Thinking</h3>
-      <p>A centralised knowledge hub that cut support calls and paid for itself by reducing onboarding training.</p>
-    </a>
-    <a class="card card--link" href="{{ '/5-moments-of-learning-need/' | relative_url }}">
-      <h3 class="card__title">5 Moments of Learning Need</h3>
-      <p>Rolling out electronic health record training to 22,000 healthcare staff through a team of trainers.</p>
-    </a>
-    <a class="card card--link" href="{{ '/no-training-training/' | relative_url }}">
-      <h3 class="card__title">No Training Training</h3>
-      <p>Getting 3,000 companies productive from go-live with resources rather than courses.</p>
-    </a>
+    {% assign my_approach = site.my_approach | sort: "date" | reverse %}
+    {% for entry in my_approach limit: 3 %}
+      {% include musing-card.html post=entry %}
+    {% endfor %}
   </div>
+  <p><a href="{{ '/my-approach/' | relative_url }}">All of my approach &rarr;</a></p>
 </section>
 
 <section class="section wrap">

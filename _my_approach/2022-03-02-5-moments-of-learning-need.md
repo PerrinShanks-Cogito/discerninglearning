@@ -1,5 +1,5 @@
 ---
-layout: page
+date: 2022-03-02
 title: "5 Moments of Learning Need"
 description: "Training 22,000 healthcare staff on a new electronic health record system."
 permalink: /5-moments-of-learning-need/

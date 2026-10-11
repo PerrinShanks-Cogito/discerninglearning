@@ -25,9 +25,13 @@ permalink: /:year/:month/:day/:title/
 include:
   - _pages
 
-# Data Work entries live in _data_work/ (one file per entry, named
-# YYYY-MM-DD-title.md like blog posts) and are listed newest first.
+# My Approach and Data Work entries live in _my_approach/ and _data_work/
+# (one file per entry, named YYYY-MM-DD-title.md like blog posts) and are
+# listed newest first.
 collections:
+  my_approach:
+    output: true
+    permalink: /my-approach/:title/
   data_work:
     output: true
     permalink: /data-work/:title/
@@ -61,5 +65,10 @@ defaults:
   - scope:
       path: ""
       type: data_work
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: my_approach
     values:
       layout: page
