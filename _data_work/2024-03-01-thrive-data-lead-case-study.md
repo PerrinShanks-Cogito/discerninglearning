@@ -20,7 +20,7 @@ I led the data workstream for Thrive, a post go-live programme teaching clinicia
 | **Data**          | Epic Signal, NEAT, USAL, Google Forms survey data                              |
 | **Output**        | Evaluation of pilots and data recommendations in the programme proposal (SBAR) |
 
-At a glance
+## At a glance
 
 In the Cardiology pilot (13 clinicians, six one-hour sessions), my before-and-after analysis showed:
 
@@ -44,11 +44,11 @@ In the Cardiology pilot (13 clinicians, six one-hour sessions), my before-and-af
 
 Cardiology moved from below the department benchmark on efficiency to close to it, and from just above benchmark on proficiency to well above it.
 
-The challenge
+## The challenge
 
 Thrive ran six pilots across both trusts (Cardiology, ENT, Dermatology, Fracture Clinic, Maternity Assessment Unit and Community). The board needed evidence before committing resource to a business-as-usual service, but the data was scattered: each Epic source covered a different staff group, refreshed on a different cycle, and some arrived only on ad hoc request up to two months after the period ended.
 
-What I did
+## What I did
 
 - **Mapped the data landscape.** Assessed four sources (Signal, NEAT, USAL and survey data) for what each measures, which staff groups it covers and how quickly it becomes available, and documented the gaps.
 
@@ -66,7 +66,7 @@ What I did
 
 *Figure 1. How I brought four data sources together into a single evaluation.*
 
-Key findings
+## Key findings
 
 <img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/e9061f66a28d09c0e0b684434f9dc15cc315f52f.png" title="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." style="width:6.25in;height:2.26042in" alt="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." />
 
@@ -84,7 +84,7 @@ Key findings
 
 *Figure 3. Epic users by role across the two trusts (w/e 23 Feb 2024): the population Thrive aims to reach.*
 
-Recommendations I made
+## Recommendations I made
 
 - Scale back intensive pilot-level monitoring and use the data instead to prioritise which services join the Thrive waiting list.
 
@@ -94,7 +94,7 @@ Recommendations I made
 
 - Allocate ongoing analyst time to track productivity alongside personalisation levels, so future Thrive delivery is driven by evidence.
 
-Skills demonstrated
+## Skills demonstrated
 
 Programme evaluation design · pre/post and benchmark analysis · EHR usage analytics (Epic Signal, NEAT, USAL) · survey design · data visualisation · translating analysis into recommendations for senior stakeholders · working with clinical teams across two NHS trusts
 

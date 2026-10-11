@@ -87,6 +87,9 @@ new commit). Watch progress on the repo's **Actions** tab.
 
 - **Title:** the document's Title (File → Info → Properties in Word), or a
   heading at the very top of the document, or else the file name.
+- **Headings:** use Word's built-in heading styles. Heading 1 becomes a
+  section heading on the page, Heading 2 a sub-heading, and so on. Text that
+  is only made bold or bigger by hand stays ordinary text.
 - **Date:** start the file name with a date, e.g.
   `2025-07-04 Lean machine.docx`; otherwise the post is dated the day it is
   first converted.
