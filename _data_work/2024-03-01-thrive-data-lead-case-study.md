@@ -12,7 +12,6 @@ I led the data workstream for Thrive, a post go-live programme teaching clinicia
 
 | **Role**          | Data Lead (Data Analyst Trainer), Apollo Thrive pilot programme                |
 | **Organisations** | Guy's and St Thomas' and King's College Hospital NHS Foundation Trusts         |
-| **Scale**         | 51,000+ Epic users across two trusts; six pilot services                       |
 | **Data**          | Epic Signal, NEAT, USAL, Google Forms survey data                              |
 | **Output**        | Evaluation of pilots and data recommendations in the programme proposal (SBAR) |
 
@@ -53,13 +52,13 @@ Thrive ran six pilots across both trusts (Cardiology, ENT, Dermatology, Fracture
 
 - **Shaped the recommendations.** Wrote the data sections of the programme proposal (SBAR) presented to the Thrive Task and Finish group.
 
-<img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/a49cf56a1be0c599ca649c57465f56a75611b3c4.png" title="Figure 1. How I brought four data sources together into a single evaluation." style="width:6.25in;height:3.01042in" alt="Figure 1. How I brought four data sources together into a single evaluation." />
+<img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/image1.png" title="Figure 1. How I brought four data sources together into a single evaluation." style="width:6.25in;height:3.01042in" alt="Figure 1. How I brought four data sources together into a single evaluation." />
 
 *Figure 1. How I brought four data sources together into a single evaluation.*
 
 ## Key findings
 
-<img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/e9061f66a28d09c0e0b684434f9dc15cc315f52f.png" title="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." style="width:6.25in;height:2.26042in" alt="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." />
+<img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/image2.png" title="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." style="width:6.25in;height:2.26042in" alt="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." />
 
 *Figure 2. Cardiology pilot results. 'Before' values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average.*
 
@@ -70,8 +69,6 @@ Thrive ran six pilots across both trusts (Cardiology, ENT, Dermatology, Fracture
 - **Survey data was underused.** It was instant and cheap compared with Epic extracts, which carried a significant delay and overhead.
 
 - **Nursing and admin were blind spots.** Epic offered very limited ways to track personalisation for these groups, despite them making up more than a third of users.
-
-<img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/9d1f6f0e82e9fc32c879dcc6fd8a549f5eef59ef.png" title="Figure 3. Epic users by role across the two trusts (w/e 23 Feb 2024): the population Thrive aims to reach." style="width:6.25in;height:2.19792in" alt="Figure 3. Epic users by role across the two trusts (w/e 23 Feb 2024): the population Thrive aims to reach." />
 
 *Figure 3. Epic users by role across the two trusts (w/e 23 Feb 2024): the population Thrive aims to reach.*
 
