@@ -4,16 +4,14 @@ title: "Thrive after Epic go live"
 description: "Does training clinicians to personalise Epic actually work? I led the data for Thrive across two NHS trusts and found the evidence: +17% efficiency, +20% proficiency and happier clinicians in the Cardiology pilot."
 ---
 
-**DATA WORK · CASE STUDY**
+<p class="doc-kicker">DATA WORK · CASE STUDY</p>
 
-Thrive: measuring the impact of Epic personalisation training
+<p class="doc-subtitle">Thrive: measuring the impact of Epic personalisation training</p>
 
 Data Lead · Apollo Thrive pilot programme · GSTT & King's College Hospital · 2023–24
 
 I led the data workstream for Thrive, a post go-live programme teaching clinicians to personalise the Epic electronic health record so they spend less time on documentation and more time with patients. My job was to answer one question for the programme board: does Thrive training actually work, and how should we measure it in the future?
 
-|                   |                                                                                |
-|-------------------|--------------------------------------------------------------------------------|
 | **Role**          | Data Lead (Data Analyst Trainer), Apollo Thrive pilot programme                |
 | **Organisations** | Guy's and St Thomas' and King's College Hospital NHS Foundation Trusts         |
 | **Scale**         | 51,000+ Epic users across two trusts; six pilot services                       |
@@ -24,19 +22,14 @@ I led the data workstream for Thrive, a post go-live programme teaching clinicia
 
 In the Cardiology pilot (13 clinicians, six one-hour sessions), my before-and-after analysis showed:
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
+<table class="stat-table">
 <tbody>
 <tr class="odd">
-<td><p><strong>+17%</strong></p>
+<td><p class="stat-figure">+17%</p>
 <p>efficiency (Signal PEP score)</p></td>
-<td><p><strong>+20%</strong></p>
+<td><p class="stat-figure">+20%</p>
 <p>proficiency (Signal score)</p></td>
-<td><p><strong>+12%</strong></p>
+<td><p class="stat-figure">+12%</p>
 <p>user happiness (survey)</p></td>
 </tr>
 </tbody>

@@ -75,6 +75,7 @@ for src in "$@"; do
     echo "Repaired the Word styles in $src so its headings are recognised"
   fi
   body=$(pandoc "$fixed_docx" --from=docx --to=gfm --wrap=none --shift-heading-level-by=1 --extract-media="$media")
+  body=$(printf '%s\n' "$body" | python3 scripts/tidy-markdown.py "$fixed_docx")
   # Root-relative image paths, as used by the rest of the site.
   body=$(printf '%s\n' "$body" | sed -E "s#(\]\(|src=\")$media/#\1/$media/#g")
 
