@@ -3,7 +3,7 @@ layout: null
 permalink: /search.json
 sitemap: false
 ---
-{%- assign docs = site.pages | where_exp: "p", "p.title" | where_exp: "p", "p.search != false" | concat: site.posts -%}
+{%- assign docs = site.pages | where_exp: "p", "p.title" | where_exp: "p", "p.search != false" | concat: site.documents -%}
 [
 {%- for doc in docs -%}
   {%- unless doc.redirect_to or doc.url == '/404.html' -%}
@@ -11,7 +11,7 @@ sitemap: false
   {%- assign printed = true %}
   {"title": {{ doc.title | jsonify }},
    "url": {{ doc.url | relative_url | jsonify }},
-   "date": {% if doc.collection == "posts" %}{{ doc.date | date: '%-d %B %Y' | jsonify }}{% else %}null{% endif %},
+   "date": {% if doc.collection %}{{ doc.date | date: '%-d %B %Y' | jsonify }}{% else %}null{% endif %},
    "text": {{ doc.content | strip_html | normalize_whitespace | jsonify }}}
   {%- endunless -%}
 {%- endfor %}
