@@ -30,6 +30,7 @@ exclude:
   - Gemfile.lock
   - netlify.toml
   - scripts/
+  - word/
   - vendor/
   - .devcontainer/
 

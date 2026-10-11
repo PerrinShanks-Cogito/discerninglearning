@@ -3,6 +3,14 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "word/**"
+  # Redeploy once uploaded Word documents have been converted to Markdown
+  # (commits made by a workflow don't trigger the push event above).
+  workflow_run:
+    workflows: ["Convert Word documents"]
+    types: [completed]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +24,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
