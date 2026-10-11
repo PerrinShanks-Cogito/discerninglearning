@@ -2,8 +2,8 @@
 
 Usage: python3 tidy-markdown.py document.docx < pandoc.md > tidy.md
 
-- A short bold ALL-CAPS line at the very top (e.g. "DATA WORK · CASE STUDY")
-  becomes a small label above the content.
+- A short bold ALL-CAPS label at the very top (e.g. "DATA WORK · CASE STUDY")
+  is dropped: the page's section and title already say what it is.
 - Paragraphs in Word's Title or Subtitle style become a subtitle. (Pandoc only
   treats Title as the page title when it is the first thing in the document;
   anywhere else it would come out as plain text.)
@@ -42,9 +42,9 @@ out = []
 for i, block in enumerate(blocks):
     stripped = block.strip()
     kicker = re.fullmatch(r"\*\*([^*\n]{1,60})\*\*", stripped)
-    if not out and kicker and kicker.group(1) == kicker.group(1).upper() and re.search(r"[A-Z]", kicker.group(1)):
-        block = '<p class="doc-kicker">%s</p>' % html.escape(plain(kicker.group(1)))
-    elif "\n" not in stripped and plain(stripped) in subtitles:
+    if not any(o.strip() for o in out) and kicker and kicker.group(1) == kicker.group(1).upper() and re.search(r"[A-Z]", kicker.group(1)):
+        continue
+    if "\n" not in stripped and plain(stripped) in subtitles:
         block = '<p class="doc-subtitle">%s</p>' % html.escape(plain(stripped))
     out.append(block)
 md = "\n\n".join(out)

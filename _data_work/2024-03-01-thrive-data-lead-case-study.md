@@ -4,8 +4,6 @@ title: "Thrive after Epic go live"
 description: "Does training clinicians to personalise Epic actually work? I led the data for Thrive across two NHS trusts and found the evidence: +17% efficiency, +20% proficiency and happier clinicians in the Cardiology pilot."
 ---
 
-<p class="doc-kicker">DATA WORK · CASE STUDY</p>
-
 <p class="doc-subtitle">Thrive: measuring the impact of Epic personalisation training</p>
 
 Data Lead · Apollo Thrive pilot programme · GSTT & King's College Hospital · 2023–24
