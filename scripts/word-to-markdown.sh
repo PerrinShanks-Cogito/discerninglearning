@@ -10,6 +10,10 @@
 # A document anywhere else in word/ is not converted, and the script exits
 # with an error naming it so the GitHub Action shows it failed.
 #
+# Word's Heading 1 becomes a section heading (##) on the page, Heading 2 a
+# sub-heading (###) and so on, because the page title is already the main
+# heading. A paragraph in Word's Title style becomes the page title.
+#
 # Images in the document go to assets/images/uploads/word/<slug>/.
 # Re-uploading a document updates the same post or page, and keeps any
 # front matter (categories, excerpt, ...) you have added to it by hand.
@@ -24,7 +28,8 @@ if [ "$#" -eq 0 ]; then
 fi
 
 title_template=$(mktemp)
-trap 'rm -f "$title_template"' EXIT
+fixed_docx=$(mktemp --suffix=.docx)
+trap 'rm -f "$title_template" "$fixed_docx"' EXIT
 printf '%s\n' '$title$' > "$title_template"
 
 misplaced=()
@@ -65,14 +70,19 @@ for src in "$@"; do
 
   media="assets/images/uploads/word/$slug"
   rm -rf "$media"
-  body=$(pandoc "$src" --from=docx --to=gfm --wrap=none --extract-media="$media")
+  # Repair documents whose styles Pandoc can't read (see fix-docx-styles.py).
+  if [ "$(python3 scripts/fix-docx-styles.py "$src" "$fixed_docx")" = fixed ]; then
+    echo "Repaired the Word styles in $src so its headings are recognised"
+  fi
+  body=$(pandoc "$fixed_docx" --from=docx --to=gfm --wrap=none --shift-heading-level-by=1 --extract-media="$media")
+  body=$(printf '%s\n' "$body" | python3 scripts/tidy-markdown.py "$fixed_docx")
   # Root-relative image paths, as used by the rest of the site.
   body=$(printf '%s\n' "$body" | sed -E "s#(\]\(|src=\")$media/#\1/$media/#g")
 
   # Title: the document's Title property, else a leading "# Heading", else the file name.
-  title=$(pandoc "$src" --from=docx --to=plain --template="$title_template" | head -n1)
+  title=$(pandoc "$fixed_docx" --from=docx --to=plain --template="$title_template" | head -n1)
   first=$(printf '%s\n' "$body" | sed -n '/[^[:space:]]/{p;q}')
-  if [[ "$first" =~ ^#\ +(.+)$ ]]; then
+  if [[ "$first" =~ ^#+\ +(.+)$ ]]; then
     [ -n "$title" ] || title=${BASH_REMATCH[1]}
     if [ "${BASH_REMATCH[1]}" = "$title" ]; then
       # The layout already shows the title, so drop the duplicate heading.

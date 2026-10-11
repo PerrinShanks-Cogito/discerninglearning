@@ -211,6 +211,33 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .prose table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; display: block; overflow-x: auto; }
 .prose td, .prose th { border: 1px solid var(--border); padding: 0.6rem 0.8rem; vertical-align: top; text-align: left; }
 .prose td:first-child { font-weight: 600; white-space: nowrap; }
+
+// Set by scripts/tidy-markdown.py for documents converted from Word.
+.doc-subtitle { margin-top: 0; font-size: 1.35rem; font-weight: 600; line-height: 1.35; }
+.prose table.stat-table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0.75rem 0;
+  margin-left: -0.75rem;
+  width: calc(100% + 1.5rem);
+}
+.prose .stat-table td {
+  border: 0;
+  border-top: 3px solid var(--accent);
+  background: var(--surface);
+  font-weight: 400;
+  white-space: normal;
+  padding: 0.9rem 1rem;
+}
+.prose .stat-table p { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.4; }
+.prose .stat-table p.stat-figure {
+  margin-bottom: 0.3rem;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
 // Pages with `wide: true` (card or video grids) use the full content width.
 .prose--wide { max-width: none; }
 
