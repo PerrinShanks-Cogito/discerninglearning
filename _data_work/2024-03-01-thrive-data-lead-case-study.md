@@ -68,6 +68,8 @@ Thrive ran six pilots across both trusts (Cardiology, ENT, Dermatology, Fracture
 
 - **Nursing and admin were blind spots.** Epic offered very limited ways to track personalisation for these groups, despite them making up more than a third of users.
 
+<img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/image3.png" style="width:5.15697in;height:3.3338in" />
+
 *Figure 3. Epic users by role across the two trusts (w/e 23 Feb 2024): the population Thrive aims to reach.*
 
 ## Recommendations I made
