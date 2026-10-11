@@ -57,7 +57,7 @@ About page uses your own intro text from the site.
   preview, and `_plugins/asset_baseurl.rb` fixes the path when the site is
   built for GitHub Pages.
 - The menu is in `_data/navigation.yml`.
-- Site title, author, tagline and the LinkedIn link in the header are in
+- Site title, author and the LinkedIn link in the header are in
   `_config.yml`.
 - The search box in the header searches every page and post. To leave a page
   out of the results, add `search: false` to its front matter.
