@@ -48,8 +48,6 @@ Thrive ran six pilots across both trusts (Cardiology, ENT, Dermatology, Fracture
 
 - **Analysed and visualised results.** Calculated changes in Signal efficiency (PEP) and proficiency scores, tracked USAL personalisation levels, and segmented survey responses, for example linking Dragon voice-recognition use to higher happiness.
 
-- **Sized the opportunity.** Profiled 51,413 Epic users by trust and role to show where personalisation could have the greatest reach.
-
 - **Shaped the recommendations.** Wrote the data sections of the programme proposal (SBAR) presented to the Thrive Task and Finish group.
 
 <img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/image1.png" title="Figure 1. How I brought four data sources together into a single evaluation." style="width:6.25in;height:3.01042in" alt="Figure 1. How I brought four data sources together into a single evaluation." />
