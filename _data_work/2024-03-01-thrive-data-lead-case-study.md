@@ -8,8 +8,6 @@ description: "Does training clinicians to personalise Epic actually work? I was 
 
 Data Lead · Apollo Thrive pilot programme · GSTT & King's College Hospital · 2023–24
 
-I led the data workstream for Thrive, a post go-live programme teaching clinicians to personalise the Epic electronic health record so they spend less time on documentation and more time with patients. My job was to answer one question for the programme board: does Thrive training actually work, and how should we measure it in the future?
-
 | **Role**          | Data Lead (Data Analyst Trainer), Apollo Thrive pilot programme                |
 | **Organisations** | Guy's and St Thomas' and King's College Hospital NHS Foundation Trusts         |
 | **Data**          | Epic Signal, NEAT, USAL, Google Forms survey data                              |
