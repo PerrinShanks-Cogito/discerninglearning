@@ -1,0 +1,50 @@
+name: Convert Word documents
+
+# Upload a .docx to word/ (blog post) or word/pages/ (page) on GitHub and this
+# converts it to Markdown with Pandoc and commits the result. See README.
+# "Run workflow" on the Actions tab re-converts every document in word/.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "word/**.docx"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: word-to-markdown-${{ github.ref }}
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Pandoc
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
+      - name: Convert documents
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "${{ github.event_name }}" = push ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            # Only the documents added or changed in this push.
+            mapfile -d '' changed < <(git diff -z --name-only --diff-filter=AMR "$BEFORE" HEAD -- 'word/*.docx')
+            [ "${#changed[@]}" -gt 0 ] || { echo "No Word documents changed."; exit 0; }
+            ./scripts/word-to-markdown.sh "${changed[@]}"
+          else
+            ./scripts/word-to-markdown.sh
+          fi
+      - name: Commit Markdown
+        run: |
+          git add -A _posts _pages assets/images
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Convert Word documents to Markdown"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

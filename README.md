@@ -57,6 +57,34 @@ About page uses your own intro text from the site.
   out of the results, add `search: false` to its front matter.
 - Styles are in `assets/css/main.scss`.
 
+## Publishing from Word
+
+You can write in Word and let GitHub do the rest — no commands needed.
+
+1. On GitHub, open the `word` folder (or `word/pages` for a page rather than
+   a blog post) and choose **Add file → Upload files**.
+2. Drag in your `.docx` and click **Commit changes**.
+
+The **Convert Word documents** GitHub Action then runs Pandoc on GitHub's
+servers, turns the document into Markdown in `_posts/` (or `_pages/`), saves
+any pictures under `assets/images/uploads/word/`, and commits the result.
+GitHub Pages redeploys automatically afterwards (and Netlify rebuilds on the
+new commit). Watch progress on the repo's **Actions** tab.
+
+- **Title:** the document's Title (File → Info → Properties in Word), or a
+  heading at the very top of the document, or else the file name.
+- **Date:** start the file name with a date, e.g.
+  `2025-07-04 Lean machine.docx`; otherwise the post is dated the day it is
+  first converted.
+- **Web address:** comes from the file name, e.g. `word/pages/My Page.docx`
+  becomes `/my-page/`.
+- **Updating:** upload a new version with the same file name and the same
+  post or page is updated. Front matter you added by hand (e.g.
+  `categories:` or `excerpt:`) is kept; the body is replaced.
+- To re-convert every document, go to **Actions → Convert Word documents →
+  Run workflow**. To run it on your own computer instead:
+  `./scripts/word-to-markdown.sh` (needs Pandoc).
+
 ## Images
 
 Images are stored under `assets/images/uploads/`. `scripts/fetch-images.sh`
