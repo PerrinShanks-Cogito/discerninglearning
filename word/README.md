@@ -3,6 +3,7 @@
 Upload a `.docx` here and GitHub converts it to a web page automatically.
 
 - `word/` — becomes a **blog post** (Midlife Musings) in `_posts/`.
+- `word/my-approach/` — becomes a **My Approach** entry in `_my_approach/`.
 - `word/data-work/` — becomes a **Data Work** entry in `_data_work/`.
 - `word/pages/` — becomes a **page** in `_pages/` (URL `/<file-name>/`).
 

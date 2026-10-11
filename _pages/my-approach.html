@@ -1,0 +1,15 @@
+---
+title: My Approach
+description: Methodologies I have used to deliver innovative learning solutions.
+wide: true
+permalink: /my-approach/
+search: false
+---
+<p>The way people interact with software has changed and is changing constantly. We all use lots of different systems everyday, clever things happen when we combine those systems in smart ways which is where I excel.</p>
+<p>Here are a few examples of the different methodologies I have used to deliver innovative learning solutions that ensure people have the right resources at the right time.</p>
+<div class="grid grid--wide">
+  {% assign entries = site.my_approach | sort: "date" | reverse %}
+  {% for entry in entries %}
+    {% include musing-card.html post=entry %}
+  {% endfor %}
+</div>

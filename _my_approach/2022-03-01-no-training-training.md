@@ -1,5 +1,5 @@
 ---
-layout: page
+date: 2022-03-01
 title: "No Training Training"
 description: "Onboarding 3,000 companies to a new software product without traditional courses."
 permalink: /no-training-training/

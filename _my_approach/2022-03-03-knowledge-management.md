@@ -1,5 +1,5 @@
 ---
-layout: page
+date: 2022-03-03
 title: "Design Thinking"
 description: "A centralised knowledge hub that cut support calls for a SaaS contact centre provider."
 permalink: /knowledge-management/

@@ -9,10 +9,10 @@ It can be hosted on **Netlify** or **GitHub Pages**; the code lives here on GitH
 | Page | URL | Source file |
 | --- | --- | --- |
 | Home | `/` | `index.html` |
-| My Approach | `/my-approach/` | `_pages/my-approach.md` |
-| Design Thinking | `/knowledge-management/` | `_pages/knowledge-management.md` |
-| 5 Moments of Learning Need | `/5-moments-of-learning-need/` | `_pages/5-moments-of-learning-need.md` |
-| No Training Training | `/no-training-training/` | `_pages/no-training-training.md` |
+| My Approach | `/my-approach/` | `_pages/my-approach.html` |
+| Design Thinking | `/knowledge-management/` | `_my_approach/` |
+| 5 Moments of Learning Need | `/5-moments-of-learning-need/` | `_my_approach/` |
+| No Training Training | `/no-training-training/` | `_my_approach/` |
 | Data Work (was Data Discoveries) | `/data-work/` | `_pages/data-work.html` |
 | Hypothesis test selection road map | `/hypothesis-test-selection-road-map/` | `_data_work/` |
 | Statistics Glossary | `/statistics-glossary/` | `_data_work/` |
@@ -47,10 +47,11 @@ About page uses your own intro text from the site.
   ```
 
   Optionally add an `excerpt:` line for the summary shown on the blog cards.
-- Data Work entries work the same way: add
+- My Approach and Data Work entries work the same way: add
+  `_my_approach/YYYY-MM-DD-your-title.md` or
   `_data_work/YYYY-MM-DD-your-title.md` with a `title:`. Add a
   `description:` line for the summary on the cards. The newest three are
-  shown on the home page and all of them on `/data-work/`.
+  shown on the home page and all of them on `/my-approach/` or `/data-work/`.
 - Add images with a plain path from the repo root, e.g.
   `![Alt text](/assets/images/my-picture.png)`. They show in GitHub's file
   preview, and `_plugins/asset_baseurl.rb` fixes the path when the site is
@@ -69,12 +70,13 @@ You can write in Word and let GitHub do the rest — no commands needed.
 1. On GitHub, open the folder for what you're writing and choose
    **Add file → Upload files**:
    - `word` for a **blog post** (Midlife Musings)
+   - `word/my-approach` for a **My Approach** entry
    - `word/data-work` for a **Data Work** entry
    - `word/pages` for a stand-alone **page**
 2. Drag in your `.docx` and click **Commit changes**.
 
 The **Convert Word documents** GitHub Action then runs Pandoc on GitHub's
-servers, turns the document into Markdown in `_posts/`, `_data_work/` or `_pages/`, saves
+servers, turns the document into Markdown in `_posts/`, `_my_approach/`, `_data_work/` or `_pages/`, saves
 any pictures under `assets/images/uploads/word/`, and commits the result.
 GitHub Pages redeploys automatically afterwards (and Netlify rebuilds on the
 new commit). Watch progress on the repo's **Actions** tab.
