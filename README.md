@@ -69,15 +69,19 @@ You can write in Word and let GitHub do the rest — no commands needed.
 
 1. On GitHub, open the folder for what you're writing and choose
    **Add file → Upload files**:
-   - `word` for a **blog post** (Midlife Musings)
+   - `word/midlife-musings` for a **blog post** (Midlife Musings)
    - `word/my-approach` for a **My Approach** entry
    - `word/data-work` for a **Data Work** entry
    - `word/pages` for a stand-alone **page**
 2. Drag in your `.docx` and click **Commit changes**.
 
+A document uploaded anywhere else in `word` (including `word` itself) isn't
+converted: the Action fails and its log names the file, so move it into one
+of the folders above.
+
 The **Convert Word documents** GitHub Action then runs Pandoc on GitHub's
-servers, turns the document into Markdown in `_posts/`, `_my_approach/`, `_data_work/` or `_pages/`, saves
-any pictures under `assets/images/uploads/word/`, and commits the result.
+servers, turns the document into Markdown in `_posts/`, `_my_approach/`,
+`_data_work/` or `_pages/`, saves any pictures under `assets/images/uploads/word/`, and commits the result.
 GitHub Pages redeploys automatically afterwards (and Netlify rebuilds on the
 new commit). Watch progress on the repo's **Actions** tab.
 
