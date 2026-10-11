@@ -69,7 +69,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem 1.5rem;
+  gap: 0.5rem 1.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -235,3 +235,60 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .post-nav a:last-child { text-align: right; }
 .prose em > a, .prose p > em:only-child { color: var(--muted); }
 .category-links { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; }
+
+// Header search and social link
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.site-tools { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; }
+.site-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+.site-search:focus-within { border-color: var(--accent); }
+.site-search input {
+  width: 7rem;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.35rem 0 0.35rem 0.85rem;
+  outline: none;
+}
+.site-search button {
+  display: flex;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.35rem 0.7rem 0.35rem 0.5rem;
+  cursor: pointer;
+}
+.site-search button:hover { color: var(--accent); }
+.social-link { display: flex; color: var(--muted); }
+.social-link:hover { color: var(--accent); }
+
+// Search page
+.search-page__form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.search-page__form input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+.search-page__form .button { border: 0; font: inherit; cursor: pointer; }
+.search-status { color: var(--muted); }
+.search-results { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.search-results mark { background: var(--hero-text); color: #14161c; padding: 0 0.1em; }
