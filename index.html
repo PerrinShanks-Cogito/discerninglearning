@@ -36,17 +36,14 @@ redirect_from:
 </section>
 
 <section class="section wrap">
-  <h2 class="section__title">Data discoveries</h2>
+  <h2 class="section__title">Data work</h2>
   <div class="grid">
-    <a class="card card--link" href="{{ '/hypothesis-test-selection-road-map/' | relative_url }}">
-      <h3 class="card__title">Hypothesis test selection road map</h3>
-      <p>Choosing the right test for your Ys and Xs, plus Type I and Type II errors.</p>
-    </a>
-    <a class="card card--link" href="{{ '/statistics-glossary/' | relative_url }}">
-      <h3 class="card__title">Statistics Glossary</h3>
-      <p>An A&ndash;Z of statistics and Lean Six Sigma terms, from ANOVA to the Weibull distribution.</p>
-    </a>
+    {% assign data_work = site.data_work | sort: "date" | reverse %}
+    {% for entry in data_work limit: 3 %}
+      {% include musing-card.html post=entry %}
+    {% endfor %}
   </div>
+  <p><a href="{{ '/data-work/' | relative_url }}">All data work &rarr;</a></p>
 </section>
 
 <section class="section wrap">

@@ -1,5 +1,5 @@
 ---
-layout: page
+date: 2025-07-01
 title: "Hypothesis test selection road map"
 description: "A road map for choosing the right hypothesis test."
 permalink: /hypothesis-test-selection-road-map/

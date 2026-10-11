@@ -24,6 +24,13 @@ permalink: /:year/:month/:day/:title/
 include:
   - _pages
 
+# Data Work entries live in _data_work/ (one file per entry, named
+# YYYY-MM-DD-title.md like blog posts) and are listed newest first.
+collections:
+  data_work:
+    output: true
+    permalink: /data-work/:title/
+
 exclude:
   - README.md
   - Gemfile
@@ -50,3 +57,8 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: data_work
+    values:
+      layout: page

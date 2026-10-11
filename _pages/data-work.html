@@ -1,0 +1,18 @@
+---
+title: Data Work
+description: Amateurish ambles through statistical analysis.
+wide: true
+permalink: /data-work/
+search: false
+redirect_from:
+  - /data-discoveries/
+---
+<blockquote>
+  <p>An amateur is someone who pursues an activity for enjoyment or as a hobby, not as a career or for financial gain</p>
+</blockquote>
+<div class="grid grid--wide">
+  {% assign data_work = site.data_work | sort: "date" | reverse %}
+  {% for entry in data_work %}
+    {% include musing-card.html post=entry %}
+  {% endfor %}
+</div>
