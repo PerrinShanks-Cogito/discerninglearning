@@ -1,5 +1,7 @@
 ---
-title: "Thrive Data Lead Case Study"
+date: 2024-03-01
+title: "Thrive after Epic go live"
+description: "Does training clinicians to personalise Epic actually work? I led the data for Thrive across two NHS trusts and found the evidence: +17% efficiency, +20% proficiency and happier clinicians in the Cardiology pilot."
 ---
 
 **DATA WORK · CASE STUDY**
