@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # Converts Word documents in word/ to Jekyll Markdown with Pandoc.
 #
-#   word/My post.docx               -> _posts/<today>-my-post.md
-#   word/2025-07-04-My post.docx    -> _posts/2025-07-04-my-post.md
-#   word/my-approach/My case.docx   -> _my_approach/<today>-my-case.md
-#   word/data-work/My study.docx    -> _data_work/<today>-my-study.md
-#   word/pages/My page.docx         -> _pages/my-page.md  (URL /my-page/)
+#   word/midlife-musings/My post.docx            -> _posts/<today>-my-post.md
+#   word/midlife-musings/2025-07-04 My post.docx -> _posts/2025-07-04-my-post.md
+#   word/my-approach/My case.docx                -> _my_approach/<today>-my-case.md
+#   word/data-work/My study.docx                 -> _data_work/<today>-my-study.md
+#   word/pages/My page.docx                      -> _pages/my-page.md  (URL /my-page/)
+#
+# A document anywhere else in word/ is not converted, and the script exits
+# with an error naming it so the GitHub Action shows it failed.
 #
 # Images in the document go to assets/images/uploads/word/<slug>/.
 # Re-uploading a document updates the same post or page, and keeps any
@@ -24,6 +27,7 @@ title_template=$(mktemp)
 trap 'rm -f "$title_template"' EXIT
 printf '%s\n' '$title$' > "$title_template"
 
+misplaced=()
 for src in "$@"; do
   [ -f "$src" ] || { echo "Skipping $src (not found)"; continue; }
   name=$(basename "$src" .docx)
@@ -37,16 +41,19 @@ for src in "$@"; do
   slug=$(printf '%s' "$slug" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
   [ -n "$slug" ] || { echo "Skipping $src (no usable file name)"; continue; }
 
+  # Blog posts, My Approach and Data Work entries are dated files in their
+  # folder; pages are named after the file.
   case "$src" in
-    word/pages/*) kind=page; out="_pages/$slug.md" ;;
-    *)
-      # Blog posts, My Approach and Data Work entries are dated files in their folder.
-      kind=post
-      case "$src" in
-        word/my-approach/*) dir=_my_approach ;;
-        word/data-work/*) dir=_data_work ;;
-        *) dir=_posts ;;
-      esac
+    word/midlife-musings/*) kind=post; dir=_posts ;;
+    word/my-approach/*) kind=post; dir=_my_approach ;;
+    word/data-work/*) kind=post; dir=_data_work ;;
+    word/pages/*) kind=page ;;
+    *) misplaced+=("$src"); continue ;;
+  esac
+
+  case "$kind" in
+    page) out="_pages/$slug.md" ;;
+    post)
       existing=$(find "$dir" -name "*-$slug.md" 2>/dev/null | sort | head -n1)
       if [ -z "$date" ] && [ -n "$existing" ]; then
         out=$existing
@@ -90,3 +97,11 @@ for src in "$@"; do
   printf '%s\n\n%s\n' "$front" "$(printf '%s\n' "$body" | sed '/./,$!d')" > "$out"
   echo "Converted $src -> $out"
 done
+
+if [ "${#misplaced[@]}" -gt 0 ]; then
+  echo
+  echo "Not converted, because these are not in one of the word/ section folders"
+  echo "(midlife-musings, my-approach, data-work or pages). Move them into one:"
+  printf '  %s\n' "${misplaced[@]}"
+  exit 1
+fi

@@ -1,7 +1,8 @@
 name: Convert Word documents
 
-# Upload a .docx to word/ (blog post), word/my-approach/ (My Approach entry),
-# word/data-work/ (Data Work entry) or word/pages/ (page) on GitHub and this
+# Upload a .docx to word/midlife-musings/ (blog post), word/my-approach/
+# (My Approach entry), word/data-work/ (Data Work entry) or word/pages/ (page)
+# on GitHub and this
 # converts it to Markdown with Pandoc and commits the result. See README.
 # "Run workflow" on the Actions tab re-converts every document in word/.
 on:
@@ -38,6 +39,8 @@ jobs:
             ./scripts/word-to-markdown.sh
           fi
       - name: Commit Markdown
+        # Still commit the documents that did convert if one was misplaced.
+        if: ${{ !cancelled() }}
         run: |
           git add -A _posts _pages _my_approach _data_work assets/images
           if git diff --cached --quiet; then
