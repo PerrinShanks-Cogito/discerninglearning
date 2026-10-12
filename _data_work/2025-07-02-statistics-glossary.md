@@ -1,5 +1,5 @@
 ---
-date: 2025-07-02
+date: 2025-02-02
 title: "Statistics Glossary"
 description: "An A-Z of statistics and Lean Six Sigma terms."
 permalink: /statistics-glossary/
