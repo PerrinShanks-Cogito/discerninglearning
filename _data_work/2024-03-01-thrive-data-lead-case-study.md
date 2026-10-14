@@ -55,7 +55,7 @@ Thrive ran six pilots across both trusts (Cardiology, ENT, Dermatology, Fracture
 
 <img src="/assets/images/uploads/word/thrive-data-lead-case-study/media/image2.png" title="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." style="width:6.25in;height:2.26042in" alt="Figure 2. Cardiology pilot results. &#39;Before&#39; values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average." />
 
-*Figure 2. Cardiology pilot results. 'Before' values are derived from the reported percentage change; dashed line shows the GSTT Cardiology average.*
+*Figure 2. Cardiology pilot results. 'Before' values are derived from the reported percentage change; dashed line shows the Cardiology average.*
 
 - **Thrive works.** Cardiology recorded +17% efficiency, +20% proficiency and +12% happiness (5.7 to 6.5).
 
