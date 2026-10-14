@@ -4,14 +4,13 @@ title: "Improvement Dosing Model"
 
 <p class="doc-subtitle">How long, and how many people, to build improvement capability across 25,000 staff?</p>
 
-System dynamics modeller · Centre for Innovation, Transformation and Improvement (CITI) · Guy's and St Thomas'
+System dynamics modeller
 
-Guy's and St Thomas' wanted improvement capability to reach its whole workforce of around 25,000 people. Before we could design a training programme, employ the staff to build the resources and deliver the training, or write the business case to fund it, we needed answers to two questions: how long would it take, and how many people would we need to train each year? I answered them with a system dynamics model of the “dosing” approach recommended by the Institute for Healthcare Improvement (IHI).
+A large NHS Trust wanted improvement capability to reach its whole workforce of around 25,000 people. Before we could design a training programme, employ the staff to build the resources and deliver the training, or write the business case to fund it, we needed answers to two questions: how long would it take, and how many people would we need to train each year? I answered them with a system dynamics model of the “dosing” approach recommended by the Institute for Healthcare Improvement (IHI).
 
 The model is not a fixed plan. It is the starting point for a collaborative approach to building capability across the trust, giving corporate leaders and senior leaders from each clinical group a shared, transparent way to decide together how we create this capability.
 
 | **Role**         | Designed and built the model; wrote the executive briefing                                                                  |
-| **Organisation** | Guy's and St Thomas' NHS Foundation Trust (CITI)                                                                            |
 | **Approach**     | System dynamics modelling of the IHI dosing approach to building improvement capacity and capability                        |
 | **Tool**         | [Insight Maker](https://insightmaker.com/), a free, open-source simulation and system dynamics tool                         |
 | **Output**       | A model with adjustable levers that underpins a trust-wide, co-designed capability plan, its staffing and its business case |
@@ -43,7 +42,7 @@ Without a plan for how fast to fill it, investment would be uncoordinated: some 
 
 ## The approach
 
-**The dosing approach.** Robert Lloyd of the IHI describes building improvement capability like prescribing a medicine: not everyone needs the same dose. Board members, senior leaders, managers, frontline staff and QI experts each need a different depth of knowledge, from a minimal to a maximum dose. His method is to count the people who need dosing, group them by role, assess what they already know, then plan how each group will receive its dose over a defined period. We translated this into four tiers for GSTT:
+**The dosing approach.** Robert Lloyd of the IHI describes building improvement capability like prescribing a medicine: not everyone needs the same dose. Board members, senior leaders, managers, frontline staff and QI experts each need a different depth of knowledge, from a minimal to a maximum dose. His method is to count the people who need dosing, group them by role, assess what they already know, then plan how each group will receive its dose over a defined period. We translated this into four tiers:
 
 | **Expert (~2%)**         | About 500 sponsors, heads of service and divisional directors. Masterclasses, 1:1 coaching and peer networks over 18 months or more.                       |
 | **Coaching (~5%)**       | About 1,250 improvement coaches, mentors and team facilitators. Coaching clinics, supervised practice and peer review over 12–18 months.                   |
