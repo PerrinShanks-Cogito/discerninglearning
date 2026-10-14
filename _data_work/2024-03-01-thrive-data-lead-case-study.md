@@ -6,10 +6,9 @@ description: "Does training clinicians to personalise Epic actually work? The Th
 
 <p class="doc-subtitle">Thrive: measuring the impact of Epic personalisation training</p>
 
-Data Lead · Apollo Thrive pilot programme · GSTT & King's College Hospital · 2023–24
+Data Lead · 2023–24
 
-| **Role**          | Data Lead (Data Analyst Trainer), Apollo Thrive pilot programme                |
-| **Organisations** | Guy's and St Thomas' and King's College Hospital NHS Foundation Trusts         |
+| **Role**          | Data Lead (Data Analyst Trainer)            |
 | **Data**          | Epic Signal, NEAT, USAL, Google Forms survey data                              |
 | **Output**        | Evaluation of pilots and data recommendations in the programme proposal (SBAR) |
 
