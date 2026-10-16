@@ -1,10 +1,8 @@
 ---
-title: "AI enabled flow article"
+title: "AI enabled patient flow improvement"
 ---
 
-**AI-enabled length of stay: a lesson in Jidoka**
-
-*Realtime patient flow optimisation guidance for clinicians*
+**Realtime patient flow optimisation guidance for clinicians**
 
 Dr Lucas Zier gave a masterclass in human–machine collaboration last week. His team at Zuckerberg San Francisco General (ZSFG), working with the University of California, San Francisco, has used AI to understand why patients stay in hospital longer than they need to, and then put that understanding to work on the wards every day giving clinicians real time tips on how to optimise patient flow.
 
