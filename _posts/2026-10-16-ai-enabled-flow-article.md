@@ -1,5 +1,9 @@
 ---
-title: "AI enabled patient flow improvement"
+layout: post
+title: 'AI enabled patient flow improvement'
+date: 2026-10-16
+categories: [Technology]
+description: 'How Zuckerberg San Francisco General used AI and the Toyota principle of Jidoka to uncover why patients stay in hospital longer than they need to, and now gives clinicians real-time discharge guidance.'
 ---
 
 **Realtime patient flow optimisation guidance for clinicians**
