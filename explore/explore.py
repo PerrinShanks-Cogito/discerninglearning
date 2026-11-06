@@ -1,19 +1,20 @@
 import requests, re, json
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (landmark-numbers)"})
-B="https://www.england.nhs.uk/wp-json/wp/v2/"
-r=s.get(B+"search?per_page=20&search="+requests.utils.quote("national cost collection data publication"),timeout=60)
-print("SEARCH",r.status_code)
-for it in r.json(): print("HIT",it.get("title"),it.get("url"),it.get("subtype"),[l.get("href") for l in it.get("_links",{}).get("self",[])])
-for it in r.json():
-    if "2024-25" in it.get("url","") or "2023-24" in it.get("url",""):
-        for l in it["_links"]["self"]:
-            p=s.get(l["href"],timeout=60).json()
-            html=p.get("content",{}).get("rendered","")
-            print("\nPAGE",it["url"],p.get("date"),p.get("modified"))
-            print("TEXT",re.sub(r"<[^>]+>"," ",html)[:2500])
-            for h in sorted(set(re.findall(r'href="([^"]+)"',html))): print("PLINK",h)
-for q in ["24-25","2425","2024-25","23-24","2324"]:
-    r=s.get(B+"media?per_page=100&search="+q,timeout=60)
-    for m in r.json():
-        u=m.get("source_url","")
-        if re.search(r"(ncc|cost|schedule|ncci|organisation)",u,re.I): print("MEDIA",q,m.get("date"),u)
+for pid in [294161,275980]:
+    p=s.get(f"https://www.england.nhs.uk/wp-json/wp/v2/documents/{pid}",timeout=60).json()
+    raw=json.dumps(p)
+    print("\nDOC",pid,p.get("date"),p.get("modified"),p.get("link"),"keys",list(p.keys()))
+    print("TITLE",p.get("title"))
+    urls=sorted(set(re.findall(r'https?:\\?/\\?/[^"\s<>]+',raw)))
+    for u in urls:
+        u=u.replace("\\/","/")
+        if "wp-content/uploads" in u or "app.powerbi" in u: print("URL",u)
+    # print any text-ish fields
+    for k in ("acf","meta","excerpt","content"):
+        if k in p: print("FIELD",k,json.dumps(p[k])[:3000])
+    att=p.get("_links",{}).get("wp:attachment",[])
+    for a in att:
+        r=s.get(a["href"]+"&per_page=100",timeout=60)
+        try:
+            for m in r.json(): print("ATT",m.get("date"),m.get("source_url"),m.get("media_details",{}).get("filesize"))
+        except Exception as e: print("ATTERR",e)
