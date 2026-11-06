@@ -11,7 +11,9 @@ on:
   workflow_run:
     workflows: ["Convert Word documents", "Refresh landmark numbers"]
     types: [completed]
-    branches: ["main"]
+    # The landmark refresh can be started from a claude/landmark-refresh...
+    # branch but always commits to main, so deploy after those runs too.
+    branches: ["main", "claude/landmark-refresh**"]
   workflow_dispatch:
 
 permissions:

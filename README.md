@@ -113,9 +113,10 @@ National Cost Collection: national averages compared with Guy's and St Thomas'
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run
 workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the
-latest edition, commits the JSON if anything changed (it always updates the
-"last checked" date) and the site redeploys. A quarterly Claude scheduled task
-does this automatically and reports what changed.
+latest edition, commits the JSON to main (it always updates the "last checked"
+date) and the site redeploys. A quarterly Claude scheduled task starts it by
+pushing a change to that file on a `claude/landmark-refresh...` branch, then
+checks the result and reports what changed. Those branches can be deleted.
 
 ## Images
 

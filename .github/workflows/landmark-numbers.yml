@@ -1,12 +1,21 @@
 name: Refresh landmark numbers
 
 # Re-checks NHS England's National Cost Collection and updates
-# _data/landmark_ncc.json. Start it from Actions → Refresh landmark numbers →
-# Run workflow, or by committing a change to _data/landmark_refresh.txt (this is
-# what the quarterly Claude scheduled task does).
+# _data/landmark_ncc.json on main. It always works on main, whatever started it.
+#
+# Ways to start it:
+#   - Actions → Refresh landmark numbers → Run workflow
+#   - commit a change to _data/landmark_refresh.txt on main
+#   - push a change to that file on a branch named claude/landmark-refresh...
+#     (this is what the quarterly Claude scheduled task does, because it can't
+#     push to main itself)
+# The Action only ever commits _data/landmark_ncc.json, then the site redeploys.
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
+      - "claude/landmark-refresh**"
     paths:
       - "_data/landmark_refresh.txt"
       - "scripts/landmark_numbers/**"
@@ -23,13 +32,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pandas openpyxl requests
       - name: Fetch National Cost Collection figures
         run: python scripts/landmark_numbers/update_ncc.py | tee landmark-refresh.log
-      - name: Commit updated figures
+      - name: Commit updated figures to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
@@ -39,5 +50,9 @@ jobs:
           else
             summary=$(grep -E "^(CHANGED|UNCHANGED)" landmark-refresh.log || true)
             git commit -m "Refresh landmark numbers: ${summary}"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
+            git push origin HEAD:main
           fi
+      - name: Summary
+        if: always()
+        run: |
+          { echo '```'; cat landmark-refresh.log 2>/dev/null; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
