@@ -1,20 +1,20 @@
-import requests, re, json
+import requests, io, zipfile, pandas as pd
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (landmark-numbers)"})
-for pid in [294161,275980]:
-    p=s.get(f"https://www.england.nhs.uk/wp-json/wp/v2/documents/{pid}",timeout=60).json()
-    raw=json.dumps(p)
-    print("\nDOC",pid,p.get("date"),p.get("modified"),p.get("link"),"keys",list(p.keys()))
-    print("TITLE",p.get("title"))
-    urls=sorted(set(re.findall(r'https?:\\?/\\?/[^"\s<>]+',raw)))
-    for u in urls:
-        u=u.replace("\\/","/")
-        if "wp-content/uploads" in u or "app.powerbi" in u: print("URL",u)
-    # print any text-ish fields
-    for k in ("acf","meta","excerpt","content"):
-        if k in p: print("FIELD",k,json.dumps(p[k])[:3000])
-    att=p.get("_links",{}).get("wp:attachment",[])
-    for a in att:
-        r=s.get(a["href"]+"&per_page=100",timeout=60)
-        try:
-            for m in r.json(): print("ATT",m.get("date"),m.get("source_url"),m.get("media_details",{}).get("filesize"))
-        except Exception as e: print("ATTERR",e)
+base="https://www.england.nhs.uk/wp-content/uploads/2026/10/"
+for f in ["NCC_FY2025-26_National_Schedule.zip","NCC_FY2025-26_NCCI.zip","NCC_FY2025-26_Org_File3.zip","NCC_FY2025-26_Org_File1.zip"]:
+    b=s.get(base+f,timeout=600).content
+    z=zipfile.ZipFile(io.BytesIO(b)); print("\n######",f,len(b))
+    for n in z.infolist():
+        print("ENTRY",n.filename,n.file_size)
+        data=z.read(n)
+        if n.filename.lower().endswith((".xlsx",".xlsb",".xls")):
+            try:
+                x=pd.ExcelFile(io.BytesIO(data))
+                for sh in x.sheet_names:
+                    df=x.parse(sh,header=None,nrows=14)
+                    print("--- SHEET",sh); print(df.iloc[:14,:10].to_string(max_colwidth=32))
+            except Exception as e: print("XERR",e)
+        elif n.filename.lower().endswith((".csv",".txt")):
+            lines=data[:200000].decode("latin-1").splitlines()
+            print("HEAD"); print("\n".join(lines[:4]))
+            rj=[l for l in lines if "RJ1" in l][:3]; print("RJ1 sample",rj)
