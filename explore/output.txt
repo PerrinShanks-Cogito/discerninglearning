@@ -1,22 +1,216 @@
-FULL Elective proportion waiting within 18 weeks This metric measures the percentage of cases where the patient was waiting to start consultant-led elective treatment and had been waiting within 18 weeks. Higher percentages indicate better performance. Current Performance 67.7% Rank: 35 of 117 National Average 65.2% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Elective proportion waiting within 18 weeks compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing Elective proportion waiting within 18 weeks over the last 12 months compared to national average. Up to latest available at Aug 2026. Monthly Elective proportion waiting within 18 weeks performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Sep 25 Guy's and St Thomas' 65.2% National Average 61.8% Month Oct 25 Guy's and St Thomas' 65.9% National Average 61.8% Month Nov 25 Guy's and St Thomas' 66.4% National Average 61.8% Month Dec 25 Guy's and St Thomas' 66.3% National Average 61.5% Month Jan 26 Guy's and St Thomas' 66.5% National Average 61.5% Month Feb 26 Guy's and St Thomas' 67.3% National Average 62.6% Month Mar 26 Guy's and St Thomas' 68.5% National Average 65.3% Month Apr 26 Guy's and St Thomas' 68.4% National Average 65% Month May 26 Guy's and St Thomas' 69.1% National Average 65.6% Month Jun 26 Guy's and St Thomas' 68.7% National Average 65.8% Month Jul 26 Guy's and St Thomas' 68.3% National Average 65.4% Month Aug 26 Guy's and St Thomas' 67.7% National Average 65.2% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Elective proportion waiting over 52 weeks This metric measures the percentage of cases where the patient was waiting to start consultant-led elective treatment and had been waiting more than 52 weeks (one year). Lower percentages indicate better performance. Current Performance 0.8% Rank: 45 of 117 National Average 1.5% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Elective proportion waiting over 52 weeks compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing Elective proportion waiting over 52 weeks over the last 12 months compared to national average. Up to latest available at Aug 2026. Monthly Elective proportion waiting over 52 weeks performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Sep 25 Guy's and St Thomas' 2% National Average 2.4% Month Oct 25 Guy's and St Thomas' 1.5% National Average 2.3% Month Nov 25 Guy's and St Thomas' 1.2% National Average 2.1% Month Dec 25 Guy's and St Thomas' 1% National Average 1.9% Month Jan 26 Guy's and St Thomas' 1.1% National Average 1.9% Month Feb 26 Guy's and St Thomas' 0.9% National Average 1.7% Month Mar 26 Guy's and St Thomas' 0.7% National Average 1.3% Month Apr 26 Guy's and St Thomas' 0.6% National Average 1.4% Month May 26 Guy's and St Thomas' 0.7% National Average 1.4% Month Jun 26 Guy's and St Thomas' 0.6% National Average 1.5% Month Jul 26 Guy's and St Thomas' 0.7% National Average 1.5% Month Aug 26 Guy's and St Thomas' 0.8% National Average 1.5% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Cancer Cancer faster diagnosis The standard reflects the proportion of patients who waited four weeks (28-days) from urgent referral to being told they have cancer, or cancer is definitively excluded. Higher percentages indicate better performance. Current Performance 86.7% Rank: 12 of 117 National Average 78.6% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Cancer faster diagnosis compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing Cancer faster diagnosis over the last 12 months compared to national average. Up to latest available at Aug 2026. Monthly Cancer faster diagnosis performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Sep 25 Guy's and St Thomas' 83.6% National Average 73.8% Month Oct 25 Guy's and St Thomas' 83% National Average 76% Month Nov 25 Guy's and St Thomas' 85% National Average 76.4% Month Dec 25 Guy's and St Thomas' 82% National Average 77.4% Month Jan 26 Guy's and St Thomas' 75.8% National Average 72.7% Month Feb 26 Guy's and St Thomas' 84.2% National Average 80.5% Month Mar 26 Guy's and St Thomas' 86.8% National Average 79.5% Month Apr 26 Guy's and St Thomas' 79.1% National Average 75.9% Month May 26 Guy's and St Thomas' 85.4% National Average 79% Month Jun 26 Guy's and St Thomas' 83.6% National Average 79% Month Jul 26 Guy's and St Thomas' 86.8% National Average 79.3% Month Aug 26 Guy's and St Thomas' 86.7% National Average 78.6% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Cancer 31-day treatment The standard reflects the proportion of patients who waited 31 days from diagnosis to first definitive treatment for cancer. Higher percentages indicate better performance. Current Performance 88.9% Rank: 100 of 117 National Average 92.1% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Cancer 31-day treatment compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing Cancer 31-day treatment over the last 12 months compared to national average. Up to latest available at Aug 2026. Monthly Cancer 31-day treatment performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Sep 25 Guy's and St Thomas' 89.5% National Average 91.2% Month Oct 25 Guy's and St Thomas' 89.8% National Average 92.5% Month Nov 25 Guy's and St Thomas' 88% National Average 91.6% Month Dec 25 Guy's and St Thomas' 90.3% National Average 92.5% Month Jan 26 Guy's and St Thomas' 82.6% National Average 89.8% Month Feb 26 Guy's and St Thomas' 89.4% National Average 93% Month Mar 26 Guy's and St Thomas' 87.8% National Average 92.8% Month Apr 26 Guy's and St Thomas' 87.2% National Average 91.5% Month May 26 Guy's and St Thomas' 90.6% National Average 92.8% Month Jun 26 Guy's and St Thomas' 89.7% National Average 92.2% Month Jul 26 Guy's and St Thomas' 90.4% National Average 92.5% Month Aug 26 Guy's and St Thomas' 88.9% National Average 92.1% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Cancer 62-day combined The standard reflects the proportion of patients who waited two months (62-days) from an urgent suspected cancer or breast symptomatic referral, or urgent screening referral, or consultant upgrade to a first definitive treatment for cancer. Higher percentages indicate better performance. Current Performance 65.8% Rank: 90 of 117 National Average 71.9% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Cancer 62-day combined compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing Cancer 62-day combined over the last 12 months compared to national average. Up to latest available at Aug 2026. Monthly Cancer 62-day combined performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Sep 25 Guy's and St Thomas' 50.3% National Average 68% Month Oct 25 Guy's and St Thomas' 50.7% National Average 69.1% Month Nov 25 Guy's and St Thomas' 54.7% National Average 70.5% Month Dec 25 Guy's and St Thomas' 63.4% National Average 72.1% Month Jan 26 Guy's and St Thomas' 57.4% National Average 68.6% Month Feb 26 Guy's and St Thomas' 53.5% National Average 68.9% Month Mar 26 Guy's and St Thomas' 64.6% National Average 72.9% Month Apr 26 Guy's and St Thomas' 67.5% National Average 70% Month May 26 Guy's and St Thomas' 69.4% National Average 69.6% Month Jun 26 Guy's and St Thomas' 62.4% National Average 69.9% Month Jul 26 Guy's and St Thomas' 61.5% National Average 71.2% Month Aug 26 Guy's and St Thomas' 65.8% National Average 71.9% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Diagnostics Diagnostics proportion waiting over 6 weeks The purpose of this dataset is to measure waits and monitor activity for 15 key diagnostic tests. Early diagnosis is important to patients and central to improving outcomes. Lower percentages indicate better performance. Current Performance 26.3% Rank: 83 of 117 National Average 24.7% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Diagnostics proportion waiting over 6 weeks compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing Diagnostics proportion waiting over 6 weeks over the last 12 months compared to national average. Up to latest available at Aug 2026. Monthly Diagnostics proportion waiting over 6 weeks performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Sep 25 Guy's and St Thomas' 34.9% National Average 22.4% Month Oct 25 Guy's and St Thomas' 34.3% National Average 21.3% Month Nov 25 Guy's and St Thomas' 35.4% National Average 21.7% Month Dec 25 Guy's and St Thomas' 40.2% National Average 24.8% Month Jan 26 Guy's and St Thomas' 40.5% National Average 24.7% Month Feb 26 Guy's and St Thomas' 33.5% National Average 20.3% Month Mar 26 Guy's and St Thomas' 34.2% National Average 21.2% Month Apr 26 Guy's and St Thomas' 36.3% National Average 24.9% Month May 26 Guy's and St Thomas' 31.7% National Average 24% Month Jun 26 Guy's and St Thomas' 27.4% National Average 23.3% Month Jul 26 Guy's and St Thomas' 25.5% National Average 23.1% Month Aug 26 Guy's and St Thomas' 26.3% National Average 24.7% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Accident and Emergency A&E 4-hour performance This metric reflects the proportion of patients who waited less than 4 hours from arrival, to admission, transfer or discharge.. Higher percentages indicate better performance. From April 2026, the 4-hour performance metric displayed in the report, including the time series data, is based on the acute trust footprint. In previous months, 4-hour performance data was based on provider level data. Current Performance 75.4% Rank: 51 of 117 National Average 74.4% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing A&E 4-hour performance compared to national average. Up to latest available at Sept 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing A&E 4-hour performance over the last 12 months compared to national average. Up to latest available at Sept 2026. Monthly A&E 4-hour performance performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Oct 25 Guy's and St Thomas' 77.3% National Average 74.2% Month Nov 25 Guy's and St Thomas' 80.1% National Average 74.2% Month Dec 25 Guy's and St Thomas' 79% National Average 73.8% Month Jan 26 Guy's and St Thomas' 76.1% National Average 72.5% Month Feb 26 Guy's and St Thomas' 75.8% National Average 74.1% Month Mar 26 Guy's and St Thomas' 74.4% National Average 77.1% Month Apr 26 Guy's and St Thomas' 77.2% National Average 76.9% Month May 26 Guy's and St Thomas' 76.4% National Average 75.7% Month Jun 26 Guy's and St Thomas' 74.8% National Average 75% Month Jul 26 Guy's and St Thomas' 76.4% National Average 75.4% Month Aug 26 Guy's and St Thomas' 75.1% National Average 75% Month Sep 26 Guy's and St Thomas' 75.4% National Average 74.4% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON A&E 12-hour performance This metric reflects the proportion of patients who waited over 12 hours from arrival, to admission, transfer or discharge, for type 1 and 2 A&E departments only. Lower percentages indicate better performance. Current Performance 1.5% Rank: 5 of 117 National Average 10.1% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing A&E 12-hour performance compared to national average. Up to latest available at Sept 2026. The most recent month is provisional data. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing A&E 12-hour performance over the last 12 months compared to national average. Up to latest available at Sept 2026. The most recent month is provisional data. Monthly A&E 12-hour performance performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Oct 25 Guy's and St Thomas' 1.7% National Average 10.7% Month Nov 25 Guy's and St Thomas' 1.3% National Average 10.2% Month Dec 25 Guy's and St Thomas' 1.2% National Average 10.5% Month Jan 26 Guy's and St Thomas' 1.2% National Average 13.1% Month Feb 26 Guy's and St Thomas' 1.4% National Average 11.3% Month Mar 26 Guy's and St Thomas' 1.3% National Average 9% Month Apr 26 Guy's and St Thomas' 1.3% National Average 9.3% Month May 26 Guy's and St Thomas' 1.3% National Average 9.7% Month Jun 26 Guy's and St Thomas' 1.6% National Average 9.8% Month Jul 26 Guy's and St Thomas' 1.8% National Average 9.6% Month Aug 26 Guy's and St Thomas' 1.7% National Average 9.7% Month Sep 26 Guy's and St Thomas' 1.5% National Average 10.1% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON 
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="within_18_weeks"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="within_18_weeks"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="52_plus_weeks"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="52_plus_weeks"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="cancer_faster_diagnostic"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="cancer_faster_diagnostic"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="cancer_31_day"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="cancer_31_day"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="cancer_62_day"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="cancer_62_day"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="diagnostics_6_weeks"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="diagnostics_6_weeks"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="ae_4_hour"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="ae_4_hour"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-FORM <form class="nhsuk-u-inline-block nhsuk-u-margin-right-4" action="/api/export/csv" method="POST"><input type="hidden" name="metricCode" value="ae_12_hour"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button" aria-disabled="false">Download CSV</button></form>
-FORM <form class="nhsuk-u-inline-block" action="/api/export/json" method="POST"><input type="hidden" name="metricCode" value="ae_12_hour"/><input type="hidden" name="providerCode" value="RJ1"/><input type="hidden" name="includeNational" value="true"/><button type="submit" class="nhsuk-button nhsuk-button--secondary" aria-disabled="false">Download JSON</button></form>
-TRY /api/export/json 405 None 
-TRY /api/export/json?provider=RJ1 405 None 
-TRY /providers 200 text/html; charset=utf-8                                   #nhsuk-cookie-banner{display:none} .show-cookie-banner #nhsuk-cookie-banner{display:block}                /* Show banner by default when JS is disabled */             #nhsuk-cookie-banner{display:block}             /* After a noscript POST redirect to #nhsuk-cookie-banner, hide it */             :target#nhsuk-cookie-banner{display:none}              (self.__next_s=self.__next_s||[]).push([0,{"children":"(function(){\n  function __fromBase64UrlUtf8(input) {\n  try {\n    var b64 = input.replace(/-/g, '+').replace(/_/g, '/');\n    var padded = b64 + '==='.slice((b64.length + 3) % 4);\n    if (typeof atob !== 'function' || typeof TextDecoder === 'undefined') return null;\n    var binary = atob(padded);\n    var bytes = new Uint8Array(binary.length);\n    for (var i = 0; i \u003c binary.length; i++) bytes[i] = binary.charCodeAt(i);\n    return new TextDecoder('utf-8', { fatal: false }).decode(bytes);\n  } catch (e) {\n    return null;\n  }\n}\n  function __getCookieValue(cookies, prefix) {\n  for (var i = 0; i \u003c cookies.length; i++) {\n    var c = cookies[i].trim();\n    if (c.indexOf(prefix) === 0) return c.substring(prefix.length);\n  }\n  return null;\n}\nfunction __tryParseJson(value) {\n  var attempts = [value];\n  try { attempts.push(decodeURIComponent(value)); } catch (e) {}\n  try { attempts.push(decodeURIComponent(attempts[attempts.length - 1])); } catch (e) {}\n  for (var j = 0; j \u003c attempts.length; j++) {\n    try {\n      va
-NPROV 134
-['/providers/airedale-nhs-foundation-trust', '/providers/alder-hey-children-s-nhs-foundation-trust', '/providers/ashford-and-st-peter-s-hospitals-nhs-foundation-trust', '/providers/barking-havering-and-redbridge-university-hospitals-nhs-trust', '/providers/barnsley-hospital-nhs-foundation-trust', '/providers/barts-health-nhs-trust', '/providers/bedfordshire-hospitals-nhs-foundation-trust', '/providers/birmingham-women-s-and-children-s-nhs-foundation-trust', '/providers/blackpool-teaching-hospitals-nhs-foundation-trust', '/providers/bolton-nhs-foundation-trust', '/providers/bradford-teaching-hospitals-nhs-foundation-trust', '/providers/buckinghamshire-healthcare-nhs-trust', '/providers/calderdale-and-huddersfield-nhs-foundation-trust', '/providers/cambridge-university-hospitals-nhs-foundation-trust', '/providers/chelsea-and-westminster-hospital-nhs-foundation-trust', '/providers/chesterfield-royal-hospital-nhs-foundation-trust', '/providers/countess-of-chester-hospital-nhs-foundation-trust', '/providers/county-durham-and-darlington-nhs-foundation-trust', '/providers/croydon-health-services-nhs-trust', '/providers/dartford-and-gravesham-nhs-trust', '/providers/doncaster-and-bassetlaw-teaching-hospitals-nhs-foundation-trust', '/providers/dorset-county-hospital-nhs-foundation-trust', '/providers/east-and-north-hertfordshire-nhs-trust', '/providers/east-cheshire-nhs-trust', '/providers/east-kent-hospitals-university-nhs-foundation-trust', '/providers/east-lancashire-hospitals-nhs-trust', '/providers/east-suffolk-and-north-essex-nhs-foundation-trust', '/providers/east-sussex-healthcare-nhs-trust', '/providers/epsom-and-st-helier-university-hospitals-nhs-trust', '/providers/frimley-health-nhs-foundation-trust', '/providers/gateshead-health-nhs-foundation-trust', '/providers/george-eliot-hospital-nhs-trust', '/providers/gloucestershire-hospitals-nhs-foundation-trust', '/providers/great-ormond-street-hospital-for-children-nhs-foundation-trust', '/providers/great-western-hospitals-nhs-foundation-trust', '/providers/guy-s-and-st-thomas-nhs-foundation-trust', '/providers/hampshire-hospitals-nhs-foundation-trust', '/providers/harrogate-and-district-nhs-foundation-trust', '/providers/homerton-healthcare-nhs-foundation-trust', '/providers/hull-university-teaching-hospitals-nhs-trust', '/providers/imperial-college-healthcare-nhs-trust', '/providers/isle-of-wight-nhs-trust', '/providers/james-paget-university-hospitals-nhs-foundation-trust', '/providers/kettering-general-hospital-nhs-foundation-trust', '/providers/king-s-college-hospital-nhs-foundation-trust', '/providers/kingston-hospital-nhs-foundation-trust', '/providers/lancashire-teaching-hospitals-nhs-foundation-trust', '/providers/leeds-teaching-hospitals-nhs-trust', '/providers/lewisham-and-greenwich-nhs-trust', '/providers/liverpool-heart-and-chest-hospital-nhs-foundation-trust', '/providers/liverpool-university-hospitals-nhs-foundation-trust', '/providers/liverpool-women-s-nhs-foundation-trust', '/providers/london-north-west-university-healthcare-nhs-trust', '/providers/maidstone-and-tunbridge-wells-nhs-trust', '/providers/manchester-university-nhs-foundation-trust', '/providers/medway-nhs-foundation-trust', '/providers/mersey-and-west-lancashire-teaching-hospitals-nhs-trust', '/providers/mid-and-south-essex-nhs-foundation-trust', '/providers/mid-cheshire-hospitals-nhs-foundation-trust', '/providers/mid-yorkshire-teaching-nhs-trust', '/providers/milton-keynes-university-hospital-nhs-foundation-trust', '/providers/moorfields-eye-hospital-nhs-foundation-trust', '/providers/norfolk-and-norwich-university-hospitals-nhs-foundation-trust', '/providers/north-bristol-nhs-trust', '/providers/north-cumbria-integrated-care-nhs-foundation-trust', '/providers/north-tees-and-hartlepool-nhs-foundation-trust', '/providers/north-west-anglia-nhs-foundation-trust', '/providers/northampton-general-hospital-nhs-trust', '/providers/northern-care-alliance-nhs-foundation-trust', '/providers/northern-lincolnshire-and-goole-nhs-foundation-trust', '/providers/northumbria-healthcare-nhs-foundation-trust', '/providers/nottingham-university-hospitals-nhs-trust', '/providers/oxford-university-hospitals-nhs-foundation-trust', '/providers/portsmouth-hospitals-university-nhs-trust', '/providers/queen-victoria-hospital-nhs-foundation-trust', '/providers/royal-berkshire-nhs-foundation-trust', '/providers/royal-cornwall-hospitals-nhs-trust', '/providers/royal-devon-university-healthcare-nhs-foundation-trust', '/providers/royal-free-london-nhs-foundation-trust', '/providers/royal-national-orthopaedic-hospital-nhs-trust', '/providers/royal-papworth-hospital-nhs-foundation-trust', '/providers/royal-surrey-county-hospital-nhs-foundation-trust', '/providers/royal-united-hospitals-bath-nhs-foundation-trust', '/providers/salisbury-nhs-foundation-trust', '/providers/sandwell-and-west-birmingham-hospitals-nhs-trust', '/providers/sheffield-children-s-nhs-foundation-trust', '/providers/sheffield-teaching-hospitals-nhs-foundation-trust', '/providers/sherwood-forest-hospitals-nhs-foundation-trust', '/providers/somerset-nhs-foundation-trust', '/providers/south-tees-hospitals-nhs-foundation-trust', '/providers/south-tyneside-and-sunderland-nhs-foundation-trust', '/providers/south-warwickshire-university-nhs-foundation-trust', '/providers/st-george-s-university-hospitals-nhs-foundation-trust', '/providers/stockport-nhs-foundation-trust', '/providers/surrey-and-sussex-healthcare-nhs-trust', '/providers/tameside-and-glossop-integrated-care-nhs-foundation-trust', '/providers/the-christie-nhs-foundation-trust', '/providers/the-clatterbridge-cancer-centre-nhs-foundation-trust', '/providers/the-dudley-group-nhs-foundation-trust', '/providers/the-hillingdon-hospitals-nhs-foundation-trust', '/providers/the-newcastle-upon-tyne-hospitals-nhs-foundation-trust', '/providers/the-princess-alexandra-hospital-nhs-trust', '/providers/the-queen-elizabeth-hospital-king-s-lynn-nhs-foundation-trust', '/providers/the-robert-jones-and-agnes-hunt-orthopaedic-hospital-nhs-foundation-trust', '/providers/the-rotherham-nhs-foundation-trust', '/providers/the-royal-marsden-nhs-foundation-trust', '/providers/the-royal-orthopaedic-hospital-nhs-foundation-trust', '/providers/the-royal-wolverhampton-nhs-trust', '/providers/the-shrewsbury-and-telford-hospital-nhs-trust', '/providers/the-walton-centre-nhs-foundation-trust', '/providers/torbay-and-south-devon-nhs-foundation-trust', '/providers/united-lincolnshire-hospitals-nhs-trust', '/providers/university-college-london-hospitals-nhs-foundation-trust', '/providers/university-hospital-southampton-nhs-foundation-trust', '/providers/university-hospitals-birmingham-nhs-foundation-trust', '/providers/university-hospitals-bristol-and-weston-nhs-foundation-trust', '/providers/university-hospitals-coventry-and-warwickshire-nhs-trust', '/providers/university-hospitals-dorset-nhs-foundation-trust', '/providers/university-hospitals-of-derby-and-burton-nhs-foundation-trust', '/providers/university-hospitals-of-leicester-nhs-trust', '/providers/university-hospitals-of-morecambe-bay-nhs-foundation-trust', '/providers/university-hospitals-of-north-midlands-nhs-trust', '/providers/university-hospitals-plymouth-nhs-trust', '/providers/university-hospitals-sussex-nhs-foundation-trust', '/providers/walsall-healthcare-nhs-trust', '/providers/warrington-and-halton-teaching-hospitals-nhs-foundation-trust', '/providers/west-hertfordshire-teaching-hospitals-nhs-trust', '/providers/west-suffolk-nhs-foundation-trust', '/providers/whittington-health-nhs-trust', '/providers/wirral-university-teaching-hospital-nhs-foundation-trust', '/providers/worcestershire-acute-hospitals-nhs-trust', '/providers/wrightington-wigan-and-leigh-nhs-foundation-trust', '/providers/wye-valley-nhs-trust', '/providers/york-and-scarborough-teaching-hospitals-nhs-foundation-trust']
+JSON ae_4_hour 200 application/json; charset=utf-8 {
+  "metadata": {
+    "provider": {
+      "code": "RJ1",
+      "name": "Guy's and St Thomas'"
+    },
+    "metric": {
+      "code": "ae_4_hour",
+      "name": "A&E 4-hour performance",
+      "unit": "percentage"
+    },
+    "nationalIncluded": true,
+    "rowCount": 12,
+    "dateRange": {
+      "from": "2025-10-01",
+      "to": "2026-09-01"
+    },
+    "generatedAt": "2026-11-06T14:31:54.140Z",
+    "contextUrl": null
+  },
+  "rows": [
+    {
+      "date": "2025-10-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.773210003,
+      "national_value": 0.741855338
+    },
+    {
+      "date": "2025-11-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.800992754,
+      "national_value": 0.742169519
+    },
+    {
+      "date": "2025-12-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.790203163,
+      "national_value": 0.738418469
+    },
+    {
+      "date": "2026-01-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.761047367,
+      "national_value": 0.724512093
+    },
+    {
+      "date": "2026-02-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.758008934,
+      "national_value": 0.740553024
+    },
+    {
+      "date": "2026-03-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.743884568,
+      "national_value": 0.771114826
+    },
+    {
+      "date": "2026-04-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "ae_4_hour",
+      "metric_name": "A&E 4-hour performance",
+      "unit": "percentage",
+      "provider_value": 0.772054606,
+      "na
+JSON cancer_62_day 200 application/json; charset=utf-8 {
+  "metadata": {
+    "provider": {
+      "code": "RJ1",
+      "name": "Guy's and St Thomas'"
+    },
+    "metric": {
+      "code": "cancer_62_day",
+      "name": "Cancer 62-day combined",
+      "unit": "percentage"
+    },
+    "nationalIncluded": true,
+    "rowCount": 12,
+    "dateRange": {
+      "from": "2025-09-01",
+      "to": "2026-08-01"
+    },
+    "generatedAt": "2026-11-06T14:31:57.627Z",
+    "contextUrl": null
+  },
+  "rows": [
+    {
+      "date": "2025-09-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.503,
+      "national_value": 0.68
+    },
+    {
+      "date": "2025-10-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.507,
+      "national_value": 0.691
+    },
+    {
+      "date": "2025-11-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.547,
+      "national_value": 0.705
+    },
+    {
+      "date": "2025-12-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.634,
+      "national_value": 0.721
+    },
+    {
+      "date": "2026-01-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.574,
+      "national_value": 0.686
+    },
+    {
+      "date": "2026-02-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.535,
+      "national_value": 0.689
+    },
+    {
+      "date": "2026-03-01",
+      "provider_code": "RJ1",
+      "provider_name": "Guy's and St Thomas'",
+      "metric_code": "cancer_62_day",
+      "metric_name": "Cancer 62-day combined",
+      "unit": "percentage",
+      "provider_value": 0.646,
+      "national_value": 0.729
+    },
+    {
+      "date":
+M Diagnostics Accident and Emergency Elective Elective proportion waiting within 18 weeks This metric
+M Current Performance 67.7% Rank: 35 of 117 National Average 65.2%
+M latest available at Aug 2026
+M latest available at Aug 2026
+M Elective proportion waiting over 52 weeks This metric
+M Current Performance 0.8% Rank: 45 of 117 National Average 1.5%
+M latest available at Aug 2026
+M latest available at Aug 2026
+M The standard reflects
+M Current Performance 86.7% Rank: 12 of 117 National Average 78.6%
+M latest available at Aug 2026
+M latest available at Aug 2026
+M The standard reflects
+M Current Performance 88.9% Rank: 100 of 117 National Average 92.1%
+M latest available at Aug 2026
+M latest available at Aug 2026
+M The standard reflects
+M Current Performance 65.8% Rank: 90 of 117 National Average 71.9%
+M latest available at Aug 2026
+M latest available at Aug 2026
+M Current Performance 26.3% Rank: 83 of 117 National Average 24.7%
+M latest available at Aug 2026
+M latest available at Aug 2026
+M Accident and Emergency A&E 4-hour performance This metric
+M Current Performance 75.4% Rank: 51 of 117 National Average 74.4%
+M latest available at Sept 2026
+M latest available at Sept 2026
+M A&E 12-hour performance This metric
+M Current Performance 1.5% Rank: 5 of 117 National Average 10.1%
+M latest available at Sept 2026
+M latest available at Sept 2026
+DIAG Diagnostics Diagnostics proportion waiting over 6 weeks The purpose of this dataset is to measure waits and monitor activity for 15 key diagnostic tests. Early diagnosis is important to patients and central to improving outcomes. Lower percentages indicate better performance. Current Performance 26.3% Rank: 83 of 117 National Average 24.7% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing Diagnostics proportion waiting over 6 weeks compared to national average. Up to latest available at Aug 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance chart
+AE age 24.7% Download Download the data powering this chart as CSV or JSON. Download CSV Download JSON Accident and Emergency A&E 4-hour performance This metric reflects the proportion of patients who waited less than 4 hours from arrival, to admission, transfer or discharge.. Higher percentages indicate better performance. From April 2026, the 4-hour performance metric displayed in the report, including the time series data, is based on the acute trust footprint. In previous months, 4-hour performance data was based on provider level data. Current Performance 75.4% Rank: 51 of 117 National Average 74.4% Providers: 134 ( 117 ranked ) Chart Data Download Chart Performance chart for Guy's and St Thomas' showing A&E 4-hour performance compared to national average. Up to latest available at Sept 2026. JavaScript required We're sorry but charts don't work properly without JavaScript enabled. Please enable JavaScript to view performance charts, or use the Data tab below for tabular information. Guy's and St Thomas' National Average Data Performance table for Guy's and St Thomas' showing A&E 4-hour performance over the last 12 months compared to national average. Up to latest available at Sept 2026. Monthly A&E 4-hour performance performance data for Guy's and St Thomas' - last 12 months with national average comparison Month Guy's and St Thomas' National Average Month Oct 25 Guy's and St Thomas' 77.3% National Average 74.2% Month Nov 25 Guy's and St Thomas' 80.1% National Average 74.2% Month Dec 25 Guy's and St Thomas' 79% National Average 73.8% Month Jan 26 Guy's and St Thomas' 76.
