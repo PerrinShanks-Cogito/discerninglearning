@@ -1,5 +1,7 @@
-import subprocess, sys
-r=subprocess.run([sys.executable,"scripts/landmark_numbers/update_performance.py"],capture_output=True,text=True)
-print(r.stdout); print(r.stderr)
-print("JSON"); print(open("_data/landmark_performance.json").read())
-# run 1793976391
+import requests, re, json
+s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (landmark-numbers)"})
+for pid in [294161,275980]:
+    raw=json.dumps(s.get(f"https://www.england.nhs.uk/wp-json/wp/v2/documents/{pid}",timeout=60).json())
+    for m in re.finditer(r"app\.powerbi\.com",raw):
+        print(pid,"CONTEXT",raw[max(0,m.start()-700):m.start()+200].replace("\\n"," "))
+        print()
