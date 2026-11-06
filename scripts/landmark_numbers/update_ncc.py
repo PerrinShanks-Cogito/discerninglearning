@@ -2,7 +2,8 @@
 """Refresh the NHS cost landmark numbers from NHS England's National Cost Collection.
 
 Finds the latest "National Cost Collection Data Publication" through NHS England's
-WordPress API, downloads the organisation-level cost file and the cost index (NCCI),
+WordPress API, downloads the cost index (NCCI) files, which give cost and activity
+for every trust by department and service,
 and writes national averages and one trust's figures to _data/landmark_ncc.json,
 which the Landmark Numbers page reads.
 
@@ -26,8 +27,8 @@ OUT = Path(__file__).resolve().parents[2] / "_data" / "landmark_ncc.json"
 SESSION = requests.Session()
 SESSION.headers["User-Agent"] = "Mozilla/5.0 (Discerning Learning landmark numbers)"
 
-# Each landmark: departments (and optionally service codes) from the
-# organisation-level file, summed as total cost / total activity.
+# Each landmark: departments (and optionally service codes) from the NCCI
+# department and service file, summed as total cost / total activity.
 METRICS = [
     {"key": "ae_major", "label": "A&E attendance at a major (type 1) emergency department",
      "unit": "attendance", "departments": ["EC"], "services": ["01EC"],
@@ -112,22 +113,31 @@ def col(df, *names):
     sys.exit(f"Missing column {names} in {list(df.columns)}")
 
 
-def org_costs(url):
-    z = read_zip(url)
-    name = next(n for n in z.namelist() if n.lower().endswith(".csv"))
-    df = pd.read_csv(z.open(name), encoding="utf-8-sig", low_memory=False)
+def money(series):
+    return pd.to_numeric(series.astype(str).str.replace(r"[£,Â\s]", "", regex=True), errors="coerce")
+
+
+def department_costs(z):
+    """Cost and activity by provider, department and service (the NCCI detail file).
+
+    Cells with very small activity are suppressed ("*") for confidentiality; they are
+    left out of both cost and activity so each unit cost stays like-for-like.
+    """
+    name = next(n for n in z.namelist() if re.search(r"Department and Service Unadjusted\.csv$", n, re.I))
+    df = pd.read_csv(z.open(name), encoding="utf-8-sig", dtype=str)
     out = pd.DataFrame({
-        "provider": df[col(df, "Provider Code")].astype(str).str.strip(),
-        "department": df[col(df, "Department Code")].astype(str).str.strip(),
-        "service": df[col(df, "Service Code")].astype(str).str.strip(),
-        "activity": pd.to_numeric(df[col(df, "Activity")], errors="coerce"),
-        "cost": pd.to_numeric(df[col(df, "Actual Cost")], errors="coerce"),
+        "provider": df[col(df, "Provider")].str.split(" - ").str[0].str.strip(),
+        "department": df[col(df, "Department")].str.split(" - ").str[0].str.strip(),
+        "service": df[col(df, "Service")].str.split(" - ").str[0].str.strip(),
+        "activity": money(df[col(df, "Activity")]),
+        "cost": money(df[col(df, "Actual Cost")]),
     })
-    return out.dropna(subset=["activity", "cost"])
+    total_cost = out.cost.sum()
+    trust_cost = out.groupby("provider").cost.sum()
+    return out.dropna(subset=["activity", "cost"]), total_cost, trust_cost
 
 
-def ncci(url, provider):
-    z = read_zip(url)
+def ncci(z, provider):
     name = next(n for n in z.namelist() if re.search(r"Mapping Pot MFF Adjusted\.xlsx$", n, re.I))
     raw = pd.read_excel(io.BytesIO(z.read(name)), header=None)
     pots = raw.iloc[0].tolist()
@@ -147,7 +157,7 @@ def ncci(url, provider):
 def remember(x):
     """Round to two significant figures for the 'remember it as' column."""
     if x >= 10000:
-        return f"£{round(x / 1000):,}k" if x < 100000 else f"£{round(x, -3):,.0f}"
+        return f"£{round(x, -3):,.0f}"
     digits = len(str(int(x))) - 2
     return f"£{round(x, -digits):,.0f}"
 
@@ -163,12 +173,12 @@ def unit_costs(d, provider):
         trust = p.cost.sum() / p.activity.sum() if p.activity.sum() > 0 else None
         rows.append({
             "key": m["key"], "label": m["label"], "unit": m["unit"], "use": m["use"],
-            "national": round(nat, 2), "national_remember": remember(nat),
+            "national": round(float(nat), 2), "national_remember": remember(nat),
             "national_activity": int(sel.activity.sum()),
-            "trust": round(trust, 2) if trust else None,
+            "trust": round(float(trust), 2) if trust else None,
             "trust_remember": remember(trust) if trust else None,
             "trust_activity": int(p.activity.sum()),
-            "difference_pct": round((trust / nat - 1) * 100) if trust else None,
+            "difference_pct": int(round((trust / nat - 1) * 100)) if trust else None,
         })
     return rows
 
@@ -192,26 +202,26 @@ def main():
 
     year, doc = latest_publication()
     urls = file_urls(doc)
-    org_url = pick(urls, r"Org_File_?1\b|Org_File1")
     ncci_url = pick(urls, r"NCCI")
-    print("Edition", year, "\n ", org_url, "\n ", ncci_url)
+    print("Edition", year, "\n ", ncci_url)
 
-    d = org_costs(org_url)
+    z = read_zip(ncci_url)
+    d, total_cost, trust_cost = department_costs(z)
     rows = unit_costs(d, args.provider)
     sanity(d, rows)
-    ncci_total, ncci_areas = ncci(ncci_url, args.provider)
+    ncci_total, ncci_areas = ncci(z, args.provider)
 
     data = {
         "edition": year,
         "costs_financial_year": year,
         "published": doc.get("date", "")[:10],
         "source_page": doc.get("link"),
-        "source_files": [org_url, ncci_url],
+        "source_files": [ncci_url],
         "provider_code": args.provider,
         "provider_name": args.provider_name,
         "providers_in_collection": int(d.provider.nunique()),
-        "national_total_cost_bn": round(d.cost.sum() / 1e9, 1),
-        "trust_total_cost_bn": round(d[d.provider == args.provider].cost.sum() / 1e9, 2),
+        "national_total_cost_bn": round(total_cost / 1e9, 1),
+        "trust_total_cost_bn": round(trust_cost.get(args.provider, 0) / 1e9, 2),
         "ncci_total": ncci_total,
         "ncci_areas": ncci_areas,
         "unit_costs": rows,
