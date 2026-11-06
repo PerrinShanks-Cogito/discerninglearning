@@ -1,35 +1,37 @@
-GET https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/ 202 1999 text/html; charset=UTF-8 CloudFront
-  BODY <!DOCTYPE html> <html lang="en"> <head>     <meta charset="utf-8">     <meta name="viewport" content="width=device-width, initial-scale=1">     <title></title>     <style>         body {             font-family: "Arial";         }     </style>     <script type="text/javascript">     window.awsWafCookieDomainList = [];     window.gokuProps = { "key":"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg9
-GET https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/ 202 1999 text/html; charset=UTF-8 CloudFront
-  BODY <!DOCTYPE html> <html lang="en"> <head>     <meta charset="utf-8">     <meta name="viewport" content="width=device-width, initial-scale=1">     <title></title>     <style>         body {             font-family: "Arial";         }     </style>     <script type="text/javascript">     window.awsWafCookieDomainList = [];     window.gokuProps = { "key":"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg9
-GET https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/ 202 1999 text/html; charset=UTF-8 CloudFront
-  BODY <!DOCTYPE html> <html lang="en"> <head>     <meta charset="utf-8">     <meta name="viewport" content="width=device-width, initial-scale=1">     <title></title>     <style>         body {             font-family: "Arial";         }     </style>     <script type="text/javascript">     window.awsWafCookieDomainList = [];     window.gokuProps = { "key":"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg9
-GET https://www.england.nhs.uk/wp-json/wp/v2/media?per_page=50&search=national%20schedule 200 12464 application/json; charset=UTF-8 nginx
-MEDIA 2024-10-04T10:06:40 https://www.england.nhs.uk/wp-content/uploads/2024/07/national-schedule-of-NHS-costs-22-23-lns.xlsx
-MEDIA 2023-09-14T16:56:38 https://www.england.nhs.uk/wp-content/uploads/2022/11/PRN00787-Letter-ahead-of-action-September-2023-and-October-2023.pdf
-MEDIA 2023-07-20T13:08:57 https://www.england.nhs.uk/wp-content/uploads/2022/11/PRN00617_Annexes-Industrial-Action-Society-of-Radiographers-SoR-08-00-Tuesday-25-July-to-08-00-Thursday-27-Jul.pdf
-MEDIA 2022-12-16T17:10:05 https://www.england.nhs.uk/wp-content/uploads/2022/12/PRN00076-industrial-action-workforce-and-rescheduled-activity-situation-report-SitRep-data-collections-dec-22.pdf
-MEDIA 2022-12-09T09:39:48 https://www.england.nhs.uk/wp-content/uploads/2022/11/RCN-Industrial-Action-Workforce-and-rescheduling-SitRep-data-collections-via-SDCS_December-2022.pdf
-GET https://www.england.nhs.uk/wp-json/wp/v2/media?per_page=50&search=national%20cost%20collection%20index 200 12314 application/json; charset=UTF-8 nginx
-MEDIA 2024-10-04T10:08:18 https://www.england.nhs.uk/wp-content/uploads/2024/07/the-national-cost-collection-index-22-23.xlsx
-MEDIA 2023-04-18T14:35:02 https://www.england.nhs.uk/wp-content/uploads/2023/04/3_The_national_cost_collection_index_NCCI_FY21-22_v3.xlsx
-MEDIA 2023-04-18T14:34:47 https://www.england.nhs.uk/wp-content/uploads/2023/04/4_NCCI_by_department_and_service_code_FY21-22_v2.xlsx
-MEDIA 2023-04-05T14:36:11 https://www.england.nhs.uk/wp-content/uploads/2023/04/3_The_national_cost_collection_index_NCCI_FY21-22_v1-1.xlsx
-MEDIA 2023-04-05T10:25:01 https://www.england.nhs.uk/wp-content/uploads/2023/04/4_NCCI_by_department_and_service_code_2022.xlsx
-MEDIA 2020-08-24T12:43:17 https://www.england.nhs.uk/wp-content/uploads/2020/08/3_-_The_national_cost_collection_index_NCCI_V2.xlsx
-GET https://www.england.nhs.uk/wp-json/wp/v2/media?per_page=50&search=2024/25%20National%20Cost%20Collection 200 2 application/json; charset=UTF-8 nginx
-GET https://www.england.nhs.uk/wp-json/wp/v2/media?per_page=50&search=NCC%202024 200 25678 application/json; charset=UTF-8 nginx
-MEDIA 2024-11-27T08:20:08 https://www.england.nhs.uk/wp-content/uploads/2023/04/Organisation_level_source_data_3_2223-v2.zip
-MEDIA 2024-11-27T08:19:10 https://www.england.nhs.uk/wp-content/uploads/2023/04/Organisation_level_source_data_2_2223-v2.zip
-MEDIA 2024-11-27T08:17:51 https://www.england.nhs.uk/wp-content/uploads/2023/04/Organisation_level_source_data_1_2223-v2.zip
-MEDIA 2024-10-09T12:04:35 https://www.england.nhs.uk/wp-content/uploads/2024/07/ncc-schedule-2022-23-org-level-data-2-v2.zip
-MEDIA 2024-10-09T12:03:50 https://www.england.nhs.uk/wp-content/uploads/2024/07/ncc-schedule-2022-23-org-level-data-1-v2.zip
-MEDIA 2024-09-27T14:05:14 https://www.england.nhs.uk/wp-content/uploads/2024/07/ncc-schedule-2022-23-org-level-data-3.zip
-MEDIA 2024-09-27T14:05:05 https://www.england.nhs.uk/wp-content/uploads/2024/07/ncc-schedule-2022-23-org-level-data-2.zip
-MEDIA 2024-09-27T14:04:46 https://www.england.nhs.uk/wp-content/uploads/2024/07/ncc-schedule-2022-23-org-level-data-1.zip
-MEDIA 2024-04-09T15:27:27 https://www.england.nhs.uk/wp-content/uploads/2021/06/ACCTS-EHIA-ACC-Transfer-March-2024.pdf
-MEDIA 2023-11-10T16:19:00 https://www.england.nhs.uk/wp-content/uploads/2023/11/2124-cc-policy-siltuximab-castleman-disease-updated.pdf
-MEDIA 2020-10-29T17:28:19 https://www.england.nhs.uk/wp-content/uploads/2020/10/2020-10-19-NCCG-Vol-5ii-for-2020-Coll-Year.pdf
-MEDIA 2020-10-29T17:27:17 https://www.england.nhs.uk/wp-content/uploads/2020/10/2020-10-19-NCCG-Vol-5i-for-2020-Coll-Year.pdf
-MEDIA 2020-10-29T17:26:06 https://www.england.nhs.uk/wp-content/uploads/2020/10/2020-10-19-NCCG-Vol-4-for-2020-Coll-Year.pdf
-MEDIA 2016-03-09T22:00:14 https://www.england.nhs.uk/wp-content/uploads/2016/03/tr1-acc-cquin-icnarc-daag-delayd-dischrg.xlsx
+SEARCH 200
+HIT 2019/20 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2019-20-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/176199']
+HIT 2020/21 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2020-21-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/198140']
+HIT 2025/26 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2025-26-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/294161']
+HIT 2018/19 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2018-19-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/177817']
+HIT 2021/22 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2021-22-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/216111']
+HIT 2023/24 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2023-24-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/256989']
+HIT 2022/23 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2022-23-national-cost-collection-data-publication-2/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/256979']
+HIT 2024/25 National Cost Collection Data Publication https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/ document ['https://www.england.nhs.uk/wp-json/wp/v2/documents/275980']
+HIT National Cost Collection for the NHS https://www.england.nhs.uk/costing-in-the-nhs/national-cost-collection/ page ['https://www.england.nhs.uk/wp-json/wp/v2/pages/161217']
+HIT Summary of Amendment to the Cost Recovery Collection, Processing and Dissemination of overseas visitor and UK Patient-Level Data Directions 2021 issued to NHS England by the Secretary of State on 9 June 2023 https://www.england.nhs.uk/long-read/summary-of-amendment-to-the-cost-recovery-collection-processing-and-dissemination/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/225371']
+HIT 2025/26 NHS Payment Scheme &#8211; Annex D: Prices and cost adjustments https://www.england.nhs.uk/long-read/25-26-nhsps-annex-d-prices-and-cost-adjustments/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/263856']
+HIT Integrated information requirements, costing processes and costing methods 2026 https://www.england.nhs.uk/long-read/integrated-costing-standards-2026/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/261840']
+HIT NHS productivity growth estimate (2025/26) &#8211; methodology https://www.england.nhs.uk/long-read/nhs-productivity-growth-estimate-2025-26-methodology/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/282315']
+HIT Ambulance information requirements, costing processes and costing methods 2026 https://www.england.nhs.uk/long-read/ambulance-costing-standards-2026/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/261846']
+HIT Federated Data Platform Check and Challenge Group – minutes and action notes: 25 April 2025 https://www.england.nhs.uk/long-read/federated-data-platform-check-and-challenge-group-minutes-and-action-notes-25-april-2025/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/269102']
+HIT Ambulance information requirements, costing processes and costing methods 2024 https://www.england.nhs.uk/long-read/ambulance-costing-standards-2024/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/239906']
+HIT National Cost Collection guidance for acute, mental health, IAPT and community services 2024 https://www.england.nhs.uk/long-read/integrated-national-cost-collection-guidance-2024/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/241360']
+HIT National Cost Collection guidance for acute, mental health, Talking Therapies and community services 2026 https://www.england.nhs.uk/long-read/integrated-national-cost-collection-guidance-2026/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/261843']
+HIT Integrated information requirements, costing processes and costing methods 2024 https://www.england.nhs.uk/long-read/integrated-costing-standards-2024/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/241343']
+HIT National Cost Collection guidance for the ambulance sector 2024 https://www.england.nhs.uk/long-read/ambulance-national-cost-collection-guidance-2024/ long-read ['https://www.england.nhs.uk/wp-json/wp/v2/long-read/240238']
+
+PAGE https://www.england.nhs.uk/publication/2023-24-national-cost-collection-data-publication/ 2024-11-27T11:33:55 2025-11-06T08:06:22
+TEXT 
+
+PAGE https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/ 2025-11-06T13:27:09 2026-10-09T09:38:07
+TEXT 
+MEDIA 24-25 2025-02-26T16:44:30 https://www.england.nhs.uk/wp-content/uploads/2025/02/NCC-24-25-Extract-Spec-Integrated-v1.0.xlsx
+MEDIA 24-25 2025-02-26T16:43:02 https://www.england.nhs.uk/wp-content/uploads/2025/02/NCC-24-25-Extract-Spec-Ambulance-v1.0.xlsx
+Traceback (most recent call last):
+  File "/home/runner/work/discerninglearning/discerninglearning/explore/explore.py", line 19, in <module>
+    if re.search(r"(ncc|cost|schedule|ncci|organisation)",u,re.I): print("MEDIA",q,m.get("date"),u)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/re/__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'bool'
