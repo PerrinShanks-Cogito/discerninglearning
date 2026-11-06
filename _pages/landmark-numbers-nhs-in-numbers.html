@@ -1,0 +1,160 @@
+---
+title: The NHS in numbers
+description: A handful of figures for the size of the NHS in England, and simple ways to use them.
+permalink: /landmark-numbers/nhs-in-numbers/
+---
+{%- assign nhs = site.data.landmark_nhs -%}
+{%- assign ncc = site.data.landmark_ncc -%}
+{%- assign b = nhs.budget -%}
+{%- assign pop = nhs.population.value | times: 1.0 -%}
+{%- assign wl = nhs.waiting_list -%}
+{%- assign gp = nhs.gp_appointments -%}
+{%- assign wf = nhs.workforce -%}
+{%- assign ae_all = ncc.unit_costs | where: "key", "ae_all" | first -%}
+{%- assign ae_major = ncc.unit_costs | where: "key", "ae_major" | first -%}
+{%- assign elective = ncc.unit_costs | where: "key", "elective" | first -%}
+{%- assign day_case = ncc.unit_costs | where: "key", "day_case" | first -%}
+{%- assign op = ncc.unit_costs | where: "key", "op_consultant" | first -%}
+
+{%- assign per_day_m = b.value_bn | times: 1000 | divided_by: 365 | round -%}
+{%- assign per_hour_m = b.value_bn | times: 1000 | divided_by: 8760 | round -%}
+{%- assign per_person = b.value_bn | times: 1000000000 | divided_by: pop | divided_by: 10 | round | times: 10 -%}
+{%- assign ae_per_day = ae_all.national_activity | times: 1.0 | divided_by: 365 | divided_by: 100 | round | times: 100 -%}
+{%- assign ae_major_per_day = ae_major.national_activity | times: 1.0 | divided_by: 365 | divided_by: 100 | round | times: 100 -%}
+{%- assign gp_per_day = gp.month_m | divided_by: gp.days_in_month | round: 2 -%}
+{%- assign staff_ratio = pop | divided_by: wf.headcount | round -%}
+{%- assign wl_ratio = wl.patients_m | times: 1000000 | divided_by: pop -%}
+{%- assign wl_one_in = 1 | divided_by: wl_ratio | round -%}
+{%- assign nurse_pct = 10000.0 | divided_by: wf.nurses_midwives | times: 100 | round: 1 -%}
+{%- assign announce_hours = 50.0 | divided_by: per_hour_m | round: 1 -%}
+
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+
+<p class="landmark-meta">
+  Figures reviewed <strong>{{ nhs.last_reviewed | date: "%-d %B %Y" }}</strong>. Each one says which period
+  it covers. The activity and cost figures come from the
+  <a href="{{ '/landmark-numbers/nhs-costs/' | relative_url }}">NHS costs</a> data, last checked
+  {{ ncc.last_checked | date: "%-d %B %Y" }}. I check for newer figures every quarter.
+</p>
+
+<p>
+  The NHS is too big to picture, which makes almost any number about it sound large. These figures
+  are for the NHS in England. The per-day and per-person versions are the ones worth remembering:
+  they turn a headline into something you can compare.
+</p>
+
+<h2 id="money">Money</h2>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ b.period }}</p>
+    <p class="nhs-stat__figure">£{{ b.value_bn | round }} billion</p>
+    <h3 class="nhs-stat__label">NHS England's day-to-day budget</h3>
+    <p class="nhs-stat__so">That's about <strong>£{{ per_day_m }} million a day</strong>, or £{{ per_hour_m }} million an hour.
+      It is planned to reach {% for l in b.later %}£{{ l.value_bn | round }} billion in {{ l.period }}{% unless forloop.last %} and {% endunless %}{% endfor %}.</p>
+    <p class="nhs-stat__source"><a href="{{ b.url }}">{{ b.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ b.period }} budget, {{ nhs.population.period }} population</p>
+    <p class="nhs-stat__figure">£{% include thousands.html n=per_person %}</p>
+    <h3 class="nhs-stat__label">NHS spending per person in England, per year</h3>
+    <p class="nhs-stat__so">Spread across about {{ pop | divided_by: 1000000 | round: 1 }} million people. That's roughly £{{ per_person | times: 1.0 | divided_by: 365 | round }} a day each.</p>
+    <p class="nhs-stat__source"><a href="{{ nhs.population.url }}">{{ nhs.population.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ ncc.costs_financial_year }} costs</p>
+    <p class="nhs-stat__figure">£{{ ncc.national_total_cost_bn }} billion</p>
+    <h3 class="nhs-stat__label">Costs counted in NHS England's cost collection</h3>
+    <p class="nhs-stat__so">What {{ ncc.providers_in_collection }} NHS trusts spent providing care, not counting high-cost drugs.
+      <a href="{{ '/landmark-numbers/nhs-costs/' | relative_url }}">See what individual items cost</a>.</p>
+    <p class="nhs-stat__source"><a href="{{ ncc.source_page }}">NHS England, National Cost Collection {{ ncc.edition }}</a></p>
+  </section>
+</div>
+
+<h2 id="activity">Activity</h2>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ gp.period }}</p>
+    <p class="nhs-stat__figure">{{ gp.month_m }} million</p>
+    <h3 class="nhs-stat__label">Appointments in general practice in a month</h3>
+    <p class="nhs-stat__so">About <strong>{{ gp_per_day }} million a day</strong>. {{ gp.face_to_face_pct | round }}% were face to face,
+      and {{ gp.same_day_pct | round }}% happened on the day they were booked. Months vary: autumn is busy.</p>
+    <p class="nhs-stat__source"><a href="{{ gp.url }}">{{ gp.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ ncc.costs_financial_year }}</p>
+    <p class="nhs-stat__figure">{{ ae_all.national_activity_text }}</p>
+    <h3 class="nhs-stat__label">Emergency care attendances in a year</h3>
+    <p class="nhs-stat__so">About <strong>{% include thousands.html n=ae_per_day %} a day</strong>, of which about
+      {% include thousands.html n=ae_major_per_day %} are at major (type 1) A&amp;E departments.</p>
+    <p class="nhs-stat__source"><a href="{{ ncc.source_page }}">NHS England, National Cost Collection {{ ncc.edition }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ ncc.costs_financial_year }}</p>
+    <p class="nhs-stat__figure">{{ op.national_activity_text }}</p>
+    <h3 class="nhs-stat__label">Consultant-led outpatient appointments in a year</h3>
+    <p class="nhs-stat__so">Plus {{ day_case.national_activity_text }} day cases and {{ elective.national_activity_text }} planned
+      inpatient stays.</p>
+    <p class="nhs-stat__source"><a href="{{ ncc.source_page }}">NHS England, National Cost Collection {{ ncc.edition }}</a></p>
+  </section>
+</div>
+
+<h2 id="people">People</h2>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ wf.period }}</p>
+    <p class="nhs-stat__figure">{{ wf.headcount | divided_by: 100000.0 | round | divided_by: 10.0 }} million</p>
+    <h3 class="nhs-stat__label">People working for the NHS</h3>
+    <p class="nhs-stat__so">About {{ wf.fte | divided_by: 100000.0 | round | divided_by: 10.0 }} million full-time equivalents. That's roughly
+      <strong>1 in {{ staff_ratio }} people in England</strong>, and one of the largest employers in the world.</p>
+    <p class="nhs-stat__source"><a href="{{ wf.url }}">{{ wf.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ wf.period }}</p>
+    <p class="nhs-stat__figure">{{ wf.nurses_midwives | divided_by: 1000 }},000</p>
+    <h3 class="nhs-stat__label">Nurses and midwives</h3>
+    <p class="nhs-stat__so">And about {{ wf.doctors | divided_by: 1000 }},000 doctors, including {% include thousands.html n=wf.gps_fte %} full-time-equivalent GPs.
+      Doctors and nurses together are well under half of NHS staff.</p>
+    <p class="nhs-stat__source"><a href="{{ wf.url }}">{{ wf.source }}</a></p>
+  </section>
+</div>
+
+<h2 id="pressure">Pressure</h2>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ wl.period }}</p>
+    <p class="nhs-stat__figure">{{ wl.pathways_m }} million</p>
+    <h3 class="nhs-stat__label">Treatments waiting on the planned-care list</h3>
+    <p class="nhs-stat__so">That's about {{ wl.patients_m }} million people, since some are waiting for more than one
+      treatment: roughly <strong>1 in {{ wl_one_in }} people in England</strong>.
+      {% include thousands.html n=wl.over_52_weeks %} had waited over a year.</p>
+    <p class="nhs-stat__source"><a href="{{ wl.url }}">{{ wl.source }}</a></p>
+  </section>
+</div>
+
+<h2 id="rules-of-thumb">Rules of thumb</h2>
+<ul class="nhs-rules">
+  <li><strong>Divide by 365.</strong> NHS England spends about £{{ per_day_m }} million a day, so a £50 million
+    announcement is about {{ announce_hours }} hours of NHS running costs.</li>
+  <li><strong>Divide by the population.</strong> With about {{ pop | divided_by: 1000000 | round }} million people, every
+    £1 billion is about £{{ 1000000000 | divided_by: pop | round }} per person.</li>
+  <li><strong>Divide by the workforce.</strong> With about {{ wf.nurses_midwives | divided_by: 1000 }},000 nurses and
+    midwives, "10,000 extra nurses" is about {{ nurse_pct }}% more.</li>
+  <li><strong>Count pathways or people?</strong> The waiting list counts treatments, not patients. Check which one a
+    headline uses before comparing it with anything else.</li>
+  <li><strong>Check the period.</strong> A monthly figure, a yearly figure and a financial-year figure can't be
+    compared directly, and months vary with the seasons.</li>
+</ul>
+
+<details class="landmark-method">
+  <summary>Where these figures come from</summary>
+  <p>
+    Each card links to its source. Activity and cost figures come from NHS England's National Cost Collection
+    and update automatically when a new edition is published. The budget, population, workforce, GP appointment
+    and waiting list figures are updated after a quarterly check for newer releases. The per-day, per-person and
+    "1 in" figures are worked out from the figures shown, so they change with them.
+  </p>
+  <p>
+    This is my personal site, so these are my reading of public data, not an official view of the NHS or of
+    Guy's and St Thomas' NHS Foundation Trust.
+  </p>
+</details>
