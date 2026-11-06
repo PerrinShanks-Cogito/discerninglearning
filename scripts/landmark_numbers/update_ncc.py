@@ -149,7 +149,7 @@ def ncci(z, provider):
     for i, label in enumerate(pots[1:], start=1):
         v = pd.to_numeric(row[i], errors="coerce")
         if pd.notna(v):
-            areas.append({"area": re.sub(r"^\d+_[^ ]+ - ", "", str(label)), "index": round(float(v))})
+            areas.append({"area": re.sub(r"^\d+_[^ ]+ - ", "", str(label)).replace(" And ", " and "), "index": round(float(v))})
     total = next((a["index"] for a in areas if a["area"] == "Total"), None)
     return total, [a for a in areas if a["area"] != "Total"]
 
@@ -160,6 +160,13 @@ def remember(x):
         return f"£{round(x, -3):,.0f}"
     digits = len(str(int(x))) - 2
     return f"£{round(x, -digits):,.0f}"
+
+
+def count(n):
+    """Readable activity count, e.g. 17.2 million or 124,000."""
+    if n >= 1e6:
+        return f"{n / 1e6:.1f} million"
+    return f"{round(n, -(len(str(int(n))) - 3)):,.0f}" if n >= 1000 else str(int(n))
 
 
 def unit_costs(d, provider):
@@ -175,9 +182,11 @@ def unit_costs(d, provider):
             "key": m["key"], "label": m["label"], "unit": m["unit"], "use": m["use"],
             "national": round(float(nat), 2), "national_remember": remember(nat),
             "national_activity": int(sel.activity.sum()),
+            "national_activity_text": count(sel.activity.sum()),
             "trust": round(float(trust), 2) if trust else None,
             "trust_remember": remember(trust) if trust else None,
             "trust_activity": int(p.activity.sum()),
+            "trust_activity_text": count(p.activity.sum()),
             "difference_pct": int(round((trust / nat - 1) * 100)) if trust else None,
         })
     return rows

@@ -102,6 +102,21 @@ new commit). Watch progress on the repo's **Actions** tab.
   Run workflow**. To run it on your own computer instead:
   `./scripts/word-to-markdown.sh` (needs Pandoc).
 
+## Landmark Numbers
+
+`/landmark-numbers/` (`_pages/landmark-numbers.html`) shows reference numbers
+for putting other figures in context, an idea from Tim Harford's *How to Make
+the World Add Up*. The NHS cost table reads `_data/landmark_ncc.json`, which
+`scripts/landmark_numbers/update_ncc.py` builds from NHS England's latest
+National Cost Collection: national averages compared with Guy's and St Thomas'
+(provider code RJ1), plus the trust's cost index.
+
+To refresh the figures, go to **Actions → Refresh landmark numbers → Run
+workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the
+latest edition, commits the JSON if anything changed (it always updates the
+"last checked" date) and the site redeploys. A quarterly Claude scheduled task
+does this automatically and reports what changed.
+
 ## Images
 
 Images are stored under `assets/images/uploads/`. `scripts/fetch-images.sh`

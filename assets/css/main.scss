@@ -212,6 +212,53 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .prose td, .prose th { border: 1px solid var(--border); padding: 0.6rem 0.8rem; vertical-align: top; text-align: left; }
 .prose td:first-child { font-weight: 600; white-space: nowrap; }
 
+// Landmark Numbers page (_pages/landmark-numbers.html).
+.landmark-meta {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+.prose table.landmark-table { display: table; font-variant-numeric: tabular-nums; }
+.prose .landmark-table thead th { font-size: 0.85rem; color: var(--muted); font-weight: 600; vertical-align: bottom; }
+.prose .landmark-table tbody th { font-weight: 600; white-space: normal; }
+.prose .landmark-table .num { text-align: right; white-space: nowrap; }
+.prose .landmark-table td.num { font-size: 1.05rem; }
+.landmark-note { display: block; margin-top: 0.25rem; font-weight: 400; font-size: 0.85rem; color: var(--muted); }
+.landmark-index { font-size: 1.15rem; }
+.landmark-index strong { font-size: 1.6rem; color: var(--accent); }
+.prose .landmark-table--index .landmark-index-cell { display: flex; align-items: center; gap: 0.6rem; font-size: 1.05rem; }
+.landmark-bar {
+  display: inline-block;
+  width: calc(var(--w) * 0.05rem);
+  height: 0.6rem;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.75;
+}
+.landmark-method { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.landmark-method summary { cursor: pointer; font-weight: 600; }
+// On phones each cost row becomes a small card: the label on top, three figures below.
+@media (max-width: 600px) {
+  .prose .landmark-table--costs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .prose .landmark-table--costs, .prose .landmark-table--costs tbody { display: block; }
+  .prose .landmark-table--costs tr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border);
+    margin-bottom: 0.75rem;
+  }
+  .prose .landmark-table--costs th, .prose .landmark-table--costs td { border: 0; padding: 0.5rem 0.6rem; }
+  .prose .landmark-table--costs tbody th { grid-column: 1 / -1; border-bottom: 1px solid var(--border); }
+  .prose .landmark-table--costs td.num { text-align: left; white-space: normal; }
+  .prose .landmark-table--costs td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+}
+
 // Set by scripts/tidy-markdown.py for documents converted from Word.
 .doc-subtitle { margin-top: 0; font-size: 1.35rem; font-weight: 600; line-height: 1.35; }
 .prose table.stat-table {
