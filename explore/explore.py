@@ -1,29 +1,21 @@
-import requests, re, io, zipfile
-from bs4 import BeautifulSoup
-import pandas as pd
-H={"User-Agent":"Mozilla/5.0 (landmark-numbers bot)"}
-url="https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/"
-r=requests.get(url,headers=H,timeout=60); print("STATUS",r.status_code)
-s=BeautifulSoup(r.text,"html.parser")
-main=s.find("main") or s
-print("TEXT:", main.get_text(" ",strip=True)[:3000])
-links=[(a.get_text(strip=True),a["href"]) for a in s.find_all("a",href=True) if re.search(r"\.(xlsx|xls|zip|csv|pdf)$",a["href"],re.I)]
-for t,h in links: print("LINK",t,"|",h)
-for t,h in links:
-    if not re.search(r"\.(xlsx|xls)$",h,re.I): 
-        if h.lower().endswith(".zip"):
-            try:
-                z=requests.get(h,headers=H,timeout=300); print("ZIP",h,len(z.content))
-                zf=zipfile.ZipFile(io.BytesIO(z.content))
-                for n in zf.infolist()[:50]: print("  ZIPENTRY",n.filename,n.file_size)
-            except Exception as e: print("ZIPERR",e)
-        continue
-    try:
-        b=requests.get(h,headers=H,timeout=300).content
-        print("\n=== FILE",t,h,len(b))
-        x=pd.ExcelFile(io.BytesIO(b))
-        for sh in x.sheet_names:
-            df=x.parse(sh,header=None,nrows=25)
-            print("--- SHEET",sh, x.book[sh].max_row if hasattr(x,'book') else "")
-            print(df.iloc[:25,:12].to_string(max_colwidth=40))
-    except Exception as e: print("ERR",h,e)
+import requests, re, json, time
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+H={"User-Agent":UA,"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Accept-Language":"en-GB,en;q=0.9"}
+s=requests.Session(); s.headers.update(H)
+def show(u):
+    for i in range(3):
+        try:
+            r=s.get(u,timeout=60); print("GET",u,r.status_code,len(r.content),r.headers.get("content-type"),r.headers.get("server"))
+            if r.status_code==200: return r
+            print("  BODY",r.text[:400].replace("\n"," ")); time.sleep(5)
+        except Exception as e: print("ERR",u,e)
+pub="https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/"
+r=show(pub)
+if r is not None and r.status_code==200:
+    for h in set(re.findall(r'href="([^"]+\.(?:xlsx|xls|zip|csv|pdf))"',r.text,re.I)): print("LINK",h)
+for q in ["national schedule","national cost collection index","2024/25 National Cost Collection","NCC 2024"]:
+    r=show("https://www.england.nhs.uk/wp-json/wp/v2/media?per_page=50&search="+requests.utils.quote(q))
+    if r is not None and r.status_code==200:
+        try:
+            for m in r.json(): print("MEDIA",m.get("date"),m.get("source_url"))
+        except Exception as e: print("JSONERR",e,r.text[:200])
