@@ -1,0 +1,43 @@
+name: Refresh landmark numbers
+
+# Re-checks NHS England's National Cost Collection and updates
+# _data/landmark_ncc.json. Start it from Actions → Refresh landmark numbers →
+# Run workflow, or by committing a change to _data/landmark_refresh.txt (this is
+# what the quarterly Claude scheduled task does).
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "_data/landmark_refresh.txt"
+      - "scripts/landmark_numbers/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: landmark-numbers
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas openpyxl requests
+      - name: Fetch National Cost Collection figures
+        run: python scripts/landmark_numbers/update_ncc.py | tee landmark-refresh.log
+      - name: Commit updated figures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add _data/landmark_ncc.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            summary=$(grep -E "^(CHANGED|UNCHANGED)" landmark-refresh.log || true)
+            git commit -m "Refresh landmark numbers: ${summary}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

@@ -5,10 +5,11 @@ on:
     branches: ["main"]
     paths-ignore:
       - "word/**"
-  # Redeploy once uploaded Word documents have been converted to Markdown
+  # Redeploy once uploaded Word documents have been converted to Markdown, or
+  # the landmark numbers have been refreshed
   # (commits made by a workflow don't trigger the push event above).
   workflow_run:
-    workflows: ["Convert Word documents"]
+    workflows: ["Convert Word documents", "Refresh landmark numbers"]
     types: [completed]
     branches: ["main"]
   workflow_dispatch:
