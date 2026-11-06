@@ -4,6 +4,7 @@ description: A few reference numbers for judging whether another number is big o
 permalink: /landmark-numbers/
 ---
 {%- assign ncc = site.data.landmark_ncc -%}
+{%- assign perf = site.data.landmark_performance -%}
 
 <p>
   The idea comes from Tim Harford's
@@ -26,6 +27,17 @@ permalink: /landmark-numbers/
       <span>A major A&amp;E attendance</span>
       <strong>{{ ncc.unit_costs[0].national_remember }}</strong> in England,
       <strong>{{ ncc.unit_costs[0].trust_remember }}</strong> at GSTT
+    </p>
+  </a>
+  {%- assign ae = perf.metrics[0] %}
+  <a class="card card--link" href="{{ '/landmark-numbers/nhs-performance/' | relative_url }}">
+    <p class="card__meta">Data to {{ perf.latest_month_text }} &middot; checked {{ perf.last_checked | date: "%-d %B %Y" }}</p>
+    <h3 class="card__title">How the NHS is performing</h3>
+    <p>The eight headline waiting-time measures for A&amp;E, planned care, cancer and diagnostics: England, Guy's and St Thomas' and the ten Shelford Group teaching hospitals.</p>
+    <p class="landmark-tile__figure">
+      <span>A&amp;E patients seen within 4 hours ({{ ae.month_text }})</span>
+      <strong>{{ ae.national }}%</strong> in England,
+      <strong>{{ ae.trust }}%</strong> at GSTT
     </p>
   </a>
 </div>

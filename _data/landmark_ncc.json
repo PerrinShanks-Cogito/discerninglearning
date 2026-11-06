@@ -6,6 +6,10 @@
   "source_files": [
     "https://www.england.nhs.uk/wp-content/uploads/2026/10/NCC_FY2025-26_NCCI.zip"
   ],
+  "dashboards": {
+    "National schedule of NHS costs": "https://app.powerbi.com/view?r=eyJrIjoiNDk2ZTU1ODQtMjIzNi00OGNlLWE0ZmMtNjExY2U1NDAwZGUwIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9",
+    "National Cost Collection Index": "https://app.powerbi.com/view?r=eyJrIjoiN2Y4MzhiYmQtZDM0My00YjJmLWE0YWEtMjg2MGFjMjNmZmEyIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9"
+  },
   "provider_code": "RJ1",
   "provider_name": "Guy's and St Thomas'",
   "providers_in_collection": 205,

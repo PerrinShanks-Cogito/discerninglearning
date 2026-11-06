@@ -1,0 +1,156 @@
+---
+title: How the NHS is performing
+description: Headline waiting times for England, Guy's and St Thomas' and the Shelford Group of teaching hospitals.
+permalink: /landmark-numbers/nhs-performance/
+---
+{%- assign perf = site.data.landmark_performance -%}
+
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+
+<p class="landmark-meta">
+  Last checked <strong>{{ perf.last_checked | date: "%-d %B %Y" }}</strong>.
+  The figures last changed on {{ perf.last_updated | date: "%-d %B %Y" }}, and the latest month
+  of data is {{ perf.latest_month_text }}. NHS England publishes these monthly, and I check every quarter.
+</p>
+
+<p>
+  These are the eight headline waiting-time measures NHS England uses to rank hospital trusts, from its
+  <a href="{{ perf.source_page }}">public data gateway</a>. Each card compares Guy's and St Thomas'
+  with England as a whole and with the
+  <a href="{{ perf.shelford_source }}">Shelford Group</a>: the ten largest NHS teaching hospital trusts
+  in England, which are fairer peers for a big specialist hospital than the average trust.
+</p>
+
+<div class="perf-legend" aria-hidden="true">
+  <span><i class="perf-dot perf-dot--trust"></i> Guy's and St Thomas'</span>
+  <span><i class="perf-dot"></i> Other Shelford trusts</span>
+  <span><i class="perf-tick"></i> England</span>
+  <span><i class="perf-line perf-line--trust"></i> GSTT, last 12 months</span>
+  <span><i class="perf-line"></i> England, last 12 months</span>
+</div>
+
+<div class="perf-grid">
+  {%- for m in perf.metrics %}
+  {%- case m.shelford_position -%}
+    {%- when 1 -%}{%- assign ord = "1st" -%}
+    {%- when 2 -%}{%- assign ord = "2nd" -%}
+    {%- when 3 -%}{%- assign ord = "3rd" -%}
+    {%- else -%}{%- assign ord = m.shelford_position | append: "th" -%}
+  {%- endcase %}
+  <section class="card perf-card" aria-labelledby="perf-{{ m.code }}">
+    <p class="card__meta">{{ m.group }} &middot; {{ m.month_text }}</p>
+    <h2 class="perf-card__title" id="perf-{{ m.code }}">{{ m.label }}</h2>
+
+    <p class="perf-card__figure"><strong>{{ m.trust }}%</strong> at GSTT</p>
+    <dl class="perf-card__compare">
+      <div><dt>England</dt><dd>{{ m.national }}%</dd></div>
+      <div><dt>Shelford median</dt><dd>{{ m.shelford_median }}%</dd></div>
+      <div><dt>Standard</dt><dd>{{ m.standard }}</dd></div>
+    </dl>
+    <p class="perf-card__rank">
+      {% if m.shelford_tied %}Joint {{ ord }}{% else %}{{ ord | capitalize }}{% endif %} of {{ m.shelford_count }} Shelford trusts{% if m.rank %}
+      &middot; {{ m.rank }} of {{ m.ranked }} in England{% endif %}
+      <span class="perf-card__better">({{ m.better }} is better)</span>
+    </p>
+
+    {%- comment -%} Strip: every Shelford trust, with better always to the right. {%- endcomment %}
+    <div class="perf-strip" role="img"
+         aria-label="Shelford trusts range from {{ m.shelford_min }}% to {{ m.shelford_max }}%. GSTT {{ m.trust }}%, England {{ m.national }}%.">
+      <div class="perf-strip__track">
+        {%- if m.better == "lower" -%}{%- assign nx = 100 | minus: m.national_x -%}{%- else -%}{%- assign nx = m.national_x -%}{%- endif %}
+        <span class="perf-tick" style="left: {{ nx }}%"></span>
+        {%- for p in m.shelford %}
+        {%- if m.better == "lower" -%}{%- assign px = 100 | minus: p.x -%}{%- else -%}{%- assign px = p.x -%}{%- endif %}
+        <span class="perf-dot{% if p.is_trust %} perf-dot--trust{% endif %}" style="left: {{ px }}%" title="{{ p.name }}: {{ p.value }}%"></span>
+        {%- endfor %}
+      </div>
+      <div class="perf-strip__ends"><span>Worse</span><span>Better</span></div>
+    </div>
+
+    {%- if m.spark_trust != "" %}
+    <svg class="perf-spark" viewBox="0 0 120 32" preserveAspectRatio="none" role="img"
+         aria-label="GSTT and England over the 12 months from {{ m.trend_from }} to {{ m.month_text }}">
+      <polyline class="perf-spark__national" points="{{ m.spark_national }}" />
+      <polyline class="perf-spark__trust" points="{{ m.spark_trust }}" />
+    </svg>
+    <p class="perf-spark__caption">{{ m.trend_from }} to {{ m.month_text }}</p>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+</div>
+
+<h2 id="shelford-table">All ten Shelford trusts</h2>
+<p>The latest month for each measure. Guy's and St Thomas' is highlighted.</p>
+
+<table class="landmark-table perf-table">
+  <thead>
+    <tr>
+      <th scope="col">Trust</th>
+      {%- for m in perf.metrics %}
+      <th scope="col" class="num">{{ m.short }}<span class="landmark-note">{{ m.better }} is better</span></th>
+      {%- endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {%- assign trusts = perf.metrics[0].shelford | sort: "name" %}
+    {%- for t in trusts %}
+    <tr{% if t.is_trust %} class="perf-table__trust"{% endif %}>
+      <th scope="row">{{ t.name }}</th>
+      {%- for m in perf.metrics %}
+      {%- assign hit = m.shelford | where: "code", t.code | first %}
+      <td class="num">{% if hit %}{{ hit.value }}%{% else %}–{% endif %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endfor %}
+    <tr class="perf-table__england">
+      <th scope="row">England</th>
+      {%- for m in perf.metrics %}
+      <td class="num">{{ m.national }}%</td>
+      {%- endfor %}
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="reading-these">Reading these numbers</h2>
+<ul>
+  <li>
+    <strong>Look at the gaps, not just the positions.</strong> With ten trusts, coming 4th rather than 6th
+    can mean a difference of a fraction of a percentage point. The dot strips show how far apart the
+    trusts really are.
+  </li>
+  <li>
+    <strong>Specialist centres look worse on the 62-day cancer measure.</strong> Many of their patients
+    are referred on from other hospitals part-way through their pathway, after much of the 62 days has
+    already passed.
+  </li>
+  <li>
+    <strong>One month is one data point.</strong> These figures move around from month to month, so the
+    12-month trend lines matter more than any single value. A run of points is what tells you something
+    has really changed.
+  </li>
+  <li>
+    <strong>The standards are the NHS's long-standing ones.</strong> Each year's planning guidance also
+    sets interim targets that are lower than these, so a trust can meet its target and still miss the
+    standard.
+  </li>
+  <li>
+    <strong>"England" is the national figure shown on NHS England's data gateway.</strong> The gateway
+    ranks {{ perf.metrics[0].ranked }} trusts on each measure. From April 2026, A&amp;E figures cover each
+    acute trust's whole area.
+  </li>
+</ul>
+
+<details class="landmark-method">
+  <summary>Where these figures come from</summary>
+  <p>
+    All values come from NHS England's public data gateway, using its download for each measure and its
+    page for <a href="{{ perf.source_page }}">Guy's and St Thomas'</a>, which gives the national rank.
+    The Shelford median is the middle of the ten trusts' values for the same month. The Shelford Group's
+    membership is listed on <a href="{{ perf.shelford_source }}">its website</a>.
+  </p>
+  <p>
+    A script fetches the latest figures every quarter and updates this page when they change. This is my
+    personal site, so these are my reading of public data, not an official view of Guy's and St Thomas'
+    NHS Foundation Trust or the Shelford Group.
+  </p>
+</details>

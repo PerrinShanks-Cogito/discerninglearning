@@ -1,7 +1,9 @@
 name: Refresh landmark numbers
 
-# Re-checks NHS England's National Cost Collection and updates
-# _data/landmark_ncc.json on main. It always works on main, whatever started it.
+# Re-checks NHS England's National Cost Collection (_data/landmark_ncc.json) and
+# its public data gateway for waiting-time performance, including the Shelford
+# Group comparison (_data/landmark_performance.json), and updates both on main.
+# It always works on main, whatever started it.
 #
 # Ways to start it:
 #   - Actions → Refresh landmark numbers → Run workflow
@@ -9,7 +11,7 @@ name: Refresh landmark numbers
 #   - push a change to that file on a branch named claude/landmark-refresh...
 #     (this is what the quarterly Claude scheduled task does, because it can't
 #     push to main itself)
-# The Action only ever commits _data/landmark_ncc.json, then the site redeploys.
+# The Action only ever commits those two data files, then the site redeploys.
 on:
   workflow_dispatch:
   push:
@@ -30,6 +32,11 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        # Explicit bash adds pipefail, so a failing script fails the run
+        # even though its output is piped through tee.
+        shell: bash
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,16 +47,19 @@ jobs:
       - run: pip install pandas openpyxl requests
       - name: Fetch National Cost Collection figures
         run: python scripts/landmark_numbers/update_ncc.py | tee landmark-refresh.log
+      - name: Fetch waiting-time performance figures
+        run: python scripts/landmark_numbers/update_performance.py | tee -a landmark-refresh.log
       - name: Commit updated figures to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add _data/landmark_ncc.json
+          git add _data/landmark_ncc.json _data/landmark_performance.json
           if git diff --cached --quiet; then
             echo "Nothing to commit"
           else
-            summary=$(grep -E "^(CHANGED|UNCHANGED)" landmark-refresh.log || true)
-            git commit -m "Refresh landmark numbers: ${summary}"
+            costs=$(grep -E "^(CHANGED|UNCHANGED)" landmark-refresh.log || true)
+            perf=$(grep -E "^PERFORMANCE" landmark-refresh.log || true)
+            git commit -m "Refresh landmark numbers" -m "Costs: ${costs}" -m "${perf}"
             git push origin HEAD:main
           fi
       - name: Summary

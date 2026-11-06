@@ -21,6 +21,15 @@ permalink: /landmark-numbers/nhs-costs/
   {{ ncc.providers_in_collection }} NHS providers in the collection, Guy's and St Thomas' included.
 </p>
 
+{%- assign schedule_url = ncc.dashboards["National schedule of NHS costs"] %}
+{%- if schedule_url %}
+<p>
+  To look up the cost of other activity, NHS England publishes an interactive
+  <a href="{{ schedule_url }}">national schedule of NHS costs in Power BI</a>
+  ({{ ncc.edition }} data).
+</p>
+{%- endif %}
+
 <table class="landmark-table landmark-table--costs">
   <thead>
     <tr>
@@ -68,6 +77,10 @@ permalink: /landmark-numbers/nhs-costs/
   compares each trust's actual costs with what the national average would predict for the same
   mix of patients, and adjusts for local costs using the market forces factor. A score of 100
   means the trust's costs are exactly as expected. A score of 120 means they are 20% higher.
+  {%- assign ncci_url = ncc.dashboards["National Cost Collection Index"] %}
+  {%- if ncci_url %}
+  NHS England's <a href="{{ ncci_url }}">cost index dashboard in Power BI</a> compares every trust.
+  {%- endif %}
 </p>
 
 <p class="landmark-index">

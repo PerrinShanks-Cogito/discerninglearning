@@ -111,11 +111,16 @@ page, `/landmark-numbers/nhs-costs/` (`_pages/landmark-numbers-nhs-costs.html`),
 reads `_data/landmark_ncc.json`, which
 `scripts/landmark_numbers/update_ncc.py` builds from NHS England's latest
 National Cost Collection: national averages compared with Guy's and St Thomas'
-(provider code RJ1), plus the trust's cost index.
+(provider code RJ1), plus the trust's cost index. The performance page,
+`/landmark-numbers/nhs-performance/` (`_pages/landmark-numbers-nhs-performance.html`),
+reads `_data/landmark_performance.json`, which
+`scripts/landmark_numbers/update_performance.py` builds from NHS England's public
+data gateway: eight waiting-time measures for GSTT, England and the ten
+Shelford Group teaching hospitals.
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run
 workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the
-latest edition, commits the JSON to main (it always updates the "last checked"
+latest figures, commits the JSON files to main (it always updates the "last checked"
 date) and the site redeploys. A quarterly Claude scheduled task starts it by
 pushing a change to that file on a `claude/landmark-refresh...` branch, then
 checks the result and reports what changed. Those branches can be deleted.
