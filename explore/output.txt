@@ -1,85 +1,131 @@
-  Provider Code Department Code Currency Code Service Code Activity National Mean      Actual Cost    Expected Cost Mapping Pot Scaled MFF
-0         G6V2S            IAPT        MAT14Z       01IAPT     9349  166.91929089   2337245.334476   1560528.450531       08_MH   1.090045
-1         G6V2S            IAPT        MAT14Z       02IAPT    73827  183.46722741  18620272.127305  13544834.997998       08_MH   1.090045
-2         G6V2S            IAPT        MAT14Z       03IAPT    23872  168.04927476   6417862.280144   4011672.287071       08_MH   1.090045
-rows 1677548 bad 1243339
-    Provider Code Department Code Currency Code Service Code Activity  National Mean  Actual Cost Expected Cost Mapping Pot Scaled MFF
-46          G6V2S            MHCC        MCG96A          A05        *   219.67540646  1198.356845             *       08_MH   1.090045
-50          G6V2S            MHCC        MCG96B          C02        *   246.24324727  2835.374410             *       08_MH   1.090045
-56          G6V2S            MHCC        MCG97A          A02        *   446.43096570   330.807516             *       08_MH   1.090045
-59          G6V2S            MHCC        MCG97C          A22        *              *  3576.972014             *       08_MH   1.090045
-70          G6V2S            MHPS        MCG98A      200MHPS        *   829.34646576     3.110194             *       08_MH   1.090045
-80            R0A             ACC         XC05Z        CCU12        *  1566.77670511  1179.628994             *      04_CCS   0.980588
-110           R0A             CHS        CAO99Z           16        *     6.35820554     4.327995             *      07_COM   0.980588
-126           R0A             CHS        CAS08Z           45        *    76.29043590   110.796601             *      07_COM   0.980588
-129           R0A             CHS        CAS99Z           24        *    93.08144359   119.929296             *      07_COM   0.980588
-137           R0A             CHS        CCI01Z           51        *    12.30533153   241.396488             *      07_COM   0.980588
-141           R0A             CHS        CCL06Z           21        *   155.28610547  1529.918400             *      07_COM   0.980588
-148           R0A             CHS        CCL14Z           45        *   150.65364991   293.289170             *      07_COM   0.980588
-158           R0A             CHS        CCS04Z           42        *    67.79715711   822.489698             *      07_COM   0.980588
-220           R0A              CL         WF01A          305        *   316.11152409    78.801956             *       05_OP   0.980588
-271           R0A              CL         WF01B          111        *   191.84772587    73.803407             *       05_OP   0.980588
-288           R0A              CL         WF01B          212        *              *  1179.257907             *       05_OP   0.980588
-363           R0A              CL         WF01C          108        *   114.73602033  1497.921389             *       05_OP   0.980588
-366           R0A              CL         WF01C          115        *   144.58744114   256.110740             *       05_OP   0.980588
-383           R0A              CL         WF01C          212        *              *   164.435801             *       05_OP   0.980588
-387           R0A              CL         WF01C          217        *   223.10800564  1140.514909             *       05_OP   0.980588
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:16: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  print(g.join(r,rsuffix="_RJ1").to_string())
+(47166, 10)
+                                    Provider Mapping Pot                            Service                               Department Activity Unit Cost  Actual Cost Expected Cost    Variance NCCI
+0  G6V2S - North London NHS Foundation Trust       08_MH                01IAPT - Assessment  IAPT - NHS Talking Therapy Care Contact     9349      £250   £2,337,245    £1,560,528    £776,717  150
+1  G6V2S - North London NHS Foundation Trust       08_MH                 02IAPT - Treatment  IAPT - NHS Talking Therapy Care Contact    73827      £252  £18,620,272   £13,544,835  £5,075,437  137
+2  G6V2S - North London NHS Foundation Trust       08_MH  03IAPT - Assessment and Treatment  IAPT - NHS Talking Therapy Care Contact    23872      £269   £6,417,862    £4,011,672  £2,406,190  160
+suppressed act 8116 cost 0
 Activity
-*    1243339
+*    8116
 Name: count, dtype: int64
-Actual Cost
-0.000000      1590
-40.683534       81
-11.070192       77
-640.462990      71
-140.159967      59
-4.245487        57
-281.757971      38
-70.867560       34
-119.545241      34
-6.695792        33
-Name: count, dtype: int64
-                  count           sum
-Department Code                      
-ACC                  83  6.087550e+05
-AMB                  15  5.204953e+03
-AUDCHS               14  3.312997e+05
-AUDOP                 5  5.054971e+03
-CHS                 750  1.623403e+07
-CL                 5947  5.964379e+06
-CMDT                  4  3.624642e+03
-DADS                999  7.328110e+05
-DAPS                  8  1.617875e+03
-DC               179207  6.472776e+08
-EC                  269  3.269152e+05
-EL               177160  2.337881e+09
-HCDe                142  2.826410e+06
-IAPT               1466  6.643021e+05
-IMAGCDC             209  1.213830e+06
-MHCC                896  1.982334e+06
-MHPS                 54  5.631031e+06
-NCC                  87  3.226594e+05
-NCL                4090  2.553290e+06
-NEL              445313  6.607346e+09
-NES              385288  1.018700e+09
-NSP                   3  4.863100e+06
-OPROC             29054  2.191084e+07
-PCC                  47  3.750958e+05
-RP                 9202  1.156364e+07
-Rehab              1160  2.643452e+06
-Renal               475  3.214970e+06
-SI_Imag_OP         1327  1.692479e+06
-Wheelchair           65  1.890803e+06
-                     a             c
-Currency Code                       
-HN22D          22781.0  1.971646e+08
-HN22E          20117.0  1.670640e+08
-HN12F          17224.0  1.491898e+08
-HN12E          15690.0  1.431483e+08
-LB69Z          10838.0  1.115978e+08
-DZ02H           7332.0  1.062987e+08
-HN22C          10638.0  9.917171e+07
-EpGro04         5703.0  8.710489e+07
-FF31D           6208.0  8.599794e+07
-HN12D           7381.0  7.362798e+07
-total cost all rows 117.58607706821333 valid rows 106.88731171256258
+Department
+CL - Consultant Led                             7614
+OPROC - Outpatient Procedures                   5700
+NES - Non-Elective Inpatient - Short Stay       5502
+DC - Daycase                                    5464
+NEL - Non-Elective Inpatient - Long Stay        5039
+NCL - Non Consultant Led                        4975
+EL - Elective Inpatients                        4959
+CHS - Community Health Service                  2151
+MHCC - Mental Health Care Contact               1351
+RP - Regular Day or Night Admissions             918
+Renal - Renal Dialysis                           467
+MHPS - Mental Health Provider Spell              368
+IAPT - NHS Talking Therapy Care Contact          318
+Rehab - Rehabilitation Inpatient                 295
+EC - Emergency Care                              290
+ACC - Adult Critical Care                        260
+DADS - Directly Accessed Diagnostic Services     252
+NCC - Neonatal Critical Care                     234
+CMDT - Cancer MDT                                200
+SI_Imag_OP - Outpatient Imaging                  138
+DAPS - Directly Accessed Pathology Services      112
+HCDe - High Cost Devices                         104
+AMB - Ambulance                                   95
+NSP - National screening programmes               80
+PCC - Paediatric Critical Care                    76
+AUDCHS - Audiology Community Health Services      73
+IMAGCDC - Community diagnostic centres            64
+AUDOP - Audiology Outpatient Care                 49
+CCT - Critical care transport                     12
+AUDAPC - Audiology Admitted Patient Care           6
+total £bn 112.491188294
+                                                        a            c            u      a_RJ1        c_RJ1         u_RJ1
+Department                                                                                                               
+ACC - Adult Critical Care                       1307266.0   3335894879  2551.810327    59565.0  169538397.0   2846.275447
+AMB - Ambulance                                13940863.0   3784619087   271.476672        NaN          NaN           NaN
+AUDAPC - Audiology Admitted Patient Care          31528.0      1942116    61.599721        NaN          NaN           NaN
+AUDCHS - Audiology Community Health Services    1600288.0    140561573    87.835173    36900.0    2091238.0     56.673117
+AUDOP - Audiology Outpatient Care                575431.0     69323683   120.472625    36390.0    5515485.0    151.565952
+CCT - Critical care transport                     13925.0     55764648  4004.642585     2036.0    6953854.0   3415.448919
+CHS - Community Health Service                 71562482.0   6707311933    93.726653   594035.0  120501783.0    202.853002
+CL - Consultant Led                            54951653.0  11347834160   206.505784  1366815.0  277117674.0    202.747024
+CMDT - Cancer MDT                               4009462.0    343684135    85.718267    24366.0    4451274.0    182.683822
+DADS - Directly Accessed Diagnostic Services   11712239.0    865831157    73.925332   135697.0   10377774.0     76.477549
+DAPS - Directly Accessed Pathology Services   472286338.0   1181628851     2.501933  1278858.0   11141333.0      8.711939
+DC - Daycase                                    7566815.0   8366331361  1105.660884   109066.0  181283633.0   1662.146159
+EC - Emergency Care                            24737939.0   7125118351   288.023928   183594.0   81829166.0    445.707191
+EL - Elective Inpatients                        1253952.0   8580399518  6842.685779    43376.0  427314469.0   9851.403288
+HCDe - High Cost Devices                         413068.0    898005881  2173.990435    14840.0   41287639.0   2782.185916
+IAPT - NHS Talking Therapy Care Contact         5157377.0    908918067   176.236499        NaN          NaN           NaN
+IMAGCDC - Community diagnostic centres          2654493.0    355408635   133.889460        NaN          NaN           NaN
+MHCC - Mental Health Care Contact              24292146.0   7484995826   308.124108        NaN          NaN           NaN
+MHPS - Mental Health Provider Spell             6273462.0   5558886778   886.095553        NaN          NaN           NaN
+NCC - Neonatal Critical Care                     893523.0   1337423058  1496.797573    13240.0   27746091.0   2095.626208
+NCL - Non Consultant Led                       25431206.0   3522727193   138.519864   564438.0  118107872.0    209.248619
+NEL - Non-Elective Inpatient - Long Stay        4539523.0  25659442121  5652.453379    32224.0  343040506.0  10645.497331
+NES - Non-Elective Inpatient - Short Stay       6592057.0   5521583245   837.611575    25898.0   68949075.0   2662.332033
+NSP - National screening programmes             9443051.0    365170214    38.670787        NaN          NaN           NaN
+OPROC - Outpatient Procedures                  19788341.0   4773471785   241.226477   425828.0  138196916.0    324.536940
+PCC - Paediatric Critical Care                   192453.0    522981470  2717.450339    18804.0   48978549.0   2604.687779
+RP - Regular Day or Night Admissions             863542.0    365591798   423.363077    95242.0   51277366.0    538.390269
+Rehab - Rehabilitation Inpatient                1957090.0   1084694732   554.238554     4258.0    4514088.0   1060.142790
+Renal - Renal Dialysis                          4580394.0    940852282   205.408592   102082.0   49978911.0    489.595727
+SI_Imag_OP - Outpatient Imaging                 7730375.0   1284789757   166.200185   111451.0   44793772.0    401.914492
+                                                             a  ...           u
+Service                                                         ...            
+01EC - Emergency departments are a CONSULTANT l...  17199456.0  ...  350.591014
+
+[1 rows x 3 columns]
+                                                                   Service                                 Department         a         c Unit Cost NCCI
+16780                                     104 - COLORECTAL SURGERY SERVICE                               DC - Daycase     950.0   1852777    £1,950  101
+16812                         256 - PAEDIATRIC INFECTIOUS DISEASES SERVICE                               DC - Daycase     115.0     98134      £853   63
+16836                                    350 - INFECTIOUS DISEASES SERVICE                               DC - Daycase      74.0     36739      £496  123
+16846                                 451 - SPECIAL CARE DENTISTRY SERVICE                               DC - Daycase    2699.0    768318      £285   61
+16848                                            502 - GYNAECOLOGY SERVICE                               DC - Daycase    1344.0   4153554    £3,090  157
+16849                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE                               DC - Daycase     753.0   1996978    £2,652  129
+16863                                     104 - COLORECTAL SURGERY SERVICE                   EL - Elective Inpatients     582.0   7541180   £12,957  118
+16896                         256 - PAEDIATRIC INFECTIOUS DISEASES SERVICE                   EL - Elective Inpatients       NaN    120930         *    *
+16921                                    350 - INFECTIOUS DISEASES SERVICE                   EL - Elective Inpatients      13.0    117332    £9,026  155
+16932                                 451 - SPECIAL CARE DENTISTRY SERVICE                   EL - Elective Inpatients      18.0     49553    £2,753   94
+16935                                            502 - GYNAECOLOGY SERVICE                   EL - Elective Inpatients     848.0   7198333    £8,489  149
+16936                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE                   EL - Elective Inpatients     621.0   7839860   £12,625  134
+16947                                     104 - COLORECTAL SURGERY SERVICE   NEL - Non-Elective Inpatient - Long Stay      63.0   1347980   £21,397  184
+16978                         256 - PAEDIATRIC INFECTIOUS DISEASES SERVICE   NEL - Non-Elective Inpatient - Long Stay       NaN     57254         *    *
+17002                                    350 - INFECTIOUS DISEASES SERVICE   NEL - Non-Elective Inpatient - Long Stay      39.0    486371   £12,471  179
+17012                                 451 - SPECIAL CARE DENTISTRY SERVICE   NEL - Non-Elective Inpatient - Long Stay       NaN     20318         *    *
+17015                                            502 - GYNAECOLOGY SERVICE   NEL - Non-Elective Inpatient - Long Stay     582.0   4463715    £7,670  162
+17016                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE   NEL - Non-Elective Inpatient - Long Stay      20.0    391659   £19,583  161
+17029                                     104 - COLORECTAL SURGERY SERVICE  NES - Non-Elective Inpatient - Short Stay      29.0    106238    £3,663  186
+17058                         256 - PAEDIATRIC INFECTIOUS DISEASES SERVICE  NES - Non-Elective Inpatient - Short Stay       NaN     10665         *    *
+17079                                    350 - INFECTIOUS DISEASES SERVICE  NES - Non-Elective Inpatient - Short Stay      25.0    107660    £4,306  218
+17091                                            502 - GYNAECOLOGY SERVICE  NES - Non-Elective Inpatient - Short Stay     613.0   1947359    £3,177  274
+17092                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE  NES - Non-Elective Inpatient - Short Stay      15.0     66432    £4,429  172
+17115                                     104 - COLORECTAL SURGERY SERVICE                        CL - Consultant Led   11500.0    374262       £33   21
+17149                         256 - PAEDIATRIC INFECTIOUS DISEASES SERVICE                        CL - Consultant Led    1136.0    144336      £127   24
+17183                                    350 - INFECTIOUS DISEASES SERVICE                        CL - Consultant Led    3042.0   2101339      £691  250
+17194                                 451 - SPECIAL CARE DENTISTRY SERVICE                        CL - Consultant Led    3752.0    110631       £29   44
+17197                                            502 - GYNAECOLOGY SERVICE                        CL - Consultant Led   32494.0  17730455      £546  241
+17198                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE                        CL - Consultant Led    6487.0   1080459      £167   78
+17217                                     104 - COLORECTAL SURGERY SERVICE                   NCL - Non Consultant Led    8405.0    353747       £42   35
+17248                         256 - PAEDIATRIC INFECTIOUS DISEASES SERVICE                   NCL - Non Consultant Led      73.0      7238       £99   83
+17291                                 451 - SPECIAL CARE DENTISTRY SERVICE                   NCL - Non Consultant Led     452.0      6926       £15   38
+17294                                            502 - GYNAECOLOGY SERVICE                   NCL - Non Consultant Led   16190.0   1278606       £79   53
+17295                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE                   NCL - Non Consultant Led     497.0     97331      £196  185
+17312                                     104 - COLORECTAL SURGERY SERVICE              OPROC - Outpatient Procedures    1030.0     64797       £63   24
+17370                                    350 - INFECTIOUS DISEASES SERVICE              OPROC - Outpatient Procedures       8.0      7768      £971  179
+17381                                 451 - SPECIAL CARE DENTISTRY SERVICE              OPROC - Outpatient Procedures    3364.0    138254       £41   44
+17384                                            502 - GYNAECOLOGY SERVICE              OPROC - Outpatient Procedures    9582.0   2816935      £294  106
+17385                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE              OPROC - Outpatient Procedures    8059.0   2158909      £268   89
+17406                                     104 - COLORECTAL SURGERY SERVICE                     Renal - Renal Dialysis       8.0    216986   £27,123  193
+17436                                            502 - GYNAECOLOGY SERVICE                     Renal - Renal Dialysis       NaN     11024         *    *
+17464                                    350 - INFECTIOUS DISEASES SERVICE       RP - Regular Day or Night Admissions     102.0     76962      £755  110
+17473                                 451 - SPECIAL CARE DENTISTRY SERVICE       RP - Regular Day or Night Admissions       NaN       110         *    *
+17475                                            502 - GYNAECOLOGY SERVICE       RP - Regular Day or Night Admissions       NaN       205         *    *
+17476                                503 - GYNAECOLOGICAL ONCOLOGY SERVICE       RP - Regular Day or Night Admissions       NaN      1033         *    *
+17499    01EC - Emergency departments are a CONSULTANT led 24 hour service                        EC - Emergency Care  123607.0  59508640      £481  127
+17500  02EC - Consultant led mono specialty accident and emergency service                        EC - Emergency Care    2426.0    378531      £156  113
+17501                              03EC - Other type of A&E / minor injury                        EC - Emergency Care   29745.0   8007482      £269  240
+17502                                       05EC - Same Day Emergency Care                        EC - Emergency Care   27816.0  13934513      £501  164
+RJ1 total 2.234986865
