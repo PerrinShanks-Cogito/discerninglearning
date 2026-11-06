@@ -1,107 +1,85 @@
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:22: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
-  print(g.join(r,rsuffix="_RJ1").to_string())
-/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default
-  warn("Workbook contains no default style, apply openpyxl's default")
-   Department Code                 Department Description
-0              ACC                    Adult Critical Care
-1              AMB                              Ambulance
-2           AUDAPC        Audiology Admitted Patient Care
-3           AUDCHS    Audiology Community Health Services
-4            AUDOP              Audiology Outpatient Care
-5               CC                          Critical Care
-6              CCT                Critical care transport
-7              CHS               Community Health Service
-8               CL                         Consultant Led
-9             CMDT                             Cancer MDT
-10            DADS  Directly Accessed Diagnostic Services
-11            DAPS   Directly Accessed Pathology Services
-12              DC                                Daycase
-13              EC                         Emergency Care
-14              EL                    Elective Inpatients
-15            HCDe                      High Cost Devices
-16            HCDr                        High Cost Drugs
-17            IAPT       NHS Talking Therapy Care Contact
-18         IMAGCDC           Community diagnostic centres
-19            MHCC             Mental Health Care Contact
-20            MHPS           Mental Health Provider Spell
-21             NCC                 Neonatal Critical Care
-22             NCL                     Non Consultant Led
-23             NEL     Non-Elective Inpatient - Long Stay
-24             NES    Non-Elective Inpatient - Short Stay
-25             NSP          National screening programmes
-26           OPROC                  Outpatient Procedures
-27             PCC               Paediatric Critical Care
-28           Rehab               Rehabilitation Inpatient
-29           Renal                         Renal Dialysis
-30              RP        Regular Day or Night Admissions
-31      SI_Imag_OP                     Outpatient Imaging
-32           SI_VW                           Virtual Ward
-33              UM             Unmatched support services
-34      Wheelchair                   Wheelchair Equipment
-['Provider Code', 'Provider Name']
-    Provider Code                                             Provider Name
-7             R1H                                    Barts Health NHS Trust
-62            RJ1                 Guy's And St Thomas' NHS Foundation Trust
-72            RJZ              King's College Hospital NHS Foundation Trust
-119           RRV  University College London Hospitals NHS Foundation Trust
-196           RYJ                     Imperial College Healthcare NHS Trust
-NCC_FY2025-26_Org_File1.zip NCC_FY2025-26_Org_File1.csv (1677548, 10) ['Provider Code', 'Department Code', 'Currency Code', 'Service Code', 'Activity', 'National Mean', 'Actual Cost', 'Expected Cost', 'Mapping Pot', 'Scaled MFF']
-NCC_FY2025-26_Org_File2.zip NCC_FY2025-26_Org_File2.csv (1677548, 10) ['Provider Code', 'Department Code', 'Currency Code', 'Service Code', 'Activity', 'MFFd National Mean', 'MFFd Actual Cost', 'MFFd Expected Cost', 'Mapping Pot', 'Scaled MFF']
-TOTAL national cost £bn 117.58607706821333 providers 205
-                    Activity   Actual Cost         unit  Activity_RJ1  Actual Cost_RJ1     unit_RJ1
-Department Code                                                                                    
-ACC                2614078.0  3.335895e+09  1276.126755      119130.0     1.695384e+08  1423.137721
-AMB               27881618.0  3.784619e+09   135.738862           NaN              NaN          NaN
-AUDAPC               63056.0  1.942116e+06    30.799864           NaN              NaN          NaN
-AUDCHS             3200480.0  1.405616e+08    43.918905       73800.0     2.091238e+06    28.336552
-AUDOP              1150824.0  6.932368e+07    60.238301       72780.0     5.515485e+06    75.782974
-CCT                  27850.0  5.576465e+07  2002.321291        4072.0     6.953854e+06  1707.724479
-CHS              142686466.0  6.670516e+09    46.749467     1155742.0     1.171848e+08   101.393566
-CL               109871588.0  1.134783e+10   103.282699     2733232.0     2.771177e+08   101.388273
-CMDT               8018918.0  3.436841e+08    42.859165       48732.0     4.451274e+06    91.341911
-DADS              23419268.0  8.658312e+08    36.970889      271380.0     1.037777e+07    38.240749
-DAPS             944572614.0  1.181629e+09     1.250967     2557702.0     1.114133e+07     4.355993
-DC                14347950.0  8.366331e+09   583.102907      206198.0     1.812836e+08   879.172618
-EC                49474256.0  7.125118e+09   144.016685      367172.0     8.182917e+07   222.863309
-EL                 1799770.0  8.580399e+09  4767.497784       68796.0     4.273145e+08  6211.327216
-HCDe                825154.0  8.980059e+08  1088.288838       29668.0     4.128764e+07  1391.655631
-HCDr              23860224.0  5.094889e+09   213.530637     5356492.0     1.537971e+08    28.712279
-IAPT              10306764.0  9.089181e+08    88.186561           NaN              NaN          NaN
-IMAGCDC            5307916.0  3.554086e+08    66.958226           NaN              NaN          NaN
-MHCC              48579096.0  7.484996e+09   154.078533           NaN              NaN          NaN
-MHPS              12546608.0  5.558887e+09   443.058935           NaN              NaN          NaN
-NCC                1786626.0  1.337423e+09   748.574718       26456.0     2.774609e+07  1048.763667
-NCL               50842450.0  3.522727e+09    69.287125     1128342.0     1.181079e+08   104.673824
-NEL                7137992.0  2.565944e+10  3594.770366       47938.0     3.430405e+08  7155.920259
-NES               11533920.0  5.521583e+09   478.725638       38280.0     6.894908e+07  1801.177532
-NSP               18886100.0  3.651702e+08    19.335395           NaN              NaN          NaN
-OPROC             39454140.0  4.773472e+09   120.987856      849058.0     1.381969e+08   162.764987
-PCC                 384680.0  5.229815e+08  1359.523420       37606.0     4.897855e+07  1302.413176
-RP                 1690558.0  3.655918e+08   216.255105      188432.0     5.127736e+07   272.126626
-Rehab              3907640.0  1.084695e+09   277.583077        8444.0     4.514088e+06   534.591232
-Renal              9159846.0  9.408523e+08   102.714857      204024.0     4.997891e+07   244.965821
-SI_Imag_OP        15452890.0  1.284790e+09    83.142361      222842.0     4.479377e+07   201.011355
-Wheelchair          434510.0  3.679577e+07    84.683373       32230.0     3.316979e+06   102.915885
-RJ1 total £bn 2.3887839514753
-DEPT EC
-                Activity   Actual Cost           u
-Service Code                                      
-01EC          34398384.0  6.029975e+09  175.298198
-02EC            916372.0  6.801997e+07   74.227464
-03EC          10586416.0  6.122809e+08   57.836469
-04EC            802026.0  3.463955e+07   43.190056
-05EC           2767432.0  3.798273e+08  137.249027
-06EC              3626.0  3.758446e+05  103.652679
-              Activity   Actual Cost           u
-Service Code                                    
-01EC          247214.0  5.950864e+07  240.717112
-02EC            4844.0  3.785315e+05   78.144404
-03EC           59482.0  8.007482e+06  134.620261
-05EC           55632.0  1.393451e+07  250.476572
-['Mapping pot', '01_EI - Elective Inpatient And Day Case', '02_NEI - Non-Elective Inpatient', '04_CCS - Critical Care', '05_OP - Outpatient Services', '06_OAS - Other Acute Services', '07_COM - Community Services', '08_MH - Mental Health', '10_PAR - Ambulance Services', '11_A&E - Emergency Care', '12_UB - Unbundled', 'Total']
-                                                                 0           1           2           3           4           5           6    7    8           9           10          11
-9                                      R1H - Barts Health NHS Trust  112.665539   81.190648   84.054268  109.784009  105.354622   52.489776  NaN  NaN   97.957392   87.071503   94.173643
-64                  RJ1 - Guy's And St Thomas' NHS Foundation Trust  121.049092  140.358091  113.201062  100.515138  138.131985  149.235105  NaN  NaN  126.666465    96.11488  118.242956
-74               RJZ - King's College Hospital NHS Foundation Trust   94.856064  103.533861  102.141817  117.859293  122.355687  117.840948  NaN  NaN   91.154557   73.670542  104.286504
-121  RRV - University College London Hospitals NHS Foundation Trust  106.137881  109.868056  106.078707  103.083801  120.566927         NaN  NaN  NaN   92.911387  144.773804  106.672967
-198                     RYJ - Imperial College Healthcare NHS Trust   94.744138   93.146629  107.160389  114.853866   90.433273       100.0  NaN  NaN  125.967669  124.425723  102.159359
+  Provider Code Department Code Currency Code Service Code Activity National Mean      Actual Cost    Expected Cost Mapping Pot Scaled MFF
+0         G6V2S            IAPT        MAT14Z       01IAPT     9349  166.91929089   2337245.334476   1560528.450531       08_MH   1.090045
+1         G6V2S            IAPT        MAT14Z       02IAPT    73827  183.46722741  18620272.127305  13544834.997998       08_MH   1.090045
+2         G6V2S            IAPT        MAT14Z       03IAPT    23872  168.04927476   6417862.280144   4011672.287071       08_MH   1.090045
+rows 1677548 bad 1243339
+    Provider Code Department Code Currency Code Service Code Activity  National Mean  Actual Cost Expected Cost Mapping Pot Scaled MFF
+46          G6V2S            MHCC        MCG96A          A05        *   219.67540646  1198.356845             *       08_MH   1.090045
+50          G6V2S            MHCC        MCG96B          C02        *   246.24324727  2835.374410             *       08_MH   1.090045
+56          G6V2S            MHCC        MCG97A          A02        *   446.43096570   330.807516             *       08_MH   1.090045
+59          G6V2S            MHCC        MCG97C          A22        *              *  3576.972014             *       08_MH   1.090045
+70          G6V2S            MHPS        MCG98A      200MHPS        *   829.34646576     3.110194             *       08_MH   1.090045
+80            R0A             ACC         XC05Z        CCU12        *  1566.77670511  1179.628994             *      04_CCS   0.980588
+110           R0A             CHS        CAO99Z           16        *     6.35820554     4.327995             *      07_COM   0.980588
+126           R0A             CHS        CAS08Z           45        *    76.29043590   110.796601             *      07_COM   0.980588
+129           R0A             CHS        CAS99Z           24        *    93.08144359   119.929296             *      07_COM   0.980588
+137           R0A             CHS        CCI01Z           51        *    12.30533153   241.396488             *      07_COM   0.980588
+141           R0A             CHS        CCL06Z           21        *   155.28610547  1529.918400             *      07_COM   0.980588
+148           R0A             CHS        CCL14Z           45        *   150.65364991   293.289170             *      07_COM   0.980588
+158           R0A             CHS        CCS04Z           42        *    67.79715711   822.489698             *      07_COM   0.980588
+220           R0A              CL         WF01A          305        *   316.11152409    78.801956             *       05_OP   0.980588
+271           R0A              CL         WF01B          111        *   191.84772587    73.803407             *       05_OP   0.980588
+288           R0A              CL         WF01B          212        *              *  1179.257907             *       05_OP   0.980588
+363           R0A              CL         WF01C          108        *   114.73602033  1497.921389             *       05_OP   0.980588
+366           R0A              CL         WF01C          115        *   144.58744114   256.110740             *       05_OP   0.980588
+383           R0A              CL         WF01C          212        *              *   164.435801             *       05_OP   0.980588
+387           R0A              CL         WF01C          217        *   223.10800564  1140.514909             *       05_OP   0.980588
+Activity
+*    1243339
+Name: count, dtype: int64
+Actual Cost
+0.000000      1590
+40.683534       81
+11.070192       77
+640.462990      71
+140.159967      59
+4.245487        57
+281.757971      38
+70.867560       34
+119.545241      34
+6.695792        33
+Name: count, dtype: int64
+                  count           sum
+Department Code                      
+ACC                  83  6.087550e+05
+AMB                  15  5.204953e+03
+AUDCHS               14  3.312997e+05
+AUDOP                 5  5.054971e+03
+CHS                 750  1.623403e+07
+CL                 5947  5.964379e+06
+CMDT                  4  3.624642e+03
+DADS                999  7.328110e+05
+DAPS                  8  1.617875e+03
+DC               179207  6.472776e+08
+EC                  269  3.269152e+05
+EL               177160  2.337881e+09
+HCDe                142  2.826410e+06
+IAPT               1466  6.643021e+05
+IMAGCDC             209  1.213830e+06
+MHCC                896  1.982334e+06
+MHPS                 54  5.631031e+06
+NCC                  87  3.226594e+05
+NCL                4090  2.553290e+06
+NEL              445313  6.607346e+09
+NES              385288  1.018700e+09
+NSP                   3  4.863100e+06
+OPROC             29054  2.191084e+07
+PCC                  47  3.750958e+05
+RP                 9202  1.156364e+07
+Rehab              1160  2.643452e+06
+Renal               475  3.214970e+06
+SI_Imag_OP         1327  1.692479e+06
+Wheelchair           65  1.890803e+06
+                     a             c
+Currency Code                       
+HN22D          22781.0  1.971646e+08
+HN22E          20117.0  1.670640e+08
+HN12F          17224.0  1.491898e+08
+HN12E          15690.0  1.431483e+08
+LB69Z          10838.0  1.115978e+08
+DZ02H           7332.0  1.062987e+08
+HN22C          10638.0  9.917171e+07
+EpGro04         5703.0  8.710489e+07
+FF31D           6208.0  8.599794e+07
+HN12D           7381.0  7.362798e+07
+total cost all rows 117.58607706821333 valid rows 106.88731171256258
