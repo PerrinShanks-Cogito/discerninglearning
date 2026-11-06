@@ -1,0 +1,135 @@
+---
+title: What NHS care costs
+description: England's average cost of common hospital activity, compared with Guy's and St Thomas'.
+permalink: /landmark-numbers/nhs-costs/
+---
+{%- assign ncc = site.data.landmark_ncc -%}
+
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+
+<p class="landmark-meta">
+  Last checked <strong>{{ ncc.last_checked | date: "%-d %B %Y" }}</strong>.
+  The figures last changed on {{ ncc.last_updated | date: "%-d %B %Y" }}.
+  I check for new editions every quarter.
+</p>
+
+<p>
+  These are average costs per unit of hospital activity in {{ ncc.costs_financial_year }}, from
+  NHS England's <a href="{{ ncc.source_page }}">National Cost Collection</a>
+  (published {{ ncc.published | date: "%-d %B %Y" }}). The figures are rounded to two
+  significant figures, which is enough to remember them by. The England average covers all
+  {{ ncc.providers_in_collection }} NHS providers in the collection, Guy's and St Thomas' included.
+</p>
+
+<table class="landmark-table landmark-table--costs">
+  <thead>
+    <tr>
+      <th scope="col">Cost of one…</th>
+      <th scope="col" class="num">England average</th>
+      <th scope="col" class="num">Guy's and St Thomas'</th>
+      <th scope="col" class="num">Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for row in ncc.unit_costs %}
+    <tr>
+      <th scope="row">
+        {{ row.label }}
+        <span class="landmark-note">{{ row.use }}. {{ row.national_activity_text }} a year in England; {{ row.trust_activity_text }} at GSTT.</span>
+      </th>
+      <td class="num" data-label="England">{{ row.national_remember }}</td>
+      <td class="num" data-label="GSTT">{{ row.trust_remember | default: "–" }}</td>
+      <td class="num" data-label="Difference">
+        {%- if row.difference_pct == nil -%}–
+        {%- elsif row.difference_pct > 5 -%}{{ row.difference_pct }}% higher
+        {%- elsif row.difference_pct < -5 -%}{{ row.difference_pct | abs }}% lower
+        {%- else -%}About the same
+        {%- endif -%}
+      </td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+
+<p>
+  For scale: in {{ ncc.costs_financial_year }} the collection covered
+  <strong>£{{ ncc.national_total_cost_bn }} billion</strong> of NHS provider costs (not counting
+  high-cost drugs). <strong>£{{ ncc.trust_total_cost_bn }} billion</strong> of that was at
+  Guy's and St Thomas'.
+</p>
+
+{%- if ncc.ncci_total %}
+<h2 id="cost-index">Allowing for case mix and London costs</h2>
+
+<p>
+  A specialist teaching hospital in central London would cost more than average even if it were
+  perfectly efficient. Its patients are more complex, and London pay and buildings cost more.
+  NHS England's <strong>National Cost Collection Index</strong> allows for both of these. It
+  compares each trust's actual costs with what the national average would predict for the same
+  mix of patients, and adjusts for local costs using the market forces factor. A score of 100
+  means the trust's costs are exactly as expected. A score of 120 means they are 20% higher.
+</p>
+
+<p class="landmark-index">
+  Guy's and St Thomas' overall: <strong>{{ ncc.ncci_total }}</strong>
+</p>
+
+<table class="landmark-table landmark-table--index">
+  <thead>
+    <tr><th scope="col">Area of care</th><th scope="col">Index (100 = as expected)</th></tr>
+  </thead>
+  <tbody>
+    {%- for a in ncc.ncci_areas %}
+    <tr>
+      <th scope="row">{{ a.area }}</th>
+      <td class="landmark-index-cell"><span class="landmark-bar" style="--w: {{ a.index | at_most: 200 }}" aria-hidden="true"></span>{{ a.index }}</td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+{%- endif %}
+
+<h2 id="reading-these">Reading these numbers</h2>
+<ul>
+  <li>
+    <strong>These are average costs, not savings.</strong> Each figure includes a share of
+    buildings, equipment and overheads. Avoiding one A&amp;E attendance does not free up the
+    full £{{ ncc.unit_costs[0].national_remember | remove: "£" }}. The short-term saving is
+    usually smaller, unless the work removed is enough to close a bed, a clinic or a shift.
+  </li>
+  <li>
+    <strong>Guy's and St Thomas' is not an average hospital.</strong> It runs specialist
+    services, such as heart and lung care at the Royal Brompton and Harefield and children's
+    care at the Evelina, that most trusts do not. That is why the cost index above is the
+    fairer comparison.
+  </li>
+  <li>
+    <strong>Trusts count some things differently.</strong> This is especially true of short
+    emergency stays and same-day emergency care, which helps explain the biggest differences
+    in the table.
+  </li>
+  <li>
+    <strong>Some small numbers are hidden.</strong> NHS England suppresses very small counts to
+    protect confidentiality. Those cells are left out of both cost and activity, so they make
+    little difference to the averages.
+  </li>
+</ul>
+
+<details class="landmark-method">
+  <summary>How these figures are calculated</summary>
+  <p>
+    Each unit cost is the total actual cost divided by the total activity. Both come from the
+    <em>NCCI by Department and Service (unadjusted)</em> file in the
+    <a href="{{ ncc.source_page }}">{{ ncc.edition }} National Cost Collection data publication</a>,
+    which gives every trust's activity and costs by department and service.
+    "A&amp;E attendance at a major emergency department" uses type 1 emergency departments only.
+    "Emergency inpatient stay" combines long and short stays. The cost index uses the
+    market-forces-adjusted file. These are national figures, published by a trust-by-trust
+    collection that is built on patient-level costing (PLICS) for acute trusts.
+  </p>
+  <p>
+    A script checks NHS England for a new edition every quarter and updates this page when the
+    figures change. This is my personal site, so these are my reading of public data, not an
+    official view of Guy's and St Thomas' NHS Foundation Trust.
+  </p>
+</details>

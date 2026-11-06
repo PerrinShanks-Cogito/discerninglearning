@@ -212,7 +212,13 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .prose td, .prose th { border: 1px solid var(--border); padding: 0.6rem 0.8rem; vertical-align: top; text-align: left; }
 .prose td:first-child { font-weight: 600; white-space: nowrap; }
 
-// Landmark Numbers page (_pages/landmark-numbers.html).
+// Landmark Numbers pages (_pages/landmark-numbers*.html).
+.landmark-tiles { margin: 1rem 0 1.5rem; }
+.landmark-tiles .card { display: block; }
+.landmark-tile__figure { border-top: 1px solid var(--border); padding-top: 0.6rem; margin-top: 0.8rem !important; }
+.landmark-tile__figure span { display: block; font-size: 0.8rem; color: var(--muted); }
+.landmark-tile__figure strong { font-size: 1.25rem; color: var(--text); }
+.landmark-back { margin-top: 0; font-size: 0.95rem; }
 .landmark-meta {
   background: var(--surface);
   border-left: 4px solid var(--accent);
