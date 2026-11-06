@@ -104,9 +104,11 @@ new commit). Watch progress on the repo's **Actions** tab.
 
 ## Landmark Numbers
 
-`/landmark-numbers/` (`_pages/landmark-numbers.html`) shows reference numbers
-for putting other figures in context, an idea from Tim Harford's *How to Make
-the World Add Up*. The NHS cost table reads `_data/landmark_ncc.json`, which
+`/landmark-numbers/` (`_pages/landmark-numbers.html`) introduces reference
+numbers for putting other figures in context, an idea from Tim Harford's *How
+to Make the World Add Up*, with a tile for each set of numbers. The NHS costs
+page, `/landmark-numbers/nhs-costs/` (`_pages/landmark-numbers-nhs-costs.html`),
+reads `_data/landmark_ncc.json`, which
 `scripts/landmark_numbers/update_ncc.py` builds from NHS England's latest
 National Cost Collection: national averages compared with Guy's and St Thomas'
 (provider code RJ1), plus the trust's cost index.
