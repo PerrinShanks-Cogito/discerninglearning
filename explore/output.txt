@@ -1,772 +1,107 @@
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-###### NCC_FY2025-26_National_Schedule.zip 2792777
-ENTRY NCC_FY2025-26_National_Schedule/ 0
-ENTRY NCC_FY2025-26_National_Schedule/Admitted Patient Care.xlsx 742072
---- SHEET Export
-             0              1                                2                                3              4                           5                      6
-0   Department  Currency Code             Currency Description  Number of finished consultan...           Cost  National average unit cost  Number of submissions
-1      Daycase          AA22C  Cerebrovascular Accident, Ne...                               86   69751.178597                  811.060216                     17
-2      Daycase          AA22D  Cerebrovascular Accident, Ne...                              154   56483.800115                  366.777923                     32
-3      Daycase          AA22E  Cerebrovascular Accident, Ne...                              137   79386.883216                  579.466301                     38
-4      Daycase          AA22F  Cerebrovascular Accident, Ne...                              470  221823.317265                  471.964505                     57
-5      Daycase          AA22G  Cerebrovascular Accident, Ne...                              931  456882.733452                  490.744075                     69
-6      Daycase          AA23C  Haemorrhagic Cerebrovascular...                                *    3877.670475                           *                      4
-7      Daycase          AA23D  Haemorrhagic Cerebrovascular...                               61   32251.451423                  528.712318                     11
-8      Daycase          AA23E  Haemorrhagic Cerebrovascular...                               48    44177.84098                  920.371687                     18
-9      Daycase          AA23F  Haemorrhagic Cerebrovascular...                               77   54053.787494                   701.99724                     21
-10     Daycase          AA23G  Haemorrhagic Cerebrovascular...                               74    76490.14783                 1033.650646                     16
-11     Daycase          AA24C  Brain Tumours or Cerebral Cy...                              362  186681.733135                  515.695395                     51
-12     Daycase          AA24D  Brain Tumours or Cerebral Cy...                              528  324644.220696                  614.856479                     67
-13     Daycase          AA24E  Brain Tumours or Cerebral Cy...                              667  382188.240586                  572.995863                     76
-ENTRY NCC_FY2025-26_National_Schedule/Ambulance.xlsx 17832
---- SHEET Export
-                                 0                     1                    2                  3                           4                      5
-0                    Currency Code  Currency Description  Number of incidents               Cost  National average unit cost  Number of submissions
-1                               01          Hear & Treat              1713660    98457503.146134                   57.454514                     11
-2                               02           See & Treat              2733472  1056831469.715513                  386.626045                     11
-3                               03          See & Convey              5044825  2516178105.175858                    498.7642                     11
-4                               04                 Other              4448906   113152008.928626                    25.43367                     11
-5                            Total                   NaN             13940863  3784619086.966132                  271.476672                     11
-6                              NaN                   NaN                  NaN                NaN                         NaN                    NaN
-7  Applied filters:\nDepartment...                   NaN                  NaN                NaN                         NaN                    NaN
-ENTRY NCC_FY2025-26_National_Schedule/Cancer Multi-disciplinary Team Meetings.xlsx 21082
---- SHEET Export
-                0                                1             2                             3                                4                5                           6                      7
-0   Currency Code             Currency Description  Service Code           Service Description  Patient Treatment Plan Discu...             Cost  National average unit cost  Number of submissions
-1         CMDTOth        Other Cancer MDT Meetings           109     BARIATRIC SURGERY SERVICE                              411         184188.2                  448.146472                      1
-2           CMDTB       Breast Cancer MDT Meetings           103        BREAST SURGERY SERVICE                            30309   5690015.171234                  187.733517                      9
-3         CMDTOth        Other Cancer MDT Meetings           303  CLINICAL HAEMATOLOGY SERVICE                            10613   2411636.605053                  227.234204                      5
-4           CMDTB       Breast Cancer MDT Meetings           800     CLINICAL ONCOLOGY SERVICE                            31275   4130302.674076                  132.064034                      6
-5           CMDTC   Colorectal Cancer MDT Meetings           800     CLINICAL ONCOLOGY SERVICE                            13461   1763742.968263                  131.026147                      6
-6          CMDTLG  Local Gynaecological Cancer ...           800     CLINICAL ONCOLOGY SERVICE                             4576    901203.745712                  196.941378                      4
-7         CMDTOth        Other Cancer MDT Meetings           800     CLINICAL ONCOLOGY SERVICE                            93421  11994341.651361                  128.390208                      7
-8         CMDTSpG  Specilist Gynaecological Can...           800     CLINICAL ONCOLOGY SERVICE                             4730    478610.427516                  101.186137                      2
-9         CMDTSpU  Specialist Upper Gastrointes...           800     CLINICAL ONCOLOGY SERVICE                            14795   1732568.438997                  117.104998                      6
-10          CMDTC   Colorectal Cancer MDT Meetings           104    COLORECTAL SURGERY SERVICE                            16211   3450651.851909                  212.858667                     10
-11        CMDTSpU  Specialist Upper Gastrointes...           104    COLORECTAL SURGERY SERVICE                             2178    375192.027593                  172.264475                      1
-12        CMDTOth        Other Cancer MDT Meetings           330           DERMATOLOGY SERVICE                            11811   2710299.001346                  229.472441                      5
-13        CMDTOth        Other Cancer MDT Meetings           120   EAR NOSE AND THROAT SERVICE                             4127    871185.364683                  211.094103                      3
-ENTRY NCC_FY2025-26_National_Schedule/Community Care Inpatient.xlsx 18092
---- SHEET Export
-                                  0              1                                2                                3                 4                           5                      6
-0                        Department  Currency Code             Currency Description  Number of finished consultan...              Cost  National average unit cost  Number of submissions
-1                           Daycase        EpGro02        Community Medical Episode                               18       10863.01741                  603.500967                      1
-2                           Daycase        EpGro06  Other Community rehabilitati...                              466     892933.834306                 1916.167026                      4
-3                           Daycase        EpGro08          Other community Episode                             1864      219630.06383                  117.827287                      2
-4               Elective Inpatients        EpGro02        Community Medical Episode                               23     123752.381019                 5380.538305                      4
-5               Elective Inpatients        EpGro04  Community Intermediate care ...                             5719   87104889.335646                15230.790232                     14
-6               Elective Inpatients        EpGro05  Community Neuro rehabilitati...                              148    2991257.959921                20211.202432                      1
-7               Elective Inpatients        EpGro06  Other Community rehabilitati...                            36613   32812726.353809                  896.204254                      6
-8               Elective Inpatients        EpGro07  Community Palliative care Ep...                              355    3562969.115478                 10036.53272                      2
-9               Elective Inpatients        EpGro08          Other community Episode                             3284   43851086.135137                13352.949493                      8
-10  Non-Elective Inpatient - Lon...        EpGro02        Community Medical Episode                            18216    40455331.32047                 2220.867991                      5
-11  Non-Elective Inpatient - Lon...        EpGro04  Community Intermediate care ...                            15267  194881495.935033                 12764.88478                     16
-12  Non-Elective Inpatient - Lon...        EpGro05  Community Neuro rehabilitati...                              169    4265616.066234                25240.331753                      4
-13  Non-Elective Inpatient - Lon...        EpGro06  Other Community rehabilitati...                             1385   16067509.306088                11601.089752                      7/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Community Health Services.xlsx 96175
---- SHEET Export
-               0                     1              2                                3                   4                5                           6                      7
-0   Service Code   Service Description  Currency Code             Currency Description  Number of contacts             Cost  National average unit cost  Number of submissions
-1             01    Appliances Service         CAI01Z  Crisis Response Intermediate...                 339   1153725.609346                 3403.320382                      1
-2             01    Appliances Service         CAL00Z           Adult LTC - Management               87608  11055851.893742                   126.19683                      1
-3             01    Appliances Service         CAO01Z             Urgent Care Services                   *        405.22574                           *                      1
-4             01    Appliances Service         CAO02Z           Other District Nursing                 242     16017.343357                   66.187369                      2
-5             01    Appliances Service         CAO99Z         Other Community Services                 126     19228.036066                  152.603461                      2
-6             01    Appliances Service         CAQ01Z         Appliances and Equipment               34824   6506725.285724                  186.846005                     12
-7             01    Appliances Service         CAT01Z             Occupational therapy                3155    859660.418884                  272.475569                      2
-8             01    Appliances Service         CCL07Z             Occupational therapy                   *       368.914821                           *                      1
-9             01    Appliances Service         CCO99Z         Other Community Services                4601   1771571.714438                  385.040581                      2
-10            01    Appliances Service         CCQ01Z         Appliances and Equipment                9004   1780052.155831                  197.695708                      9
-11            02  Arts Therapy Service         CAL00Z           Adult LTC - Management                 291     61687.234382                  211.983623                      1
-12            02  Arts Therapy Service         CAO99Z         Other Community Services                   *        557.96599                           *                      1
-13            02  Arts Therapy Service         CCO99Z         Other Community Services                4647    673373.242657                  144.904937                      1
-ENTRY NCC_FY2025-26_National_Schedule/Critical Care Transport.xlsx 17276
---- SHEET Export
-                                 0                                1                   2                3                           4                      5
-0                    Currency Code             Currency Description  Number of Journeys             Cost  National average unit cost  Number of submissions
-1                            XA06Z  Neonatal Critical Care, Tran...                7171  22088736.841403                 3080.286828                      9
-2                            XB08Z  Paediatric Critical Care, Tr...                6754  33675911.116166                 4986.069161                      9
-3                            Total                              NaN               13925  55764647.957569                 4004.642582                     12
-4                              NaN                              NaN                 NaN              NaN                         NaN                    NaN
-5  Applied filters:\nDepartment...                              NaN                 NaN              NaN                         NaN                    NaN
-ENTRY NCC_FY2025-26_National_Schedule/Critical Care.xlsx 27601
---- SHEET Export
-                      0             1                                2              3                                4                   5                 6                           7                      8
-0            Department  Service Code              Service Description  Currency Code             Currency Description  Number of bed days              Cost  National average unit cost  Number of submissions
-1   Adult Critical Care         CCU01  Non-specific, general adult ...          XC07Z  Adult Critical Care, 0 Organ...               31611   55311710.391412                 1749.761488                     87
-2   Adult Critical Care         CCU02  Surgical adult PATIENTS (uns...          XC07Z  Adult Critical Care, 0 Organ...                6952   11855917.576834                 1705.396659                      8
-3   Adult Critical Care         CCU03  Medical adult PATIENTS (unsp...          XC07Z  Adult Critical Care, 0 Organ...                8379   15099098.460903                 1802.016763                     10
-4   Adult Critical Care         CCU05  Neurosciences adult PATIENTS...          XC07Z  Adult Critical Care, 0 Organ...                 547     755521.572682                 1381.209456                      8
-5   Adult Critical Care         CCU06  Cardiac surgical adult PATIE...          XC07Z  Adult Critical Care, 0 Organ...                5511    6613809.210996                 1200.110545                     13
-6   Adult Critical Care         CCU07  Thoracic surgical adult PATI...          XC07Z  Adult Critical Care, 0 Organ...                 710    1362574.211153                 1919.118607                      2
-7   Adult Critical Care         CCU08  Burns and plastic surgery ad...          XC07Z  Adult Critical Care, 0 Organ...                2452    5059065.324318                 2063.240344                      2
-8   Adult Critical Care         CCU09  Spinal adult PATIENTS predom...          XC07Z  Adult Critical Care, 0 Organ...                 109     186731.927489                 1713.136949                      3
-9   Adult Critical Care         CCU10  Renal adult PATIENTS predomi...          XC07Z  Adult Critical Care, 0 Organ...                1406    1181635.767867                  840.423732                      4
-10  Adult Critical Care         CCU12  Obstetric and gynaecology cr...          XC07Z  Adult Critical Care, 0 Organ...                3795    6901694.591211                 1818.628351                      5
-11  Adult Critical Care         CCU90  Non standard LOCATION using ...          XC07Z  Adult Critical Care, 0 Organ...                3160    1582866.552585                  500.907137                      3
-12  Adult Critical Care        CCU999                          Unknown          XC07Z  Adult Critical Care, 0 Organ...                 241         429000.24                 1780.083983                      2
-13  Adult Critical Care         CCU01  Non-specific, general adult ...          XC06Z  Adult Critical Care, 1 Organ...              380787  802326737.681734                 2107.022398                    123
-ENTRY NCC_FY2025-26_National_Schedule/Diagnostic Imaging.xlsx 28818
---- SHEET Export
-                               0              1                                2                       3              4                           5                      6
-0                     Department  Currency Code             Currency Description  Number of examinations           Cost  National average unit cost  Number of submissions
-1   Community diagnostic centres          AA33C  Conventional EEG, EMG or Ner...                    1616  954456.651305                  590.629116                      3
-2   Community diagnostic centres          AA33D  Conventional EEG, EMG or Ner...                       *         215.24                           *                      1
-3   Community diagnostic centres           AS01    Fitting of Hearing Aid, Adult                       *        1984.59                           *                      1
-4   Community diagnostic centres           AS08    Follow-up, Adult, Face toFace                       *         393.45                           *                      1
-5   Community diagnostic centres           AS11                        Aftercare                       *         277.11                           *                      1
-6   Community diagnostic centres          ASNNS  Newborn Hearing Screening Pr...                    7105  615839.253054                   86.676883                      1
-7   Community diagnostic centres          BZ88A  Retinal Tomography, 19 years...                   18191      2207561.7                  121.354609                      1
-8   Community diagnostic centres          BZ88B  Retinal Tomography, 18 years...                      15        2114.89                  140.992667                      1
-9   Community diagnostic centres          BZ89A  Digital Retinal Photography,...                    5317  477535.758612                   89.813007                      3
-10  Community diagnostic centres          BZ89B  Digital Retinal Photography,...                       *         432.45                           *                      1
-11  Community diagnostic centres          CA37A  Audiometry or Hearing Assess...                    9336     1617077.37                  173.208801                      4
-12  Community diagnostic centres          CA37B  Audiometry or Hearing Assess...                      65        7949.12                  122.294154                      2
-13  Community diagnostic centres          CA37C  Audiometry or Hearing Assess...                      65         7994.5                  122.992308                      1/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Directly Accessed Audiology Services.xlsx 21232
---- SHEET Export
-                                  0              1                                2               3                4                           5                      6
-0                        Department  Currency Code             Currency Description  Activity Value             Cost  National average unit cost  Number of submissions
-1   Audiology Community Health S...           AS01    Fitting of Hearing Aid, Adult          154589  18344829.401016                  118.668401                     52
-2         Audiology Outpatient Care           AS01    Fitting of Hearing Aid, Adult           48517   7745150.703853                  159.637873                     12
-3   Audiology Community Health S...           AS02    Fitting of Hearing Aid, Child           14760   3394591.378183                  229.985866                     43
-4         Audiology Outpatient Care           AS02    Fitting of Hearing Aid, Child            2339    524426.880861                  224.209868                     12
-5   Audiology Community Health S...           AS03  Fitting of Hearing Aid, Chil...             646    134683.704803                  208.488707                      6
-6         Audiology Outpatient Care           AS03  Fitting of Hearing Aid, Chil...             111      72008.21324                  648.722642                      3
-7   Audiology Community Health S...           AS04  Fitting of Hearing Aid or De...            4982    653165.654185                  131.105109                     21
-8         Audiology Outpatient Care           AS04  Fitting of Hearing Aid or De...             952     201149.68592                  211.291687                      6
-9   Audiology Community Health S...           AS05  Hearing Aid, Adult, Any Qual...           70465    7360112.53338                  104.450614                     23
-10        Audiology Outpatient Care           AS05  Hearing Aid, Adult, Any Qual...           26422   3175463.221821                  120.182546                      5
-11  Audiology Community Health S...           AS06  Hearing Aid, Adult, Other Co...          189391  19161490.286906                  101.174239                     43
-12        Audiology Outpatient Care           AS06  Hearing Aid, Adult, Other Co...           35474   3858588.155049                  108.772288                     12
-13  Audiology Community Health S...           AS07               Hearing Aid, Child           25196   4543440.992591                    180.3239                     39
-ENTRY NCC_FY2025-26_National_Schedule/Directly Accessed Diagnostic Services.xlsx 47962
---- SHEET Export
-                0                                1             2                                3                       4               5                           6                      7
-0   Currency Code             Currency Description  Service Code              Service Description  Number of examinations            Cost  National average unit cost  Number of submissions
-1           AA33C  Conventional EEG, EMG or Ner...           401  CLINICAL NEUROPHYSIOLOGY SER...                    1665  1424755.444052                  855.708975                      2
-2           AA33C  Conventional EEG, EMG or Ner...           812       DIAGNOSTIC IMAGING SERVICE                    2847   526704.293031                  185.003264                      2
-3           AA33C  Conventional EEG, EMG or Ner...           999                          Unknown                   12214  3057947.872959                  250.364162                      4
-4           AA33D  Conventional EEG, EMG or Ner...           812       DIAGNOSTIC IMAGING SERVICE                     176    16565.467374                   94.121974                      1
-5           AA33D  Conventional EEG, EMG or Ner...           999                          Unknown                     889   216398.574997                   243.41797                      4
-6           DZ30Z              Chest Physiotherapy           999                          Unknown                     214        18996.93                   88.770701                      1
-7           DZ31Z  Cardiopulmonary Exercise Tes...           320               CARDIOLOGY SERVICE                       *     1476.853965                           *                      1
-8           DZ31Z  Cardiopulmonary Exercise Tes...           812       DIAGNOSTIC IMAGING SERVICE                       *      416.752869                           *                      1
-9           DZ31Z  Cardiopulmonary Exercise Tes...           999                          Unknown                     182    17898.297819                   98.342296                      2
-10          DZ32Z  Field Exercise Test or Measu...           320               CARDIOLOGY SERVICE                       *        703.1126                           *                      1
-11          DZ32Z  Field Exercise Test or Measu...           341   RESPIRATORY PHYSIOLOGY SERVICE                     418    53943.206816                  129.050734                      2
-12          DZ32Z  Field Exercise Test or Measu...           812       DIAGNOSTIC IMAGING SERVICE                    1398    37787.032073                   27.029351                      3
-13          DZ32Z  Field Exercise Test or Measu...           999                          Unknown                    1292   410323.978433                  317.588219                      2
-ENTRY NCC_FY2025-26_National_Schedule/Directly Accessed Pathology Services.xlsx 19189
---- SHEET Export
-                0                             1             2                           3                4                 5                           6                      7
-0   Currency Code          Currency Description  Service Code         Service Description  Number of tests              Cost  National average unit cost  Number of submissions
-1          PATH01                      Cytology           822  CHEMICAL PATHOLOGY SERVICE           457785   10201958.559006                    22.28548                      5
-2          PATH01                      Cytology           999                     Unknown            57208    5598152.736391                   97.856117                     41
-3          PATH02  Histopathology and histology           812  DIAGNOSTIC IMAGING SERVICE             5101       344905.2824                   67.615229                      1
-4          PATH02  Histopathology and histology           822  CHEMICAL PATHOLOGY SERVICE           290937    7491253.274012                   25.748713                     10
-5          PATH02  Histopathology and histology           999                     Unknown           328350   24170215.129941                   73.611132                     72
-6          PATH03     Integrated blood services           822  CHEMICAL PATHOLOGY SERVICE          6093582    8579764.314757                       1.408                      3
-7          PATH03     Integrated blood services           999                     Unknown         26136972   67716515.469927                    2.590832                     28
-8          PATH04         Clinical biochemistry           812  DIAGNOSTIC IMAGING SERVICE          3943988    4859473.970851                    1.232122                      1
-9          PATH04         Clinical biochemistry           822  CHEMICAL PATHOLOGY SERVICE         21819028   34960971.179167                    1.602316                     11
-10         PATH04         Clinical biochemistry           999                     Unknown        314757216   498007207.53906                    1.582195                     83
-11         PATH05                   Haematology           812  DIAGNOSTIC IMAGING SERVICE           295685    1097585.129434                    3.712008                      1
-12         PATH05                   Haematology           822  CHEMICAL PATHOLOGY SERVICE          5454966   11066319.787878                    2.028669                      9
-13         PATH05                   Haematology           999                     Unknown         55800113  154432041.703569                    2.767594                     82/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Emergency Care.xlsx 21639
---- SHEET Export
-                                  0              1                                2                      3                  4                           5                      6
-0                           Service  Currency Code             Currency Description  Number of attendances               Cost  National average unit cost  Number of submissions
-1   01EC - Emergency departments...          VB01Z  Emergency Medicine, Any Inve...                  23477    34530322.910408                 1470.814964                    120
-2   01EC - Emergency departments...          VB02Z  Emergency Medicine, Category...                 492885    448177827.51118                  909.294922                    122
-3   01EC - Emergency departments...          VB03Z  Emergency Medicine, Category...                1825691  1015396747.642315                  556.171196                    122
-4   01EC - Emergency departments...          VB04Z  Emergency Medicine, Category...                 987418   699033101.202007                  707.940407                    122
-5   01EC - Emergency departments...          VB05Z  Emergency Medicine, Category...                 226999   128766350.108549                  567.255143                    122
-6   01EC - Emergency departments...          VB06Z  Emergency Medicine, Category...                 324893   147578454.591537                  454.237101                    122
-7   01EC - Emergency departments...          VB07Z  Emergency Medicine, Category...                2015819   832302422.522254                  412.885493                    122
-8   01EC - Emergency departments...          VB08Z  Emergency Medicine, Category...                4400115  1318771558.301558                  299.712975                    122
-9   01EC - Emergency departments...          VB09Z  Emergency Medicine, Category...                3185136   777615669.408478                  244.138922                    122
-10  01EC - Emergency departments...          VB10Z  Emergency Medicine, Dental Care                    645      164791.614772                  255.490876                     68
-11  01EC - Emergency departments...          VB11Z  Emergency Medicine, No Inves...                3715252   627005001.623911                  168.765134                    122
-12  01EC - Emergency departments...          VB99Z  Emergency Medicine, Patient ...                   1126      632476.301382                  561.701866                     61
-13  02EC - Consultant led mono s...          VB01Z  Emergency Medicine, Any Inve...                   1722      250758.410783                  145.620448                     16
-ENTRY NCC_FY2025-26_National_Schedule/High Cost Devices.xlsx 21530
---- SHEET Export
-                0                                1               2                3                           4                      5
-0   Currency Code             Currency Description  Activity Value             Cost  National average unit cost  Number of submissions
-1           DEV01  3 dimensional mapping and li...           22352  76953994.142016                 3442.823646                     36
-2           DEV02  Aneurysm coils (Separated an...            4786  14339968.043337                 2996.232353                     38
-3           DEV03  Bespoke orthopaedic prosthes...            9887  21337792.376511                 2158.166519                     35
-4           DEV04  Biological mesh, including s...           15073  12271539.703436                  814.140496                     73
-5           DEV05       Bone anchored hearing aids            2881   12554526.62477                 4357.697544                     44
-6           DEV06          Bone growth stimulators            1295   1984389.453794                 1532.347069                     31
-7           DEV07  Carotid, iliac and renal ste...            4641   7982243.324508                 1719.940385                     44
-8           DEV08  Consumables associated with ...            1498   4942459.265229                 3299.372006                     12
-9           DEV09  Deep brain, vagal, sacral, s...            5789    59816289.9722                10332.750038                     43
-10          DEV10  Devices used in connection w...            1565   5955816.906466                 3805.633806                      3
-11          DEV11  Drug-eluting peripheral angi...            4585   3595117.551545                  784.104155                     36
-12          DEV12  Endovascular stent graft (In...            4071  39318617.810787                 9658.221029                     46
-13          DEV13  Flow diverters for intracran...             614   7023485.815738                 11438.90198                     14
-ENTRY NCC_FY2025-26_National_Schedule/High Cost Drugs.xlsx 17478
---- SHEET Export
-                                 0                     1               2                  3                           4                      5
-0                    Currency Code  Currency Description  Activity value               Cost  National average unit cost  Number of submissions
-1                             HCDr       High Cost Drugs        11930112  5094888830.404922                  427.061274                    145
-2                            Total                   NaN        11930112  5094888830.404922                  427.061274                    145
-3                              NaN                   NaN             NaN                NaN                         NaN                    NaN
-4  Applied filters:\nDepartment...                   NaN             NaN                NaN                         NaN                    NaN
-ENTRY NCC_FY2025-26_National_Schedule/Maternity Care Contacts.xlsx 26061
---- SHEET Export
-                           0             1                              2              3                                4                      5               6                           7                      8
-0                 Department  Service Code            Service Description  Currency Code             Currency Description  Number of attendances            Cost  National average unit cost  Number of submissions
-1   Community Health Service            06  Community Paediatrics Service           N03F  Health Visitor, Other Clinic...                     18     2590.552905                  143.919606                      1
-2   Community Health Service            06  Community Paediatrics Service           N03N     Health Visitor, Immunisation                   2252    83589.673451                   37.117972                      1
-3   Community Health Service            09            Counselling Service           N03A  Health Visitor, Ante, Natal ...                      *      123.686876                           *                      1
-4   Community Health Service            11               DIABETES SERVICE           N03A  Health Visitor, Ante, Natal ...                      *      467.672885                           *                      1
-5   Community Health Service            11               DIABETES SERVICE           N03F  Health Visitor, Other Clinic...                      *      367.756697                           *                      1
-6   Community Health Service            12       District Nursing Service           N01A  Community Midwife, Ante Nata...                  26464  1889769.859139                   71.409079                      1
-7   Community Health Service            12       District Nursing Service           N01P  Community Midwife, Post Nata...                  10349  1162413.871386                  112.321371                      1
-8   Community Health Service            12       District Nursing Service           N03A  Health Visitor, Ante, Natal ...                      *      264.832244                           *                      1
-9   Community Health Service            12       District Nursing Service           N03B  Health Visitor, New Baby Review                      *      250.587526                           *                      1
-10  Community Health Service            12       District Nursing Service           N03D    Health Visitor, 1 Year Review                      *        82.89626                           *                      1
-11  Community Health Service            12       District Nursing Service           N03F  Health Visitor, Other Clinic...                     94     9102.173041                   96.831628                      1
-12  Community Health Service            12       District Nursing Service           N03G  Health Visitor, Other Statut...                      *      198.124007                           *                      1
-13  Community Health Service            12       District Nursing Service           N03J  Health Visitor, Other Statut...                    156     6922.455926                   44.374717                      1/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Mental Health Care Contacts.xlsx 82810
---- SHEET Export
-               0                    1              2                                3                   4               5                           6                      7
-0   Service Code  Service Description  Currency Code             Currency Description  Number of contacts            Cost  National average unit cost  Number of submissions
-1            A01     Day Care Service         MAA96D  Adult - Psychosis and Bipola...                 955   158159.335158                  165.611869                      2
-2            A01     Day Care Service         MAA96Z  Adult - Psychosis and Bipola...                 898   188737.535057                  210.175429                      2
-3            A01     Day Care Service         MAB96D  Adult - Mood and Anxiety Dis...                 300   220241.658954                  734.138863                      2
-4            A01     Day Care Service         MAB96Z  Adult - Mood and Anxiety Dis...                2276   503147.590808                  221.066604                      2
-5            A01     Day Care Service         MAE96D  Adult - Neurocognitive Disor...                1832   396820.805339                  216.605243                      2
-6            A01     Day Care Service         MAE96Z  Adult - Neurocognitive Disor...                 552   108824.491663                  197.145818                      2
-7            A01     Day Care Service         MAF96D  Adult - Personality Disorder...                  19    17947.118179                  944.585167                      1
-8            A01     Day Care Service         MAF96Z  Adult - Personality Disorder...                 102    18032.860762                  176.792753                      1
-9            A01     Day Care Service         MAZ99Z     Adult - Cross-cutting crisis                  20    10170.627287                  508.531364                      2
-10           A01     Day Care Service         MBC96D  All Age - Eating and Feeding...                 717   976941.828468                 1362.540904                      2
-11           A01     Day Care Service         MBC96Z  All Age - Eating and Feeding...                 112   663016.489195                 5919.790082                      1
-12           A01     Day Care Service         MBC98Z  All Age - Eating and Feeding...                 483   620264.193311                 1284.190876                      1
-13           A01     Day Care Service         MBU96D  Other/Unclassified - Communi...               22593  5597923.722597                  247.772484                      9
-ENTRY NCC_FY2025-26_National_Schedule/Mental Health Provider Spells.xlsx 36264
---- SHEET Export
-               0                               1              2                                3                   4                 5                           6                      7
-0   Service Code             Service Description  Currency Code             Currency Description  Number of bed days              Cost  National average unit cost  Number of submissions
-1        200MHPS  Acute Adult Mental Health Care         MAA98A  Adult - Psychosis and Bipola...              717591  533373743.508604                   743.28377                     33
-2        200MHPS  Acute Adult Mental Health Care         MAA98B  Adult - Psychosis and Bipola...                9431    8892012.903255                  942.849422                      6
-3        200MHPS  Acute Adult Mental Health Care         MAA98C  Adult - Psychosis and Bipola...                  46       77559.85602                 1686.083827                      2
-4        200MHPS  Acute Adult Mental Health Care         MAA98D  Adult - Psychosis and Bipola...                 607     928890.199806                  1530.29687                      2
-5        200MHPS  Acute Adult Mental Health Care         MAA98Z  Adult - Psychosis and Bipola...              113191   73467081.490236                   649.05409                      8
-6        200MHPS  Acute Adult Mental Health Care         MAB98A  Adult - Mood and Anxiety Dis...              146176  105968075.830798                  724.934845                     32
-7        200MHPS  Acute Adult Mental Health Care         MAB98B  Adult - Mood and Anxiety Dis...                 594       557256.0999                  938.141582                      3
-8        200MHPS  Acute Adult Mental Health Care         MAB98C  Adult - Mood and Anxiety Dis...                 150      198382.22159                 1322.548144                      4
-9        200MHPS  Acute Adult Mental Health Care         MAB98Z  Adult - Mood and Anxiety Dis...                8119     4906768.88264                   604.35631                      5
-10       200MHPS  Acute Adult Mental Health Care         MAE98A  Adult - Neurocognitive Disor...                8890    6786359.701169                  763.370045                     30
-11       200MHPS  Acute Adult Mental Health Care         MAE98C  Adult - Neurocognitive Disor...                  66      42888.608992                  649.827409                      1
-12       200MHPS  Acute Adult Mental Health Care         MAE98Z  Adult - Neurocognitive Disor...                 768     588801.649213                  766.668814                      1
-13       200MHPS  Acute Adult Mental Health Care         MAF98A  Adult - Personality Disorder...               98177   73601232.985166                  749.678978                     32
-ENTRY NCC_FY2025-26_National_Schedule/National Screening Programmes.xlsx 17772
---- SHEET Export
-                                 0                                1                   2                 3                           4                      5
-0                    Currency Code             Currency Description  Number of Contacts              Cost  National average unit cost  Number of submissions
-1                           NSP001  NHS abdominal aortic aneurys...              260222   15025085.075925                   57.739488                     33
-2                           NSP002   NHS breast screening programme             1937162  196896942.733791                   101.64196                     64
-3                           NSP003  NHS cervical screening progr...             1659112   35641778.766027                   21.482443                     11
-4                           NSP004  NHS bowel cancer screening p...             5586557  117606402.177561                   21.051679                     36
-5                            Total                              NaN             9443053  365170208.753304                   38.670778                     80
-6                              NaN                              NaN                 NaN               NaN                         NaN                    NaN
-7  Applied filters:\nDepartment...                              NaN                 NaN               NaN                         NaN                    NaN
-ENTRY NCC_FY2025-26_National_Schedule/NHS Talking Therapies.xlsx 43456
---- SHEET Export
-               0                    1              2                                3                   4              5                           6                      7
-0   Service Code  Service Description  Currency Code             Currency Description  Number of Contacts           Cost  National average unit cost  Number of submissions
-1         01IAPT           Assessment         MAT01A  Depression - Mild - Low inte...                1007  165494.698091                  164.344288                     13
-2         01IAPT           Assessment         MAT01B  Depression - Mild - High int...                 228   49726.988224                  218.100826                     12
-3         01IAPT           Assessment         MAT01C  Depression - Moderate - Low ...                2384  389046.353982                  163.190585                     15
-4         01IAPT           Assessment         MAT01D  Depression - Moderate - High...                 542  107506.645979                  198.351745                     14
-5         01IAPT           Assessment         MAT01E  Depression - Severe - Low in...                5527   914308.05253                  165.425738                     15
-6         01IAPT           Assessment         MAT01F  Depression - Severe - High i...                1275   262195.64241                  205.643641                     15
-7         01IAPT           Assessment         MAT02A  Generalised Anxiety - Mild -...                4039  755458.498313                  187.040975                     12
-8         01IAPT           Assessment         MAT02B  Generalised Anxiety - Mild -...                 121    23211.20392                  191.828132                      8
-9         01IAPT           Assessment         MAT02C  Generalised Anxiety - Modera...                1939  273805.053251                  141.209414                     12
-10        01IAPT           Assessment         MAT02D  Generalised Anxiety - Modera...                 178   32850.731608                  184.554672                     12
-11        01IAPT           Assessment         MAT02E  Generalised Anxiety - Severe...                3051  442622.256011                  145.074486                     12
-12        01IAPT           Assessment         MAT02F  Generalised Anxiety - Severe...                 321   59724.153565                  186.056553                     11
-13        01IAPT           Assessment         MAT03A  Body Dysmorphic Disorder - A...                   *     380.324047                           *                      2/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Nuclear Medicine.xlsx 24037
---- SHEET Export
-                               0              1                                2                       3               4                           5                      6
-0                     Department  Currency Code             Currency Description  Number of examinations            Cost  National average unit cost  Number of submissions
-1   Community diagnostic centres          RN28Z                      Breath Test                    1391      8505.93097                    6.114976                      1
-2             Outpatient Imaging          RN28Z                      Breath Test                    1677   464157.142762                   276.77826                     13
-3             Outpatient Imaging          RN31Z               Dacryoscintigraphy                     231    84127.140895                  364.186757                     30
-4   Community diagnostic centres          RN52Z  Delivery of Other Radionucli...                       *      459.032529                           *                      1
-5             Outpatient Imaging          RN52Z  Delivery of Other Radionucli...                    5615  9895509.200008                 1762.334675                     36
-6   Community diagnostic centres          RN30A  Dimercaptosuccinic Acid (DMS...                       *      536.993228                           *                      1
-7             Outpatient Imaging          RN30A  Dimercaptosuccinic Acid (DMS...                    2361   890597.484821                   377.21198                     61
-8             Outpatient Imaging          RN30C  Dimercaptosuccinic Acid (DMS...                     794   296926.879649                  373.963324                     44
-9             Outpatient Imaging          RN30B  Dimercaptosuccinic Acid (DMS...                     491   205770.684224                  419.084897                     41
-10  Community diagnostic centres          RN11Z        Dopamine Transporter Scan                       *      510.351077                           *                      1
-11            Outpatient Imaging          RN11Z        Dopamine Transporter Scan                    4345  3886211.304036                  894.409966                     50
-12  Community diagnostic centres          RN27A  Glomerular Filtration Rate T...                       *      510.351077                           *                      1
-13            Outpatient Imaging          RN27A  Glomerular Filtration Rate T...                    8666  5190800.208093                  598.984561                     46
-ENTRY NCC_FY2025-26_National_Schedule/Outpatient Care.xlsx 190439
---- SHEET Export
-                 0             1                                2              3                                4                      5            6                           7                      8
-0       Department  Service Code              Service Description  Currency Code             Currency Description  Number of attendances         Cost  National average unit cost  Number of submissions
-1   Consultant Led       06ACSIU                HIV, AIDS and STD          WF02D  Multiprofessional Non-Admitt...                      *   499.136958                           *                      1
-2   Consultant Led           103           BREAST SURGERY SERVICE          VC01Z  Assessment for Rehabilitatio...                      *   245.153744                           *                      1
-3   Consultant Led           104       COLORECTAL SURGERY SERVICE          VC01Z  Assessment for Rehabilitatio...                      *   538.891858                           *                      1
-4   Consultant Led           105  HEPATOBILIARY AND PANCREATIC...          VC01Z  Assessment for Rehabilitatio...                      *  1259.952111                           *                      1
-5   Consultant Led           111              ORTHOPAEDIC SERVICE          WF02C  Multiprofessional Non-Admitt...                      *    682.14714                           *                      2
-6   Consultant Led           111              ORTHOPAEDIC SERVICE          WF02D  Multiprofessional Non-Admitt...                      *   239.155212                           *                      1
-7   Consultant Led           115           TRAUMA SURGERY SERVICE          WF02C  Multiprofessional Non-Admitt...                      *   152.208661                           *                      1
-8   Consultant Led           115           TRAUMA SURGERY SERVICE          WF02D  Multiprofessional Non-Admitt...                      *   276.050961                           *                      1
-9   Consultant Led           130            OPHTHALMOLOGY SERVICE          VC01Z  Assessment for Rehabilitatio...                      *    245.70754                           *                      1
-10  Consultant Led           142     PAEDIATRIC DENTISTRY SERVICE          VC01Z  Assessment for Rehabilitatio...                      *   255.256999                           *                      1
-11  Consultant Led           142     PAEDIATRIC DENTISTRY SERVICE          WF02D  Multiprofessional Non-Admitt...                      *  2654.354198                           *                      2
-12  Consultant Led           161               BURNS CARE SERVICE          WF02D  Multiprofessional Non-Admitt...                      *   881.296298                           *                      2
-13  Consultant Led           170   CARDIOTHORACIC SURGERY SERVICE          WF02C  Multiprofessional Non-Admitt...                      *   351.581722                           *                      2
-ENTRY NCC_FY2025-26_National_Schedule/Outpatient Procedure.xlsx 78382
---- SHEET Export
-                0                                1                     2                3                           4                      5
-0   Currency Code             Currency Description  Number of procedures             Cost  National average unit cost  Number of submissions
-1           FF61D  Abdominal Hernia Procedures,...                     *       168.721997                           *                      1
-2           FF61C  Abdominal Hernia Procedures,...                     *      1170.280055                           *                      5
-3           AB23Z  Acupuncture for Pain Management                 37908    8778127.64465                  231.563988                     61
-4           CA62Z                    Adenoidectomy                     *       883.812181                           *                      3
-5           CA61Z               Adenotonsillectomy                     *       987.274513                           *                      1
-6           CD12B  Adjustment of Dental Device,...                160770  38290049.691605                  238.166634                    100
-7           CD12A  Adjustment of Dental Device,...                 92870  24541977.281565                  264.261627                    105
-8           FF14Z  Adjustment of Gastric Band f...                   970    132716.340843                   136.82097                     23
-9           KA04B  Adrenal Procedures with CC S...                   222      69134.56375                  311.416954                     13
-10          DZ59Z                  Airflow Studies                101691  30576880.522925                  300.684235                    117
-11          AB24Z  Alteration of Function of Ne...                  1185    565597.604606                  477.297557                     12
-12          DZ58Z  Alveolar Carbon Monoxide Mea...                  3639    966859.922036                  265.693851                     58
-13          YQ22B  Amputation of Single Limb wi...                     *       711.509002                           *                      3
-ENTRY NCC_FY2025-26_National_Schedule/Rehabilitation Inpatient.xlsx 112181
---- SHEET Export
-                0                                1             2                                3                   4               5                           6       7                      8
-0   Currency Code             Currency Description  Service Code              Service Description  Number of bed days            Cost  National average unit cost  Sector  Number of submissions
-1           AA22C  Cerebrovascular Accident, Ne...           314  REHABILITATION MEDICINE SERVICE                1451  1124269.836968                  774.824147   Acute                     16
-2           AA22C  Cerebrovascular Accident, Ne...           323          SPINAL INJURIES SERVICE                  81    85021.414397                 1049.647091   Acute                      1
-3           AA22C  Cerebrovascular Accident, Ne...           344  COMPLEX SPECIALISED REHABILI...                 283   209263.490253                  739.446962   Acute                      1
-4           AA22C  Cerebrovascular Accident, Ne...           345  SPECIALIST REHABILITATION SE...                 382   257759.882431                   674.76409   Acute                      4
-5           AA22D  Cerebrovascular Accident, Ne...           314  REHABILITATION MEDICINE SERVICE                 437   346143.705007                  792.090858   Acute                      6
-6           AA22D  Cerebrovascular Accident, Ne...           323          SPINAL INJURIES SERVICE                  42    41808.828655                  995.448301   Acute                      1
-7           AA22D  Cerebrovascular Accident, Ne...           344  COMPLEX SPECIALISED REHABILI...                 220   163545.265047                  743.387568   Acute                      1
-8           AA22E  Cerebrovascular Accident, Ne...           314  REHABILITATION MEDICINE SERVICE                 157   119542.024286                  761.414167   Acute                      8
-9           AA22E  Cerebrovascular Accident, Ne...           344  COMPLEX SPECIALISED REHABILI...                  26    18727.188026                  720.276463   Acute                      1
-10          AA22E  Cerebrovascular Accident, Ne...           345  SPECIALIST REHABILITATION SE...                   *     3897.701241                           *   Acute                      1
-11          AA22F  Cerebrovascular Accident, Ne...           314  REHABILITATION MEDICINE SERVICE                 126   102376.509407                  812.511979   Acute                      4
-12          AA22F  Cerebrovascular Accident, Ne...           345  SPECIALIST REHABILITATION SE...                 170    71433.235909                  420.195505   Acute                      3
-13          AA22G  Cerebrovascular Accident, Ne...           314  REHABILITATION MEDICINE SERVICE                  24    17945.518921                  747.729955   Acute                      4/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Summary HRG.xlsx 1006875
---- SHEET Export
-                                  0              1              2              3                        4                        5                        6         7            8              9
-0                        Department  Critical care  Critical care  Critical care  Critical care transport  Critical care transport  Critical care transport   Daycase      Daycase        Daycase
-1                          Currency       Activity      Unit cost           Cost                 Activity                Unit cost                     Cost  Activity    Unit cost           Cost
-2   AA22C - Cerebrovascular Acci...            NaN            NaN            NaN                      NaN                      NaN                      NaN        86   811.060216   69751.178597
-3   AA22D - Cerebrovascular Acci...            NaN            NaN            NaN                      NaN                      NaN                      NaN       154   366.777923   56483.800115
-4   AA22E - Cerebrovascular Acci...            NaN            NaN            NaN                      NaN                      NaN                      NaN       137   579.466301   79386.883216
-5   AA22F - Cerebrovascular Acci...            NaN            NaN            NaN                      NaN                      NaN                      NaN       470   471.964505  221823.317265
-6   AA22G - Cerebrovascular Acci...            NaN            NaN            NaN                      NaN                      NaN                      NaN       931   490.744075  456882.733452
-7   AA23C - Haemorrhagic Cerebro...            NaN            NaN            NaN                      NaN                      NaN                      NaN         *            *    3877.670475
-8   AA23D - Haemorrhagic Cerebro...            NaN            NaN            NaN                      NaN                      NaN                      NaN        61   528.712318   32251.451423
-9   AA23E - Haemorrhagic Cerebro...            NaN            NaN            NaN                      NaN                      NaN                      NaN        48   920.371687    44177.84098
-10  AA23F - Haemorrhagic Cerebro...            NaN            NaN            NaN                      NaN                      NaN                      NaN        77    701.99724   54053.787494
-11  AA23G - Haemorrhagic Cerebro...            NaN            NaN            NaN                      NaN                      NaN                      NaN        74  1033.650646    76490.14783
-12  AA24C - Brain Tumours or Cer...            NaN            NaN            NaN                      NaN                      NaN                      NaN       362   515.695395  186681.733135
-13  AA24D - Brain Tumours or Cer...            NaN            NaN            NaN                      NaN                      NaN                      NaN       528   614.856479  324644.220696
-ENTRY NCC_FY2025-26_National_Schedule/Summary Mental Health & NHS Talking Therapies.xlsx 37808
---- SHEET Export
-                                  0                           1                           2                           3                             4                             5                             6                                7                                8                                9
-0                        Department  Mental Health Care Contact  Mental Health Care Contact  Mental Health Care Contact  Mental Health Provider Spell  Mental Health Provider Spell  Mental Health Provider Spell  NHS Talking Therapy Care Con...  NHS Talking Therapy Care Con...  NHS Talking Therapy Care Con...
-1                          Currency                    Activity                   Unit cost                        Cost                      Activity                     Unit cost                          Cost                         Activity                        Unit cost                             Cost
-2   IAPT - NHS Talking Therapy C...                         NaN                         NaN                         NaN                           NaN                           NaN                           NaN                             4462                       375.338428                   1674760.063555
-3   MAA96A - Adult - Psychosis a...                     1272332                  236.035455            300315462.165995                           962                   1155.642333                1111727.923993                              NaN                              NaN                              NaN
-4   MAA96B - Adult - Psychosis a...                      872296                  301.388457            262899945.866458                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-5   MAA96C - Adult - Psychosis a...                       53978                  632.604649              34146733.71815                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-6   MAA96D - Adult - Psychosis a...                       85660                     287.647             24639842.004522                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-7   MAA96Z - Adult - Psychosis a...                      314481                  345.658541             108703043.76129                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-8   MAA97A - Adult - Psychosis a...                       59758                  267.320139             15974516.864809                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-9   MAA97B - Adult - Psychosis a...                        5381                  218.149802              1173864.085956                           450                   2836.851391                 1276583.12595                              NaN                              NaN                              NaN
-10  MAA97C - Adult - Psychosis a...                          12                  1145.75042                13749.005043                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-11  MAA97D - Adult - Psychosis a...                       12849                  429.799382              5522492.259404                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-12  MAA97Z - Adult - Psychosis a...                         771                   327.59826               252578.258471                           NaN                           NaN                           NaN                              NaN                              NaN                              NaN
-13  MAA98A - Adult - Psychosis a...                       26027                   70.215639              1827502.430958                       1010146                     810.25174              818472553.658212                              NaN                              NaN                              NaN
-ENTRY NCC_FY2025-26_National_Schedule/Summary Other Currency.xlsx 104691
---- SHEET Export
-                                  0          1           2                  3           4           5           6                         7                         8                         9
-0                        Department  Ambulance   Ambulance          Ambulance  Cancer MDT  Cancer MDT  Cancer MDT  Community Care Inpatient  Community Care Inpatient  Community Care Inpatient
-1                          Currency   Activity   Unit cost               Cost    Activity   Unit cost        Cost                  Activity                 Unit cost                      Cost
-2                 01 - Hear & Treat    1713660   57.454514    98457503.146134         NaN         NaN         NaN                       NaN                       NaN                       NaN
-3                  02 - See & Treat    2733472  386.626045  1056831469.715513         NaN         NaN         NaN                       NaN                       NaN                       NaN
-4                 03 - See & Convey    5044825    498.7642  2516178105.175858         NaN         NaN         NaN                       NaN                       NaN                       NaN
-5                        04 - Other    4448906    25.43367   113152008.928626         NaN         NaN         NaN                       NaN                       NaN                       NaN
-6                   A03 - Dietitian        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-7   A06A1 - Occupational Therapi...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-8   A08AG - Physiotherapist, Adu...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-9   A13C1 - Speech and Language ...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-10  AS01 - Fitting of Hearing Ai...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-11  AS02 - Fitting of Hearing Ai...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-12  AS03 - Fitting of Hearing Ai...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN
-13  AS04 - Fitting of Hearing Ai...        NaN         NaN                NaN         NaN         NaN         NaN                       NaN                       NaN                       NaN/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:22: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  print(g.join(r,rsuffix="_RJ1").to_string())
 /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default
   warn("Workbook contains no default style, apply openpyxl's default")
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_National_Schedule/Summary Outpatient Attendances.xlsx 38136
---- SHEET Export
-                                  0               1               2                 3                   4                   5                   6         7           8                 9
-0                        Department  Consultant Led  Consultant Led    Consultant Led  Non Consultant Led  Non Consultant Led  Non Consultant Led     Total       Total             Total
-1                           Service        Activity       Unit cost              Cost            Activity           Unit cost                Cost  Activity   Unit cost              Cost
-2       06ACSIU - HIV, AIDS and STD          588239      207.893224  122290902.074236              297931          163.076066     48585415.395999    886170  192.825663  170876317.470236
-3   07ACSIU - Reproductive medicine          123105      258.982736   31882069.706997              117012          218.437301     25559785.444603    240117  239.224441     57441855.1516
-4     08ACSIU - Gender reassignment           20014      604.772012   12103907.058057               14302          216.399233      3094941.829923     34316  442.908523    15198848.88798
-5     100 - GENERAL SURGERY SERVICE         1128100      198.315493  223719707.264909              420396          139.483959     58638498.469816   1548496  182.343516  282358205.734725
-6             101 - UROLOGY SERVICE         2079961      159.978342  332748711.799945              395712          126.433051     50031075.446795   2475673  154.616457   382779787.24674
-7   102 - TRANSPLANT SURGERY SER...           95855      329.413502   31575931.232785                9978           368.46182      3676512.036256    105833  333.095001   35252443.269041
-8      103 - BREAST SURGERY SERVICE         1288801      228.648195    294682022.6365              185984          160.865697     29918445.745988   1474785  220.100197  324600468.382488
-9   104 - COLORECTAL SURGERY SER...          954938      159.334428  152154500.324857              213051          112.249513     23914870.951656   1167989  150.745744  176069371.276513
-10  105 - HEPATOBILIARY AND PANC...           97766      241.852783   23644979.162615                8689          326.115608      2833618.519508    106455  248.730428   26478597.682123
-11  106 - UPPER GASTROINTESTINAL...          219576      192.337514   42232702.000699               23757           135.81074      3226455.755377    243333  186.818712   45459157.756076
-12   107 - VASCULAR SURGERY SERVICE          425847      203.221671    86541339.08984               81345          152.345131     12392514.662279    507192  195.061937   98933853.752119
-13     108 - SPINAL SURGERY SERVICE          247258      189.269114   46798302.563639               18024           117.11966      2110964.752669    265282  184.367078   48909267.316308
-ENTRY NCC_FY2025-26_National_Schedule/Wheelchair Care Contacts and Equipment.xlsx 23770
---- SHEET Export
-                           0             1                                2              3                                4                               5               6                           7                      8
-0                 Department  Service Code              Service Description  Currency Code             Currency Description  Number of attendances or items            Cost  National average unit cost  Number of submissions
-1   Community Health Service           999                          Unknown           WC23  Accessories - Specialised wi...                             245   285441.958072                 1165.069217                      7
-2         Non Consultant Led           314  REHABILITATION MEDICINE SERVICE           WC23  Accessories - Specialised wi...                              74    39808.276444                  537.949682                      1
-3         Non Consultant Led           999                          Unknown           WC23  Accessories - Specialised wi...                             200    558499.00138                 2792.495007                      2
-4   Community Health Service           300  GENERAL INTERNAL MEDICINE SE...           WC22        Accessories - Specialised                               *     2967.286908                           *                      1
-5   Community Health Service           314  REHABILITATION MEDICINE SERVICE           WC22        Accessories - Specialised                            2716       110680.28                   40.751208                      1
-6   Community Health Service           420               PAEDIATRIC SERVICE           WC22        Accessories - Specialised                               *      301.247402                           *                      1
-7   Community Health Service           999                          Unknown           WC22        Accessories - Specialised                            1955  1164301.918573                  595.550853                     15
-8         Non Consultant Led           651     Occupational Therapy Service           WC22        Accessories - Specialised                             136   101452.935437                  745.977466                      1
-9         Non Consultant Led           999                          Unknown           WC22        Accessories - Specialised                             144    61408.775318                  426.449829                      2
-10  Community Health Service           314  REHABILITATION MEDICINE SERVICE           WC21               Accessories - High                           10728       312487.15                   29.128183                      1
-11  Community Health Service           318        INTERMEDIATE CARE SERVICE           WC21               Accessories - High                               *     1204.989607                           *                      1
-12  Community Health Service           430         ELDERLY MEDICINE SERVICE           WC21               Accessories - High                               *      301.247402                           *                      1
-13  Community Health Service           999                          Unknown           WC21               Accessories - High                            3076  1072313.400736                  348.606437                     16
-
-###### NCC_FY2025-26_NCCI.zip 2872842
-ENTRY NCC_FY2025-26_NCCI/ 0
-ENTRY NCC_FY2025-26_NCCI/NCCI by Department and Service MFF Adjusted.csv 7880711
-HEAD
-ï»¿Provider,Mapping Pot,Service,Department,Activity,Unit Cost,Actual Cost,Expected Cost,Variance,NCCI
-G6V2S - North London NHS Foundation Trust,08_MH,01IAPT - Assessment,IAPT - NHS Talking Therapy Care Contact,9349,Â£229,"Â£2,144,173","Â£1,567,556","Â£576,616",137
-G6V2S - North London NHS Foundation Trust,08_MH,02IAPT - Treatment,IAPT - NHS Talking Therapy Care Contact,73827,Â£231,"Â£17,082,108","Â£13,410,885","Â£3,671,223",127
-G6V2S - North London NHS Foundation Trust,08_MH,03IAPT - Assessment and Treatment,IAPT - NHS Talking Therapy Care Contact,23872,Â£247,"Â£5,887,702","Â£3,956,355","Â£1,931,347",149
-RJ1 sample []
-ENTRY NCC_FY2025-26_NCCI/NCCI by Department and Service Unadjusted.csv 7881081
-HEAD
-ï»¿Provider,Mapping Pot,Service,Department,Activity,Unit Cost,Actual Cost,Expected Cost,Variance,NCCI
-G6V2S - North London NHS Foundation Trust,08_MH,01IAPT - Assessment,IAPT - NHS Talking Therapy Care Contact,9349,Â£250,"Â£2,337,245","Â£1,560,528","Â£776,717",150
-G6V2S - North London NHS Foundation Trust,08_MH,02IAPT - Treatment,IAPT - NHS Talking Therapy Care Contact,73827,Â£252,"Â£18,620,272","Â£13,544,835","Â£5,075,437",137
-G6V2S - North London NHS Foundation Trust,08_MH,03IAPT - Assessment and Treatment,IAPT - NHS Talking Therapy Care Contact,23872,Â£269,"Â£6,417,862","Â£4,011,672","Â£2,406,190",160
-RJ1 sample []
-ENTRY NCC_FY2025-26_NCCI/NCCI by Mapping Pot MFF Adjusted.xlsx 32275
---- SHEET Export
-                                  0                                1                                2                       3                            4                              5                            6                      7                            8                        9
-0                       Mapping pot  01_EI - Elective Inpatient A...  02_NEI - Non-Elective Inpatient  04_CCS - Critical Care  05_OP - Outpatient Services  06_OAS - Other Acute Services  07_COM - Community Services  08_MH - Mental Health  10_PAR - Ambulance Services  11_A&E - Emergency Care
-1                          Provider                             NCCI                             NCCI                    NCCI                         NCCI                           NCCI                         NCCI                   NCCI                         NCCI                     NCCI
-2   G6V2S - North London NHS Fou...                              NaN                              NaN                     NaN                          NaN                            NaN                          NaN              94.291488                          NaN                      NaN
-3   R0A - Manchester University ...                        97.624799                        116.59788               92.983251                    97.016207                     103.730877                   106.968275             130.186305                          NaN                 81.09929
-4   R0B - South Tyneside And Sun...                        79.622873                       114.344067              113.411376                     75.14438                      96.306223                    73.069342              83.590937                          NaN                78.967238
-5   R0D - University Hospitals D...                        97.726133                       106.167705              128.978865                   107.342745                      88.621799                    89.176445                    NaN                          NaN               105.439376
-6   R1A - Herefordshire And Worc...                              NaN                              NaN                     NaN                   165.539269                            NaN                    96.573826             117.647088                          NaN                      NaN
-7   R1D - Shropshire Community H...                         72.67005                                *                     NaN                   134.556054                      93.126677                    96.163814                    NaN                          NaN                94.261695
-8     R1F - Isle Of Wight NHS Trust                       120.428998                       132.811581              145.384202                    98.858588                      166.35077                    78.727903                    NaN                    114.48094               144.024239
-9      R1H - Barts Health NHS Trust                       112.665539                        81.190648               84.054268                   109.784009                     105.354622                    52.489776                    NaN                          NaN                97.957392
-10  R1K - London North West Univ...                       117.202487                       100.571851                92.27075                    94.838672                     127.059304                   104.321906                    NaN                          NaN               111.315722
-11  R1L - Essex Partnership Univ...                              NaN                              NaN                     NaN                   130.446849                            NaN                    48.696255              91.835254                          NaN                      NaN
-12  RA2 - Royal Surrey County Ho...                        75.567371                        91.106368                88.46996                    98.383985                      113.45333                   136.244884                    NaN                          NaN                84.882056
-13  RA7 - University Hospitals B...                       113.188623                       107.492849                92.15399                   110.369211                     136.798472                    63.263888                    NaN                          NaN               104.911568/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default
-  warn("Workbook contains no default style, apply openpyxl's default")
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_NCCI/NCCI by Mapping Pot Unadjusted.xlsx 32323
---- SHEET Export
-                                  0                                1                                2                       3                            4                              5                            6                      7                            8                        9
-0                       Mapping pot  01_EI - Elective Inpatient A...  02_NEI - Non-Elective Inpatient  04_CCS - Critical Care  05_OP - Outpatient Services  06_OAS - Other Acute Services  07_COM - Community Services  08_MH - Mental Health  10_PAR - Ambulance Services  11_A&E - Emergency Care
-1                          Provider                             NCCI                             NCCI                    NCCI                         NCCI                           NCCI                         NCCI                   NCCI                         NCCI                     NCCI
-2   G6V2S - North London NHS Fou...                              NaN                              NaN                     NaN                          NaN                            NaN                          NaN             102.126416                          NaN                      NaN
-3   R0A - Manchester University ...                        95.202405                       114.706543                90.07876                    94.766261                     102.860728                   105.746603             130.337001                          NaN                79.501375
-4   R0B - South Tyneside And Sun...                         76.70075                       110.349133              108.351215                    72.257976                      92.379525                    70.420881              80.655038                          NaN                75.824747
-5   R0D - University Hospitals D...                         95.83604                       104.305391              125.250132                   104.726973                      87.092498                    88.741305                    NaN                          NaN               103.286271
-6   R1A - Herefordshire And Worc...                              NaN                              NaN                     NaN                   161.980303                            NaN                    94.609768             114.342638                          NaN                      NaN
-7   R1D - Shropshire Community H...                        71.005734                                *                     NaN                   130.325602                      89.525584                    93.758204                    NaN                          NaN                90.362706
-8     R1F - Isle Of Wight NHS Trust                       116.140169                       128.059024              138.455827                    95.185253                     160.071824                    75.157685                    NaN                   110.337521               138.164301
-9      R1H - Barts Health NHS Trust                       121.225417                        88.105565               90.537548                   118.091925                     113.676261                    56.129756                    NaN                          NaN                106.70423
-10  R1K - London North West Univ...                        125.50962                       107.961634               98.506804                   101.330131                     135.209663                   112.677878                    NaN                          NaN               119.349315
-11  R1L - Essex Partnership Univ...                              NaN                              NaN                     NaN                    132.90807                            NaN                    49.210129              92.437731                          NaN                      NaN
-12  RA2 - Royal Surrey County Ho...                        78.363147                        94.571456               91.376816                   101.836947                     118.078439                   141.054058                    NaN                          NaN                88.067266
-13  RA7 - University Hospitals B...                        111.70382                       107.016688               90.247429                   109.017599                     136.818963                    63.286021                    NaN                          NaN               104.175103
-
-###### NCC_FY2025-26_Org_File3.zip 5360375
-ENTRY NCC_FY2025-26_Org_File3/ 0
-ENTRY NCC_FY2025-26_Org_File3/Currency Description.xlsx 112392
---- SHEET Currency
-               0                                1
-0   CurrencyCode             Currency Description
-1             01                     Hear & Treat
-2             02                      See & Treat
-3             03                     See & Convey
-4             04                            Other
-5            A03                        Dietitian
-6          A06A1  Occupational Therapist, Adul...
-7          A08AG    Physiotherapist, Adult, Group
-8          A13C1  Speech and Language Therapis...
-9          AA22C  Cerebrovascular Accident, Ne...
-10         AA22D  Cerebrovascular Accident, Ne...
-11         AA22E  Cerebrovascular Accident, Ne...
-12         AA22F  Cerebrovascular Accident, Ne...
-13         AA22G  Cerebrovascular Accident, Ne...
-ENTRY NCC_FY2025-26_Org_File3/Department Description.xlsx 18267
---- SHEET Department Description
-                  0                                1
-0   Department Code           Department Description
-1               ACC              Adult Critical Care
-2               AMB                        Ambulance
-3            AUDAPC  Audiology Admitted Patient Care
-4            AUDCHS  Audiology Community Health S...
-5             AUDOP        Audiology Outpatient Care
-6                CC                    Critical Care
-7               CCT          Critical care transport
-8               CHS         Community Health Service
-9                CL                   Consultant Led
-10             CMDT                       Cancer MDT
-11             DADS  Directly Accessed Diagnostic...
-12             DAPS  Directly Accessed Pathology ...
-13               DC                          Daycase
-ENTRY NCC_FY2025-26_Org_File3/ExcludedAGG_LNS.xlsx 14573
---- SHEET ExcludedAGG_LNS
-           0              1                2             3              4         5            6     7
-0     Period  Provider Code  Department Code  Service Code  Currency Code  Activity         Cost  Data
-1  FY2025-26            RPC             DADS           999          DEV59         *  5249.649996   AGG
-ENTRY NCC_FY2025-26_Org_File3/ExcludedEpTypeNot3_LNS.xlsx 4315010
---- SHEET EpTypeNot3_LNS
-            0              1                2             3              4         5             6         7
-0      Period  Provider Code  Department Code  Service Code  Currency Code  Activity          Cost      Data
-1   FY2025-26            R1H              NEL           340          FD03A         *    402.709143  AcuteAPC
-2   FY2025-26            RDE              NEL           110          HN14E         *   6577.781563  AcuteAPC
-3   FY2025-26            RYR              NEL           340          DZ24N         *   7301.240813  AcuteAPC
-4   FY2025-26            RC9              NES           300          FF53A         *    280.962374  AcuteAPC
-5   FY2025-26            RD8              NEL           302          SA17G         *   5506.474506  AcuteAPC
-6   FY2025-26            RF4              NEL           100          VA11D         *   4674.407168  AcuteAPC
-7   FY2025-26            RJE              NEL           303          SA26A         *   8560.398177  AcuteAPC
-8   FY2025-26            RHQ               EL           101          MB05C         *   5454.036825  AcuteAPC
-9   FY2025-26            R1K              NEL           100          HE71B         *  16447.130798  AcuteAPC
-10  FY2025-26            RJR              NEL           430          FD03A         *  18978.038637  AcuteAPC
-11  FY2025-26            RTE              NES           300          KB02G         *   1635.645411  AcuteAPC
-12  FY2025-26            RQW              NEL           430          EB10A         *   1210.052536  AcuteAPC
-13  FY2025-26            RNS              NEL           300          MB05C         *   4351.576002  AcuteAPC/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_Org_File3/ExcludedOP_Imaging_LNS.xlsx 21827
---- SHEET ExcludedOP_Imaging
-            0              1                2             3              4         5     6         7
-0      Period  Provider Code  Department Code  Service Code  Currency Code  Activity  Cost      Data
-1   FY2025-26            RQX              NCL           812          RD97Z     44838     0  PLICS OP
-2   FY2025-26            RD1            OPROC           101          RD97Z       374     0  PLICS OP
-3   FY2025-26            RTX              NCL           812          RD97Z      4501     0  PLICS OP
-4   FY2025-26            RWP              NCL           812          RD97Z     67130     0  PLICS OP
-5   FY2025-26            RJ7            OPROC           150          RD97Z         *     0  PLICS OP
-6   FY2025-26            RJ7            OPROC           812          RN97Z      4429     0  PLICS OP
-7   FY2025-26            RQ3              NCL           253          RD97Z         *     0  PLICS OP
-8   FY2025-26            R0D            OPROC           371          RN97Z         9     0  PLICS OP
-9   FY2025-26            RJL            OPROC           304          RN97Z       356     0  PLICS OP
-10  FY2025-26            RJL            OPROC           340          RN97Z         *     0  PLICS OP
-11  FY2025-26            RJL            OPROC           103          RN97Z         *     0  PLICS OP
-12  FY2025-26            RJL            OPROC           100          RN97Z        18     0  PLICS OP
-13  FY2025-26            RTK            OPROC           812          RN97Z      2280     0  PLICS OP
-ENTRY NCC_FY2025-26_Org_File3/ExcludedUnmatched_LNS.xlsx 302277
---- SHEET ExcludedUnmatched_LNS
-            0              1                2             3              4         5              6     7
-0      Period  Provider Code  Department Code  Service Code  Currency Code  Activity           Cost  Data
-1   FY2025-26            R1H               UM            UM          DEV02       787      253596.67   AGG
-2   FY2025-26            RJ7               UM            UM          RN18A         *     456.811409   AGG
-3   FY2025-26            RPC               UM            UM         PATH07       448              0   AGG
-4   FY2025-26            RRK               UM            UM          RN30A         *     492.904305   AGG
-5   FY2025-26            RTG               UM            UM          RN30A        26   17780.988703   AGG
-6   FY2025-26            REN               UM            UM          RN30A        57    25360.67746   AGG
-7   FY2025-26            RXR               UM            UM          RN30C        48   17414.520257   AGG
-8   FY2025-26            RJ1               UM            UM          DEV02        56           4600   AGG
-9   FY2025-26            R1H               UM            UM         PATH05     21210      210976.72   AGG
-10  FY2025-26            RXN               UM            UM          DEV02         *     495.564319   AGG
-11  FY2025-26            RTE               UM            UM         PATH07     46064  934309.256678   AGG
-12  FY2025-26            RXF               UM            UM          RD03Z       292       87867.49   AGG
-13  FY2025-26            RFR               UM            UM          RD01A      4108  949446.037056   AGG
-ENTRY NCC_FY2025-26_Org_File3/ExcludedUZ_LNS.xlsx 562775
---- SHEET ExcludedUZ_LNS
-            0              1                2             3              4         5              6         7
-0      Period  Provider Code  Department Code  Service Code  Currency Code  Activity           Cost      Data
-1   FY2025-26            RHQ              NES           110          UZ01Z         *   26436.225647  AcuteAPC
-2   FY2025-26            RJ2              NEL           340          UZ01Z       204  485391.967323  AcuteAPC
-3   FY2025-26            RR8              NES           501          UZ01Z        38   48674.163309  AcuteAPC
-4   FY2025-26            RL4              NES           560          UZ01Z         *     3320.89482  AcuteAPC
-5   FY2025-26            RTP              NEL           100          UZ01Z        14  237073.581909  AcuteAPC
-6   FY2025-26            RP5               EL           110          UZ01Z        11  137554.499048  AcuteAPC
-7   FY2025-26            RR7              NEL           430          UZ01Z         *   26614.116707  AcuteAPC
-8   FY2025-26            RX1              NEL           340          UZ01Z       214   846512.03356  AcuteAPC
-9   FY2025-26            RXP              NEL           422          UZ01Z       103  310064.410237  AcuteAPC
-10  FY2025-26            RYR              NEL           192          UZ01Z       103  536011.430327  AcuteAPC
-11  FY2025-26            RWE              NEL           328          UZ01Z        78  290541.996733  AcuteAPC
-12  FY2025-26            RWW              NEL           180          UZ01Z         *     924.076308  AcuteAPC
-13  FY2025-26            RXK              NEL           503          UZ01Z         *    1068.237404  AcuteAPC
-ENTRY NCC_FY2025-26_Org_File3/ExcludedVirtualWards_LNS.xlsx 18166
---- SHEET ExcludedVirtualWards_LNS
-            0              1                2             3              4         5               6         7
-0      Period  Provider Code  Department Code  Service Code  Currency Code  Activity            Cost      Data
-1   FY2025-26            RWA            SI_VW         SI_VW         VIR001      5519    432769.57121  PLICS SI
-2   FY2025-26            RRK            SI_VW         SI_VW         VIR001        76    55525.702165  PLICS SI
-3   FY2025-26            RXK            SI_VW         SI_VW         VIR001      4722    546414.22422  PLICS SI
-4   FY2025-26            RWE            SI_VW         SI_VW         VIR001       851   540572.828381  PLICS SI
-5   FY2025-26            RTF            SI_VW         SI_VW         VIR002      1167   550001.234226  PLICS SI
-6   FY2025-26            RXN            SI_VW         SI_VW         VIR001       395   294096.289561  PLICS SI
-7   FY2025-26            RWE            SI_VW         SI_VW         VIR002       269   113982.201647  PLICS SI
-8   FY2025-26            RXN            SI_VW         SI_VW         VIR002       494   281647.838472  PLICS SI
-9   FY2025-26            R0D            SI_VW         SI_VW         VIR003      2743  1976842.437863  PLICS SI
-10  FY2025-26            RAJ            SI_VW         SI_VW         VIR002      1381    159237.99485  PLICS SI
-11  FY2025-26            RJC            SI_VW         SI_VW         VIR003      1798   616259.241022  PLICS SI
-12  FY2025-26            RGP            SI_VW         SI_VW         VIR003      2965   678760.339567  PLICS SI
-13  FY2025-26            RH8            SI_VW         SI_VW         VIR003      4978  2539452.033579  PLICS SI
-ENTRY NCC_FY2025-26_Org_File3/Mapping Pot Description.xlsx 17138
---- SHEET Mapping Pot Description
-              0                                1
-0   Mapping Pot                 Mapping pot name
-1         01_EI  Elective Inpatient And Day Case
-2        02_NEI           Non-Elective Inpatient
-3        04_CCS                    Critical Care
-4         05_OP              Outpatient Services
-5        06_OAS             Other Acute Services
-6        07_COM               Community Services
-7         08_MH                     Mental Heath
-8        10_PAR               Ambulance Services
-9        11_A&E                              A&E
-10        12_UB                        Unbundled
-11      13_Excl  Excluded from the National S...
-ENTRY NCC_FY2025-26_Org_File3/Organisation Description.xlsx 22491
---- SHEET Organisation
-                0                                1
-0   Provider Code                    Provider Name
-1           G6V2S  North London NHS Foundation ...
-2             R0A  Manchester University NHS Fo...
-3             R0B  South Tyneside And Sunderlan...
-4             R0D  University Hospitals Dorset ...
-5             R1A  Herefordshire And Worcesters...
-6             R1D  Shropshire Community Health ...
-7             R1F          Isle Of Wight NHS Trust
-8             R1H           Barts Health NHS Trust
-9             R1K  London North West University...
-10            R1L  Essex Partnership University...
-11            RA2  Royal Surrey County Hospital...
-12            RA7  University Hospitals Bristol...
-13            RA9  Torbay And South Devon NHS F.../home/runner/work/discerninglearning/discerninglearning/explore/explore.py:14: Pandas4Warning: ExcelFile.parse is deprecated. Use pd.read_excel instead.
-  df=x.parse(sh,header=None,nrows=14)
-
-ENTRY NCC_FY2025-26_Org_File3/Service Description.xlsx 27883
---- SHEET Service
-               0                                1
-0   Service Code              Service Description
-1             01               Appliances Service
-2           01EC  Emergency departments are a ...
-3         01IAPT                       Assessment
-4             02             Arts Therapy Service
-5           02EC  Consultant led mono specialt...
-6         02IAPT                        Treatment
-7             03                   Cancer Service
-8           03EC  Other type of A&E / minor in...
-9         03IAPT         Assessment and Treatment
-10            04                  Cardiac Service
-11          04EC              NHS walk-in centres
-12        04IAPT                      Review Only
-13            05         Community Dental Service
-
-###### NCC_FY2025-26_Org_File1.zip 33825087
-ENTRY NCC_FY2025-26_Org_File1.csv 111196923
-HEAD
-ï»¿Provider Code,Department Code,Currency Code,Service Code,Activity,National Mean,Actual Cost,Expected Cost,Mapping Pot,Scaled MFF
-G6V2S,IAPT,MAT14Z,01IAPT,9349,166.91929089,2337245.334476,1560528.450531,08_MH,1.090045
-G6V2S,IAPT,MAT14Z,02IAPT,73827,183.46722741,18620272.127305,13544834.997998,08_MH,1.090045
-G6V2S,IAPT,MAT14Z,03IAPT,23872,168.04927476,6417862.280144,4011672.287071,08_MH,1.090045
-RJ1 sample []
+   Department Code                 Department Description
+0              ACC                    Adult Critical Care
+1              AMB                              Ambulance
+2           AUDAPC        Audiology Admitted Patient Care
+3           AUDCHS    Audiology Community Health Services
+4            AUDOP              Audiology Outpatient Care
+5               CC                          Critical Care
+6              CCT                Critical care transport
+7              CHS               Community Health Service
+8               CL                         Consultant Led
+9             CMDT                             Cancer MDT
+10            DADS  Directly Accessed Diagnostic Services
+11            DAPS   Directly Accessed Pathology Services
+12              DC                                Daycase
+13              EC                         Emergency Care
+14              EL                    Elective Inpatients
+15            HCDe                      High Cost Devices
+16            HCDr                        High Cost Drugs
+17            IAPT       NHS Talking Therapy Care Contact
+18         IMAGCDC           Community diagnostic centres
+19            MHCC             Mental Health Care Contact
+20            MHPS           Mental Health Provider Spell
+21             NCC                 Neonatal Critical Care
+22             NCL                     Non Consultant Led
+23             NEL     Non-Elective Inpatient - Long Stay
+24             NES    Non-Elective Inpatient - Short Stay
+25             NSP          National screening programmes
+26           OPROC                  Outpatient Procedures
+27             PCC               Paediatric Critical Care
+28           Rehab               Rehabilitation Inpatient
+29           Renal                         Renal Dialysis
+30              RP        Regular Day or Night Admissions
+31      SI_Imag_OP                     Outpatient Imaging
+32           SI_VW                           Virtual Ward
+33              UM             Unmatched support services
+34      Wheelchair                   Wheelchair Equipment
+['Provider Code', 'Provider Name']
+    Provider Code                                             Provider Name
+7             R1H                                    Barts Health NHS Trust
+62            RJ1                 Guy's And St Thomas' NHS Foundation Trust
+72            RJZ              King's College Hospital NHS Foundation Trust
+119           RRV  University College London Hospitals NHS Foundation Trust
+196           RYJ                     Imperial College Healthcare NHS Trust
+NCC_FY2025-26_Org_File1.zip NCC_FY2025-26_Org_File1.csv (1677548, 10) ['Provider Code', 'Department Code', 'Currency Code', 'Service Code', 'Activity', 'National Mean', 'Actual Cost', 'Expected Cost', 'Mapping Pot', 'Scaled MFF']
+NCC_FY2025-26_Org_File2.zip NCC_FY2025-26_Org_File2.csv (1677548, 10) ['Provider Code', 'Department Code', 'Currency Code', 'Service Code', 'Activity', 'MFFd National Mean', 'MFFd Actual Cost', 'MFFd Expected Cost', 'Mapping Pot', 'Scaled MFF']
+TOTAL national cost £bn 117.58607706821333 providers 205
+                    Activity   Actual Cost         unit  Activity_RJ1  Actual Cost_RJ1     unit_RJ1
+Department Code                                                                                    
+ACC                2614078.0  3.335895e+09  1276.126755      119130.0     1.695384e+08  1423.137721
+AMB               27881618.0  3.784619e+09   135.738862           NaN              NaN          NaN
+AUDAPC               63056.0  1.942116e+06    30.799864           NaN              NaN          NaN
+AUDCHS             3200480.0  1.405616e+08    43.918905       73800.0     2.091238e+06    28.336552
+AUDOP              1150824.0  6.932368e+07    60.238301       72780.0     5.515485e+06    75.782974
+CCT                  27850.0  5.576465e+07  2002.321291        4072.0     6.953854e+06  1707.724479
+CHS              142686466.0  6.670516e+09    46.749467     1155742.0     1.171848e+08   101.393566
+CL               109871588.0  1.134783e+10   103.282699     2733232.0     2.771177e+08   101.388273
+CMDT               8018918.0  3.436841e+08    42.859165       48732.0     4.451274e+06    91.341911
+DADS              23419268.0  8.658312e+08    36.970889      271380.0     1.037777e+07    38.240749
+DAPS             944572614.0  1.181629e+09     1.250967     2557702.0     1.114133e+07     4.355993
+DC                14347950.0  8.366331e+09   583.102907      206198.0     1.812836e+08   879.172618
+EC                49474256.0  7.125118e+09   144.016685      367172.0     8.182917e+07   222.863309
+EL                 1799770.0  8.580399e+09  4767.497784       68796.0     4.273145e+08  6211.327216
+HCDe                825154.0  8.980059e+08  1088.288838       29668.0     4.128764e+07  1391.655631
+HCDr              23860224.0  5.094889e+09   213.530637     5356492.0     1.537971e+08    28.712279
+IAPT              10306764.0  9.089181e+08    88.186561           NaN              NaN          NaN
+IMAGCDC            5307916.0  3.554086e+08    66.958226           NaN              NaN          NaN
+MHCC              48579096.0  7.484996e+09   154.078533           NaN              NaN          NaN
+MHPS              12546608.0  5.558887e+09   443.058935           NaN              NaN          NaN
+NCC                1786626.0  1.337423e+09   748.574718       26456.0     2.774609e+07  1048.763667
+NCL               50842450.0  3.522727e+09    69.287125     1128342.0     1.181079e+08   104.673824
+NEL                7137992.0  2.565944e+10  3594.770366       47938.0     3.430405e+08  7155.920259
+NES               11533920.0  5.521583e+09   478.725638       38280.0     6.894908e+07  1801.177532
+NSP               18886100.0  3.651702e+08    19.335395           NaN              NaN          NaN
+OPROC             39454140.0  4.773472e+09   120.987856      849058.0     1.381969e+08   162.764987
+PCC                 384680.0  5.229815e+08  1359.523420       37606.0     4.897855e+07  1302.413176
+RP                 1690558.0  3.655918e+08   216.255105      188432.0     5.127736e+07   272.126626
+Rehab              3907640.0  1.084695e+09   277.583077        8444.0     4.514088e+06   534.591232
+Renal              9159846.0  9.408523e+08   102.714857      204024.0     4.997891e+07   244.965821
+SI_Imag_OP        15452890.0  1.284790e+09    83.142361      222842.0     4.479377e+07   201.011355
+Wheelchair          434510.0  3.679577e+07    84.683373       32230.0     3.316979e+06   102.915885
+RJ1 total £bn 2.3887839514753
+DEPT EC
+                Activity   Actual Cost           u
+Service Code                                      
+01EC          34398384.0  6.029975e+09  175.298198
+02EC            916372.0  6.801997e+07   74.227464
+03EC          10586416.0  6.122809e+08   57.836469
+04EC            802026.0  3.463955e+07   43.190056
+05EC           2767432.0  3.798273e+08  137.249027
+06EC              3626.0  3.758446e+05  103.652679
+              Activity   Actual Cost           u
+Service Code                                    
+01EC          247214.0  5.950864e+07  240.717112
+02EC            4844.0  3.785315e+05   78.144404
+03EC           59482.0  8.007482e+06  134.620261
+05EC           55632.0  1.393451e+07  250.476572
+['Mapping pot', '01_EI - Elective Inpatient And Day Case', '02_NEI - Non-Elective Inpatient', '04_CCS - Critical Care', '05_OP - Outpatient Services', '06_OAS - Other Acute Services', '07_COM - Community Services', '08_MH - Mental Health', '10_PAR - Ambulance Services', '11_A&E - Emergency Care', '12_UB - Unbundled', 'Total']
+                                                                 0           1           2           3           4           5           6    7    8           9           10          11
+9                                      R1H - Barts Health NHS Trust  112.665539   81.190648   84.054268  109.784009  105.354622   52.489776  NaN  NaN   97.957392   87.071503   94.173643
+64                  RJ1 - Guy's And St Thomas' NHS Foundation Trust  121.049092  140.358091  113.201062  100.515138  138.131985  149.235105  NaN  NaN  126.666465    96.11488  118.242956
+74               RJZ - King's College Hospital NHS Foundation Trust   94.856064  103.533861  102.141817  117.859293  122.355687  117.840948  NaN  NaN   91.154557   73.670542  104.286504
+121  RRV - University College London Hospitals NHS Foundation Trust  106.137881  109.868056  106.078707  103.083801  120.566927         NaN  NaN  NaN   92.911387  144.773804  106.672967
+198                     RYJ - Imperial College Healthcare NHS Trust   94.744138   93.146629  107.160389  114.853866   90.433273       100.0  NaN  NaN  125.967669  124.425723  102.159359
