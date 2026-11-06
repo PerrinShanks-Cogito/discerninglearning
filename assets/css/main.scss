@@ -244,6 +244,50 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 }
 .landmark-method { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
 .landmark-method summary { cursor: pointer; font-weight: 600; }
+// NHS performance page: one card per measure.
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+.perf-card { display: flex; flex-direction: column; }
+.prose .perf-card__title { font-size: 1.05rem; margin: 0.1rem 0 0.6rem; line-height: 1.3; }
+.perf-card__figure { margin: 0 !important; color: var(--muted); }
+.perf-card__figure strong { font-size: 2rem; color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 0.25rem; }
+.perf-card__compare { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0 1.25rem; margin: 0.5rem 0; }
+.perf-card__compare dt { font-size: 0.75rem; color: var(--muted); }
+.perf-card__compare dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.perf-card__rank { font-size: 0.9rem; margin: 0.25rem 0 0.75rem !important; }
+.perf-card__better { color: var(--muted); }
+.perf-strip { margin-top: auto; padding-top: 0.25rem; }
+.perf-strip__track { position: relative; height: 1.25rem; margin: 0 0.4rem; border-bottom: 1px solid var(--border); }
+.perf-strip__ends { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); }
+.perf-dot, .perf-tick { display: inline-block; }
+.perf-strip .perf-dot, .perf-strip .perf-tick { position: absolute; transform: translateX(-50%); }
+.perf-dot {
+  width: 0.6rem; height: 0.6rem; border-radius: 50%;
+  background: var(--muted); opacity: 0.55; bottom: -0.3rem;
+}
+.perf-dot--trust { background: var(--accent); opacity: 1; width: 0.85rem; height: 0.85rem; bottom: -0.42rem; z-index: 1; box-shadow: 0 0 0 2px var(--surface); }
+.perf-tick { width: 2px; height: 1.1rem; background: var(--text); bottom: -0.55rem; }
+.perf-spark { display: block; width: 100%; height: 2.5rem; margin-top: 0.9rem; overflow: visible; }
+.perf-spark polyline { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.perf-spark__trust { stroke: var(--accent); }
+.perf-spark__national { stroke: var(--muted); stroke-dasharray: 4 3; }
+.perf-spark__caption { font-size: 0.7rem; color: var(--muted); margin: 0.2rem 0 0 !important; }
+.perf-legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.85rem; color: var(--muted); }
+.perf-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.perf-legend .perf-tick { height: 0.9rem; }
+.perf-line { display: inline-block; width: 1.4rem; border-top: 2px dashed var(--muted); }
+.perf-line--trust { border-top: 2px solid var(--accent); }
+.prose table.landmark-table.perf-table { display: block; overflow-x: auto; font-size: 0.9rem; }
+.prose .perf-table thead th { white-space: normal; min-width: 5.5rem; }
+.prose .perf-table tbody th { white-space: nowrap; }
+.prose .perf-table__trust th, .prose .perf-table__trust td { background: var(--surface); color: var(--accent); font-weight: 700; }
+.prose .perf-table__england th, .prose .perf-table__england td { border-top: 2px solid var(--text); font-style: italic; }
+.prose .perf-table td.num { font-size: 0.95rem; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .landmark-table--costs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
