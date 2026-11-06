@@ -1,0 +1,12 @@
+{%- comment -%}
+  Prints a whole number with thousands separators, e.g. 1234567 -> 1,234,567.
+  Usage: {% include thousands.html n=some_number %}
+{%- endcomment -%}
+{%- assign tn = include.n | round -%}
+{%- if tn >= 1000000 -%}
+{{ tn | divided_by: 1000000 }},{{ tn | modulo: 1000000 | divided_by: 1000 | prepend: "00" | slice: -3, 3 }},{{ tn | modulo: 1000 | prepend: "00" | slice: -3, 3 }}
+{%- elsif tn >= 1000 -%}
+{{ tn | divided_by: 1000 }},{{ tn | modulo: 1000 | prepend: "00" | slice: -3, 3 }}
+{%- else -%}
+{{ tn }}
+{%- endif -%}

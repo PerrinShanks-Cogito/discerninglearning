@@ -5,6 +5,7 @@ permalink: /landmark-numbers/
 ---
 {%- assign ncc = site.data.landmark_ncc -%}
 {%- assign perf = site.data.landmark_performance -%}
+{%- assign nhs = site.data.landmark_nhs -%}
 
 <p>
   The idea comes from Tim Harford's
@@ -19,6 +20,15 @@ permalink: /landmark-numbers/
 <h2 id="sets">The numbers</h2>
 
 <div class="grid landmark-tiles">
+  <a class="card card--link" href="{{ '/landmark-numbers/nhs-in-numbers/' | relative_url }}">
+    <p class="card__meta">England &middot; reviewed {{ nhs.last_reviewed | date: "%-d %B %Y" }}</p>
+    <h3 class="card__title">The NHS in numbers</h3>
+    <p>The size of the NHS: its budget, staff, appointments and waiting list, with per-day and per-person versions you can use to judge a headline.</p>
+    <p class="landmark-tile__figure">
+      <span>NHS England's budget ({{ nhs.budget.period }})</span>
+      <strong>£{{ nhs.budget.value_bn | times: 1000 | divided_by: 365 | round }} million</strong> a day
+    </p>
+  </a>
   <a class="card card--link" href="{{ '/landmark-numbers/nhs-costs/' | relative_url }}">
     <p class="card__meta">{{ ncc.costs_financial_year }} costs &middot; checked {{ ncc.last_checked | date: "%-d %B %Y" }}</p>
     <h3 class="card__title">What NHS care costs</h3>

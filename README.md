@@ -116,7 +116,13 @@ National Cost Collection: national averages compared with Guy's and St Thomas'
 reads `_data/landmark_performance.json`, which
 `scripts/landmark_numbers/update_performance.py` builds from NHS England's public
 data gateway: eight waiting-time measures for GSTT, England and the ten
-Shelford Group teaching hospitals.
+Shelford Group teaching hospitals. The NHS in numbers page,
+`/landmark-numbers/nhs-in-numbers/` (`_pages/landmark-numbers-nhs-in-numbers.html`),
+combines the cost collection figures with curated figures in
+`_data/landmark_nhs.json` (budget, population, workforce, GP appointments and the
+waiting list), each with its period and source. Its per-day, per-person and
+"1 in" figures are calculated on the page. `_includes/thousands.html` formats
+numbers with commas.
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run
 workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the
@@ -124,6 +130,9 @@ latest figures, commits the JSON files to main (it always updates the "last chec
 date) and the site redeploys. A quarterly Claude scheduled task starts it by
 pushing a change to that file on a `claude/landmark-refresh...` branch, then
 checks the result and reports what changed. Those branches can be deleted.
+The same task checks the curated figures in `_data/landmark_nhs.json` for newer
+releases and opens a pull request when it finds any, so you can review them before
+they go live.
 
 ## Images
 

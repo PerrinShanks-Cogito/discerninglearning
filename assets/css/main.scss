@@ -288,6 +288,21 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .prose .perf-table__england th, .prose .perf-table__england td { border-top: 2px solid var(--text); font-style: italic; }
 .prose .perf-table td.num { font-size: 0.95rem; }
 
+// The NHS in numbers page.
+.nhs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+.nhs-stat { display: flex; flex-direction: column; }
+.nhs-stat__figure { margin: 0.1rem 0 0 !important; font-size: 2rem; font-weight: 700; line-height: 1.15; color: var(--accent); font-variant-numeric: tabular-nums; }
+.prose .nhs-stat__label { font-size: 1rem; margin: 0.3rem 0 0.5rem; }
+.nhs-stat__so { margin-top: 0 !important; font-size: 0.95rem; }
+.nhs-stat__source { margin-top: auto !important; padding-top: 0.6rem; font-size: 0.78rem; color: var(--muted); }
+.nhs-stat__source a { color: var(--muted); }
+.nhs-rules li { margin-bottom: 0.5rem; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .landmark-table--costs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

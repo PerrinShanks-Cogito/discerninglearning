@@ -1,0 +1,52 @@
+{
+  "_about": "Curated figures for /landmark-numbers/nhs-in-numbers/. Each figure records its period and source. Activity and cost figures on that page come from landmark_ncc.json instead and refresh automatically. The quarterly Claude scheduled task checks these figures and opens a pull request when newer ones are published.",
+  "last_reviewed": "2026-11-06",
+  "budget": {
+    "label": "NHS England day-to-day budget",
+    "value_bn": 204.9,
+    "period": "2026/27",
+    "later": [
+      { "period": "2027/28", "value_bn": 215.4 },
+      { "period": "2028/29", "value_bn": 226.1 }
+    ],
+    "source": "HM Treasury, Spending Review 2025 (table 5.6)",
+    "url": "https://www.gov.uk/government/publications/spending-review-2025-document/spending-review-2025-html"
+  },
+  "population": {
+    "label": "Population of England",
+    "value": 58834800,
+    "period": "mid-2025",
+    "source": "ONS, population estimates, mid-2025 (published 1 October 2026)",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+  },
+  "waiting_list": {
+    "label": "Planned-care waiting list",
+    "pathways_m": 7.37,
+    "patients_m": 6.24,
+    "over_52_weeks": 113339,
+    "period": "end of August 2026",
+    "source": "NHS England, referral to treatment waiting times (published October 2026)",
+    "url": "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/"
+  },
+  "gp_appointments": {
+    "label": "Appointments in general practice",
+    "month_m": 35.1,
+    "days_in_month": 30,
+    "face_to_face_pct": 59.9,
+    "same_day_pct": 45.0,
+    "period": "September 2026",
+    "source": "NHS England, Appointments in General Practice, September 2026 (published 29 October 2026)",
+    "url": "https://digital.nhs.uk/data-and-information/publications/statistical/appointments-in-general-practice/september-2026"
+  },
+  "workforce": {
+    "label": "NHS workforce",
+    "headcount": 1800000,
+    "fte": 1600000,
+    "nurses_midwives": 467000,
+    "doctors": 216000,
+    "gps_fte": 28800,
+    "period": "December 2025",
+    "source": "Nuffield Trust, The NHS workforce in numbers (from NHS England workforce statistics)",
+    "url": "https://www.nuffieldtrust.org.uk/resource/the-nhs-workforce-in-numbers"
+  }
+}
