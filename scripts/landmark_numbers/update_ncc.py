@@ -94,6 +94,16 @@ def file_urls(doc):
     return sorted(urls)
 
 
+def dashboards(doc):
+    """Power BI dashboards linked from the publication page, keyed by their link text."""
+    found = {}
+    for value in (doc.get("custom_fields") or {}).values():
+        if isinstance(value, str):
+            for href, label in re.findall(r'href="(https://app\.powerbi\.com/[^"]+)"[^>]*>([^<]+)</a>', value):
+                found[label.strip()] = href
+    return found
+
+
 def pick(urls, pattern, exclude=r"unsuppressed|HCD"):
     found = [u for u in urls if re.search(pattern, u, re.I) and not re.search(exclude, u, re.I)]
     if not found:
@@ -226,6 +236,7 @@ def main():
         "published": doc.get("date", "")[:10],
         "source_page": doc.get("link"),
         "source_files": [ncci_url],
+        "dashboards": dashboards(doc),
         "provider_code": args.provider,
         "provider_name": args.provider_name,
         "providers_in_collection": int(d.provider.nunique()),
