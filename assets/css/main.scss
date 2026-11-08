@@ -395,6 +395,22 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .em-key--actual { background: var(--accent); }
 .em-key--target { background: var(--nat-wales); }
 
+/* Food: origins bar and self-sufficiency list. */
+.fd-seg--1 { background: #2e7d4f; }
+.fd-seg--2 { background: #1f5a91; }
+.fd-seg--3 { background: #a0522d; }
+.fd-seg--4 { background: #74408a; }
+.fd-seg--5 { background: #b8860b; }
+.fd-seg--6 { background: #2e78b0; }
+.fd-seg--7 { background: #8a3d5c; }
+.fd-seg--8 { background: #5f636e; }
+.fd-products { margin: 1rem 0; }
+.fd-products .pf-bar { background: linear-gradient(to right, transparent calc(90.9% - 1px), var(--text, currentColor) calc(90.9% - 1px), var(--text, currentColor) calc(90.9% + 1px), transparent calc(90.9% + 1px)); }
+.fd-products li .pf-bar i { background: var(--nat-wales); }
+.fd-products li.is-short .pf-bar i { background: var(--nat-ni); }
+
+.prose .ju-table td .landmark-note { display: block; font-weight: 400; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

@@ -610,7 +610,227 @@ permalink: /landmark-numbers/uk-and-nations/
   <a href="{{ tg.budgets_url }}">{{ tg.budgets_source }}</a>; <a href="{{ tg.ndc_url }}">{{ tg.ndc_source }}</a>.
 </p>
 {%- endif %}
+{%- if g.key == "agriculture" %}
+{%- assign fd = uk.uk_only.food %}
+{%- assign ss = fd.self_sufficiency %}
+{%- assign tr = fd.trade %}
+{%- assign imp_pp = tr.imports_bn | times: 1000000000.0 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+{%- assign imp_share = 100 | minus: ss.all_pct %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ ss.period }}{% if ss.period == "2025" %}, provisional{% endif %}</p>
+    <p class="nhs-stat__figure">{{ ss.all_pct }}%</p>
+    <h3 class="nhs-stat__label">of the food the UK uses is produced here</h3>
+    <p class="nhs-stat__so">So roughly {{ imp_share }}% has to be imported. Counting only foods that can be grown in the UK (leaving out
+      bananas, coffee and the like), the figure is {{ ss.indigenous_pct }}%. Measured by value, this is Defra's "production to supply ratio".</p>
+    <ul class="em-pace">
+      {%- for h in ss.history %}
+      <li><span>{{ h.year }}{% if forloop.first %} (first year of the series){% endif %}</span><strong>{{ h.pct }}%</strong></li>
+      {%- endfor %}
+    </ul>
+    <p class="nhs-stat__source"><a href="{{ ss.url }}">{{ ss.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ tr.period }}, provisional</p>
+    <p class="nhs-stat__figure">£{{ tr.gap_bn }} billion</p>
+    <h3 class="nhs-stat__label">food, feed and drink trade gap</h3>
+    <p class="nhs-stat__so">The UK imported £{{ tr.imports_bn }} billion of food, animal feed and drink and exported £{{ tr.exports_bn }} billion.
+      Imports work out at about £{% include thousands.html n=imp_pp %} per person.</p>
+    <ul class="em-pace">
+      <li><span>Imports</span><strong>£{{ tr.imports_bn }}bn</strong></li>
+      <li><span>Exports</span><strong>£{{ tr.exports_bn }}bn</strong></li>
+    </ul>
+    <p class="nhs-stat__source"><a href="{{ tr.url }}">{{ tr.source }}</a>; the gap is imports minus exports</p>
+  </section>
+</div>
+
+{%- assign og = fd.origins %}
+<h3 id="food-origins">Where the UK's food comes from, {{ og.period }}</h3>
+<div class="en-mix" role="img" aria-label="Origins of food consumed in the UK in {{ og.period }}: {% for r in og.items %}{{ r.label }} {{ r.pct }}%{% unless forloop.last %}, {% endunless %}{% endfor %}">
+  {%- for r in og.items %}
+  <span class="en-mix__seg fd-seg--{{ forloop.index }}" style="flex-basis: {{ r.pct }}%" title="{{ r.label }}: {{ r.pct }}%">{% if r.pct >= 10 %}{{ r.label }} {{ r.pct }}%{% endif %}</span>
+  {%- endfor %}
+</div>
+<ul class="en-legend">
+  {%- for r in og.items %}
+  <li><i class="fd-seg--{{ forloop.index }}" aria-hidden="true"></i>{{ r.label }} <strong>{{ r.pct }}%</strong></li>
+  {%- endfor %}
+</ul>
+<p class="uk-note">Share of food consumed in the UK by where it was produced, measured by value. <a href="{{ og.url }}">{{ og.source }}</a>.</p>
+
+{%- assign bp = fd.by_product %}
+<h3 id="food-by-product">How much of each food the UK produces</h3>
+<p>
+  Production as a share of what the UK uses. Above 100% means the UK produces more than it uses and exports the rest; below 100% means
+  the gap is filled by imports. The line marks 100%.
+</p>
+<section class="pf-list fd-products">
+  <h4>Produced in the UK, as % of UK use<span>{{ bp.period }}</span></h4>
+  <ul>
+    {%- for r in bp.items %}
+    {%- assign w = r.pct | times: 100.0 | divided_by: 110 | round: 1 %}
+    <li{% if r.pct < 100 %} class="is-short"{% endif %}><span class="pf-label">{{ r.label }}</span>
+      <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span><span class="pf-val">{{ r.pct }}%</span></li>
+    {%- endfor %}
+  </ul>
+</section>
+<p class="uk-note">2025 figures are provisional. <a href="{{ bp.url }}">{{ bp.source }}</a>.</p>
+
+{%- assign fm = fd.farming %}
+{%- assign lp = fd.land_and_people %}
+{%- assign fm_max = 0 %}{% for r in fm.outputs %}{% if r.bn > fm_max %}{% assign fm_max = r.bn %}{% endif %}{% endfor %}
+{%- assign sub_share = fm.subsidies_bn | times: 100.0 | divided_by: fm.tiff_bn | round %}
+<h3 id="farming">Farming</h3>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ fm.period }}</p>
+    <p class="nhs-stat__figure">£{{ fm.gva_bn }} billion</p>
+    <h3 class="nhs-stat__label">added to the economy by farming, {{ fm.gva_pct }}% of the UK total</h3>
+    <p class="nhs-stat__so">Farms sold £{{ fm.livestock_output_bn }} billion of livestock and livestock products and £{{ fm.crop_output_bn }} billion of
+      crops. Their combined income was £{{ fm.tiff_bn }} billion, which included £{{ fm.subsidies_bn }} billion of subsidies: equal to about
+      {{ sub_share }}% of it.</p>
+    <p class="nhs-stat__source"><a href="{{ fm.url }}">{{ fm.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ lp.date }}</p>
+    <p class="nhs-stat__figure">{{ lp.uaa_share_pct }}% of the land</p>
+    <h3 class="nhs-stat__label">is farmed, by {% include thousands.html n=lp.workers %} people</h3>
+    <p class="nhs-stat__so">{% include thousands.html n=lp.farmers %} farmers, partners and directors and {% include thousands.html n=lp.employees %}
+      employees and casual workers, on commercial holdings.</p>
+    <table class="def-table">
+      <thead><tr><th scope="col">Animals on farms</th><th scope="col" class="num">Number</th></tr></thead>
+      <tbody>
+        {%- for r in lp.livestock %}
+        {%- assign lm = r.n | divided_by: 100000.0 | round | divided_by: 10.0 %}
+        <tr><th scope="row">{{ r.label }}</th><td class="num">{{ lm }} million</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="nhs-stat__source"><a href="{{ lp.url }}">{{ lp.source }}</a></p>
+  </section>
+</div>
+<section class="pf-list">
+  <h4>What farms sell: the ten biggest outputs<span>£bn, {{ fm.period }}</span></h4>
+  <ul>
+    {%- for r in fm.outputs %}
+    {%- assign w = r.bn | times: 100.0 | divided_by: fm_max | round: 1 %}
+    <li><span class="pf-label">{{ r.label }}</span><span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span><span class="pf-val">£{{ r.bn }}bn</span></li>
+    {%- endfor %}
+  </ul>
+</section>
+
+{%- assign sp = fd.spending %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ sp.period }}</p>
+    <p class="nhs-stat__figure">{{ sp.avg_pct }}%</p>
+    <h3 class="nhs-stat__label">of household spending goes on food and soft drinks for the home</h3>
+    <p class="nhs-stat__so">For the poorest fifth of households it's {{ sp.lowest_pct }}%; for the richest fifth, {{ sp.highest_pct }}%.
+      Eating out is counted separately.</p>
+    <p class="nhs-stat__source"><a href="{{ sp.url }}">{{ sp.source }}</a></p>
+  </section>
+</div>
+{%- endif %}
 {%- endfor %}
+
+{%- assign ju = uk.uk_only.justice %}
+{%- assign ew = ju.ew %}
+<h2 id="law-and-order">Law and order</h2>
+<p>
+  The UK has three separate legal systems: one for England and Wales, one for Scotland and one for Northern Ireland, each with its own
+  police, courts and prisons. So these figures compare the three systems rather than the four nations.
+</p>
+<table class="landmark-table uk-table ju-table">
+  <thead>
+    <tr>
+      <th scope="col">Measure</th>
+      {%- for sy in ju.systems %}<th scope="col" class="num">{{ sy.name }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {%- for m in ju.measures %}
+    <tr{% if m.derived %} class="uk-table__derived"{% endif %}>
+      <th scope="row">{{ m.label }}{% if m.derived %}<span class="landmark-note">{{ ju.population_note }}</span>{% endif %}</th>
+      {%- for sy in ju.systems %}
+      {%- assign cell = m.values[sy.key] %}
+      <td class="num" data-label="{{ sy.name }}">{% include fmt.html v=cell f=m.format %}{% unless m.derived %}<span class="landmark-note">{{ m.periods[sy.key] }}</span>{% endunless %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+{%- assign ju_links = "" %}
+{%- for m in ju.measures %}{% unless m.derived %}{% for src in m.sources %}
+{%- capture one %}<a href="{{ src.url }}">{{ src.name }}</a>{% endcapture %}
+{%- if ju_links == "" %}{% assign ju_links = one %}{% else %}{% assign ju_links = ju_links | append: "; " | append: one %}{% endif %}
+{%- endfor %}{% endunless %}{% endfor %}
+<p class="uk-note">{{ ju.note }} Sources: {{ ju_links }}.</p>
+
+{%- assign co = ew.courts %}
+{%- assign pr = ew.prisons %}
+{%- assign cs = ew.csew %}
+{%- assign crown_rise = co.crown_open | minus: co.crown_open_prev %}
+{%- assign remand_pct = pr.remand | times: 100.0 | divided_by: pr.total | round %}
+<h3 id="england-and-wales-justice">England and Wales</h3>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ cs.period }}</p>
+    <p class="nhs-stat__figure">{{ cs.incidents_m }} million</p>
+    <h3 class="nhs-stat__label">crimes experienced by adults, according to the Crime Survey</h3>
+    <p class="nhs-stat__so">{{ cs.fraud_m }} million of them were fraud or computer misuse. The survey asks people about crimes they've
+      experienced, so it includes crimes never reported to the police. Police recorded {{ ew.homicide_rate_published }} homicides per million
+      people and {% include thousands.html n=ew.knife.offences %} knife-enabled offences ({{ ew.knife.change_pct | abs }}% {% if ew.knife.change_pct < 0 %}down{% else %}up{% endif %} on the year before).</p>
+    <p class="nhs-stat__source"><a href="{{ cs.url }}">{{ cs.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ co.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=co.crown_open %}</p>
+    <h3 class="nhs-stat__label">cases waiting to be dealt with by the Crown Court</h3>
+    <p class="nhs-stat__so">Up {% include thousands.html n=crown_rise %} on a year earlier. {% include thousands.html n=co.crown_over_year %} of them
+      had been open for a year or more. Magistrates' courts had {% include thousands.html n=co.mags_open %} open cases.</p>
+    <p class="nhs-stat__source"><a href="{{ co.url }}">{{ co.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ pr.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=pr.total %}</p>
+    <h3 class="nhs-stat__label">people in prison</h3>
+    <ul class="em-pace">
+      <li><span>Sentenced</span><strong>{% include thousands.html n=pr.sentenced %}</strong></li>
+      <li><span>On remand, awaiting trial or sentence</span><strong>{% include thousands.html n=pr.remand %} ({{ remand_pct }}%)</strong></li>
+    </ul>
+    <p class="nhs-stat__so">A further {% include thousands.html n=pr.probation %} people were supervised by the Probation Service on
+      {{ pr.probation_date }}.</p>
+    <p class="nhs-stat__source"><a href="{{ pr.url }}">{{ pr.source }}</a></p>
+  </section>
+  {%- assign ro = ew.reoffending %}
+  {%- assign et = ew.ethnicity %}
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ ro.cohort }} cohort</p>
+    <p class="nhs-stat__figure">{{ ro.short_sentence_pct }}%</p>
+    <h3 class="nhs-stat__label">of adults released from sentences of under 12 months reoffend within a year</h3>
+    <p class="nhs-stat__so">Across everyone cautioned, convicted or released from prison, {{ ro.overall_pct }}% committed a proven offence
+      within a year. Those who did reoffend committed {{ ro.reoffences_each }} further offences each, on average.</p>
+    <p class="nhs-stat__source"><a href="{{ ro.url }}">{{ ro.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ et.date }}</p>
+    <h3 class="nhs-stat__label">People in prison by ethnic group</h3>
+    <table class="def-table">
+      <thead><tr><th scope="col">Ethnic group</th><th scope="col" class="num">Prisoners</th><th scope="col" class="num">Share</th><th scope="col" class="num">Population</th></tr></thead>
+      <tbody>
+        {%- for g in et.groups %}
+        {%- assign sh = g.n | times: 100.0 | divided_by: et.total | round: 1 %}
+        <tr><th scope="row">{{ g.label }}</th><td class="num">{% include thousands.html n=g.n %}</td><td class="num">{{ sh }}%</td><td class="num">{% if g.pop_pct %}{{ g.pop_pct }}%{% else %}–{% endif %}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="nhs-stat__so">Black people make up about three times the share of prisoners that they do of the population. The Ministry of
+      Justice says minority ethnic groups are over-represented at several stages of the justice system, most of all at stop and search,
+      remand and in prison, and that these figures alone can't show the causes. The population column is from the 2021 Census, which also counts
+      children, so the comparison is approximate.</p>
+    <p class="nhs-stat__source"><a href="{{ et.url }}">{{ et.source }}</a>; <a href="{{ et.pop_url }}">{{ et.pop_source }}</a></p>
+  </section>
+</div>
 
 <h2 id="reading-these">Reading these numbers</h2>
 <ul>

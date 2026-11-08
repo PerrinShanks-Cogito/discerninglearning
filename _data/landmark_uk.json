@@ -721,6 +721,88 @@
         }
       ],
       "note": "Shares are of electricity generated in each nation. The grid is shared, so a nation can generate more than it uses and send the rest to the others or abroad (Northern Ireland shares a market with Ireland). The UK row of \"sent out or brought in\" is net imports through interconnectors. Emissions are for 2024, the latest year with figures for each nation. The UK total includes 10.0 million tonnes from offshore oil and gas that isn't assigned to any nation."
+    },
+    {
+      "key": "agriculture",
+      "title": "Farming and food",
+      "measures": [
+        {
+          "key": "farm_holdings",
+          "label": "Farm holdings",
+          "format": "int",
+          "values": {
+            "uk": 212000,
+            "england": 100000,
+            "scotland": 48000,
+            "wales": 37000,
+            "ni": 26000
+          },
+          "period": "June 2025",
+          "source": "Defra, Agriculture in the United Kingdom 2025, chapter 2: structure of the industry (June 2025 survey; published 9 July 2026); rounded to the nearest thousand; England counts commercial holdings only",
+          "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025/chapter-2-structure-of-industry"
+        },
+        {
+          "key": "farm_area_mha",
+          "label": "Area of farm holdings (million hectares)",
+          "format": "dec2",
+          "values": {
+            "uk": 16.77,
+            "england": 8.95,
+            "scotland": 5.02,
+            "wales": 1.77,
+            "ni": 1.03
+          },
+          "period": "June 2025",
+          "source": "Defra, Agriculture in the United Kingdom 2025, chapter 2: structure of the industry (June 2025 survey; published 9 July 2026)",
+          "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025/chapter-2-structure-of-industry"
+        },
+        {
+          "key": "farm_area_share",
+          "label": "Share of land that is farmed",
+          "format": "pct1",
+          "values": {
+            "uk": 69.1,
+            "england": 68.7,
+            "scotland": 64.5,
+            "wales": 85.4,
+            "ni": 74.8
+          },
+          "period": "June 2025",
+          "source": "Defra, Agriculture in the United Kingdom 2025, chapter 2: structure of the industry (June 2025 survey; published 9 July 2026); divided by land area (ONS)",
+          "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025/chapter-2-structure-of-industry"
+        },
+        {
+          "key": "farm_size_ha",
+          "label": "Average farm size (hectares)",
+          "format": "int",
+          "values": {
+            "uk": 79,
+            "england": 90,
+            "scotland": 104,
+            "wales": 47,
+            "ni": 40
+          },
+          "period": "June 2025",
+          "source": "Defra, Agriculture in the United Kingdom 2025, chapter 2: structure of the industry (June 2025 survey; published 9 July 2026)",
+          "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025/chapter-2-structure-of-industry"
+        },
+        {
+          "key": "tiff_bn",
+          "label": "Total income from farming (£ billion)",
+          "format": "dec2",
+          "values": {
+            "uk": 8.4,
+            "england": 5.4,
+            "scotland": 1.46,
+            "wales": 0.51,
+            "ni": 1.03
+          },
+          "period": "2025",
+          "source": "Defra (UK, 30 June 2026; England, 24 September 2026), Scottish Government (30 April 2026), Welsh Government (23 April 2026) and DAERA (20 August 2026), total income from farming 2025, current prices, as rounded in each release",
+          "url": "https://www.gov.uk/government/statistics/total-income-from-farming-in-the-uk/total-income-from-farming-in-the-uk-in-2025"
+        }
+      ],
+      "note": "Total income from farming is the profit of all farms together, including subsidies. Each nation publishes its own estimate, at different times and with different rounding, so the four nations don't add up exactly to the UK figure. Farm counts for England cover commercial holdings only."
     }
   ],
   "uk_only": {
@@ -1444,6 +1526,490 @@
         "ndc_source": "GOV.UK, UK's 2035 Nationally Determined Contribution",
         "ndc_url": "https://www.gov.uk/government/publications/uks-2035-nationally-determined-contribution-ndc-emissions-reduction-target-under-the-paris-agreement",
         "net_zero_year": 2050
+      }
+    },
+    "food": {
+      "self_sufficiency": {
+        "period": "2025",
+        "all_pct": 60,
+        "indigenous_pct": 72,
+        "history": [
+          {
+            "year": 1956,
+            "pct": 47
+          },
+          {
+            "year": 1984,
+            "pct": 78
+          },
+          {
+            "year": 2000,
+            "pct": 67
+          },
+          {
+            "year": 2024,
+            "pct": 65
+          },
+          {
+            "year": 2025,
+            "pct": 60
+          }
+        ],
+        "source": "Defra, Food statistics in your pocket: UK food production to supply ratio (updated 29 July 2026; 2025 provisional)",
+        "url": "https://www.gov.uk/csv-preview/6a3cfdf9eaee00074150f4ab/fsp-csv-production-supply-ratio-09jul2026.csv"
+      },
+      "origins": {
+        "period": "2025",
+        "items": [
+          {
+            "label": "UK",
+            "pct": 58
+          },
+          {
+            "label": "EU",
+            "pct": 23
+          },
+          {
+            "label": "Africa",
+            "pct": 5
+          },
+          {
+            "label": "Asia",
+            "pct": 4
+          },
+          {
+            "label": "South America",
+            "pct": 4
+          },
+          {
+            "label": "Rest of Europe",
+            "pct": 3
+          },
+          {
+            "label": "North America",
+            "pct": 2
+          },
+          {
+            "label": "Australasia",
+            "pct": 1
+          }
+        ],
+        "source": "Defra, Food statistics in your pocket: origins of food consumed in the UK, 2025 (updated 29 July 2026)",
+        "url": "https://www.gov.uk/government/statistics/food-statistics-pocketbook/food-statistics-in-your-pocket"
+      },
+      "by_product": {
+        "period": "2025",
+        "items": [
+          {
+            "label": "Barley",
+            "pct": 107
+          },
+          {
+            "label": "Milk",
+            "pct": 105
+          },
+          {
+            "label": "Lamb and mutton",
+            "pct": 103
+          },
+          {
+            "label": "Eggs",
+            "pct": 88
+          },
+          {
+            "label": "Beef and veal",
+            "pct": 84
+          },
+          {
+            "label": "Wheat",
+            "pct": 83
+          },
+          {
+            "label": "Poultry meat",
+            "pct": 80
+          },
+          {
+            "label": "Potatoes",
+            "pct": 71
+          },
+          {
+            "label": "Pork",
+            "pct": 67
+          },
+          {
+            "label": "Fresh vegetables",
+            "pct": 56
+          },
+          {
+            "label": "Fresh fruit",
+            "pct": 14
+          }
+        ],
+        "source": "Defra, Agriculture in the United Kingdom 2025, chapters 7 and 8: production as % of new supply for use in the UK (2025 provisional)",
+        "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025"
+      },
+      "trade": {
+        "period": "2025",
+        "imports_bn": 67.8,
+        "exports_bn": 25.7,
+        "gap_bn": 42.1,
+        "source": "Defra, Food statistics in your pocket: UK trade in food, feed and drink, 2025 provisional",
+        "url": "https://www.gov.uk/government/statistics/food-statistics-pocketbook/food-statistics-in-your-pocket"
+      },
+      "spending": {
+        "period": "financial year ending 2025",
+        "avg_pct": 10.9,
+        "lowest_pct": 15.2,
+        "highest_pct": 7.9,
+        "source": "Defra, Food statistics in your pocket: household spending on food and non-alcoholic drinks",
+        "url": "https://www.gov.uk/government/statistics/food-statistics-pocketbook/food-statistics-in-your-pocket"
+      },
+      "farming": {
+        "period": "2025",
+        "tiff_bn": 8.4,
+        "gva_bn": 15.9,
+        "gva_pct": 0.58,
+        "subsidies_bn": 3.4,
+        "livestock_output_bn": 22.2,
+        "crop_output_bn": 11.4,
+        "outputs": [
+          {
+            "label": "Milk",
+            "bn": 7.0
+          },
+          {
+            "label": "Beef",
+            "bn": 5.1
+          },
+          {
+            "label": "Poultry",
+            "bn": 3.4
+          },
+          {
+            "label": "Wheat",
+            "bn": 2.1
+          },
+          {
+            "label": "Fresh vegetables",
+            "bn": 2.1
+          },
+          {
+            "label": "Mutton and lamb",
+            "bn": 1.9
+          },
+          {
+            "label": "Pigmeat",
+            "bn": 1.8
+          },
+          {
+            "label": "Plants and flowers",
+            "bn": 1.6
+          },
+          {
+            "label": "Eggs",
+            "bn": 1.5
+          },
+          {
+            "label": "Potatoes",
+            "bn": 1.5
+          }
+        ],
+        "source": "Defra, Total income from farming in the UK in 2025 (updated 30 June 2026), current prices",
+        "url": "https://www.gov.uk/government/statistics/total-income-from-farming-in-the-uk/total-income-from-farming-in-the-uk-in-2025"
+      },
+      "land_and_people": {
+        "date": "June 2025",
+        "uaa_share_pct": 69,
+        "workers": 446000,
+        "farmers": 289000,
+        "employees": 157000,
+        "livestock": [
+          {
+            "label": "Cattle",
+            "n": 9292000
+          },
+          {
+            "label": "Sheep and lambs",
+            "n": 30484000
+          },
+          {
+            "label": "Pigs",
+            "n": 4739000
+          },
+          {
+            "label": "Poultry",
+            "n": 183332000
+          }
+        ],
+        "source": "Defra, Agriculture in the United Kingdom 2025, chapters 2 and 8 (June 2025 survey)",
+        "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025"
+      }
+    },
+    "justice": {
+      "systems": [
+        {
+          "key": "ew",
+          "name": "England and Wales"
+        },
+        {
+          "key": "scotland",
+          "name": "Scotland"
+        },
+        {
+          "key": "ni",
+          "name": "Northern Ireland"
+        }
+      ],
+      "population_note": "Rates use ONS mid-2025 population estimates.",
+      "measures": [
+        {
+          "key": "police",
+          "label": "Police officers (full-time equivalent)",
+          "format": "int",
+          "values": {
+            "ew": 145886,
+            "scotland": 16402,
+            "ni": 6192
+          },
+          "periods": {
+            "ew": "31 March 2026",
+            "scotland": "30 June 2026",
+            "ni": "30 September 2025"
+          },
+          "sources": [
+            {
+              "name": "Home Office, Police workforce, England and Wales: 31 March 2026 (43 territorial forces)",
+              "url": "https://www.gov.uk/government/statistics/police-workforce-england-and-wales-31-march-2026/police-workforce-england-and-wales-31-march-2026"
+            },
+            {
+              "name": "Scottish Government, Police officer quarterly strength statistics: 30 June 2026",
+              "url": "https://www.gov.scot/publications/police-officer-quarterly-strength-statistics-30-june-2026/"
+            },
+            {
+              "name": "PSNI, freedom of information disclosure on officer numbers (18 December 2025)",
+              "url": "https://www.psni.police.uk/foi-disclosure-log/total-officer-numbers"
+            }
+          ]
+        },
+        {
+          "key": "police_rate",
+          "label": "Police officers per 100,000 people",
+          "format": "int",
+          "values": {
+            "ew": 235,
+            "scotland": 296,
+            "ni": 321
+          },
+          "derived": true
+        },
+        {
+          "key": "prison",
+          "label": "People in prison",
+          "format": "int",
+          "values": {
+            "ew": 87712,
+            "scotland": 8466,
+            "ni": 2283
+          },
+          "periods": {
+            "ew": "30 September 2026",
+            "scotland": "1 July 2026",
+            "ni": "week ending 30 October 2026"
+          },
+          "sources": [
+            {
+              "name": "Ministry of Justice, Offender management statistics quarterly: April to June 2026 (population at 30 September 2026)",
+              "url": "https://www.gov.uk/government/statistics/offender-management-statistics-quarterly-april-to-june-2026/offender-management-statistics-quarterly-april-to-june-2026"
+            },
+            {
+              "name": "Scottish Government, Scottish prison population projections: July 2026",
+              "url": "https://www.gov.scot/publications/scottish-prison-population-projections-july-2026/pages/overview-of-scottish-prison-population-and-court-demand-trends/"
+            },
+            {
+              "name": "Department of Justice NI, weekly prison population",
+              "url": "https://www.justice-ni.gov.uk/articles/weekly-situation-reports-202420252026"
+            }
+          ]
+        },
+        {
+          "key": "prison_rate",
+          "label": "People in prison per 100,000 people",
+          "format": "int",
+          "values": {
+            "ew": 141,
+            "scotland": 153,
+            "ni": 118
+          },
+          "derived": true
+        },
+        {
+          "key": "homicide",
+          "label": "Homicides in a year",
+          "format": "int",
+          "values": {
+            "ew": 512,
+            "scotland": 45,
+            "ni": 19
+          },
+          "periods": {
+            "ew": "year ending June 2026",
+            "scotland": "2024-25",
+            "ni": "2025-26"
+          },
+          "sources": [
+            {
+              "name": "ONS, Crime in England and Wales: year ending June 2026 (police recorded homicide offences)",
+              "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/yearendingjune2026"
+            },
+            {
+              "name": "Scottish Government, Homicide in Scotland 2024-25 (victims)",
+              "url": "https://www.gov.scot/publications/homicide-scotland-2024-25/"
+            },
+            {
+              "name": "PSNI, Police recorded crime in Northern Ireland, period ending 31 March 2026 (homicide offences)",
+              "url": "https://www.psni.police.uk/system/files/2026-05/525903612/Police%20Recorded%20Crime%20Bulletin%20Period%20Ending%2031st%20March%202026.pdf"
+            }
+          ]
+        },
+        {
+          "key": "homicide_rate",
+          "label": "Homicides per million people",
+          "format": "dec1",
+          "values": {
+            "ew": 8.3,
+            "scotland": 8.1,
+            "ni": 9.9
+          },
+          "derived": true
+        },
+        {
+          "key": "reoffend",
+          "label": "Reoffending within a year (%)",
+          "format": "pct1",
+          "values": {
+            "ew": 30.1,
+            "scotland": 26.1,
+            "ni": 17.3
+          },
+          "periods": {
+            "ew": "Oct–Dec 2024 cohort, all ages",
+            "scotland": "2022-23 cohort, reconvicted",
+            "ni": "2022/23 cohort, adults"
+          },
+          "sources": [
+            {
+              "name": "Ministry of Justice, Proven reoffending statistics: October to December 2024 (published 29 October 2026) and July to September 2024 (released from custody)",
+              "url": "https://www.gov.uk/government/statistics/proven-reoffending-statistics-october-to-december-2024"
+            },
+            {
+              "name": "Scottish Government, Reconviction rates in Scotland: 2022 to 2023 offender cohort (published 23 June 2026)",
+              "url": "https://www.gov.scot/publications/reconviction-rates-in-scotland-2022-2023-cohort/pages/reconvictions-in-court/"
+            },
+            {
+              "name": "Department of Justice NI, Adult and youth reoffending in Northern Ireland, 2022/23 cohort",
+              "url": "https://datavis.nisra.gov.uk/justice/Adult-and-Youth-Reoffending-in-Northern-Ireland-202223.html"
+            }
+          ]
+        },
+        {
+          "key": "reoffend_custody",
+          "label": "Reoffending within a year after release from prison (%)",
+          "format": "pct1",
+          "values": {
+            "ew": 40.6,
+            "scotland": 42.5,
+            "ni": 46.0
+          },
+          "periods": {
+            "ew": "Jul–Sep 2024 cohort, adults",
+            "scotland": "2022-23 cohort, reconvicted",
+            "ni": "2022/23 cohort, adults"
+          },
+          "sources": []
+        }
+      ],
+      "note": "The three systems count differently and publish at different times, so each figure shows its own date. Scotland counts homicide victims; England and Wales and Northern Ireland count offences. With small numbers, homicide rates can swing from year to year. Recorded crime isn't shown because each system uses different counting rules. Reoffending is measured differently in each system (Scotland counts reconvictions), so compare the three with care.",
+      "ew": {
+        "csew": {
+          "period": "year ending June 2026",
+          "incidents_m": 9.7,
+          "fraud_m": 4.5,
+          "source": "ONS, Crime in England and Wales: year ending June 2026 (Crime Survey for England and Wales)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/yearendingjune2026"
+        },
+        "knife": {
+          "period": "year ending June 2026",
+          "offences": 48615,
+          "change_pct": -6
+        },
+        "homicide_rate_published": 8.3,
+        "courts": {
+          "date": "end of June 2026",
+          "crown_open": 80829,
+          "crown_open_prev": 78226,
+          "crown_over_year": 23706,
+          "mags_open": 380230,
+          "source": "Ministry of Justice, Criminal court statistics quarterly: April to June 2026 (published 24 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/criminal-court-statistics-quarterly-april-to-june-2026/criminal-court-statistics-quarterly-april-to-june-2026"
+        },
+        "prisons": {
+          "date": "30 September 2026",
+          "total": 87712,
+          "sentenced": 71341,
+          "remand": 15921,
+          "probation": 241119,
+          "probation_date": "30 June 2026",
+          "source": "Ministry of Justice, Offender management statistics quarterly: April to June 2026 (published 29 October 2026)",
+          "url": "https://www.gov.uk/government/statistics/offender-management-statistics-quarterly-april-to-june-2026/offender-management-statistics-quarterly-april-to-june-2026"
+        },
+        "police_workforce": 234441,
+        "reoffending": {
+          "cohort": "October to December 2024",
+          "overall_pct": 30.1,
+          "short_sentence_pct": 67.2,
+          "reoffences_each": 5.29,
+          "source": "Ministry of Justice, Proven reoffending statistics: October to December 2024 (published 29 October 2026)",
+          "url": "https://www.gov.uk/government/statistics/proven-reoffending-statistics-october-to-december-2024"
+        },
+        "ethnicity": {
+          "date": "30 September 2026",
+          "groups": [
+            {
+              "label": "White",
+              "n": 62636,
+              "pop_pct": 84
+            },
+            {
+              "label": "Black or Black British",
+              "n": 10503,
+              "pop_pct": 4
+            },
+            {
+              "label": "Asian or Asian British",
+              "n": 7338,
+              "pop_pct": 9
+            },
+            {
+              "label": "Mixed",
+              "n": 4369,
+              "pop_pct": 2
+            },
+            {
+              "label": "Other ethnic group",
+              "n": 2131,
+              "pop_pct": 2
+            },
+            {
+              "label": "Not stated or recorded",
+              "n": 735
+            }
+          ],
+          "total": 87712,
+          "source": "Ministry of Justice, Prison population: 30 September 2026, table 1.Q.7 (remand, sentenced and non-criminal prisoners added together)",
+          "url": "https://assets.publishing.service.gov.uk/media/6ae1403fee0b648ce360628c/prison-population-30-Sept-2026.ods",
+          "pop_source": "Ministry of Justice, Statistics on ethnicity and the criminal justice system 2024 (2021 Census comparison)",
+          "pop_url": "https://assets.publishing.service.gov.uk/media/692716712a37784b16ecf554/Executive_Summary_-_Statistics_on_Ethnicity_in_the_Criminal_Justice_System__2024.pdf"
+        }
       }
     }
   }
