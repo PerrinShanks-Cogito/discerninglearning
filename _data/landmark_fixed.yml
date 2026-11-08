@@ -1,0 +1,94 @@
+# Fixed anchors: numbers that don't change, so they need no quarterly check.
+# Each item: figure (big number), label (what it is), so (how to use it), optional source/url.
+sections:
+  - id: time
+    title: Time
+    lead: A million seconds is under two weeks. A billion seconds is more than 31 years.
+    items:
+      - figure: 11.6 days
+        label: in a million seconds
+        so: Counting to a million at one a second, without stopping, takes 11 days and 14 hours.
+      - figure: 31.7 years
+        label: in a billion seconds
+        so: A billion is a thousand times a million, so it's a different order of thing altogether. A trillion seconds is about 31,700 years.
+      - figure: "8,760"
+        label: hours in a year
+        so: "8,784 in a leap year. There are 86,400 seconds in a day and 525,600 minutes in a year."
+      - figure: About 1,700
+        label: hours in a full-time working year
+        so: 37.5 hours a week for about 45 weeks, once holidays and bank holidays are taken off.
+      - figure: About 4,170
+        label: weeks in an 80-year life
+        so: That's 29,220 days, or about 700,000 hours. Most of us have used fewer weeks than we think.
+  - id: big-numbers
+    title: Big numbers
+    lead: If you earned £1 every second, it would take 11.6 days to make a million and nearly 32 years to make a billion.
+    items:
+      - figure: "1,000"
+        label: millions in a billion
+        so: The UK uses the "short" billion, a thousand million, like the US. A trillion is a thousand billion.
+      - figure: £1 a second
+        label: is £31.6 million a year
+        so: A handy way to feel the difference between a million (11.6 days) and a billion (31.7 years) of anything.
+      - figure: 1 in a million
+        label: a micromort
+        so: A one-in-a-million chance of dying, a unit used to compare everyday risks.
+  - id: size
+    title: Size and distance
+    lead: Light from the Sun takes 8 minutes 19 seconds to reach us, and just 1.3 seconds from the Moon.
+    items:
+      - figure: "40,075 km"
+        label: around the Earth at the equator
+        so: About 24,900 miles. Flying from London to Sydney is roughly 17,000 km, over 40% of the way round.
+        source: NASA, Earth fact sheet
+        url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
+      - figure: "384,400 km"
+        label: to the Moon, on average
+        so: About ten times round the Earth. Light covers it in 1.3 seconds.
+        source: NASA, Moon fact sheet
+        url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+      - figure: 150 million km
+        label: to the Sun
+        so: One astronomical unit, defined as exactly 149,597,870,700 metres. Light takes 8 minutes 19 seconds.
+        source: International Astronomical Union, 2012 resolution B2
+        url: https://syrte.obspm.fr/IAU_resolutions/IAUResol_2012_0.html
+      - figure: "299,792 km"
+        label: travelled by light in a second
+        so: Exactly 299,792,458 metres a second, by definition. That's about 7.5 times round the Earth.
+        source: BIPM, The International System of Units (SI brochure)
+        url: https://www.bipm.org/en/publications/si-brochure
+  - id: everyday-units
+    title: Everyday units
+    lead: A hectare is a square 100 metres each side, about one and a half football pitches.
+    items:
+      - figure: 1.4
+        label: football pitches in a hectare
+        so: A pitch of 105 by 68 metres covers 0.71 hectares. A hectare is 2.47 acres; 100 hectares is a square kilometre.
+      - figure: 2.5 million litres
+        label: in an Olympic swimming pool
+        so: "50 metres by 25 metres and at least 2 metres deep: 2,500 cubic metres."
+      - figure: 1 tonne
+        label: of water in a cubic metre
+        so: A litre of water weighs a kilogram, so a cubic metre (1,000 litres) weighs a tonne.
+      - figure: 1 kWh
+        label: a 3 kW kettle for 20 minutes
+        so: A kilowatt-hour is 1,000 watts for an hour. A gigawatt running for a year makes 8.76 terawatt-hours.
+      - figure: "About 100,000"
+        label: heartbeats a day
+        so: At 70 beats a minute, that's about 37 million a year.
+  - id: rules
+    title: Rules of thumb
+    lead: Divide 72 by a yearly growth rate to find roughly how many years it takes something to double.
+    items:
+      - figure: 72 ÷ rate
+        label: years for something to double
+        so: Prices rising 2% a year double in about 36 years; money growing 7% a year doubles in about 10.
+      - figure: "1 in 20 = 5%"
+        label: switch between "1 in" and per cent
+        so: 1 in 10 is 10%, 1 in 4 is 25%, 1 in 3 is about 33%. "1 in" figures are easier to picture; percentages are easier to compare.
+      - figure: 10% → 12%
+        label: is 2 percentage points, but 20% more
+        so: Check which one a headline means. A rise "of 2%" and a rise "of 2 percentage points" are very different.
+      - figure: Per day, per person
+        label: the two quickest checks
+        so: Divide a yearly figure by 365 and a national figure by the population before deciding whether it's big.

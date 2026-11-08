@@ -1,0 +1,79 @@
+---
+title: Fixed anchors
+description: Numbers that never need updating, for getting a feel for time, size, distance and big numbers.
+permalink: /landmark-numbers/fixed-anchors/
+---
+{%- assign fx = site.data.landmark_fixed -%}
+
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+
+<p>
+  Most landmark numbers go out of date: populations grow and budgets change. These don't. They are fixed facts and
+  simple arithmetic that help you picture how long, how far or how big something is, and they work for any figure,
+  in any year.
+</p>
+
+<nav class="uk-nav" aria-label="Fixed anchors">
+  <p class="uk-nav__row uk-nav__sections">
+    <span>On this page:</span>
+    {%- for sec in fx.sections %}
+    <a href="#{{ sec.id }}">{{ sec.title }}</a>
+    {%- endfor %}
+    <a href="#time-left">Time left</a>
+  </p>
+</nav>
+
+{%- for sec in fx.sections %}
+<h2 id="{{ sec.id }}">{{ sec.title }}</h2>
+<p class="uk-lead">{{ sec.lead }}</p>
+<div class="nhs-grid">
+  {%- for it in sec.items %}
+  <section class="card nhs-stat">
+    <p class="nhs-stat__figure">{{ it.figure }}</p>
+    <h3 class="nhs-stat__label">{{ it.label }}</h3>
+    <p class="nhs-stat__so">{{ it.so }}</p>
+    {%- if it.source %}<p class="nhs-stat__source"><a href="{{ it.url }}">{{ it.source }}</a></p>{% endif %}
+  </section>
+  {%- endfor %}
+</div>
+{%- endfor %}
+
+<h2 id="time-left">Time left</h2>
+<p class="uk-lead">Turn a number of years into weeks, days and hours. Weeks are easier to picture than decades.</p>
+<form class="card fx-calc" onsubmit="return false" aria-describedby="fx-note">
+  <div class="fx-calc__inputs">
+    <label>Age now <input type="number" id="fx-now" min="0" max="120" step="1" value="40" inputmode="numeric"></label>
+    <label>Count to age <input type="number" id="fx-to" min="1" max="120" step="1" value="80" inputmode="numeric"></label>
+  </div>
+  <div class="fx-calc__out" aria-live="polite">
+    <p><strong id="fx-weeks">2,087</strong> weeks</p>
+    <p><strong id="fx-days">14,610</strong> days</p>
+    <p><strong id="fx-hours">350,640</strong> hours</p>
+    <p><strong id="fx-awake">233,760</strong> waking hours<span>at 16 hours a day</span></p>
+  </div>
+  <p class="nhs-stat__source" id="fx-note">Worked out in your browser from the two ages, using 365.25 days a year. Nothing you type is saved or sent anywhere.</p>
+</form>
+<script>
+(function () {
+  var now = document.getElementById("fx-now"), to = document.getElementById("fx-to");
+  function fmt(n) { return Math.round(n).toLocaleString("en-GB"); }
+  function update() {
+    var years = Math.max(0, (parseFloat(to.value) || 0) - (parseFloat(now.value) || 0));
+    var days = years * 365.25;
+    document.getElementById("fx-weeks").textContent = fmt(days / 7);
+    document.getElementById("fx-days").textContent = fmt(days);
+    document.getElementById("fx-hours").textContent = fmt(days * 24);
+    document.getElementById("fx-awake").textContent = fmt(days * 16);
+  }
+  now.addEventListener("input", update); to.addEventListener("input", update); update();
+})();
+</script>
+
+<details class="landmark-method">
+  <summary>Where these figures come from</summary>
+  <p>
+    The distances and the speed of light come from the sources linked on each card. Everything else is arithmetic:
+    a year is taken as 365.25 days, a football pitch as 105 by 68 metres (the size used at most major grounds) and an
+    Olympic pool at its minimum depth of 2 metres. These figures don't change, so this page isn't part of the quarterly check.
+  </p>
+</details>

@@ -446,6 +446,16 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .uk-topics .landmark-tile__figure strong { display: block; font-size: 1.6rem; color: var(--accent); }
 .uk-topics__list { font-size: 0.8rem; color: var(--muted); margin-top: auto !important; }
 
+/* Fixed anchors: time-left calculator. */
+.fx-calc { display: grid; gap: 1rem; margin: 0.5rem 0 1.5rem; }
+.fx-calc__inputs { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; }
+.fx-calc__inputs label { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 600; font-size: 0.9rem; }
+.fx-calc__inputs input { width: 7rem; font: inherit; font-size: 1.1rem; padding: 0.4rem 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--text); }
+.fx-calc__out { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.75rem; }
+.fx-calc__out p { margin: 0 !important; }
+.fx-calc__out strong { display: block; font-size: 1.6rem; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.2; }
+.fx-calc__out span { display: block; font-size: 0.75rem; color: var(--muted); }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

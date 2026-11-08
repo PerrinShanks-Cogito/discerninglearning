@@ -106,7 +106,11 @@ new commit). Watch progress on the repo's **Actions** tab.
 
 `/landmark-numbers/` (`_pages/landmark-numbers.html`) introduces reference
 numbers for putting other figures in context, an idea from Tim Harford's *How
-to Make the World Add Up*, with two tiles: the UK and its nations, and the NHS.
+to Make the World Add Up*, with three tiles: the UK and its nations, the NHS, and
+fixed anchors. Fixed anchors, `/landmark-numbers/fixed-anchors/`
+(`_pages/landmark-numbers-fixed.html`), reads `_data/landmark_fixed.yml`: numbers that never
+change (time, big numbers, size and distance, everyday units, rules of thumb) plus a
+time-left calculator, so it isn't part of the quarterly check.
 The NHS overview, `/landmark-numbers/nhs/` (`_pages/landmark-numbers-nhs.html`),
 leads to the three NHS pages below; `_data/landmark_nhs_pages.yml` lists them and
 their sections for the jump menu (`_includes/landmark-nav.html`, shared with the
