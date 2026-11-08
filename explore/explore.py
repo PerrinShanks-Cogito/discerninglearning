@@ -1,8 +1,18 @@
-import requests, io
+import requests, io, re
 import pandas as pd
-pd.set_option("display.width",300); pd.set_option("display.max_columns",30); pd.set_option("display.max_colwidth",50); pd.set_option("display.max_rows",100)
+pd.set_option("display.width",300); pd.set_option("display.max_columns",40); pd.set_option("display.max_colwidth",40); pd.set_option("display.max_rows",200)
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (Discerning Learning landmark numbers)"})
-x=pd.ExcelFile(io.BytesIO(s.get("https://assets.publishing.service.gov.uk/media/6a7afefb423b0bdba0290eb1/UK_armed_forces_equipment_and_formations_2026.xlsx",timeout=180).content))
-for sh in ["1","5","7","8"]:
-    d=pd.read_excel(x,sh,header=None); print("=====",sh); print(d.to_string(max_colwidth=50)[:6000])
-# 1794164882
+pages=["/government/statistics/electricity-chapter-5-digest-of-united-kingdom-energy-statistics-dukes",
+"/government/statistics/renewable-sources-of-energy-chapter-6-digest-of-united-kingdom-energy-statistics-dukes",
+"/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025",
+"/government/statistics/energy-trends-section-5-electricity",
+"/government/statistics/energy-trends-section-6-renewables",
+"/government/publications/interconnectors-electricity"]
+for p in pages:
+    try:
+        j=s.get("https://www.gov.uk/api/content"+p,timeout=60).json()
+        print("#####",p,j.get("public_updated_at"))
+        for a in j.get("details",{}).get("attachments",[]):
+            print("  ",a.get("title"),"|",a.get("url"))
+    except Exception as e: print("ERR",p,e)
+# 1794165359
