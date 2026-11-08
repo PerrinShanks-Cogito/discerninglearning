@@ -1,0 +1,18 @@
+{%- comment -%} The ten largest companies in the FTSE 100 by share of its value. {%- endcomment -%}
+{%- assign co = uk.uk_only.gdp.companies %}
+{%- assign co_max = co.list.first.pct %}
+<section class="pf-list co-list">
+  <h4>Share of the FTSE 100's value<span>{{ co.weights_date }}</span></h4>
+  <ol>
+    {%- for c in co.list %}
+    {%- assign w = c.pct | times: 100.0 | divided_by: co_max | round: 1 %}
+    <li><span class="pf-label"><strong>{{ forloop.index }}.</strong> {{ c.name }}<small>{{ c.what }}</small></span>
+      <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span>
+      <span class="pf-val">{{ c.pct }}%</span></li>
+    {%- endfor %}
+  </ol>
+</section>
+<p class="uk-note">The FTSE 100 is the 100 largest companies listed on the London Stock Exchange. It was worth about
+  £{% include thousands.html n=co.index_value_bn %} billion on {{ co.index_value_date }}, counting only shares available to trade, so 1% of the index is roughly £{{ co.index_value_bn | divided_by: 100 | round }} billion.
+  Many of these companies earn most of their money abroad, so their size says more about the City than about the UK economy.
+  Source {% include uk-src.html u=co.url t=co.source %}</p>

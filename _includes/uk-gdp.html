@@ -1,0 +1,30 @@
+{%- comment -%} UK GDP headline and output by sector, for the economy page. {%- endcomment -%}
+{%- assign gd = uk.uk_only.gdp %}
+{%- assign gd_pp = gd.gdp_bn | times: 1000000000.0 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+{%- assign gd_day = gd.gdp_bn | times: 1000 | divided_by: 365 | round %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ gd.year }}</p>
+    <p class="nhs-stat__figure">£{{ gd.gdp_bn | divided_by: 1000.0 | round: 2 }} trillion</p>
+    <h3 class="nhs-stat__label">the value of everything the UK produced in a year</h3>
+    <p class="nhs-stat__so">That's about £{% include thousands.html n=gd_day %} million a day, or £{% include thousands.html n=gd_pp %} per person.
+      After allowing for inflation, the economy grew {{ gd.real_growth_pct }}% in {{ gd.year }} ({{ gd.growth_prev_pct }}% the year before).</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=gd.url t=gd.source %}</p>
+  </section>
+</div>
+{%- assign gd_max = gd.sectors.first.bn %}
+<section class="pf-list fd-gdp">
+  <h4>What the UK's economy produces, by sector<span>£{% include thousands.html n=gd.sectors_total_bn %}bn, {{ gd.sectors_year }}</span></h4>
+  <ul>
+    {%- for r in gd.sectors %}
+    {%- assign w = r.bn | times: 100.0 | divided_by: gd_max | round: 1 %}
+    <li>
+      <span class="pf-label">{{ r.label }}{% if r.note %}<small>{{ r.note }}</small>{% endif %}</span>
+      <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span>
+      <span class="pf-val">£{{ r.bn | round }}bn<small>{{ r.pct }}%</small></span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+<p class="uk-note">Gross value added at current prices. It sums to less than GDP because GDP also counts taxes on products, such as VAT.
+  Sources {% include uk-src.html u=gd.sectors_url t=gd.sectors_source %}</p>

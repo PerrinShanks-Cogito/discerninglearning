@@ -14,6 +14,9 @@
   url: /landmark-numbers/uk-and-nations/economy/
   sections:
     - { id: economy, title: Economy and work }
+    - { id: gdp, title: GDP and industries }
+    - { id: growth, title: Growth areas }
+    - { id: companies, title: Biggest companies }
     - { id: benefits, title: Benefits }
     - { id: money, title: Spending per person }
     - { id: spending-and-income, title: Spending and income }

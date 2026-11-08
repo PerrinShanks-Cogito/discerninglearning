@@ -442,6 +442,36 @@
           "url": "https://www.nomisweb.co.uk/datasets/asher"
         },
         {
+          "key": "annual_pay_ft",
+          "label": "Median annual pay before tax, full-time employees (£)",
+          "format": "money",
+          "values": {
+            "uk": 39039,
+            "england": 39243,
+            "scotland": 39905,
+            "wales": 36354,
+            "ni": 37129
+          },
+          "period": "tax year to April 2025, by where people live",
+          "source": "ONS, Annual Survey of Hours and Earnings 2025 (resident analysis, Nomis NM_30_1, annual gross pay, median)",
+          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025"
+        },
+        {
+          "key": "annual_pay_all",
+          "label": "Median annual pay before tax, all employees including part-time (£)",
+          "format": "money",
+          "values": {
+            "uk": 32890,
+            "england": 33080,
+            "scotland": 33061,
+            "wales": 30732,
+            "ni": 31252
+          },
+          "period": "tax year to April 2025, by where people live",
+          "source": "ONS, Annual Survey of Hours and Earnings 2025 (resident analysis, Nomis NM_30_1, annual gross pay, median)",
+          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025"
+        },
+        {
           "key": "employment_rate",
           "label": "Employment rate, ages 16 to 64 (%)",
           "format": "pct1",
@@ -457,6 +487,134 @@
           "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/regionallabourmarket/october2026"
         }
       ]
+    },
+    {
+      "key": "gdp",
+      "title": "GDP and industries",
+      "measures": [
+        {
+          "key": "gdp_bn",
+          "label": "GDP (£ billion)",
+          "format": "dec1",
+          "count": true,
+          "values": {
+            "uk": 2884.0,
+            "england": 2472.1,
+            "scotland": 218.8,
+            "wales": 100.3,
+            "ni": 67.7
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross domestic product: all ITL regions, 1998 to 2024, table 5 (current market prices)",
+          "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions"
+        },
+        {
+          "key": "gva_manufacturing",
+          "label": "Manufacturing (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 8.9,
+            "england": 8.6,
+            "scotland": 9.5,
+            "wales": 14.6,
+            "ni": 11.4
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        },
+        {
+          "key": "gva_finance",
+          "label": "Finance and insurance (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 8.0,
+            "england": 8.3,
+            "scotland": 8.0,
+            "wales": 5.4,
+            "ni": 4.2
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        },
+        {
+          "key": "gva_infocomm",
+          "label": "Information and communication (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 6.1,
+            "england": 6.6,
+            "scotland": 3.6,
+            "wales": 3.0,
+            "ni": 3.7
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        },
+        {
+          "key": "gva_professional",
+          "label": "Professional, scientific and technical (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 8.6,
+            "england": 9.1,
+            "scotland": 7.3,
+            "wales": 4.2,
+            "ni": 4.9
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        },
+        {
+          "key": "gva_health",
+          "label": "Health and social care (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 8.5,
+            "england": 8.1,
+            "scotland": 10.8,
+            "wales": 12.5,
+            "ni": 12.2
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        },
+        {
+          "key": "gva_public_admin",
+          "label": "Public administration and defence (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 5.0,
+            "england": 4.6,
+            "scotland": 6.8,
+            "wales": 8.5,
+            "ni": 6.2
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        },
+        {
+          "key": "gva_land",
+          "label": "Farming, energy and water (% of output)",
+          "format": "pct1",
+          "values": {
+            "uk": 4.9,
+            "england": 3.6,
+            "scotland": 8.4,
+            "wales": 6.1,
+            "ni": 5.7
+          },
+          "period": "2024",
+          "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+          "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+        }
+      ],
+      "note": "Output is gross value added: the value of goods and services produced, minus what went into making them. GDP adds taxes on products. The UK figures include offshore oil and gas, which isn't counted in any nation, so the nations add up to slightly less than the UK. Regional figures are revised less often than national ones, so the UK total here (for 2024) is a little below the latest national estimate for the same year."
     },
     {
       "key": "benefits",
@@ -2028,6 +2186,277 @@
           "pop_source": "Ministry of Justice, Statistics on ethnicity and the criminal justice system 2024 (2021 Census comparison)",
           "pop_url": "https://assets.publishing.service.gov.uk/media/692716712a37784b16ecf554/Executive_Summary_-_Statistics_on_Ethnicity_in_the_Criminal_Justice_System__2024.pdf"
         }
+      }
+    },
+    "gdp": {
+      "year": 2025,
+      "gdp_bn": 3044.6,
+      "real_growth_pct": 1.2,
+      "growth_prev_pct": 1.1,
+      "source": "ONS, GDP at current market prices (series YBHA) and year-on-year real growth (IHYP), quarterly national accounts, released 30 September 2026",
+      "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/ybha/ukea",
+      "sectors_year": 2024,
+      "sectors_total_bn": 2601.6,
+      "sectors": [
+        {
+          "label": "Real estate",
+          "bn": 377.5,
+          "pct": 14.5,
+          "note": "Includes the rent home-owners would pay themselves"
+        },
+        {
+          "label": "Wholesale and retail",
+          "bn": 245.5,
+          "pct": 9.4
+        },
+        {
+          "label": "Manufacturing",
+          "bn": 230.3,
+          "pct": 8.9
+        },
+        {
+          "label": "Professional, scientific and technical",
+          "bn": 224.7,
+          "pct": 8.6,
+          "note": "Law, accounting, consultancy, research, engineering"
+        },
+        {
+          "label": "Health and social care",
+          "bn": 221.1,
+          "pct": 8.5
+        },
+        {
+          "label": "Finance and insurance",
+          "bn": 207.3,
+          "pct": 8.0
+        },
+        {
+          "label": "Information and communication",
+          "bn": 160.0,
+          "pct": 6.1,
+          "note": "Software, telecoms, publishing, broadcasting"
+        },
+        {
+          "label": "Construction",
+          "bn": 153.2,
+          "pct": 5.9
+        },
+        {
+          "label": "Education",
+          "bn": 150.4,
+          "pct": 5.8
+        },
+        {
+          "label": "Administrative and support services",
+          "bn": 131.1,
+          "pct": 5.0,
+          "note": "Recruitment, rental, travel agents, cleaning, security"
+        },
+        {
+          "label": "Public administration and defence",
+          "bn": 130.6,
+          "pct": 5.0
+        },
+        {
+          "label": "Energy, water and mining",
+          "bn": 110.3,
+          "pct": 4.2,
+          "note": "Includes offshore oil and gas"
+        },
+        {
+          "label": "Transport and storage",
+          "bn": 91.5,
+          "pct": 3.5
+        },
+        {
+          "label": "Hotels, pubs and restaurants",
+          "bn": 73.0,
+          "pct": 2.8
+        },
+        {
+          "label": "Farming, forestry and fishing",
+          "bn": 18.4,
+          "pct": 0.7
+        },
+        {
+          "label": "Arts, leisure and other services",
+          "bn": 76.6,
+          "pct": 2.9
+        }
+      ],
+      "sectors_source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1c (current prices)",
+      "sectors_url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry",
+      "growth": {
+        "from": 2019,
+        "to": 2024,
+        "total_pct": 4.5,
+        "sections": [
+          {
+            "label": "Information and communication",
+            "pct": 33.9
+          },
+          {
+            "label": "Professional, scientific and technical",
+            "pct": 24.5
+          },
+          {
+            "label": "Transport and storage",
+            "pct": 5.1
+          },
+          {
+            "label": "Manufacturing",
+            "pct": 4.2
+          },
+          {
+            "label": "Health and social care",
+            "pct": 1.7
+          },
+          {
+            "label": "Wholesale and retail",
+            "pct": -8.2
+          },
+          {
+            "label": "Finance and insurance",
+            "pct": -8.3
+          },
+          {
+            "label": "Mining and quarrying (mostly oil and gas)",
+            "pct": -37.2
+          },
+          {
+            "label": "Energy, gas and electricity supply",
+            "pct": -48.1
+          }
+        ],
+        "industries": [
+          {
+            "label": "Scientific research and development",
+            "pct": 53.8,
+            "bn": 31.0
+          },
+          {
+            "label": "Information services (data, web hosting, search)",
+            "pct": 49.6,
+            "bn": 13.3
+          },
+          {
+            "label": "Motor vehicle manufacturing",
+            "pct": 44.9,
+            "bn": 15.6
+          },
+          {
+            "label": "Office and business support",
+            "pct": 38.2,
+            "bn": 33.7
+          },
+          {
+            "label": "Head offices and management consultancy",
+            "pct": 34.6,
+            "bn": 38.6
+          },
+          {
+            "label": "Advertising and market research",
+            "pct": 33.5,
+            "bn": 26.5
+          },
+          {
+            "label": "Computer programming and consultancy",
+            "pct": 28.1,
+            "bn": 74.9
+          },
+          {
+            "label": "Architecture and engineering",
+            "pct": 24.0,
+            "bn": 34.7
+          },
+          {
+            "label": "Food manufacturing",
+            "pct": 22.6,
+            "bn": 29.8
+          },
+          {
+            "label": "Pharmaceutical manufacturing",
+            "pct": 22.4,
+            "bn": 24.8
+          }
+        ],
+        "note": "Real (price-adjusted) growth in output, for industries producing at least £10 billion a year in 2024. Telecommunications grew faster still on this measure (+69%), but its output is hard to price-adjust, so it's left out.",
+        "source": "ONS, Regional gross value added (balanced) by industry, 1998 to 2024, table 1a (chained volume measures)",
+        "url": "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry"
+      },
+      "priority_sectors": {
+        "list": [
+          "Advanced manufacturing",
+          "Clean energy industries",
+          "Creative industries",
+          "Defence",
+          "Digital and technologies",
+          "Financial services",
+          "Life sciences",
+          "Professional and business services"
+        ],
+        "source": "HM Government, The UK's Modern Industrial Strategy (23 June 2025) and sector plans",
+        "url": "https://www.gov.uk/government/publications/industrial-strategy-sector-plans/sector-plans"
+      },
+      "companies": {
+        "weights_date": "30 June 2026",
+        "index_value_bn": 2544.6,
+        "index_value_date": "30 October 2026",
+        "top10_pct": 49.5,
+        "list": [
+          {
+            "name": "HSBC",
+            "what": "Banking",
+            "pct": 9.84
+          },
+          {
+            "name": "AstraZeneca",
+            "what": "Medicines",
+            "pct": 8.47
+          },
+          {
+            "name": "Shell",
+            "what": "Oil and gas",
+            "pct": 6.6
+          },
+          {
+            "name": "Rolls-Royce",
+            "what": "Aircraft engines and defence",
+            "pct": 4.86
+          },
+          {
+            "name": "Unilever",
+            "what": "Food, home and personal care brands",
+            "pct": 3.83
+          },
+          {
+            "name": "British American Tobacco",
+            "what": "Tobacco and nicotine",
+            "pct": 3.8
+          },
+          {
+            "name": "GSK",
+            "what": "Medicines and vaccines",
+            "pct": 3.17
+          },
+          {
+            "name": "Rio Tinto",
+            "what": "Mining",
+            "pct": 2.95
+          },
+          {
+            "name": "BP",
+            "what": "Oil and gas",
+            "pct": 2.94
+          },
+          {
+            "name": "Barclays",
+            "what": "Banking",
+            "pct": 2.77
+          }
+        ],
+        "source": "FTSE Russell, FTSE 100 index constituent weights (as at 30 June 2026) and FTSE 100 factsheet (30 October 2026)",
+        "url": "https://research.ftserussell.com/analytics/factsheets/Home/DownloadConstituentsWeights/?indexdetails=UKX"
       }
     }
   }
