@@ -1,0 +1,16 @@
+{%- comment -%}
+  Prints the numbered sources collected since uk-src-start.html, then clears them.
+{%- endcomment -%}
+{%- if src_n > 0 %}
+{%- assign s_us = src_urls | split: "|~|" %}
+{%- assign s_ts = src_titles | split: "|~|" %}
+<div class="src-list">
+  <p class="src-list__title">Sources</p>
+  <ol>
+    {%- for s_x in s_us %}
+    <li id="{{ src_sec }}-src-{{ forloop.index }}"><a href="{{ s_x }}">{{ s_ts[forloop.index0] }}</a></li>
+    {%- endfor %}
+  </ol>
+</div>
+{%- endif %}
+{%- assign src_n = 0 -%}

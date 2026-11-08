@@ -1,0 +1,22 @@
+{%- comment -%}
+  Sticky jump menu for the UK and its nations pages. Usage: {% include uk-nav.html current="energy" %}
+  (current="overview" on the overview page).
+{%- endcomment -%}
+{%- assign nav_pages = site.data.landmark_uk_pages -%}
+{%- assign nav_here = nav_pages | where: "slug", include.current | first -%}
+<nav class="uk-nav" aria-label="UK and its nations">
+  <p class="uk-nav__row uk-nav__topics">
+    <a href="{{ '/landmark-numbers/uk-and-nations/' | relative_url }}"{% if include.current == "overview" %} aria-current="page"{% endif %}>Overview</a>
+    {%- for p in nav_pages %}
+    <a href="{{ p.url | relative_url }}"{% if p.slug == include.current %} aria-current="page"{% endif %}>{{ p.short }}</a>
+    {%- endfor %}
+  </p>
+  {%- if nav_here %}
+  <p class="uk-nav__row uk-nav__sections">
+    <span>On this page:</span>
+    {%- for s in nav_here.sections %}
+    <a href="#{{ s.id }}">{{ s.title }}</a>
+    {%- endfor %}
+  </p>
+  {%- endif %}
+</nav>

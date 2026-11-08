@@ -1,0 +1,18 @@
+{%- comment -%}
+  A numbered source marker. Adds the source to the current section's list (once per link) and prints
+  a superscript number linking to it. Usage: {% include uk-src.html u=source.url t=source.name %}
+{%- endcomment -%}
+{%- assign s_u = include.u -%}
+{%- assign s_hit = 0 -%}
+{%- assign s_list = src_urls | split: "|~|" -%}
+{%- for s_x in s_list -%}{%- if s_hit == 0 and s_x == s_u -%}{%- assign s_hit = forloop.index -%}{%- endif -%}{%- endfor -%}
+{%- if s_hit == 0 -%}
+  {%- assign src_n = src_n | plus: 1 -%}
+  {%- assign s_hit = src_n -%}
+  {%- if src_n == 1 -%}
+    {%- assign src_urls = s_u -%}{%- assign src_titles = include.t -%}
+  {%- else -%}
+    {%- assign src_urls = src_urls | append: "|~|" | append: s_u -%}{%- assign src_titles = src_titles | append: "|~|" | append: include.t -%}
+  {%- endif -%}
+{%- endif -%}
+<sup class="src-ref"><a href="#{{ src_sec }}-src-{{ s_hit }}" aria-label="Source {{ s_hit }}">{{ s_hit }}</a></sup>

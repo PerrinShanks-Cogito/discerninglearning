@@ -1,0 +1,31 @@
+{%- assign uk = site.data.landmark_uk -%}
+{%- assign people = uk.groups | where: "key", "people" | first -%}
+{%- assign pop = people.measures | where: "key", "population" | first -%}
+{%- assign land = people.measures | where: "key", "land_km2" | first -%}
+{%- assign working = people.measures | where: "key", "working_age" | first -%}
+{%- assign older = people.measures | where: "key", "over_65" | first -%}
+{%- assign health = uk.groups | where: "key", "health" | first -%}
+{%- assign le_f = health.measures | where: "key", "le_female" | first -%}
+{%- assign le_m = health.measures | where: "key", "le_male" | first -%}
+{%- assign hle_f = health.measures | where: "key", "hle_female" | first -%}
+{%- assign hle_m = health.measures | where: "key", "hle_male" | first -%}
+{%- assign money = uk.groups | where: "key", "money" | first -%}
+{%- assign spend = money.measures | where: "key", "spend_per_head" | first -%}
+
+{%- assign uk_pop = pop.values.uk | times: 1.0 -%}
+{%- assign eng_share = pop.values.england | divided_by: uk_pop | times: 100 | round -%}
+{%- assign scot_pop_share = pop.values.scotland | divided_by: uk_pop | times: 100 | round -%}
+{%- assign scot_land_share = land.values.scotland | divided_by: land.values.uk | times: 100 | round -%}
+{%- assign eng_density = pop.values.england | divided_by: land.values.england | round -%}
+{%- assign scot_density = pop.values.scotland | divided_by: land.values.scotland | round -%}
+{%- assign natural = uk.uk_births | minus: uk.uk_deaths -%}
+{%- assign poor_health_f = le_f.values.uk | minus: hle_f.values.uk | round: 1 -%}
+{%- assign poor_health_m = le_m.values.uk | minus: hle_m.values.uk | round: 1 -%}
+{%- assign per_bn = 1000000000.0 | divided_by: uk_pop | round -%}
+{%- assign hle_avg = hle_f.values.uk | plus: hle_m.values.uk | divided_by: 2.0 | round -%}
+{%- assign low_n = "" -%}{%- assign high_n = "" -%}{%- assign low_v = 1000000000 -%}{%- assign high_v = 0 -%}
+{%- for n in uk.nations offset: 1 -%}
+  {%- assign v = spend.values[n.key] -%}
+  {%- if v < low_v -%}{%- assign low_v = v -%}{%- assign low_n = n.name -%}{%- endif -%}
+  {%- if v > high_v -%}{%- assign high_v = v -%}{%- assign high_n = n.name -%}{%- endif -%}
+{%- endfor -%}

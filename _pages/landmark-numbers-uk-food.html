@@ -1,0 +1,18 @@
+---
+title: "The UK and its nations: farming and food"
+description: Farms and farm income by nation, how much of its food the UK produces, where the rest comes from, and food trade.
+permalink: /landmark-numbers/uk-and-nations/food/
+---
+{% include uk-setup.html %}
+{% include uk-page-head.html current="food" %}
+
+{%- include uk-src-start.html sec="agriculture" %}
+{%- include uk-range.html group="agriculture" key="farm_area_share" %}
+{%- assign ag_sh_n = r_hi_n %}{% assign ag_sh_v = r_hi_v %}
+{%- include uk-range.html group="agriculture" key="farm_size_ha" %}
+<h2 id="agriculture">By nation</h2>
+<p class="uk-lead">{{ ag_sh_n }} farms {{ ag_sh_v }}% of its land, the highest share of the four nations. {{ r_hi_n }}'s farms are
+  the biggest, at {{ r_hi_v }} hectares on average; {{ r_lo_n }}'s are the smallest, at {{ r_lo_v }}.</p>
+{% include uk-table.html key="agriculture" %}
+{% include uk-food.html %}
+{% include uk-src-list.html %}

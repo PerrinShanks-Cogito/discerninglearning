@@ -1,0 +1,110 @@
+
+{%- assign ju = uk.uk_only.justice %}
+{%- assign ew = ju.ew %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="three-systems" %}
+<h2 id="three-systems">Comparing the three legal systems</h2>
+<p class="uk-lead">{%- assign ju_rc = ju.measures | where: "key", "reoffend_custody" | first %}{% assign ju_lo = 100 %}{% assign ju_hi = 0 %}{% for sy in ju.systems %}{% assign t_v = ju_rc.values[sy.key] %}{% if t_v < ju_lo %}{% assign ju_lo = t_v %}{% endif %}{% if t_v > ju_hi %}{% assign ju_hi = t_v %}{% endif %}{% endfor %}Between {{ ju_lo | round }}% and {{ ju_hi | round }}% of people released from prison reoffend within a year, depending on the system.</p>
+<p>
+  The UK has three separate legal systems: one for England and Wales, one for Scotland and one for Northern Ireland, each with its own
+  police, courts and prisons. So these figures compare the three systems rather than the four nations.
+</p>
+<table class="landmark-table uk-table ju-table">
+  <thead>
+    <tr>
+      <th scope="col">Measure</th>
+      {%- for sy in ju.systems %}<th scope="col" class="num">{{ sy.name }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {%- for m in ju.measures %}
+    {%- assign t_min = 1000000000000 %}{% assign t_max = -1000000000000 %}
+    {%- for sy in ju.systems %}{% assign t_v = m.values[sy.key] %}{% if t_v < t_min %}{% assign t_min = t_v %}{% endif %}{% if t_v > t_max %}{% assign t_max = t_v %}{% endif %}{% endfor %}
+    <tr{% if m.derived %} class="uk-table__derived"{% endif %}>
+      <th scope="row">{{ m.label }}{% for src in m.sources %}{% include uk-src.html u=src.url t=src.name %}{% endfor %}</th>
+      {%- for sy in ju.systems %}
+      {%- assign cell = m.values[sy.key] %}
+      {%- assign t_cls = "" %}{% if m.derived and t_min != t_max %}{% if cell == t_max %}{% assign t_cls = " uk-hi" %}{% elsif cell == t_min %}{% assign t_cls = " uk-lo" %}{% endif %}{% endif %}
+      <td class="num{{ t_cls }}" data-label="{{ sy.name }}">{% include fmt.html v=cell f=m.format %}{% unless m.derived %}<span class="landmark-note">{{ m.periods[sy.key] }}</span>{% endunless %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+<p class="uk-key"><span class="uk-key__swatch uk-hi"></span> highest and <span class="uk-key__swatch uk-lo"></span> lowest rate of the three systems. {{ ju.population_note }}</p>
+<details class="uk-more"><summary>Comparing the three systems</summary><p class="uk-note">{{ ju.note }}</p></details>
+
+{%- assign co = ew.courts %}
+{%- assign pr = ew.prisons %}
+{%- assign cs = ew.csew %}
+{%- assign crown_rise = co.crown_open | minus: co.crown_open_prev %}
+{%- assign remand_pct = pr.remand | times: 100.0 | divided_by: pr.total | round %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="england-and-wales-justice" %}
+<h2 id="england-and-wales-justice">England and Wales</h2>
+<p class="uk-lead">{% include thousands.html n=co.crown_open %} cases are waiting to be dealt with by the Crown Court, and {% include thousands.html n=pr.total %} people are in prison.</p>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ cs.period }}</p>
+    <p class="nhs-stat__figure">{{ cs.incidents_m }} million</p>
+    <h3 class="nhs-stat__label">crimes experienced by adults, according to the Crime Survey</h3>
+    <p class="nhs-stat__so">{{ cs.fraud_m }} million of them were fraud or computer misuse. The survey asks people about crimes they've
+      experienced, so it includes crimes never reported to the police. Police recorded {{ ew.homicide_rate_published }} homicides per million
+      people and {% include thousands.html n=ew.knife.offences %} knife-enabled offences ({{ ew.knife.change_pct | abs }}% {% if ew.knife.change_pct < 0 %}down{% else %}up{% endif %} on the year before).</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=cs.url t=cs.source %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ co.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=co.crown_open %}</p>
+    <h3 class="nhs-stat__label">cases waiting to be dealt with by the Crown Court</h3>
+    <p class="nhs-stat__so">Up {% include thousands.html n=crown_rise %} on a year earlier. {% include thousands.html n=co.crown_over_year %} of them
+      had been open for a year or more. Magistrates' courts had {% include thousands.html n=co.mags_open %} open cases.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=co.url t=co.source %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ pr.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=pr.total %}</p>
+    <h3 class="nhs-stat__label">people in prison</h3>
+    <ul class="em-pace">
+      <li><span>Sentenced</span><strong>{% include thousands.html n=pr.sentenced %}</strong></li>
+      <li><span>On remand, awaiting trial or sentence</span><strong>{% include thousands.html n=pr.remand %} ({{ remand_pct }}%)</strong></li>
+    </ul>
+    <p class="nhs-stat__so">A further {% include thousands.html n=pr.probation %} people were supervised by the Probation Service on
+      {{ pr.probation_date }}.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=pr.url t=pr.source %}</p>
+  </section>
+  {%- assign ro = ew.reoffending %}
+  {%- assign et = ew.ethnicity %}
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ ro.cohort }} cohort</p>
+    <p class="nhs-stat__figure">{{ ro.short_sentence_pct }}%</p>
+    <h3 class="nhs-stat__label">of adults released from sentences of under 12 months reoffend within a year</h3>
+    <p class="nhs-stat__so">Across everyone cautioned, convicted or released from prison, {{ ro.overall_pct }}% committed a proven offence
+      within a year. Those who did reoffend committed {{ ro.reoffences_each }} further offences each, on average.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=ro.url t=ro.source %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ et.date }}</p>
+    {%- assign et_black = et.groups | where: "label", "Black or Black British" | first %}
+    {%- assign et_bpct = et_black.n | times: 100.0 | divided_by: et.total | round: 1 %}
+    <p class="nhs-stat__figure">{{ et_bpct }}%</p>
+    <h3 class="nhs-stat__label">of people in prison are Black or Black British, against {{ et_black.pop_pct }}% of the population</h3>
+    <details class="uk-more uk-more--inline">
+      <summary>Show all ethnic groups</summary>
+    <table class="def-table">
+      <thead><tr><th scope="col">Ethnic group</th><th scope="col" class="num">Prisoners</th><th scope="col" class="num">Share</th><th scope="col" class="num">Population</th></tr></thead>
+      <tbody>
+        {%- for g in et.groups %}
+        {%- assign sh = g.n | times: 100.0 | divided_by: et.total | round: 1 %}
+        <tr><th scope="row">{{ g.label }}</th><td class="num">{% include thousands.html n=g.n %}</td><td class="num">{{ sh }}%</td><td class="num">{% if g.pop_pct %}{{ g.pop_pct }}%{% else %}–{% endif %}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    </details>
+    <p class="nhs-stat__so">The Ministry of
+      Justice says minority ethnic groups are over-represented at several stages of the justice system, most of all at stop and search,
+      remand and in prison, and that these figures alone can't show the causes. The population column is from the 2021 Census, which also counts
+      children, so the comparison is approximate.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=et.url t=et.source %}; {% include uk-src.html u=et.pop_url t=et.pop_source %}</p>
+  </section>
+</div>

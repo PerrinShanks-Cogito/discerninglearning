@@ -1,0 +1,10 @@
+{%- comment -%}
+  Top of each UK and its nations page: way back, review date and the jump menu.
+  Usage: {% include uk-page-head.html current="energy" %}
+{%- endcomment -%}
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a>{% if include.current != "overview" %} &middot; <a href="{{ '/landmark-numbers/uk-and-nations/' | relative_url }}">The UK and its nations</a>{% endif %}</p>
+<p class="landmark-meta">
+  Figures reviewed <strong>{{ uk.last_reviewed | date: "%-d %B %Y" }}</strong>. Each figure says which period it covers,
+  and they don't all cover the same one. I check for newer releases every quarter.
+</p>
+{% include uk-nav.html current=include.current %}

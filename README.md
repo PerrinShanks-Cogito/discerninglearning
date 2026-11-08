@@ -122,13 +122,17 @@ combines the cost collection figures with curated figures in
 `_data/landmark_nhs.json` (budget, population, workforce, GP appointments and the
 waiting list), each with its period and source. Its per-day, per-person and
 "1 in" figures are calculated on the page. `_includes/thousands.html` formats
-numbers with commas. The UK and its nations page,
-`/landmark-numbers/uk-and-nations/` (`_pages/landmark-numbers-uk-and-nations.html`),
-reads `_data/landmark_uk.json`: curated figures for the UK, England, Scotland,
-Wales and Northern Ireland (population, age groups, households, land,
-migration, health, religion, economy, benefits, public spending, electricity
-generation, emissions and farming, plus UK-wide migration, Universal Credit, defence and energy
-(generation mix, renewables, power stations, storage, interconnectors, gas), greenhouse gas emissions, food (self-sufficiency, origins, trade, farming) and law and order (police, prisons and homicides for the three legal systems, plus crime, courts and prisons in England and Wales) figures in `uk_only`), each with its period and source. `_includes/fmt.html` formats them.
+numbers with commas. The UK and its nations section is an overview page,
+`/landmark-numbers/uk-and-nations/` (`_pages/landmark-numbers-uk-and-nations.html`), with six topic pages
+under it (`_pages/landmark-numbers-uk-*.html`): people, economy, defence, energy, food, and law and order.
+All of them read `_data/landmark_uk.json`: curated figures for the UK, England, Scotland, Wales and
+Northern Ireland in `groups`, plus UK-wide figures in `uk_only`, each with its period and source.
+`_data/landmark_uk_pages.yml` lists the topic pages and their sections, which drive the jump menu
+(`_includes/uk-nav.html`) and the overview tiles. Each topic is built from includes: `uk-table.html`
+draws a nations table (shading the highest and lowest rate; measures marked `"count": true` aren't
+shaded), and `uk-energy.html`, `uk-food.html`, `uk-justice.html` and the like draw the rest.
+Sources are numbered with `uk-src.html` and listed at the end of each section by `uk-src-list.html`.
+`_includes/fmt.html` formats the numbers.
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run
 workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the

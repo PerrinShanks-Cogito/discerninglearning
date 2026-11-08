@@ -1,0 +1,16 @@
+{%- comment -%}
+  Finds the lowest and highest of the four nations for one measure, for use in headline sentences.
+  Usage: {% include uk-range.html group="economy" key="gdp_per_head" %} then use r_lo_n, r_lo_v, r_hi_n, r_hi_v, r_uk.
+{%- endcomment -%}
+{%- assign r_g = uk.groups | where: "key", include.group | first -%}
+{%- assign r_m = r_g.measures | where: "key", include.key | first -%}
+{%- assign r_lo_v = 1000000000000 -%}{%- assign r_hi_v = -1000000000000 -%}
+{%- for n in uk.nations offset: 1 -%}
+  {%- assign r_v = r_m.values[n.key] -%}
+  {%- if r_v != nil -%}
+    {%- if r_v < r_lo_v -%}{%- assign r_lo_v = r_v -%}{%- assign r_lo_n = n.name -%}{%- endif -%}
+    {%- if r_v > r_hi_v -%}{%- assign r_hi_v = r_v -%}{%- assign r_hi_n = n.name -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign r_uk = r_m.values.uk -%}
+{%- assign r_period = r_m.period -%}

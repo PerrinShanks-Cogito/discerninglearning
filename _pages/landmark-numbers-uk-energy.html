@@ -1,0 +1,19 @@
+---
+title: "The UK and its nations: energy and emissions"
+description: Electricity generation, the renewables mix, power stations, gas, and greenhouse gas emissions against the UK's targets.
+permalink: /landmark-numbers/uk-and-nations/energy/
+---
+{% include uk-setup.html %}
+{% include uk-page-head.html current="energy" %}
+
+{%- include uk-src-start.html sec="energy" %}
+{%- include uk-range.html group="energy" key="renewables_pct" %}
+{%- assign en_g = uk.groups | where: "key", "energy" | first %}
+{%- assign en_ren = en_g.measures | where: "key", "renewables_pct" | first %}
+{%- assign en_net = en_g.measures | where: "key", "net_sent_twh" | first %}
+<h2 id="energy">By nation</h2>
+<p class="uk-lead">Scotland gets {{ en_ren.values.scotland }}% of its electricity from renewables and sends a net {{ en_net.values.scotland }} TWh
+  to the rest of the UK. {{ r_lo_n }} gets the least from renewables: {{ r_lo_v }}%.</p>
+{% include uk-table.html key="energy" %}
+{% include uk-energy.html %}
+{% include uk-src-list.html %}
