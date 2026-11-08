@@ -349,6 +349,17 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .pf-list--receipts .pf-bar i { background: var(--nat-scotland); }
 .pf-val { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
 
+.prose h4 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+.prose .pf-list h4 { margin: 0 0 0.6rem; }
+.def-equipment .pf-list li { grid-template-columns: minmax(0, 1fr) auto; }
+.def-equipment .pf-val { min-width: 3.5rem; }
+.prose table.def-table { display: table; width: 100%; margin: 0.25rem 0 0.5rem; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.prose .def-table th, .prose .def-table td { border: 0; border-bottom: 1px solid var(--border); padding: 0.35rem 0.4rem; }
+.prose .def-table tbody th { font-weight: 600; white-space: normal; }
+.prose .def-table thead th { font-size: 0.78rem; color: var(--muted); }
+.prose .def-table td.num, .prose .def-table th.num { text-align: right; }
+.prose .def-table__total th, .prose .def-table__total td { font-weight: 700; border-bottom: 0; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
