@@ -1,31 +1,15 @@
-import requests, re, io, html, traceback
+import requests, io, re, html, traceback
 import pandas as pd
-pd.set_option("display.width",250); pd.set_option("display.max_columns",40); pd.set_option("display.max_colwidth",45)
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (Discerning Learning landmark numbers)"})
-print("######### NI UC ods")
 try:
-    b=s.get("https://www.communities-ni.gov.uk/system/files/2026-08/dfc-ni-uc-stats-supp-tables-may-2026.ods",timeout=120).content
-    x=pd.ExcelFile(io.BytesIO(b),engine="odf"); print(x.sheet_names[:15])
-    for sh in x.sheet_names[:6]:
-        d=pd.read_excel(x,sh,header=None); print("--",sh,d.shape); print(d.head(14).to_string()[:2500])
+    x=pd.ExcelFile(io.BytesIO(s.get("https://www.communities-ni.gov.uk/system/files/2026-08/dfc-ni-uc-stats-supp-tables-may-2026.ods",timeout=120).content),engine="odf")
+    d=pd.read_excel(x,"01",header=None); print(d.iloc[55:66,:3].to_string())
 except Exception: traceback.print_exc()
-print("######### Scotland chart data")
+# MoD spending in Spending Review 2025 table
 try:
-    r=s.get("https://www.scotlandscensus.gov.uk/documents/scotlands-census-2022-ethnic-group-national-identity-language-and-religion-chart-data/",timeout=90)
-    ls=[a for a in re.findall(r'href="([^"]+)"',r.text) if re.search(r"\.(xlsx|csv|ods)",a,re.I)]; print(ls)
-    for a in ls[:2]:
-        u=a if a.startswith("http") else "https://www.scotlandscensus.gov.uk"+a
-        x=pd.ExcelFile(io.BytesIO(s.get(u,timeout=120).content)); print(x.sheet_names)
-        for sh in x.sheet_names:
-            d=pd.read_excel(x,sh,header=None)
-            if d.astype(str).apply(lambda r: r.str.contains("Sikh|Hindu|No religion",case=False).any(),axis=1).any():
-                print("--",sh); print(d.to_string()[:3500])
+    r=s.get("https://www.gov.uk/government/publications/spending-review-2025-document/spending-review-2025-html",timeout=90)
+    t=html.unescape(re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",r.text)))
+    for m in re.finditer(r"Table [0-9.]+: Ministry of Defence[^.]{0,900}",t): print("SR",m.group(0)[:900])
+    for m in re.finditer(r"Defence (Resource DEL|budget|spending)[^.]{0,400}",t): print("SRD",m.group(0)[:400])
 except Exception: traceback.print_exc()
-print("######### NI MS-B20 sheets")
-try:
-    x=pd.ExcelFile(io.BytesIO(s.get("https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-b20.xlsx",timeout=120).content)); print(x.sheet_names)
-    for sh in x.sheet_names:
-        if re.search(r"^(NI|Northern)",sh):
-            d=pd.read_excel(x,sh,header=None); print(d.iloc[7:11].T.to_string())
-except Exception: traceback.print_exc()
-# 1794158908
+# 1794158967
