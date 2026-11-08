@@ -1,20 +1,45 @@
-NAEI24_GHG_CSV_files/ 0
-NAEI24_GHG_CSV_files/CO2e_ConversionFactors_naei24.csv 205
-NAEI24_GHG_CSV_files/GHG machine readable files NAEI24 README.docx 79548
-NAEI24_GHG_CSV_files/GHG_EFs_output_naei24.csv 39853345
-NAEI24_GHG_CSV_files/GHG_emissions_output_naei24.csv 26470969
-===== NAEI24_GHG_CSV_files/CO2e_ConversionFactors_naei24.csv
-['GasID', 'Gas', 'ConvertFactor', 'ConvertTo']
-   GasID                       Gas  ConvertFactor    ConvertTo
-0      2  Carbon Dioxide as Carbon       3.666667  GWP CO2_AR5
-1      3                   Methane      28.000000  GWP CO2_AR5
-===== NAEI24_GHG_CSV_files/GHG_EFs_output_naei24.csv
-['GasID', 'Gas', 'Sector', 'NFR/CRT Code', 'NFR/CRT Description', 'Territorycode', 'Territory', 'Sourcecode', 'SourceName', 'Activitycode', 'ActivityName', 'Activity_Unit', 'Emission_Unit', 'Year', 'Emission_Factor']
-   GasID                       Gas  Sector NFR/CRT Code                                     NFR/CRT Description  Territorycode Territory  Sourcecode                           SourceName  Activitycode ActivityName Activity_Unit Emission_Unit  Year  Emission_Factor
-0      2  Carbon Dioxide as Carbon  Energy        1A4ci  1A4ci_Agriculture/Forestry/Fishing_Stationary_fuel_use              1        UK           2  Agriculture - stationary combustion             5  Burning oil      TJ (net)     kilotonne  1990         0.019577
-1      3                   Methane  Energy        1A4ci  1A4ci_Agriculture/Forestry/Fishing_Stationary_fuel_use              1        UK           2  Agriculture - stationary combustion             5  Burning oil      TJ (net)     kilotonne  1990         0.000010
-===== NAEI24_GHG_CSV_files/GHG_emissions_output_naei24.csv
-['GasID', 'Gas', 'NFR/CRT Code', 'NFR/CRT Description', 'Sourcecode', 'SourceName', 'Activitycode', 'ActivityName', 'Emission_Unit', 'Year', 'Emission']
-   GasID                       Gas NFR/CRT Code                  NFR/CRT Description  Sourcecode      SourceName  Activitycode ActivityName Emission_Unit  Year      Emission
-0      2  Carbon Dioxide as Carbon        1A1ai  1A1ai_Public_electricity_generation          33  Power stations             7         Coal     kilotonne  1990  49949.948922
-1      2  Carbon Dioxide as Carbon        1A1ai  1A1ai_Public_electricity_generation          33  Power stations            14     Fuel oil     kilotonne  1990   5308.690682
+ATT Offender management statistics quarterly: April to June 2026 | /government/statistics/offender-management-statistics-quarterly-april-to-june-2026/offender-management-statistics-quarterly-april-to-june-2026
+ATT Offender management statistics quarterly: April to June 2026 | https://assets.publishing.service.gov.uk/media/6ae1fe7f9bca21f1c5036e92/OMSQ_Q2_2026.pdf
+ATT Guide to offender management statistics | https://assets.publishing.service.gov.uk/media/6ae13d9a16428df537606276/Guide_to_Offender_Management_Statistics.pdf
+ATT Prison population: 30 September 2026 | https://assets.publishing.service.gov.uk/media/6ae1403fee0b648ce360628c/prison-population-30-Sept-2026.ods
+ATT Prison population data tool: 30 September 2026 | https://assets.publishing.service.gov.uk/media/6ae140dfee0b648ce360628d/Prison_Population_data_tool_2026-09-30.xlsx
+ATT Prison receptions: April to June 2026 | https://assets.publishing.service.gov.uk/media/6ae1418cee0b648ce360628e/prison-receptions-Apr-to-June-2026.ods
+ATT Prison releases: April to June 2026 | https://assets.publishing.service.gov.uk/media/6ae20c619bca21f1c5036eb1/prison-releases-Apr-to-June-2026.ods
+ATT Prison adjudications: April to June 2026 | https://assets.publishing.service.gov.uk/media/6ae141ce7b7111c482d80a9b/prison-adjudications-Apr-to-June-2026.ods
+ATT Prison recalls: April to June 2026 | https://assets.publishing.service.gov.uk/media/6ae20dfc460c1346f7be7850/licence-recalls-Apr-to-Jun-2026.ods
+ATT Probation: April to June 2026 | https://assets.publishing.service.gov.uk/media/6ae14201e4367e5c8b0467d8/probation-Apr-to-Jun-2026.ods
+ATT CSV dataset and variable guide | https://assets.publishing.service.gov.uk/media/6ae14271e4367e5c8b0467d9/CSV.zip
+ATT Users of offender management statistics | https://assets.publishing.service.gov.uk/media/6ae1452616428df537606277/Users_of_Offender_Management_Statistics_.pdf
+##### https://assets.publishing.service.gov.uk/media/6ae1403fee0b648ce360628c/prison-population-30-Sept-2026.ods ['Cover', 'Contents', 'Notes', 'Table_1_Q_1', 'Table_1_Q_2', 'Table_1_Q_3', 'Table_1_Q_4', 'Table_1_Q_5', 'Table_1_Q_6', 'Table_1_Q_7', 'Table_1_Q_8', 'Table_1_Q_9', 'Table_1_Q_10', 'Table_1_Q_11', 'Table_1_Q_12', 'Table_1_Q_13', 'Table_1_Q_14', 'Table_1_Q_15', 'Table_1_Q_16', 'Table_1_Q_17', 'Table_1_Q_18', 'Table_1_Q_19']
+===== Table_1_Q_7
+                                          0                       1                       2             3            4            5             6             7                                        8
+0   Table 1.Q.7: Time series: prison pop...                     NaN                     NaN           NaN          NaN          NaN           NaN           NaN                                      NaN
+1        This worksheet contains one table.                     NaN                     NaN           NaN          NaN          NaN           NaN           NaN                                      NaN
+2                      Link to Contents tab                     NaN                     NaN           NaN          NaN          NaN           NaN           NaN                                      NaN
+3             Source: Prison NOMIS, and DPS                     NaN                     NaN           NaN          NaN          NaN           NaN           NaN                                      NaN
+4                                       Sex      Custody type group               Ethnicity  30 Sept 2025  31 Dec 2025  31 Mar 2026  30 June 2026  30 Sept 2026  Percentage change between 30 Sept 20...
+5                           Male and female                  Remand         All ethnicities         17700        16628        16025         15386         15921                                  -0.1005
+6                           Male and female                  Remand  Asian or Asian British          1794         1737         1712          1605          1640                                  -0.0858
+7                           Male and female                  Remand  Black or Black British          2242         2075         2067          2089          2138                                  -0.0464
+8                           Male and female                  Remand                   Mixed           932          868          821           813           853                                  -0.0848
+9                           Male and female                  Remand      Other ethnic group           806          703          699           648           668                                  -0.1712
+10                          Male and female                  Remand                   White         11510        10781        10274          9862         10308                                  -0.1044
+11                          Male and female                  Remand              Not stated            57           73           97            82           102                                   0.7895
+12                          Male and female                  Remand            Not recorded           359          391          355           287           212                                  -0.4095
+13                          Male and female               Sentenced         All ethnicities         69398        68599        70829         70003         71341                                    0.028
+14                          Male and female               Sentenced  Asian or Asian British          5300         5306         5481          5545          5643                                   0.0647
+15                          Male and female               Sentenced  Black or Black British          8159         8174         8217          8101          8267                                   0.0132
+16                          Male and female               Sentenced                   Mixed          3354         3314         3423          3413          3496                                   0.0423
+17                          Male and female               Sentenced      Other ethnic group          1300         1304         1346          1363          1400                                   0.0769
+18                          Male and female               Sentenced                   White         50889        50050        51915         51204         52120                                   0.0242
+19                          Male and female               Sentenced              Not stated           151          159          154           164           174                                   0.1523
+20                          Male and female               Sentenced            Not recorded           245          292          293           213           241                                  -0.0163
+21                          Male and female  Non criminal prisoners         All ethnicities           367          386          488           469           450                                   0.2262
+22                          Male and female  Non criminal prisoners  Asian or Asian British            36           44           50            54            55                                      [z]
+23                          Male and female  Non criminal prisoners  Black or Black British            58           60           73            96            98                                   0.6897
+24                          Male and female  Non criminal prisoners                   Mixed            17           19           28            24            20                                      [z]
+25                          Male and female  Non criminal prisoners      Other ethnic group            43           57           77            70            63                                      [z]
+26                          Male and female  Non criminal prisoners                   White           202          198          249           213           208                                   0.0297
+27                          Male and female  Non criminal prisoners              Not stated             3          [c]            0             3             4                                      [z]
+28                          Male and female  Non criminal prisoners            Not recorded             8          [c]           11             9             2            
+##### https://assets.publishing.service.gov.uk/media/6ae140dfee0b648ce360628d/Prison_Population_data_tool_2026-09-30.xlsx ['Cover', 'User Guide', 'PT', 'PT Data']
