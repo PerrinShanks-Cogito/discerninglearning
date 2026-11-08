@@ -1,0 +1,56 @@
+# Topic pages under /landmark-numbers/uk-and-nations/. Used for the jump menu and the overview tiles.
+- slug: people
+  title: People, health and religion
+  short: People
+  url: /landmark-numbers/uk-and-nations/people/
+  sections:
+    - { id: people, title: People and place }
+    - { id: migration, title: Migration }
+    - { id: health, title: Health }
+    - { id: religion, title: Religion }
+- slug: economy
+  title: Economy, benefits and public money
+  short: Economy
+  url: /landmark-numbers/uk-and-nations/economy/
+  sections:
+    - { id: economy, title: Economy and work }
+    - { id: benefits, title: Benefits }
+    - { id: money, title: Spending per person }
+    - { id: spending-and-income, title: Spending and income }
+- slug: defence
+  title: Defence
+  short: Defence
+  url: /landmark-numbers/uk-and-nations/defence/
+  sections:
+    - { id: defence-spending, title: Spending }
+    - { id: armed-forces, title: Armed forces }
+    - { id: nuclear, title: Nuclear deterrent }
+    - { id: equipment, title: Equipment }
+- slug: energy
+  title: Energy and emissions
+  short: Energy
+  url: /landmark-numbers/uk-and-nations/energy/
+  sections:
+    - { id: energy, title: By nation }
+    - { id: electricity-mix, title: Electricity mix }
+    - { id: renewables, title: Renewables }
+    - { id: energy-infrastructure, title: Infrastructure }
+    - { id: emissions, title: Emissions }
+    - { id: emissions-targets, title: Targets }
+- slug: food
+  title: Farming and food
+  short: Food
+  url: /landmark-numbers/uk-and-nations/food/
+  sections:
+    - { id: agriculture, title: By nation }
+    - { id: food-imports, title: Imports }
+    - { id: food-origins, title: Where food comes from }
+    - { id: food-by-product, title: By product }
+    - { id: farming, title: Farming }
+- slug: law-and-order
+  title: Law and order
+  short: Law and order
+  url: /landmark-numbers/uk-and-nations/law-and-order/
+  sections:
+    - { id: three-systems, title: Three systems }
+    - { id: england-and-wales-justice, title: England and Wales }

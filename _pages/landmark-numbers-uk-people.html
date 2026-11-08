@@ -1,0 +1,57 @@
+---
+title: "The UK and its nations: people, health and religion"
+description: Population, age, households, migration, health and religion for the UK, England, Scotland, Wales and Northern Ireland.
+permalink: /landmark-numbers/uk-and-nations/people/
+---
+{% include uk-setup.html %}
+{% include uk-page-head.html current="people" %}
+
+{%- include uk-src-start.html sec="people" %}
+<h2 id="people">People and place</h2>
+<p class="uk-lead">{{ uk_pop | divided_by: 100000 | round | divided_by: 10.0 }} million people live in the UK, {{ eng_share }}% of them in England.
+  Scotland has {{ scot_land_share }}% of the land but only {{ scot_pop_share }}% of the people.</p>
+{% include uk-table.html key="people" %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="migration" %}
+{%- assign mg = uk.groups | where: "key", "migration" | first %}
+{%- assign mg_net = mg.measures | where: "key", "net_international" | first %}
+{%- assign mg_nat = mg.measures | where: "key", "natural_change" | first %}
+<h2 id="migration">Migration</h2>
+<p class="uk-lead">In the {{ mg_net.period }}, {% include thousands.html n=mg_net.values.uk %} more people moved to the UK from abroad than
+  left it{% if mg_nat.values.uk > 0 %}, while births outnumbered deaths by just {% include thousands.html n=mg_nat.values.uk %}{% else %}, while deaths outnumbered births{% endif %}.</p>
+{% include uk-table.html key="migration" %}
+{% include uk-migration.html %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="health" %}
+<h2 id="health">Health</h2>
+<p class="uk-lead">A girl born in the UK can expect to live to {{ le_f.values.uk }} years and a boy to {{ le_m.values.uk }}, but only about
+  {{ hle_avg }} of those years in good health.</p>
+{% include uk-table.html key="health" %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="religion" %}
+{%- assign rg = uk.groups | where: "key", "religion" | first %}
+{%- assign rg_chr = rg.measures | where: "key", "christian" | first %}
+{%- assign rg_none = rg.measures | where: "key", "no_religion" | first %}
+<h2 id="religion">Religion</h2>
+<p class="uk-lead">{{ rg_chr.values.ni }}% of people in Northern Ireland describe themselves as Christian, the highest of the four nations.
+  In Scotland, {{ rg_none.values.scotland }}% say they have no religion.</p>
+{% include uk-table.html key="religion" %}
+{% include uk-src-list.html %}
+
+<details class="landmark-method">
+  <summary>Notes on these figures</summary>
+  <ul>
+    <li><strong>"Working age" here means 16 to 64,</strong> the standard statistical definition. The State Pension age is
+      now 66, and plenty of people work beyond it or don't work before it, so it's a measure of age, not of jobs.
+      Household figures come from the Labour Force Survey, which no longer covers Northern Ireland.</li>
+    <li><strong>Migration figures come in two versions.</strong> The table uses the mid-year population estimates, which
+      split migration by nation. The UK headline uses the ONS's later, provisional migration estimates, which are revised
+      as more data arrives. "Migration within the UK" is people moving between the four nations.</li>
+    <li><strong>Healthy life expectancy is based on how people rate their own health,</strong> so it is less precise
+      than life expectancy, especially for the smaller nations.</li>
+    <li><strong>Religion comes from each nation's census,</strong> taken in 2021 (Scotland 2022), so it changes only with a new census.</li>
+  </ul>
+</details>

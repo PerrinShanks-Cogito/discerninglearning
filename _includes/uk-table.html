@@ -1,0 +1,42 @@
+{%- comment -%}
+  A table comparing the UK and its four nations for one group in _data/landmark_uk.json.
+  Usage: {% include uk-table.html key="people" %}
+  The highest and lowest of the four nations are shaded in each row. When every row covers the same
+  period it's given once, in the caption; otherwise each row shows its own.
+{%- endcomment -%}
+{%- assign utab = uk.groups | where: "key", include.key | first -%}
+{%- assign g = utab -%}
+{%- assign t_per = utab.measures.first.period -%}
+{%- assign t_same = true -%}
+{%- assign t_shade = false -%}
+{%- for m in utab.measures -%}{%- if m.count != true -%}{%- assign t_shade = true -%}{%- endif -%}{%- endfor -%}
+{%- for m in utab.measures -%}{%- if m.period != t_per -%}{%- assign t_same = false -%}{%- endif -%}{%- endfor -%}
+<table class="landmark-table uk-table">
+  {%- if t_same %}<caption>Figures for {{ t_per }}</caption>{% endif %}
+  <thead>
+    <tr>
+      <th scope="col">Measure</th>
+      {%- for n in uk.nations %}<th scope="col" class="num">{{ n.name }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {%- for m in utab.measures %}
+    {%- assign t_min = 1000000000000 %}{% assign t_max = -1000000000000 %}{% assign t_cnt = 0 %}
+    {%- for n in uk.nations offset: 1 %}{% assign t_v = m.values[n.key] %}{% if t_v != nil %}{% assign t_cnt = t_cnt | plus: 1 %}{% if t_v < t_min %}{% assign t_min = t_v %}{% endif %}{% if t_v > t_max %}{% assign t_max = t_v %}{% endif %}{% endif %}{% endfor %}
+    <tr>
+      <th scope="row">{{ m.label }}{% include uk-src.html u=m.url t=m.source %}{% unless t_same %}<span class="landmark-note">{{ m.period }}</span>{% endunless %}</th>
+      {%- for n in uk.nations %}
+      {%- assign cell = m.values[n.key] %}
+      {%- assign t_cls = "" %}
+      {%- if m.count != true and n.key != "uk" and cell != nil and t_cnt > 2 and t_min != t_max %}{% if cell == t_max %}{% assign t_cls = " uk-hi" %}{% elsif cell == t_min %}{% assign t_cls = " uk-lo" %}{% endif %}{% endif %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}{{ t_cls }}" data-label="{{ n.name }}">{% include fmt.html v=cell f=m.format %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endfor %}
+    {%- include uk-table-derived.html %}
+  </tbody>
+</table>
+{%- if t_shade %}
+<p class="uk-key"><span class="uk-key__swatch uk-hi"></span> highest and <span class="uk-key__swatch uk-lo"></span> lowest of the four nations (rates and averages only)</p>
+{%- endif %}
+{%- if utab.note %}<p class="uk-note">{{ utab.note }}</p>{% endif %}

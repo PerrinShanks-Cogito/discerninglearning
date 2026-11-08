@@ -1,0 +1,108 @@
+{%- assign df = uk.uk_only.defence %}
+{%- assign df_now = df.mod_budget | first %}
+{%- assign df_last = df.mod_budget | last %}
+{%- assign df_pp = df.nato_bn | times: 1000000000 | divided_by: uk_pop | round %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="defence-spending" %}
+<h2 id="defence-spending">Spending</h2>
+<p class="uk-lead">Defence spending is £{{ df.nato_bn }} billion a year on NATO's definition: {{ df.nato_pct_gdp }}% of GDP, or about £{% include thousands.html n=df_pp %} per person.</p>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ df.nato_period }}</p>
+    <p class="nhs-stat__figure">£{{ df.nato_bn }} billion</p>
+    <h3 class="nhs-stat__label">Defence spending, NATO definition</h3>
+    <p class="nhs-stat__so">That's {{ df.nato_pct_gdp }}% of GDP, or about £{% include thousands.html n=df_pp %} per person in the UK.
+      NATO's definition is broader than the Ministry of Defence budget (it includes items such as military pensions).</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=df.nato_url t=df.nato_source %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ df_now.period }} to {{ df_last.period }}</p>
+    <p class="nhs-stat__figure">£{{ df_now.bn }} billion</p>
+    <h3 class="nhs-stat__label">Ministry of Defence budget, {{ df_now.period }}</h3>
+    <p class="nhs-stat__so">Planned to rise to {% for b in df.mod_budget offset: 1 %}£{{ b.bn }} billion in {{ b.period }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+      {{ df.targets }}</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=df.mod_url t=df.mod_source %}; {% include uk-src.html u=df.targets_url t=df.targets_source %}</p>
+  </section>
+</div>
+
+{%- assign pe = df.personnel %}
+{%- assign per_k = pe.regulars.total | times: 1000.0 | divided_by: uk_pop | round: 1 %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="armed-forces" %}
+<h2 id="armed-forces">Armed forces</h2>
+<p class="uk-lead">{% include thousands.html n=pe.total %} people serve in the armed forces: {% include thousands.html n=pe.regulars.total %} full-time regulars and {% include thousands.html n=pe.reserves.total %} volunteer reservists, as at {{ pe.date }}.</p>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ pe.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=pe.total %}</p>
+    <h3 class="nhs-stat__label">People serving in the UK armed forces</h3>
+    <p class="nhs-stat__so">{% include thousands.html n=pe.regulars.total %} full-time regulars (about {{ per_k }} for every 1,000 people in the UK),
+      {% include thousands.html n=pe.reserves.total %} volunteer reservists, {% include thousands.html n=pe.gurkhas %} Gurkhas and
+      {% include thousands.html n=pe.other %} others. In the year to June 2026, {% include thousands.html n=pe.intake_12m %} regulars joined
+      and {% include thousands.html n=pe.outflow_12m %} left.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=pe.url t=pe.source %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ pe.date }}</p>
+    <table class="def-table">
+      <thead><tr><th scope="col"></th><th scope="col" class="num">Regulars</th><th scope="col" class="num">Reserves</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Royal Navy and Royal Marines</th><td class="num">{% include thousands.html n=pe.regulars.navy %}</td><td class="num">{% include thousands.html n=pe.reserves.navy %}</td></tr>
+        <tr><th scope="row">Army</th><td class="num">{% include thousands.html n=pe.regulars.army %}</td><td class="num">{% include thousands.html n=pe.reserves.army %}</td></tr>
+        <tr><th scope="row">Royal Air Force</th><td class="num">{% include thousands.html n=pe.regulars.raf %}</td><td class="num">{% include thousands.html n=pe.reserves.raf %}</td></tr>
+        <tr class="def-table__total"><th scope="row">Total</th><td class="num">{% include thousands.html n=pe.regulars.total %}</td><td class="num">{% include thousands.html n=pe.reserves.total %}</td></tr>
+      </tbody>
+    </table>
+    <p class="nhs-stat__source">Rounded to the nearest 10, so rows may not add up exactly. "Others" are groups such as sponsored reserves that the MoD counts separately.</p>
+  </section>
+</div>
+
+{%- assign nu = df.nuclear %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="nuclear" %}
+<h2 id="nuclear">Nuclear deterrent</h2>
+<p class="uk-lead">The UK caps its nuclear stockpile at {{ nu.warhead_cap }} warheads, carried on {{ nu.submarines }} Vanguard-class submarines, one of which has been on patrol at all times since {{ nu.casd_since }}.</p>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; government ceiling</p>
+    <p class="nhs-stat__figure">Up to {{ nu.warhead_cap }} warheads</p>
+    <h3 class="nhs-stat__label">The UK's nuclear stockpile limit</h3>
+    <p class="nhs-stat__so">{{ nu.warhead_cap_note }}. An independent estimate put the stockpile at about {{ nu.estimate }}
+      in {{ nu.estimate_period }}.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=nu.estimate_url t=nu.estimate_source %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; since {{ nu.casd_since }}</p>
+    <p class="nhs-stat__figure">{{ nu.submarines }} submarines</p>
+    <h3 class="nhs-stat__label">Vanguard-class submarines carrying {{ nu.missile }} missiles</h3>
+    <p class="nhs-stat__so">A UK ballistic missile submarine has been on patrol at all times since {{ nu.casd_since }}: the continuous
+      at-sea deterrent. Trident is the UK's only nuclear weapons system. {{ nu.replacement }}.</p>
+    <p class="nhs-stat__source">Source {% include uk-src.html u=nu.url t=nu.source %}</p>
+  </section>
+</div>
+
+{%- assign eq = df.equipment %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="equipment" %}
+<h2 id="equipment">Ships, aircraft and vehicles</h2>
+<p class="uk-lead">{%- assign eq_navy = eq.groups | where: "title", "Royal Navy" | first %}{% assign eq_air = eq.groups | where: "title", "Aircraft" | first %}{% assign eq_army = eq.groups | where: "title", "Army" | first %}
+{%- assign eq_car = eq_navy.items | where: "label", "Aircraft carriers" | first %}{% assign eq_des = eq_navy.items | where: "label", "Destroyers" | first %}{% assign eq_fri = eq_navy.items | where: "label", "Frigates" | first %}
+{%- assign eq_f35 = eq_air.items | where: "label", "F-35B Lightning" | first %}{% assign eq_typ = eq_air.items | where: "label", "Typhoon" | first %}{% assign eq_tank = eq_army.items | where: "label", "Challenger 2 main battle tanks" | first %}
+{%- assign eq_esc = eq_des.n | plus: eq_fri.n %}{% assign eq_jets = eq_f35.n | plus: eq_typ.n %}
+The UK has {{ eq_car.n }} aircraft carriers, {{ eq_esc }} destroyers and frigates, {{ eq_jets }} combat jets (F-35s and Typhoons) and {{ eq_tank.n }} main battle tanks, as at {{ eq.date }}.</p>
+<details class="uk-more">
+  <summary>Show the full list</summary>
+<div class="pf-grid def-equipment">
+  {%- for grp in eq.groups %}
+  <section class="pf-list">
+    <h4>{{ grp.title }}</h4>
+    <ul>
+      {%- for it in grp.items %}
+      <li><span class="pf-label">{{ it.label }}</span><span class="pf-val">{% include thousands.html n=it.n %}{% if it.in_service and it.in_service != it.n %}<small>({{ it.in_service }} in service)</small>{% endif %}</span></li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
+</details>
+<p class="uk-note">As at {{ eq.date }}. {{ eq.note }}{% include uk-src.html u=eq.url t=eq.source %}.</p>

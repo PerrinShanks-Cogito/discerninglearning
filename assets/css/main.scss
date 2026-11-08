@@ -411,6 +411,41 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 
 .prose .ju-table td .landmark-note { display: block; font-weight: 400; }
 
+/* UK and its nations: jump menu, headlines, shading, numbered sources and fold-away detail. */
+.uk-nav { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--border); padding: 0.4rem 0; margin: 0 0 1.25rem; }
+.uk-nav__row { margin: 0 !important; display: flex; gap: 0.3rem 0.9rem; white-space: nowrap; overflow-x: auto; scrollbar-width: thin; font-size: 0.9rem; padding: 0.15rem 0; }
+.uk-nav__row a { text-decoration: none; }
+.uk-nav__topics a { font-weight: 600; color: var(--muted); }
+.uk-nav__topics a[aria-current="page"] { color: var(--text); border-bottom: 2px solid var(--accent); }
+.uk-nav__sections { font-size: 0.82rem; }
+.uk-nav__sections span { color: var(--muted); }
+.prose h2[id] { scroll-margin-top: 5.5rem; }
+.src-list li { scroll-margin-top: 5.5rem; }
+.uk-lead { font-size: 1.12rem; line-height: 1.5; font-weight: 600; border-left: 4px solid var(--accent); padding: 0.1rem 0 0.1rem 0.8rem; margin: 0.5rem 0 1rem !important; }
+.prose .uk-table caption { caption-side: top; text-align: left; font-size: 0.8rem; color: var(--muted); padding: 0 0 0.35rem; }
+.prose .uk-table td.uk-hi, .uk-key__swatch.uk-hi { background: rgba(134, 106, 0, 0.16); }
+.prose .uk-table td.uk-lo, .uk-key__swatch.uk-lo { background: rgba(47, 95, 138, 0.16); }
+.uk-key { font-size: 0.78rem; color: var(--muted); margin: -0.6rem 0 1rem !important; }
+.uk-key__swatch { display: inline-block; width: 0.85rem; height: 0.85rem; border-radius: 2px; vertical-align: -0.1rem; border: 1px solid var(--border); }
+.src-ref { font-size: 0.68rem; line-height: 0; margin-left: 0.1rem; }
+.src-ref a { text-decoration: none; color: var(--muted); }
+.src-ref + .src-ref::before { content: ","; color: var(--muted); }
+.prose .ju-table td.num, .prose .ju-table th { white-space: normal; }
+.prose .ju-table td .landmark-note { font-size: 0.75rem; }
+.src-list { font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); margin: 1.5rem 0 2.25rem; padding-top: 0.5rem; }
+.src-list__title { font-weight: 700; margin: 0 0 0.25rem !important; }
+.src-list ol { margin: 0; padding-left: 1.5rem; }
+.src-list li { margin: 0.15rem 0; }
+.src-list a { color: var(--muted); }
+.uk-more { margin: 0.25rem 0 1.25rem; }
+.uk-more > summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--accent); }
+.uk-more[open] > summary { margin-bottom: 0.6rem; }
+.uk-more--inline { margin: 0.25rem 0 0.75rem; }
+.pf-grid--single { grid-template-columns: 1fr; max-width: 40rem; }
+.uk-topics .card__title { margin-bottom: 0.4rem; }
+.uk-topics .landmark-tile__figure strong { display: block; font-size: 1.6rem; color: var(--accent); }
+.uk-topics__list { font-size: 0.8rem; color: var(--muted); margin-top: auto !important; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

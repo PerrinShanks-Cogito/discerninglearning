@@ -1,0 +1,49 @@
+    {%- if g.key == "people" %}
+    <tr class="uk-table__derived">
+      <th scope="row">Share of people of working age<span class="landmark-note">Ages 16 to 64, as a % of the population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign wv = working.values[n.key] | times: 100.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ wv }}%</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">Share aged 65 and over<span class="landmark-note">As a % of the population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign ov = older.values[n.key] | times: 100.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ ov }}%</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">People of working age for each person 65 and over<span class="landmark-note">Working age divided by 65 and over</span></th>
+      {%- for n in uk.nations %}
+      {%- assign rv = working.values[n.key] | times: 1.0 | divided_by: older.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ rv }}</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">People per km²<span class="landmark-note">Population divided by land area</span></th>
+      {%- for n in uk.nations %}
+      {%- assign dv = pop.values[n.key] | divided_by: land.values[n.key] | round %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{% include thousands.html n=dv %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}
+    {%- if g.key == "migration" %}
+    {%- assign netint = g.measures | where: "key", "net_international" | first %}
+    <tr class="uk-table__derived">
+      <th scope="row">Net international migration per 1,000 people<span class="landmark-note">Divided by the mid-2025 population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign nv = netint.values[n.key] | times: 1000.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ nv }}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}
+    {%- if g.key == "money" %}
+    <tr class="uk-table__derived">
+      <th scope="row">Compared with the UK average<span class="landmark-note">UK = 100</span></th>
+      {%- for n in uk.nations %}
+      {%- assign iv = spend.values[n.key] | times: 100.0 | divided_by: spend.values.uk | round %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ iv }}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}

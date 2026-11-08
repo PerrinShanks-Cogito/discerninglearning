@@ -1,0 +1,47 @@
+{%- assign pf = uk.uk_only.public_finances %}
+{%- assign pf_max = 0 %}
+{%- for r in pf.spending %}{% if r.bn > pf_max %}{% assign pf_max = r.bn %}{% endif %}{% endfor %}
+{%- for r in pf.receipts %}{% if r.bn > pf_max %}{% assign pf_max = r.bn %}{% endif %}{% endfor %}
+{%- assign hh = people.measures | where: "key", "households" | first %}
+{%- assign sp_pp = pf.spending_total_bn | times: 1000000000 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+{%- assign rc_pp = pf.receipts_total_bn | times: 1000000000 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+{%- assign sp_hh = pf.spending_total_bn | times: 1000.0 | divided_by: hh.values.uk | divided_by: 100 | round | times: 100 %}
+{%- assign rc_hh = pf.receipts_total_bn | times: 1000.0 | divided_by: hh.values.uk | divided_by: 100 | round | times: 100 %}
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="spending-and-income" %}
+<h2 id="spending-and-income">Spending and income, UK {{ pf.period }}</h2>
+<p class="uk-lead">In {{ pf.period }} the UK public sector spent £{% include thousands.html n=pf.spending_total_bn %} billion and raised £{% include thousands.html n=pf.receipts_total_bn %} billion, borrowing £{{ pf.borrowing_bn }} billion.</p>
+<p>
+  In {{ pf.period }} the UK public sector spent <strong>£{% include thousands.html n=pf.spending_total_bn %} billion</strong> and
+  raised <strong>£{% include thousands.html n=pf.receipts_total_bn %} billion</strong>, borrowing
+  <strong>£{{ pf.borrowing_bn }} billion</strong> to cover the gap. That's about £{% include thousands.html n=sp_pp %} spent and
+  £{% include thousands.html n=rc_pp %} raised per person, or £{% include thousands.html n=sp_hh %} and £{% include thousands.html n=rc_hh %}
+  per household. The bars below share one scale, so you can compare them across both lists.
+</p>
+<div class="pf-grid">
+  {%- assign lists = "spending,receipts" | split: "," %}
+  {%- for lk in lists %}
+  {%- if lk == "spending" %}{% assign rows = pf.spending %}{% assign tot = pf.spending_total_bn %}{% else %}{% assign rows = pf.receipts %}{% assign tot = pf.receipts_total_bn %}{% endif %}
+  <section class="pf-list pf-list--{{ lk }}">
+    <h4>{% if lk == "spending" %}Where it goes{% else %}Where it comes from{% endif %}
+      <span>£{% include thousands.html n=tot %}bn</span></h4>
+    <ul>
+      {%- for r in rows %}
+      {%- assign w = r.bn | times: 100.0 | divided_by: pf_max | round: 1 %}
+      {%- assign share = r.bn | times: 100.0 | divided_by: tot | round %}
+      <li>
+        <span class="pf-label">{{ r.label }}{% if r.note %}<small>{{ r.note }}</small>{% endif %}</span>
+        <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span>
+        <span class="pf-val">£{{ r.bn | round }}bn<small>{{ share }}%</small></span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p class="nhs-stat__source">Source {% if lk == "spending" %}{% include uk-src.html u=pf.spending_url t=pf.spending_source %}{% else %}{% include uk-src.html u=pf.receipts_url t=pf.receipts_source %}{% endif %}</p>
+  </section>
+  {%- endfor %}
+</div>
+<p class="uk-note">
+  Spending is HM Treasury's total managed expenditure; income is public sector current receipts. They come from releases
+  a couple of months apart, so spending minus income doesn't exactly equal the
+  <a href="{{ pf.borrowing_url }}">£{{ pf.borrowing_bn }} billion borrowed</a>. Rows may not add up exactly because of rounding.
+</p>

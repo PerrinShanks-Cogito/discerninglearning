@@ -1,0 +1,52 @@
+---
+title: "The UK and its nations: economy, benefits and public money"
+description: GDP, pay, employment, benefits and public spending for the UK and its nations, plus UK spending and income by sector.
+permalink: /landmark-numbers/uk-and-nations/economy/
+---
+{% include uk-setup.html %}
+{% include uk-page-head.html current="economy" %}
+
+{%- include uk-src-start.html sec="economy" %}
+{%- include uk-range.html group="economy" key="weekly_pay" %}
+{%- assign pay_lo_n = r_lo_n %}{% assign pay_lo_v = r_lo_v %}{% assign pay_hi_n = r_hi_n %}{% assign pay_hi_v = r_hi_v %}{% assign pay_uk = r_uk %}
+{%- include uk-range.html group="economy" key="gdp_per_head" %}
+<h2 id="economy">Economy and work</h2>
+<p class="uk-lead">The typical full-time worker earns {% include fmt.html v=pay_uk f="money2" %} a week, from {% include fmt.html v=pay_lo_v f="money2" %}
+  in {{ pay_lo_n }} to {% include fmt.html v=pay_hi_v f="money2" %} in {{ pay_hi_n }}. GDP per person ranges from {% include fmt.html v=r_lo_v f="money" %}
+  in {{ r_lo_n }} to {% include fmt.html v=r_hi_v f="money" %} in {{ r_hi_n }}.</p>
+{% include uk-table.html key="economy" %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="benefits" %}
+{%- assign uc0 = uk.uk_only.universal_credit %}
+{%- assign uc0_t = uc0.gb_m | times: 1000000 | plus: uc0.ni | divided_by: 100000.0 | round | divided_by: 10.0 %}
+{%- include uk-range.html group="benefits" key="claimant_count" %}
+<h2 id="benefits">Benefits</h2>
+<p class="uk-lead">{{ uc0_t }} million people get Universal Credit, but only {% include thousands.html n=r_uk %} claim because they are unemployed
+  ({{ r_period }}).</p>
+{% include uk-table.html key="benefits" %}
+{% include uk-benefits.html %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="money" %}
+<h2 id="money">Public spending per person</h2>
+<p class="uk-lead">Public spending per person ranges from {% include fmt.html v=low_v f="money" %} in {{ low_n }} to
+  {% include fmt.html v=high_v f="money" %} in {{ high_n }}.</p>
+{% include uk-table.html key="money" %}
+{% include uk-public-finances.html %}
+{% include uk-src-list.html %}
+
+<details class="landmark-method">
+  <summary>Notes on these figures</summary>
+  <ul>
+    <li><strong>Spending per person reflects need as well as choices.</strong> The devolved governments are funded
+      largely through a block grant (set using the Barnett formula), and older, more rural or poorer populations
+      cost more to serve. Higher spending per person is not by itself a sign of waste or generosity.</li>
+    <li><strong>GDP per person can mislead for small economies.</strong> It counts output where it is produced, so
+      commuting, company headquarters and North Sea oil (allocated to the UK, not to Scotland) all affect it.
+      Median pay is a better guide to what people earn.</li>
+    <li><strong>There is no single count of "people on benefits".</strong> The claimant count covers people who claim because
+      they are unemployed. Universal Credit is wider, and the State Pension and disability benefits are separate again.
+      Social protection spending covers all of these, plus social care.</li>
+  </ul>
+</details>
