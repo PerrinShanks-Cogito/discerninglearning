@@ -1,16 +1,15 @@
-"DATE_NAME","GEOGRAPHY_NAME","SEX_NAME","PAY_NAME","OBS_VALUE","OBS_STATUS_NAME"
-"2025","United Kingdom","Total","Annual pay - gross",32890,"Normal Value"
-"2025","United Kingdom","Full Time Workers","Annual pay - gross",39039,"Normal Value"
-"2025","England","Total","Annual pay - gross",33080,"Normal Value"
-"2025","England","Full Time Workers","Annual pay - gross",39243,"Normal Value"
-"2025","Wales","Total","Annual pay - gross",30732,"Normal Value"
-"2025","Wales","Full Time Workers","Annual pay - gross",36354,"Normal Value"
-"2025","Scotland","Total","Annual pay - gross",33061,"Normal Value"
-"2025","Scotland","Full Time Workers","Annual pay - gross",39905,"Normal Value"
-"2025","Northern Ireland","Total","Annual pay - gross",31252,"Normal Value"
-"2025","Northern Ireland","Full Time Workers","Annual pay - gross",37129,"Normal Value"
-
-"DATE_NAME","MEASURES_NAME","OBS_VALUE"
-"2025","Value",39039
-"2025","Confidence",0.3
-
+Configuration file: /home/runner/work/discerninglearning/discerninglearning/site/_config.yml
+            Source: /home/runner/work/discerninglearning/discerninglearning/site
+       Destination: /home/runner/work/discerninglearning/discerninglearning/site/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.545 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+OK uk-and-nations/economy 44891 bytes, refs=26, lists=7, leftovers=0
+OK uk-and-nations 13049 bytes, refs=0, lists=0, leftovers=0
+OK uk-and-nations/people 29220 bytes, refs=25, lists=4, leftovers=0
+<p class="uk-lead">The typical full-time worker earns £39,039 a year before tax (£766.60
+<p class="uk-lead">The UK produced £3.04 trillion of goods and services in 2025.
+<p class="uk-lead">Since 2019, the UK economy has grown 4.5% after inflation. Technology and professional services
+<p class="uk-lead">The ten most valuable companies make up 49.5% of the FTSE 100. The largest, HSBC, is
