@@ -1881,9 +1881,54 @@
             "ni": 9.9
           },
           "derived": true
+        },
+        {
+          "key": "reoffend",
+          "label": "Reoffending within a year (%)",
+          "format": "pct1",
+          "values": {
+            "ew": 30.1,
+            "scotland": 26.1,
+            "ni": 17.3
+          },
+          "periods": {
+            "ew": "Oct–Dec 2024 cohort, all ages",
+            "scotland": "2022-23 cohort, reconvicted",
+            "ni": "2022/23 cohort, adults"
+          },
+          "sources": [
+            {
+              "name": "Ministry of Justice, Proven reoffending statistics: October to December 2024 (published 29 October 2026) and July to September 2024 (released from custody)",
+              "url": "https://www.gov.uk/government/statistics/proven-reoffending-statistics-october-to-december-2024"
+            },
+            {
+              "name": "Scottish Government, Reconviction rates in Scotland: 2022 to 2023 offender cohort (published 23 June 2026)",
+              "url": "https://www.gov.scot/publications/reconviction-rates-in-scotland-2022-2023-cohort/pages/reconvictions-in-court/"
+            },
+            {
+              "name": "Department of Justice NI, Adult and youth reoffending in Northern Ireland, 2022/23 cohort",
+              "url": "https://datavis.nisra.gov.uk/justice/Adult-and-Youth-Reoffending-in-Northern-Ireland-202223.html"
+            }
+          ]
+        },
+        {
+          "key": "reoffend_custody",
+          "label": "Reoffending within a year after release from prison (%)",
+          "format": "pct1",
+          "values": {
+            "ew": 40.6,
+            "scotland": 42.5,
+            "ni": 46.0
+          },
+          "periods": {
+            "ew": "Jul–Sep 2024 cohort, adults",
+            "scotland": "2022-23 cohort, reconvicted",
+            "ni": "2022/23 cohort, adults"
+          },
+          "sources": []
         }
       ],
-      "note": "The three systems count differently and publish at different times, so each figure shows its own date. Scotland counts homicide victims; England and Wales and Northern Ireland count offences. With small numbers, homicide rates can swing from year to year. Recorded crime isn't shown because each system uses different counting rules.",
+      "note": "The three systems count differently and publish at different times, so each figure shows its own date. Scotland counts homicide victims; England and Wales and Northern Ireland count offences. With small numbers, homicide rates can swing from year to year. Recorded crime isn't shown because each system uses different counting rules. Reoffending is measured differently in each system (Scotland counts reconvictions), so compare the three with care.",
       "ew": {
         "csew": {
           "period": "year ending June 2026",
@@ -1917,7 +1962,54 @@
           "source": "Ministry of Justice, Offender management statistics quarterly: April to June 2026 (published 29 October 2026)",
           "url": "https://www.gov.uk/government/statistics/offender-management-statistics-quarterly-april-to-june-2026/offender-management-statistics-quarterly-april-to-june-2026"
         },
-        "police_workforce": 234441
+        "police_workforce": 234441,
+        "reoffending": {
+          "cohort": "October to December 2024",
+          "overall_pct": 30.1,
+          "short_sentence_pct": 67.2,
+          "reoffences_each": 5.29,
+          "source": "Ministry of Justice, Proven reoffending statistics: October to December 2024 (published 29 October 2026)",
+          "url": "https://www.gov.uk/government/statistics/proven-reoffending-statistics-october-to-december-2024"
+        },
+        "ethnicity": {
+          "date": "30 September 2026",
+          "groups": [
+            {
+              "label": "White",
+              "n": 62636,
+              "pop_pct": 84
+            },
+            {
+              "label": "Black or Black British",
+              "n": 10503,
+              "pop_pct": 4
+            },
+            {
+              "label": "Asian or Asian British",
+              "n": 7338,
+              "pop_pct": 9
+            },
+            {
+              "label": "Mixed",
+              "n": 4369,
+              "pop_pct": 2
+            },
+            {
+              "label": "Other ethnic group",
+              "n": 2131,
+              "pop_pct": 2
+            },
+            {
+              "label": "Not stated or recorded",
+              "n": 735
+            }
+          ],
+          "total": 87712,
+          "source": "Ministry of Justice, Prison population: 30 September 2026, table 1.Q.7 (remand, sentenced and non-criminal prisoners added together)",
+          "url": "https://assets.publishing.service.gov.uk/media/6ae1403fee0b648ce360628c/prison-population-30-Sept-2026.ods",
+          "pop_source": "Ministry of Justice, Statistics on ethnicity and the criminal justice system 2024 (2021 Census comparison)",
+          "pop_url": "https://assets.publishing.service.gov.uk/media/692716712a37784b16ecf554/Executive_Summary_-_Statistics_on_Ethnicity_in_the_Criminal_Justice_System__2024.pdf"
+        }
       }
     }
   }
