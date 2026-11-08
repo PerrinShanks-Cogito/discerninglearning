@@ -10,10 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
-      - run: pip install openpyxl pandas requests beautifulsoup4 odfpy pdfplumber
-      - run: python explore/explore.py > explore/output.txt 2>&1 || true
+      - uses: actions/checkout@v4
+        with: { ref: claude/uk-gdp, path: site }
+      - uses: ruby/setup-ruby@v1
+        with: { ruby-version: "3.3", working-directory: site, bundler-cache: true }
+      - run: |
+          cd site
+          (bundle exec jekyll build 2>&1 | tail -8) > ../explore/output.txt
+          for f in uk-and-nations/economy uk-and-nations uk-and-nations/people; do
+            p=_site/landmark-numbers/$f/index.html
+            if [ -f "$p" ]; then echo "OK $f $(wc -c < $p) bytes, refs=$(grep -o 'class=\"src-ref\"' $p | wc -l), lists=$(grep -o 'class=\"src-list\"' $p | wc -l), leftovers=$(grep -c '{{\|{%' $p)"; else echo "MISSING $f"; fi
+          done >> ../explore/output.txt
+          grep -o '<p class="uk-lead">[^<]*' _site/landmark-numbers/uk-and-nations/economy/index.html | head -4 >> ../explore/output.txt
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
