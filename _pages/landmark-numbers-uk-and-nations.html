@@ -488,6 +488,55 @@ permalink: /landmark-numbers/uk-and-nations/
     <p class="nhs-stat__source"><a href="{{ gas.url }}">{{ gas.source }}</a></p>
   </section>
 </div>
+
+{%- assign em = uk.uk_only.emissions %}
+{%- assign em_pp = em.total_mt | times: 1000000.0 | divided_by: uk_pop | round: 1 %}
+{%- assign em_drop = em.change_since_1990_pct | abs | round %}
+{%- assign em_max = 0 %}
+{%- for r in em.sectors %}{% if r.mt > em_max %}{% assign em_max = r.mt %}{% endif %}{% if r.mt_1990 > em_max %}{% assign em_max = r.mt_1990 %}{% endif %}{% endfor %}
+<h3 id="emissions">Greenhouse gas emissions</h3>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ em.period }}{% if em.provisional %}, provisional{% endif %}</p>
+    <p class="nhs-stat__figure">{{ em.total_mt }} million tonnes</p>
+    <h3 class="nhs-stat__label">of greenhouse gases, measured as CO₂ equivalent</h3>
+    <p class="nhs-stat__so">That's {{ em_drop }}% less than in 1990 ({{ em.total_1990_mt }} million tonnes) and {{ em.change_on_year_pct | abs }}% less than
+      in 2024. It works out at about {{ em_pp }} tonnes per person. Carbon dioxide makes up about {{ em.co2_share_pct }}%; the rest is mainly
+      methane and nitrous oxide.</p>
+    <p class="nhs-stat__source"><a href="{{ em.url }}">{{ em.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ em.period }}, not in the total</p>
+    <p class="nhs-stat__figure">{{ em.aviation_mt | plus: em.shipping_mt | round: 1 }} million tonnes</p>
+    <h3 class="nhs-stat__label">from international flights and shipping</h3>
+    <p class="nhs-stat__so">{{ em.aviation_mt }} million tonnes from flights and {{ em.shipping_mt }} million from ships leaving the UK. International
+      rules leave these out of national totals, but the UK's carbon budgets will include them from 2033.</p>
+    <p class="nhs-stat__source"><a href="{{ em.url }}">{{ em.source }}</a></p>
+  </section>
+</div>
+<div class="pf-grid">
+  {%- assign lists = "now,then" | split: "," %}
+  {%- for lk in lists %}
+  <section class="pf-list{% if lk == 'then' %} pf-list--receipts{% endif %}">
+    <h4>{% if lk == "now" %}By sector, {{ em.period }}<span>{{ em.total_mt }} Mt</span>{% else %}The same sectors in 1990<span>{{ em.total_1990_mt }} Mt</span>{% endif %}</h4>
+    <ul>
+      {%- for r in em.sectors %}
+      {%- if lk == "now" %}{% assign v = r.mt %}{% assign tot = em.total_mt %}{% else %}{% assign v = r.mt_1990 %}{% assign tot = em.total_1990_mt %}{% endif %}
+      {%- assign w = v | times: 100.0 | divided_by: em_max | round: 1 %}
+      {%- assign share = v | times: 100.0 | divided_by: tot | round %}
+      <li>
+        <span class="pf-label">{{ r.label }}{% if lk == "now" %}<small><strong>{{ r.change_pct | abs }}% {% if r.change_pct < 0 %}lower{% else %}higher{% endif %} than 1990</strong>{% if r.note %}. {{ r.note }}{% endif %}</small>{% endif %}</span>
+        <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span>
+        <span class="pf-val">{{ v }} Mt<small>{% if share < 1 %}&lt;1{% else %}{{ share }}{% endif %}%</small></span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
+<p class="uk-note">Mt = million tonnes of CO₂ equivalent. Both lists share one scale. Emissions are counted where they are produced, so
+  electricity is counted at the power station, not where it's used, and goods made abroad aren't included.
+  <a href="{{ em.url }}">{{ em.source }}</a>.</p>
 {%- endif %}
 {%- endfor %}
 

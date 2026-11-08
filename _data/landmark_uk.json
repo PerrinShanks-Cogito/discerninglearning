@@ -522,7 +522,7 @@
     },
     {
       "key": "energy",
-      "title": "Energy",
+      "title": "Energy and emissions",
       "measures": [
         {
           "key": "generated_twh",
@@ -688,9 +688,39 @@
           "period": "2025",
           "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
           "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "ghg_mt",
+          "label": "Greenhouse gas emissions (million tonnes CO₂e)",
+          "format": "dec1",
+          "values": {
+            "uk": 373.3,
+            "england": 278.7,
+            "scotland": 36.6,
+            "wales": 29.7,
+            "ni": 18.4
+          },
+          "period": "2024",
+          "source": "NAEI for DESNZ and the devolved governments, Greenhouse gas inventories for England, Scotland, Wales and Northern Ireland: 1990–2024 (May 2026), table 19; excludes international aviation and shipping",
+          "url": "https://naei.energysecurity.gov.uk/sites/default/files/2026-06/DG_GHG%20Inventories_1990-2024.pdf"
+        },
+        {
+          "key": "ghg_per_person",
+          "label": "Greenhouse gas emissions per person (tonnes CO₂e)",
+          "format": "dec1",
+          "values": {
+            "uk": 5.4,
+            "england": 4.8,
+            "scotland": 6.6,
+            "wales": 9.3,
+            "ni": 9.5
+          },
+          "period": "2024",
+          "source": "NAEI for DESNZ and the devolved governments, Greenhouse gas inventories for England, Scotland, Wales and Northern Ireland: 1990–2024 (May 2026), table 19; excludes international aviation and shipping; divided by ONS mid-2024 population",
+          "url": "https://naei.energysecurity.gov.uk/sites/default/files/2026-06/DG_GHG%20Inventories_1990-2024.pdf"
         }
       ],
-      "note": "Shares are of electricity generated in each nation. The grid is shared, so a nation can generate more than it uses and send the rest to the others or abroad (Northern Ireland shares a market with Ireland). The UK row of \"sent out or brought in\" is net imports through interconnectors."
+      "note": "Shares are of electricity generated in each nation. The grid is shared, so a nation can generate more than it uses and send the rest to the others or abroad (Northern Ireland shares a market with Ireland). The UK row of \"sent out or brought in\" is net imports through interconnectors. Emissions are for 2024, the latest year with figures for each nation. The UK total includes 10.0 million tonnes from offshore oil and gas that isn't assigned to any nation."
     }
   ],
   "uk_only": {
@@ -1302,6 +1332,76 @@
         "source": "DESNZ, DUKES 2026, tables 4.1.1 and 4.5 (published 30 July and 29 September 2026)",
         "url": "https://www.gov.uk/government/statistics/natural-gas-chapter-4-digest-of-united-kingdom-energy-statistics-dukes"
       }
+    },
+    "emissions": {
+      "period": "2025",
+      "provisional": true,
+      "total_mt": 366.6,
+      "total_1990_mt": 790.8,
+      "change_since_1990_pct": -53.6,
+      "previous_mt": 373.4,
+      "change_on_year_pct": -1.8,
+      "co2_share_pct": 78,
+      "sectors": [
+        {
+          "label": "Domestic transport",
+          "mt": 112.9,
+          "mt_1990": 124.2,
+          "change_pct": -9,
+          "note": "Cars, vans, lorries, buses, trains, domestic flights and shipping"
+        },
+        {
+          "label": "Buildings and product uses",
+          "mt": 80.4,
+          "mt_1990": 109.5,
+          "change_pct": -27,
+          "note": "Homes 53.4, offices, shops and public buildings 22.0"
+        },
+        {
+          "label": "Agriculture",
+          "mt": 45.9,
+          "mt_1990": 55.0,
+          "change_pct": -16,
+          "note": "Livestock, soils, farm machinery"
+        },
+        {
+          "label": "Industry",
+          "mt": 41.1,
+          "mt_1990": 155.7,
+          "change_pct": -74
+        },
+        {
+          "label": "Electricity supply",
+          "mt": 37.4,
+          "mt_1990": 204.0,
+          "change_pct": -82,
+          "note": "Power stations"
+        },
+        {
+          "label": "Fuel supply",
+          "mt": 27.3,
+          "mt_1990": 77.2,
+          "change_pct": -65,
+          "note": "Oil and gas production, refineries"
+        },
+        {
+          "label": "Waste",
+          "mt": 21.2,
+          "mt_1990": 55.0,
+          "change_pct": -62
+        },
+        {
+          "label": "Land use and forestry",
+          "mt": 0.4,
+          "mt_1990": 10.3,
+          "change_pct": -96,
+          "note": "Net: emissions minus what forests and soils absorb"
+        }
+      ],
+      "aviation_mt": 36.0,
+      "shipping_mt": 4.7,
+      "source": "DESNZ, 2025 UK greenhouse gas emissions: provisional figures (published 2 April 2026), data tables 1a and 5",
+      "url": "https://www.gov.uk/government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025"
     }
   }
 }
