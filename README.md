@@ -125,7 +125,8 @@ waiting list), each with its period and source. Its per-day, per-person and
 numbers with commas. The UK and its nations page,
 `/landmark-numbers/uk-and-nations/` (`_pages/landmark-numbers-uk-and-nations.html`),
 reads `_data/landmark_uk.json`: curated figures for the UK, England, Scotland,
-Wales and Northern Ireland (population, land, health, economy and public
+Wales and Northern Ireland (population, age groups, households, land, health,
+economy and public
 spending), each with its period and source. `_includes/fmt.html` formats them.
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run

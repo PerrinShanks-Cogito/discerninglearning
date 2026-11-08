@@ -7,6 +7,8 @@ permalink: /landmark-numbers/uk-and-nations/
 {%- assign people = uk.groups | where: "key", "people" | first -%}
 {%- assign pop = people.measures | where: "key", "population" | first -%}
 {%- assign land = people.measures | where: "key", "land_km2" | first -%}
+{%- assign working = people.measures | where: "key", "working_age" | first -%}
+{%- assign older = people.measures | where: "key", "over_65" | first -%}
 {%- assign health = uk.groups | where: "key", "health" | first -%}
 {%- assign le_f = health.measures | where: "key", "le_female" | first -%}
 {%- assign le_m = health.measures | where: "key", "le_male" | first -%}
@@ -130,6 +132,27 @@ permalink: /landmark-numbers/uk-and-nations/
     {%- endfor %}
     {%- if g.key == "people" %}
     <tr class="uk-table__derived">
+      <th scope="row">Share of people of working age<span class="landmark-note">Ages 16 to 64, as a % of the population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign wv = working.values[n.key] | times: 100.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ wv }}%</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">Share aged 65 and over<span class="landmark-note">As a % of the population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign ov = older.values[n.key] | times: 100.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ ov }}%</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">People of working age for each person 65 and over<span class="landmark-note">Working age divided by 65 and over</span></th>
+      {%- for n in uk.nations %}
+      {%- assign rv = working.values[n.key] | times: 1.0 | divided_by: older.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ rv }}</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
       <th scope="row">People per km²<span class="landmark-note">Population divided by land area</span></th>
       {%- for n in uk.nations %}
       {%- assign dv = pop.values[n.key] | divided_by: land.values[n.key] | round %}
@@ -169,6 +192,11 @@ permalink: /landmark-numbers/uk-and-nations/
   <li>
     <strong>Healthy life expectancy is based on how people rate their own health,</strong> so it is less precise
     than life expectancy, especially for the smaller nations.
+  </li>
+  <li>
+    <strong>"Working age" here means 16 to 64,</strong> the standard statistical definition. The State Pension age is
+    now 66, and plenty of people work beyond it or don't work before it, so it's a measure of age, not of jobs.
+    Household figures come from the Labour Force Survey, which no longer covers Northern Ireland.
   </li>
   <li>
     <strong>The periods differ.</strong> Population is mid-2025, spending is 2024/25, employment is mid-2026.
