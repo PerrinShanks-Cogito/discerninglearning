@@ -160,6 +160,16 @@ permalink: /landmark-numbers/uk-and-nations/
       {%- endfor %}
     </tr>
     {%- endif %}
+    {%- if g.key == "migration" %}
+    {%- assign netint = g.measures | where: "key", "net_international" | first %}
+    <tr class="uk-table__derived">
+      <th scope="row">Net international migration per 1,000 people<span class="landmark-note">Divided by the mid-2025 population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign nv = netint.values[n.key] | times: 1000.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ nv }}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}
     {%- if g.key == "money" %}
     <tr class="uk-table__derived">
       <th scope="row">Compared with the UK average<span class="landmark-note">UK = 100</span></th>
@@ -171,6 +181,74 @@ permalink: /landmark-numbers/uk-and-nations/
     {%- endif %}
   </tbody>
 </table>
+{%- if g.note %}<p class="uk-note">{{ g.note }}</p>{% endif %}
+{%- if g.key == "migration" %}
+{%- assign lt = uk.uk_only.migration_ltim %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ lt.period }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=lt.net %}</p>
+    <h3 class="nhs-stat__label">Net migration to the UK, latest estimate</h3>
+    <p class="nhs-stat__so">{% include thousands.html n=lt.immigration %} people arrived to live in the UK for at least a year and
+      {% include thousands.html n=lt.emigration %} left. That's down from {% include thousands.html n=lt.net_previous %} in the {{ lt.previous_period }}.
+      This is a later, provisional estimate, so it differs from the mid-year table above.</p>
+    <p class="nhs-stat__source"><a href="{{ lt.url }}">{{ lt.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ lt.period }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=lt.non_eu_immigration %}</p>
+    <h3 class="nhs-stat__label">Non-EU+ nationals arriving, by main reason</h3>
+    <p class="nhs-stat__so">EU+ is the EU plus Iceland, Liechtenstein, Norway and Switzerland.</p>
+    <ul class="uk-reasons">
+      {%- for r in lt.non_eu_reasons %}
+      <li><span>{{ r.reason }}</span><span class="uk-reasons__bar" style="--w: {{ r.pct }}" aria-hidden="true"></span><strong>{{ r.pct }}%</strong></li>
+      {%- endfor %}
+    </ul>
+    <p class="nhs-stat__source"><a href="{{ lt.url }}">{{ lt.source }}</a></p>
+  </section>
+</div>
+{%- endif %}
+{%- if g.key == "benefits" %}
+{%- assign uc = uk.uk_only.universal_credit %}
+{%- assign uc_total = uc.gb_m | times: 1000000 | plus: uc.ni | divided_by: 100000.0 | round | divided_by: 10.0 %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ uc.period }}</p>
+    <p class="nhs-stat__figure">{{ uc_total }} million</p>
+    <h3 class="nhs-stat__label">People on Universal Credit</h3>
+    <p class="nhs-stat__so">{{ uc.gb_m }} million in Great Britain and {% include thousands.html n=uc.ni %} in Northern Ireland, where it is
+      run separately. Universal Credit goes to people in work on low incomes as well as those out of work, so it is much broader
+      than the claimant count.</p>
+    <p class="nhs-stat__source"><a href="{{ uc.gb_url }}">{{ uc.gb_source }}</a>; <a href="{{ uc.ni_url }}">{{ uc.ni_source }}</a></p>
+  </section>
+</div>
+{%- endif %}
+{%- if g.key == "money" %}
+{%- assign df = uk.uk_only.defence %}
+{%- assign df_now = df.mod_budget | first %}
+{%- assign df_last = df.mod_budget | last %}
+{%- assign df_pp = df.nato_bn | times: 1000000000 | divided_by: uk_pop | round %}
+<h3 id="defence">Defence (UK-wide)</h3>
+<p>Defence is run for the whole UK, so there are no figures for each nation.</p>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ df.nato_period }}</p>
+    <p class="nhs-stat__figure">£{{ df.nato_bn }} billion</p>
+    <h3 class="nhs-stat__label">Defence spending, NATO definition</h3>
+    <p class="nhs-stat__so">That's {{ df.nato_pct_gdp }}% of GDP, or about £{% include thousands.html n=df_pp %} per person in the UK.
+      NATO's definition is broader than the Ministry of Defence budget (it includes items such as military pensions).</p>
+    <p class="nhs-stat__source"><a href="{{ df.nato_url }}">{{ df.nato_source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ df_now.period }} to {{ df_last.period }}</p>
+    <p class="nhs-stat__figure">£{{ df_now.bn }} billion</p>
+    <h3 class="nhs-stat__label">Ministry of Defence budget, {{ df_now.period }}</h3>
+    <p class="nhs-stat__so">Planned to rise to {% for b in df.mod_budget offset: 1 %}£{{ b.bn }} billion in {{ b.period }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+      {{ df.targets }}</p>
+    <p class="nhs-stat__source"><a href="{{ df.mod_url }}">{{ df.mod_source }}</a>; <a href="{{ df.targets_url }}">{{ df.targets_source }}</a></p>
+  </section>
+</div>
+{%- endif %}
 {%- endfor %}
 
 <h2 id="reading-these">Reading these numbers</h2>
@@ -197,6 +275,16 @@ permalink: /landmark-numbers/uk-and-nations/
     <strong>"Working age" here means 16 to 64,</strong> the standard statistical definition. The State Pension age is
     now 66, and plenty of people work beyond it or don't work before it, so it's a measure of age, not of jobs.
     Household figures come from the Labour Force Survey, which no longer covers Northern Ireland.
+  </li>
+  <li>
+    <strong>Migration figures come in two versions.</strong> The table uses the mid-year population estimates, which
+    split migration by nation. The UK headline uses the ONS's later, provisional migration estimates, which are revised
+    as more data arrives. "Migration within the UK" is people moving between the four nations.
+  </li>
+  <li>
+    <strong>There is no single count of "people on benefits".</strong> The claimant count covers people who claim because
+    they are unemployed. Universal Credit is wider, and the State Pension and disability benefits are separate again.
+    Social protection spending covers all of these, plus social care.
   </li>
   <li>
     <strong>The periods differ.</strong> Population is mid-2025, spending is 2024/25, employment is mid-2026.

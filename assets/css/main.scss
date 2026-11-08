@@ -329,6 +329,12 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .prose .uk-table td.uk-table__uk { font-weight: 700; }
 .prose .uk-table__derived th, .prose .uk-table__derived td { font-style: italic; }
 
+.uk-note { font-size: 0.85rem; color: var(--muted); margin-top: -0.75rem !important; }
+.uk-reasons { list-style: none; padding: 0; margin: 0.25rem 0 0; font-size: 0.9rem; }
+.uk-reasons li { display: grid; grid-template-columns: 6.5rem 1fr 2.5rem; align-items: center; gap: 0.5rem; margin: 0.15rem 0; }
+.uk-reasons__bar { height: 0.55rem; width: calc(var(--w) * 1%); max-width: 100%; background: var(--accent); border-radius: 2px; }
+.uk-reasons strong { text-align: right; font-variant-numeric: tabular-nums; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
