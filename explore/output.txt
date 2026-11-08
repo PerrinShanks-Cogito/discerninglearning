@@ -1,70 +1,64 @@
-GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/ybha/ukea/data 200 63857
-ybha Gross Domestic Product at market prices: Current price: Seasonally adjusted £m 2026-09-29T23:00:00.000Z [('2022', '2590757'), ('2023', '2766446'), ('2024', '2904950'), ('2025', '3044594')]
-GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/abmi/ukea/data 200 64200
-abmi Gross Domestic Product: chained volume measures: Seasonally adjusted £m 2026-09-29T23:00:00.000Z [('2022', '2860259'), ('2023', '2872948'), ('2024', '2904950'), ('2025', '2940195')]
-GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/ihyp/ukea/data 200 16909
-ihyp Gross Domestic Product: Year on Year growth: CVM SA % 2026-09-29T23:00:00.000Z [('2022', '5.0'), ('2023', '0.4'), ('2024', '1.1'), ('2025', '1.2')]
-GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustryandallinternationalterritoriallevel 404 27237
-PAGE regionalgrossvalueaddedbalancedbyindustryandallinternationalterritoriallevelsitlregions []
-GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions 200 54594
-PAGE regionalgrossdomesticproductallnutslevelregions []
-    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2018/regionalgrossdomesticproductgdpallnutslevelregions.xlsx
-    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2019/regionalgrossdomesticproductallitlregions.xlsx
-    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2020/regionalgrossdomesticproductgdpallitlregions.xlsx
-    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2021/regionalgrossdomesticproductgdpallitlregions.xlsx
-    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2022/regionalgrossdomesticproductgdpbyallitlregions.xlsx
-    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2023/regionalgrossdomesticproductgdpbyallinternationalterritoriallevelitlregions.xlsx
-GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallitlregions 404 27237
-PAGE regionalgrossdomesticproductallitlregions []
-GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/sex.def.sjson 200 24968
-ERR sex Expecting value: line 1 column 1 (char 0)
-GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/item.def.sjson 200 25280
-ERR item Expecting value: line 1 column 1 (char 0)
-GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/pay.def.sjson 200 25136
-ERR pay Expecting value: line 1 column 1 (char 0)
-GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1.data.csv?geography=K02000001,E92000001,W92000004,S92000003,N92000002&date=latestMINUS1,la 200 3121
-"DATE_NAME","GEOGRAPHY_NAME","SEX_NAME","PAY_NAME","OBS_VALUE","OBS_STATUS_NAME"
-"2024","United Kingdom","Total","Weekly pay - gross",613.5,"Normal Value"
-"2024","United Kingdom","Total","Annual pay - gross",31600,"Normal Value"
-"2024","United Kingdom","Full Time Workers","Weekly pay - gross",728.3,"Normal Value"
-"2024","United Kingdom","Full Time Workers","Annual pay - gross",37439,"Normal Value"
-"2024","England","Total","Weekly pay - gross",619.6,"Normal Value"
-"2024","England","Total","Annual pay - gross",31850,"Normal Value"
-"2024","England","Full Time Workers","Weekly pay - gross",732.5,"Normal Value"
-"2024","England","Full Time Workers","Annual pay - gross",37636,"Normal Value"
-"2024","Wales","Total","Weekly pay - gross",575.0,"Normal Value"
-"2024","Wales","Total","Annual pay - gross",29592,"Normal Value"
-"2024","Wales","Full Time Workers","Weekly pay - gross",685.3,"Normal Value"
-"2024","Wales","Full Time Workers","Annual pay - gross",34898,"Normal Value"
-"2024","Scotland","Total","Weekly pay - gross",614.1,"Normal Value"
-"2024","Scotland","Total","Annual pay - gross",31871,"Normal Value"
-"2024","Scotland","Full Time Workers","Weekly pay - gross",740.1,"Normal Value"
-"2024","Scotland","Full Time Workers","Annual pay - gross",38321,"Normal Value"
-"2024","Northern Ireland","Total","Weekly pay - gross",559.8,"Normal Value"
-"2024","Northern Ireland","Total","Annual pay - gross",28788,"Normal Value"
-"2024","Northern Ireland","Full Time Workers","Weekly pay - gross",664.6,"Normal Value"
-"2024","Northern Ireland","Full Time Workers","Annual pay - gross",34249,"Normal Value"
-"2025","United Kingdom","Total","Weekly pay - gross",642.5,"Normal Value"
-"2025","United Kingdom","Total","Annual pay - gross",32890,"Normal Value"
-"2025","United Kingdom","Full Time Workers","Weekly pay - gross",766.6,"Normal Value"
-"2025","United Kingdom","Full Time Workers","Annual pay - gross",39039,"Normal Value"
-"2025","England","Total","Weekly pay - gross",648.4,"Normal Value"
-"2025","England","Total","Annual pay - gross",33080,"Normal Value"
-"2025","England","Full Time Workers","Weekly pay - gross",769.5,"Normal Value"
-"2025","England","Full Time Workers","Annual pay - gross",39243,"Normal Value"
-"2025","Wales","Total","Weekly pay - gross",601.8,"Normal Value"
-"2025","Wales","Total","Annual pay - gross",30732,"Normal Value"
-"2025","Wales","Full Time Workers","Weekly pay - gross",719.3,"Normal Value"
-"2025","Wales","Full Time Workers","Annual pay - gross",36354,"Normal Value"
-"2025","Scotland","Total","Weekly pay - gross",642.9,"Normal Value"
-"2025","Scotland","Total","Annual pay - gross",33061,"Normal Value"
-"2025","Scotland","Full Time Workers","Weekly pay - gross",775.6,"Normal Value"
-"2025","Scotland","Full Time Workers","Annual pay - gross",39905,"Normal Value"
-"2025","Northern Ireland","Total","Weekly pay - gross",594.1,"Normal Value"
-"2025","Northern Ireland","Total","Annual pay - gross",31252,"Normal Value"
-"2025","Northern Ireland","Full Time Workers","Weekly p
 GET https://research.ftserussell.com/Analytics/FactSheets/Home/DownloadSingleIssue?issueName=UKX&IsManual=false 200 378903
-FACTSHEET FTSE Russell Factsheet | FTSE 100 Index | bmkTitle1 | The FTSE 100 is a market-capitalisation weighted index of UK-listed blue chip companies. The | index is part of the FTSE UK Series and is designed to measure the performance of the 100 | largest companies traded on the London Stock Exchange that pass scree
+=== page 1
+4 -19.4 -19.4 -23.5 -44.7 30 December 1983
+Return/Risk Ratio – based on compound annual returns and volatility in Performance and Volatility table Base Value
+Drawdown - based on daily data
+1000
+Top 5 Constituents
+Investability Screen
+Constituent ICB Sector Net MCap (GBPm) Wgt %
+Actual free float applied and liquidity
+Shell Oil Gas and Coal 235,454 9.25
+screened
+HSBC Hldgs Banks 218,851 8.60
+Index Calculation
+AstraZeneca Pharmaceuticals and Biotechnology 209,114 8.22
+Real-time and end-of-day index available
+Rolls-Royce Holdings Aerospace and Defense 103,871 4.08
+Unilever Personal Care Drug and Grocery Stores 101,137 3.97 End-of-Day Distribution
+Totals 868,428 34.13 Via FTP and email
+Currency
+ICB Supersector Breakdown
+Sterling and Euro
+FTSE 100 FTSE All-Share
+Review Dates
+ICB Code ICB Supersector No. of Net MCap (GBPm) Wgt % No. of Net MCap (GBPm) Wgt %
+Cons Cons
+Quarterly in March, June, September,
+1010 Technology 4 69,659 2.74 19 78,923 2.74
+December
+1510 Telecommunications 3 35,890 1.41 5 38,775 1.34
+Historical Data
+2010 Health Care 5 325,435 12.79 12 332,575 11.53
+Available from January 1984
+3010 Banks 7 419,610 16.49 13 424,478 14.71
+3020 Financial Services 12 130,024 5.11 209 270,804 9.38
+3030 Insurance 6 84,855 3.33 9 87,707 3.04
+3510 Real Estate 5 30,201 1.19 37 59,892 2.08
+4010 Automobiles and Parts - - - 1 106 0.00
+4020 Consumer Products and Services 4 56,000 2.20 15 71,611 2.48
+4030 Media 3 23,166 0.91 9 27,649 0.96
+4040 Retailers 4 29,329 1.15 19 41,834 1.45
+4050 Travel and Leisure 4 39,536 1.55 24 51,990 1.80
+4510 Food Beverage and Tobacco 6 185,291 7.28 17 195,473 6.77
+Personal Care Drug and Grocery
+4520 5 183,632 7.22 11 188,805 6.54
+Stores
+5010 Construction and Materials 1 4,044 0.16 16 14,873 0.52
+5020 Industrial Goods and Services 15 283,252 11.13 64 329
+=== page 2
+FTSE 100 Index Data as at: 30 October 2026
+Index Characteristics
+Attributes FTSE 100
+Number of constituents 100
+Net MCap (GBPm) 2,544,559
+Dividend Yield % 3.04
+Constituent Sizes (Net MCap GBPm)
+Average 25,446
+Largest 235,454
+Smallest 677
+Median 8,921
+Weight of Largest Constituent (%) 9.25
 Top 10 Holdings (% Index MCap) 49.50
 3 0 October 2026
 bmkImage1 bmkImage2 bmkImage3
@@ -78,5 +72,47 @@ or their respective licensors.
 FTSE International Limited is authorised and regulated by the Financial Conduct Authority as a benchmark administrator.
 All information is provided for information purposes only. All information and data contained in this publication is obtained by LSEG, from sources believed by
 it to be accurate and reliable. Because of the possibility of human and mechanical inaccuracy as well as other factors, however, such information and data is
-provided "as is" without warranty of any kind. No member of LSEG nor their respective directors, officers, employees, partners or licensors make any claim,
-prediction,
+provided "as is" without warranty of any kind. No member of LSEG nor their respective directors, officers, employees, partners or licenso
+GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1.data.csv?geography=N92000002,K02000001&date=latest&sex=7&item=2&pay=7&measures=20100&select=date_na 200 103
+"DATE_NAME","GEOGRAPHY_NAME","OBS_VALUE"
+"2025","Northern Ireland",31252
+"2025","United Kingdom",32890
+
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2024/relateddata 200 64083
+DS /economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions
+DS /economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductcityandenterpriseregions
+DS /economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductcityregions
+DS /economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductenterpriseregions
+DS /economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductlocalauthorities
+DS /economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region
+DS /economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry
+DS /economy/grossvalueaddedgva/datasets/nominalregionalgrossvalueaddedbalancedperheadandincomecomponents
+DS /economy/grossvalueaddedgva/datasets/regionalgrossvalueaddedbalancedbycombinedauthoritycityregionsandothereconomicandenterpriseregionsoftheuk
+DS /economy/grossvalueaddedgva/datasets/regionalgrossvalueaddedbalancedqualitymetrics
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions 200 54594
+  files ['/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2024/regionalgrossdomesticproductgdpbyallinternationalterritoriallevelitlregions.xlsx', '/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2023/regionalgrossdomesticproductgdpbyallinternationalterritoriallevelitlregions.xlsx', '/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2022/regionalgrossdomesticproductgdpbyallitlregions.xlsx']
+GET https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2024/regionalgrossdome 200 620678
+  sheets ['Notice', 'Information', 'Contents', 'Notes', 'Table 1', 'Table 2', 'Table 3', 'Table 4', 'Table 5', 'Table 6', 'Table 7', 'Table 8', 'Table 9', 'Table 10', 'Table 11', 'Table 12', 'Table 13']
+  --- Notice
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          0
+0                                                                                                                                                                                                                                                                                   
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region 200 71445
+  files ['/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region/tlcnortheast/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiestlcnortheast.xlsx', '/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region/tldnorthwest/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiestldnorthwest.xlsx', '/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region/tleyorkshireandthehumber/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiestleyorkshireandthehumber.xlsx']
+GET https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region/tlcnor 200 460748
+  sheets ['Information', 'Contents', 'Notes', 'Table 1', 'Table 2', 'Table 3', 'Table 4']
+  --- Table 1
+                                                                                                                                                              0          1           2          3                                                        4       5       6       7
+0  Table 1: Regional gross value added (balanced) by industry: local authorities by ITL1 region: TLC North East, chained volume measures index, 2023 equals 100        NaN         NaN        NaN                                                      NaN     NaN     NaN     NaN
+1                                                                                                                                                   ITL1 region    LA code     LA name      SIC07                                        SIC07 description  1998.0  1999.0  2000.0
+2                                                                                                                                                   North East   E06000001  Hartlepool      Total                                           All industries    88.9    93.6    94.0
+3                                                                                                   
+GET https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry 200 44871
+  files ['/file?uri=/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry/current/regionalgrossvalueaddedbalancedbyindustryandallinternationalterritoriallevelsitlregions.xlsx']
+GET https://www.ons.gov.uk/file?uri=/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry/current/regionalgrossvalu 429 1202935
+Traceback (most recent call last):
+  File "/home/runner/work/discerninglearning/discerninglearning/explore/explore.py", line 28, in <module>
+    x=pd.ExcelFile(io.BytesIO(get(u).content)); print("  sheets",x.sheet_names[:25])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1683, in __init__
+    raise ValueError(
+ValueError: Excel file format cannot be determined, you must specify an engine manually.
