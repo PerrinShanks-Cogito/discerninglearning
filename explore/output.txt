@@ -1,88 +1,13 @@
-/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/openpyxl/worksheet/header_footer.py:48: UserWarning: Cannot parse header or footer so it will be ignored
-  warn("""Cannot parse header or footer so it will be ignored""")
-200 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet 395258 https://obr.uk/docs/sodugn2q20l901oy19v1cz5e/PSF_aggregates_databank_Oct_EFO.xlsx
-['Changes since last (OLD)', 'Aggregates (£bn)', 'Aggregates (per cent of GDP)', 'Aggregates (2025-26 prices)', 'Receipts (£bn)', 'Public finances since 1900', 'Glossary']
--- Changes since last (OLD) (93, 90)
-    0           1                               2                          3                                  4                             5             6                               7
-0 NaN         NaN                       £ billion                        NaN                                NaN                           NaN           NaN                             NaN
-1 NaN         NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
-2 NaN         NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
-3 NaN         NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
-4 NaN    ONS code                            JW2O                       KX5Q                               JW2Q                         -JW2Z         -JW2S                             NaN
-5 NaN  Derivation                               a                       
--- Aggregates (£bn) (97, 34)
-    0           1                               2                          3                                  4                             5             6                               7
-0 NaN         NaN                       £ billion                        NaN                                NaN                           NaN           NaN                             NaN
-1 NaN         NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
-2 NaN         NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
-3 NaN         NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
-4 NaN    ONS code                            JW2O                       KX5Q                               JW2Q                         -JW2Z         -JW2S                             NaN
-5 NaN  Derivation                               a                       
--- Aggregates (per cent of GDP) (94, 71)
-    0        1                               2                          3                                  4                             5             6                               7
-0 NaN      NaN                Per cent of GDP1                        NaN                                NaN                           NaN           NaN                             NaN
-1 NaN      NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
-2 NaN      NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
-3 NaN      NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
-4 NaN  1948-49                       42.940919                  38.599562                          33.234136                      2.634573      2.730853                        5.365427
-5 NaN  1949-50                       43.298545                  38.474813                 
--- Aggregates (2025-26 prices) (85, 31)
-    0        1                               2                          3                                  4                             5             6                               7
-0 NaN      NaN      £ billion (2024-25 prices)                        NaN                                NaN                           NaN           NaN                             NaN
-1 NaN      NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
-2 NaN      NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
-3 NaN      NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
-4 NaN  1955-56                      229.885113                 228.644256                         183.222353                      27.56009     17.861812                       45.421902
-5 NaN  1956-57                      231.873078                 234.398794                 
--- Receipts (£bn) (43, 34)
-    0    1                               2            3            4                                                      5                      6               7
-0 NaN  NaN  Public sector current receipts          NaN          NaN                                                    NaN                    NaN             NaN
-1 NaN  NaN                             NaN          NaN          NaN                                                    NaN                    NaN             NaN
-2 NaN  NaN                             NaN          NaN          NaN                                                    NaN                    NaN             NaN
-3 NaN  NaN        VAT (net of VAT refunds)  VAT refunds  Fuel duties  Stamp duty land tax (includes Scottish LBTT and ATED)  Stamp taxes on shares  Tobacco duties
-4 NaN  NaN                            CTRU         AHGO         CUDG                                                   MM9F                   BKST            GTAO
-5 NaN  NaN                             NaN          NaN          NaN                                                    NaN                    NaN             NaN
--- Public finances since 1900 (148, 6)
-    0                                                                                                                                                                                                                                                                                                                                                                    1                       2                      3                                    4                               5
-0 NaN                                                                                                                                                                                                                                                                                                                                  Key public finances data since 1900                     NaN                    NaN                                  NaN                             NaN
-1 NaN                                                                                                                                       Forecast as of March 2026 Economic and fiscal outlook, latest outturns as of 21 July 2026 from ONS/HM 
--- Glossary (23, 5)
-    0                               1                                                                                                                                                                                                                           2                                                                                            3         4
-0 NaN                             NaN                                                                                                                                                                                                                         NaN                                                                                          NaN       NaN
-1 NaN                        Glossary                                                                                                                                                                                                                         NaN                                                                                          NaN       NaN
-2 NaN                             NaN                                                                                
-== RECEIPTS Receipts (£bn) hdr 3 row 32
-    np.float64(nan) | nan
-    nan | 2025-26
-    'VAT (net of VAT refunds)' | 180.326
-    'VAT refunds' | 30.5
-    'Fuel duties' | 24.559
-    'Stamp duty land tax (includes Scottish LBTT and ATED)' | 16.627
-    'Stamp taxes on shares' | 4.735
-    'Tobacco duties' | 7.468
-    'Alcohol duties' | 12.432
-    'Vehicle excise duties1' | 9.031
-    'Air passenger duty' | 4.616
-    'Insurance premium tax' | 9.039
-    'Climate change levy and carbon price floor' | 1.74
-    'Environmental levies (Renewables Obligation and Contracts for Difference)2' | 11.796999999999999
-    'Emissions trading scheme' | 2.122
-    'Diverted profits tax' | 0.604
-    'Pay as your earn (PAYE) income tax' | 280.513
-    'Self assessed (SA) income tax' | 54.071
-    'Other income tax' | -5.246
-    'Capital gains tax' | 24.31
-    'Onshore corporation tax (includes Bank Surcharge and EGL)3' | 97.798
-    'Offshore corporation tax' | 1.794
-    'Petroleum revenue tax' | -0.443
-    'Energy profits levy' | 2.756
-    'Bank levy' | 1.515
-    'Licence fee receipts' | 3.91
-    'Inheritance tax' | 8.466
-    'National insurance contributions (NICs)' | 204.429
-    'Council tax' | 50.444
-    'Public sector interest and dividend receipts' | 40.646
-    'Public sector gross operating surplus (GOS)' | 82.91
-    'Other public sector taxes and receipts' | 67.84299999999985
-    'Public sector current receipts' | 1231.312
-    'National accounts taxes' | 1104.686
+ROW 85 [('nan', '2024-25'), ('Public sector current receipts', 1140.579), ('Total managed expenditure', 1290.348), ('Public sector current expenditure', 1146.058), ('Public sector net investment', 76.564), ('Depreciation', 67.726), ('Public sector gross investment', 144.29), ('National account taxes', 1014.849), ('Cyclically-adjusted current budget defic', 67.09725264912385), ('Primary balance', -67.806), ('Cyclically-adjusted primary balance', -61.69825264912384), ('Cyclically-adjusted net borrowing', 143.6612526491238), ('Public sector net borrowing', 149.769), ('Current budget deficit', 73.205), ('Public sector net financial liabilities', 2410.6), ('Central government net cash requirement', 180.23)]
+ROW 86 [('nan', '2025-26'), ('Public sector current receipts', 1231.312), ('Total managed expenditure', 1365.598), ('Public sector current expenditure', 1206.374), ('Public sector net investment', 86.894), ('Depreciation', 72.33), ('Public sector gross investment', 159.224), ('National account taxes', 1104.686), ('Cyclically-adjusted current budget defic', 31.785680993022662), ('Primary balance', -46.823), ('Cyclically-adjusted primary balance', -31.21668099302266), ('Cyclically-adjusted net borrowing', 118.67968099302267), ('Public sector net borrowing', 134.286), ('Current budget deficit', 47.392), ('Public sector net financial liabilities', 2549.9), ('Central government net cash requirement', 135.121)]
+ROW 87 [('nan', '2026-27'), ('Public sector current receipts', 1315.9711613196882), ('Total managed expenditure', 1449.1671663918767), ('Public sector current expenditure', 1278.433284906636), ('Public sector net investment', 92.62973892375732), ('Depreciation', 78.10414256148333), ('Public sector gross investment', 170.73388148524066), ('National account taxes', 1182.8417314944193), ('Cyclically-adjusted current budget defic', 17.544362556696562), ('Primary balance', -32.41760260679707), ('Cyclically-adjusted primary balance', -9.395699015062506), ('Cyclically-adjusted net borrowing', 110.17410148045388), ('Public sector net borrowing', 133.19600507218846), ('Current budget deficit', 40.566266148431126), ('Public sector net financial liabilities', 2684.0787110138917), ('Central government net cash requirement', 145.45606927906005)]
+ROW 88 [('nan', '2027-28'), ('Public sector current receipts', 1392.02476751509), ('Total managed expenditure', 1504.005238307325), ('Public sector current expenditure', 1326.805159075556), ('Public sector net investment', 94.46482014344956), ('Depreciation', 82.73525908831942), ('Public sector gross investment', 177.200079231769), ('National account taxes', 1248.6888057738631), ('Cyclically-adjusted current budget defic', -5.408596018417902), ('Primary balance', -5.31940942771791), ('Cyclically-adjusted primary balance', 17.604837239485676), ('Cyclically-adjusted net borrowing', 89.05622412503166), ('Public sector net borrowing', 111.98047079223524), ('Current budget deficit', 17.515650648785684), ('Public sector net financial liabilities', 2806.742153196526), ('Central government net cash requirement', 140.23519997709917)]
+Aggregates (£bn) NOTE 93 Outturn fiscal data consistent with the ONS/HM Treasury Public Sector Finances Statistical Bulletin released on 22 September 2026.
+Aggregates (£bn) NOTE 94 Forecast years from 2026-27 are consistent with the OBR Economic and fiscal outlook forecast published October 2026.
+Aggregates (£bn) NOTE 95 A full list of sources is available in the glossary.
+Receipts (£bn) NOTE 39 Outturn fiscal data consistent with the ONS/HM Treasury Public Sector Finances Statistical Bulletin released on 22 September 2026.
+Receipts (£bn) NOTE 40 Forecast years from 2026-27 are consistent with the OBR Economic and fiscal outlook forecast published October 2026.
+Receipts (£bn) NOTE 42 A full list of sources is available in the glossary.
+    0                                                                                                                                                                                                                                                                                                                                                                    1    2    3    4    5
+0 NaN                                                                                                                                                                                                                                                                                                                                  Key public finances data since 1900  NaN  NaN  NaN  NaN
+1 NaN                             
