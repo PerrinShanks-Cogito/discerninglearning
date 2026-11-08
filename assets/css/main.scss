@@ -14,6 +14,10 @@
   --hero-body: #f2f2f2;
   --measure: 46rem;
   --wide: 68rem;
+  --nat-england: #866a00;
+  --nat-scotland: #2f5f8a;
+  --nat-wales: #2e7d4f;
+  --nat-ni: #8a3d5c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -303,8 +307,38 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .nhs-stat__source a { color: var(--muted); }
 .nhs-rules li { margin-bottom: 0.5rem; }
 
+// The UK and its nations page.
+.uk-share { margin: 1rem 0 1.5rem; }
+.uk-share__row { display: grid; grid-template-columns: 4rem 1fr; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
+.uk-share__label { margin: 0 !important; font-weight: 600; font-size: 0.9rem; }
+.uk-share__bar { display: flex; height: 2rem; border-radius: 3px; overflow: hidden; background: var(--surface); }
+.uk-share__seg { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem; font-weight: 600; white-space: nowrap; overflow: hidden; }
+.uk-share__seg + .uk-share__seg { box-shadow: inset 2px 0 0 var(--bg); }
+.uk-share__seg--england { background: var(--nat-england); }
+.uk-share__seg--scotland { background: var(--nat-scotland); }
+.uk-share__seg--wales { background: var(--nat-wales); }
+.uk-share__seg--ni { background: var(--nat-ni); }
+.uk-share__legend { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.3rem 1.1rem; font-size: 0.85rem; color: var(--muted); margin: 0.4rem 0 0 4.75rem !important; }
+.uk-share__legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.uk-share__key { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; }
+.prose table.landmark-table.uk-table { display: block; overflow-x: auto; font-size: 0.88rem; }
+.prose .uk-table tbody th { white-space: normal; min-width: 8.5rem; }
+.prose .uk-table th, .prose .uk-table td { padding: 0.5rem 0.55rem; }
+.prose .uk-table thead th { font-size: 0.8rem; }
+.prose .uk-table .landmark-note a { color: var(--muted); }
+.prose .uk-table td.uk-table__uk { font-weight: 700; }
+.prose .uk-table__derived th, .prose .uk-table__derived td { font-style: italic; }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
+  .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .prose table.landmark-table.uk-table, .prose .uk-table tbody { display: block; }
+  .prose .uk-table tr { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); margin-bottom: 0.75rem; }
+  .prose .uk-table th, .prose .uk-table td { border: 0; padding: 0.45rem 0.55rem; }
+  .prose .uk-table tbody th { grid-column: 1 / -1; border-bottom: 1px solid var(--border); min-width: 0; }
+  .prose .uk-table td.num { text-align: left; white-space: normal; }
+  .prose .uk-table td::before { content: attr(data-label); display: block; font-size: 0.72rem; color: var(--muted); font-style: normal; font-weight: 400; }
+  .uk-share__legend { margin-left: 0 !important; }
   .prose .landmark-table--costs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .prose .landmark-table--costs, .prose .landmark-table--costs tbody { display: block; }
   .prose .landmark-table--costs tr {

@@ -135,7 +135,7 @@ permalink: /landmark-numbers/nhs-in-numbers/
 <ul class="nhs-rules">
   <li><strong>Divide by 365.</strong> NHS England spends about £{{ per_day_m }} million a day, so a £50 million
     announcement is about {{ announce_hours }} hours of NHS running costs.</li>
-  <li><strong>Divide by the population.</strong> With about {{ pop | divided_by: 1000000 | round }} million people, every
+  <li><strong>Divide by the population.</strong> With about {{ pop | divided_by: 1000000 | round: 1 }} million people, every
     £1 billion is about £{{ 1000000000 | divided_by: pop | round }} per person.</li>
   <li><strong>Divide by the workforce.</strong> With about {{ wf.nurses_midwives | divided_by: 1000 }},000 nurses and
     midwives, "10,000 extra nurses" is about {{ nurse_pct }}% more.</li>

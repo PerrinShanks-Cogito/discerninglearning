@@ -1,0 +1,131 @@
+{
+  "_about": "Curated figures for /landmark-numbers/uk-and-nations/. Each measure gives a value for the UK and each nation, with its period and source. Formats: int, km2, years1, pct1, money, money2. The quarterly Claude scheduled task checks these and opens a pull request when newer figures are published.",
+  "last_reviewed": "2026-11-08",
+  "nations": [
+    { "key": "uk", "name": "UK" },
+    { "key": "england", "name": "England" },
+    { "key": "scotland", "name": "Scotland" },
+    { "key": "wales", "name": "Wales" },
+    { "key": "ni", "name": "Northern Ireland" }
+  ],
+  "uk_births": 652400,
+  "uk_deaths": 647500,
+  "births_deaths_period": "year to mid-2025",
+  "groups": [
+    {
+      "key": "people",
+      "title": "People and place",
+      "measures": [
+        {
+          "key": "population", "label": "Population", "format": "int",
+          "values": { "uk": 69483900, "england": 58834800, "scotland": 5545500, "wales": 3175200, "ni": 1928400 },
+          "period": "mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025 (published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "growth", "label": "Population growth in a year (%)", "format": "pct2",
+          "values": { "uk": 0.33, "england": 0.39, "scotland": 0.04, "wales": -0.09, "ni": 0.03 },
+          "period": "mid-2024 to mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025 (published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "median_age", "label": "Median age (years)", "format": "years1",
+          "values": { "uk": 40.9, "england": 40.6, "scotland": 43.1, "wales": 43.2, "ni": 40.6 },
+          "period": "mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025 (published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "land_km2", "label": "Land area (km²)", "format": "km2",
+          "values": { "uk": 242742.5, "england": 130312.6, "scotland": 77900.3, "wales": 20736.7, "ni": 13793.0 },
+          "period": "December 2024 boundaries",
+          "source": "ONS, Standard Area Measurements for the countries (December 2024), land to mean high water excluding inland water; UK is the sum of the four",
+          "url": "https://www.data.gov.uk/dataset/standard-area-measurements-for-the-countries-december-2024-in-the-uk"
+        }
+      ]
+    },
+    {
+      "key": "health",
+      "title": "Health",
+      "measures": [
+        {
+          "key": "le_female", "label": "Life expectancy at birth, women (years)", "format": "years1",
+          "values": { "uk": 83.0, "england": 83.3, "scotland": 81.1, "wales": 82.2, "ni": 82.6 },
+          "period": "2022 to 2024",
+          "source": "ONS, National life tables, life expectancy in the UK: 2022 to 2024 (published 10 December 2025)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/bulletins/nationallifetablesunitedkingdom/latest"
+        },
+        {
+          "key": "le_male", "label": "Life expectancy at birth, men (years)", "format": "years1",
+          "values": { "uk": 79.1, "england": 79.4, "scotland": 77.1, "wales": 78.3, "ni": 78.8 },
+          "period": "2022 to 2024",
+          "source": "ONS, National life tables, life expectancy in the UK: 2022 to 2024 (published 10 December 2025)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/bulletins/nationallifetablesunitedkingdom/latest"
+        },
+        {
+          "key": "hle_female", "label": "Healthy life expectancy at birth, women (years)", "format": "years1",
+          "values": { "uk": 60.9, "england": 61.3, "scotland": 59.4, "wales": 58.5, "ni": 60.7 },
+          "period": "2022 to 2024",
+          "source": "ONS, Healthy life expectancy, UK: between 2011 to 2013 and 2022 to 2024 (published 19 February 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/bulletins/healthstatelifeexpectanciesuk/between2011to2013and2022to2024"
+        },
+        {
+          "key": "hle_male", "label": "Healthy life expectancy at birth, men (years)", "format": "years1",
+          "values": { "uk": 60.7, "england": 60.9, "scotland": 59.1, "wales": 59.2, "ni": 60.8 },
+          "period": "2022 to 2024",
+          "source": "ONS, Healthy life expectancy, UK: between 2011 to 2013 and 2022 to 2024 (published 19 February 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/bulletins/healthstatelifeexpectanciesuk/between2011to2013and2022to2024"
+        },
+        {
+          "key": "health_per_head", "label": "Public spending on health per person", "format": "money",
+          "values": { "uk": 3487, "england": 3462, "scotland": 3539, "wales": 3758, "ni": 3659 },
+          "period": "2024/25",
+          "source": "HM Treasury, Country and regional analysis 2025, table A.15 (published 19 November 2025)",
+          "url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2025"
+        }
+      ]
+    },
+    {
+      "key": "economy",
+      "title": "Economy and work",
+      "measures": [
+        {
+          "key": "gdp_per_head", "label": "GDP per person", "format": "money",
+          "values": { "uk": 41627, "england": 42171, "scotland": 39441, "wales": 31484, "ni": 35108 },
+          "period": "2024",
+          "source": "ONS, Regional economic activity by gross domestic product, UK: 1998 to 2024 (published 23 September 2026)",
+          "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2024"
+        },
+        {
+          "key": "weekly_pay", "label": "Median weekly pay, full-time (before tax)", "format": "money2",
+          "values": { "uk": 766.6, "england": 769.5, "scotland": 775.6, "wales": 719.3, "ni": 715.6 },
+          "period": "April 2025, by where people live",
+          "source": "ONS, Annual Survey of Hours and Earnings, resident analysis (via Nomis)",
+          "url": "https://www.nomisweb.co.uk/datasets/asher"
+        },
+        {
+          "key": "employment_rate", "label": "Employment rate, ages 16 to 64 (%)", "format": "pct1",
+          "values": { "uk": 75.3, "england": 75.6, "scotland": 74.0, "wales": 73.3, "ni": 72.5 },
+          "period": "June to August 2026",
+          "source": "ONS, Labour market in the regions of the UK: October 2026 (published 20 October 2026)",
+          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/regionallabourmarket/october2026"
+        }
+      ]
+    },
+    {
+      "key": "money",
+      "title": "Public money",
+      "measures": [
+        {
+          "key": "spend_per_head", "label": "Public spending per person (identifiable)", "format": "money",
+          "values": { "uk": 13504, "england": 13134, "scotland": 15563, "wales": 15155, "ni": 16116 },
+          "period": "2024/25",
+          "source": "HM Treasury, Country and regional analysis: November 2025 (published 19 November 2025)",
+          "url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2025/country-and-regional-analysis-november-2025"
+        }
+      ]
+    }
+  ]
+}
