@@ -1,91 +1,28 @@
-Traceback (most recent call last):
-  File "/home/runner/work/discerninglearning/discerninglearning/explore/explore.py", line 36, in <module>
-    x=pd.ExcelFile(io.BytesIO(s.get(u,timeout=120).content)); print(x.sheet_names)
-                              ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 671, in get
-    return self.request("GET", url, params=params, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 635, in request
-    prep = self.prepare_request(req)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 541, in prepare_request
-    p.prepare(
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/models.py", line 439, in prepare
-    self.prepare_url(url, params)
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/models.py", line 514, in prepare_url
-    raise MissingSchema(
-requests.exceptions.MissingSchema: Invalid URL '/system/files/statistics/census-2021-ms-b19.xlsx': No scheme supplied. Perhaps you meant https:///system/files/statistics/census-2021-ms-b19.xlsx?
-
-######### MYE components
-200 ['https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2025/mye25tablesuk.xlsx', 'https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2011tomid2025/myebtablesuk20112025.xlsx', 'https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/ukpopulationestimates1838to2025/ukpopulationestimates18382025.xlsx']
-['Cover sheet', 'Contents', 'Notes', 'Geography guide', 'Related publications', 'MYE1', 'MYE2 - Persons', 'MYE2 - Females', 'MYE2 - Males', 'MYE3', 'MYE4', 'MYE5', 'MYE6', 'MYE0']
--- MYE3 (412, 15)
-['Code', 'Name', 'Geography', 'Estimated Population mid-2024', 'Births', 'Deaths', 'Births minus Deaths', 'Internal Migration Inflow', 'Internal Migration Outflow', 'Internal Migration Net', 'International Migration Inflow', 'International Migration Outflow', 'International Migration Net', 'Other', 'Estimated Population mid-2025']
-7         Code              Name Geography Estimated Population mid-2024  Births  Deaths Births minus Deaths Internal Migration Inflow Internal Migration Outflow Internal Migration Net International Migration Inflow International Migration Outflow International Migration Net Other Estimated Population mid-2025
-8    K02000001    UNITED KINGDOM   Country                      69256274  652441  647532                4909                   No data                    No data                     26                         886222                          663361                      222861  -131                      69483939
-11   E92000001           ENGLAND   Country                      58607170  561503  532711               28792                    118192                     129008                 -10816                         791404                          581370                      210034  -368                      58834812
-344  W92000004             WALES   Country                       3177949   26473   35641               -9168                     74901                      70025                   4876                          25131                           23474                        1657  -133                       3175181
-367  S92000003          SCOTLAND   Country                       5543300   45410   61566              -16156                     50200                      41600                   8600                          57600                           48300                        9300   456                       5545500
-400  N92000002  NORTHERN IRELAND   Country                       1927855   19055   17614                1441                     11279                      13913                  -2634                          12087                           10217                        1870   -86                       1928446
-
-######### TS030
-200
-"GEOGRAPHY_NAME","C2021_RELIGION_10_NAME","MEASURES_NAME","OBS_VALUE"
-"England","Total: All usual residents","Value",56490048
-"England","Total: All usual residents","Percent",100.0
-"England","No religion","Value",20715664
-"England","No religion","Percent",36.7
-"England","Christian","Value",26167899
-"England","Christian","Percent",46.3
-"England","Buddhist","Value",262433
-"England","Buddhist","Percent",0.5
-"England","Hindu","Value",1020533
-"England","Hindu","Percent",1.8
-"England","Jewish","Value",269283
-"England","Jewish","Percent",0.5
-"England","Muslim","Value",3801186
-"England","Muslim","Percent",6.7
-"England","Sikh","Value",520092
-"England","Sikh","Percent",0.9
-"England","Other religion","Value",332410
-"England","Other religion","Percent",0.6
-"England","Not answered","Value",3400548
-"England","Not answered","Percent",6.0
-"Wales","Total: All usual residents","Value",3107494
-"Wales","Total: All usual residents","Percent",100.0
-"Wales","No religion","Value",1446398
-"Wales","No religion","Percent",46.5
-"Wales","Christian","Value",1354773
-"Wales","Christian","Percent",43.6
-"Wales","Buddhist","Value",10075
-"Wales","Buddhist","Percent",0.3
-"Wales","Hindu","Value",12242
-"Wales","Hindu","Percent",0.4
-"Wales","Jewish","Value",2044
-"Wales","Jewish","Percent",0.1
-"Wales","Muslim","Value",66947
-"Wales","Muslim","Percent",2.2
-"Wales","Sikh","Value",4048
-"Wales","Sikh","Percent",0.1
-"Wales","Other religion","Value",15926
-"Wales","Other religion","Percent",0.5
-"Wales","Not answered","Value",195041
-"Wales","Not answered","Percent",6.3
-
-
-######### NISRA
-200 ['/system/files/statistics/census-2021-ms-b19.xlsx', '/system/files/statistics/census-2021-ms-b20.xlsx', '/system/files/statistics/census-2021-ms-b21.xlsx', '/system/files/statistics/census-2021-ms-b22.xlsx', '/system/files/statistics/census-2021-ms-b23.xlsx', '/system/files/statistics/census-2021-ms-b24.xlsx', '/system/files/statistics/census-2021-ms-b25.xlsx', '/system/files/statistics/census-2021-ms-b30.xlsx', '/system/files/statistics/census-2021-ms-b31.xlsx']
-
-######### UC
-200 ['https://www.gov.uk/government/statistics/announcements/universal-credit-statistics-29-april-2013-to-13-august-2026--2', '/government/statistics/universal-credit-statistics-29-april-2013-to-12-march-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-12-february-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-8-january-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-11-december-2025', '/government/statistics/universal-credit-statistics-29-april-2013-to-13-november-2025']
-https://www.gov.uk/government/statistics/announcements/universal-credit-statistics-29-april-2013-to-13-august-2026--2
+######### NISRA B19
+['Cover_sheet', 'Settlement', 'Ward', 'LGD', 'NI', 'Notes']
+-- NI (14, 11)
+                                                                                                                        0               1                    2                    3                               4                  5                            6                                              7                8            9                    10
+0                                                                                                MS-B19: Religion [note 1]             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+1                                                                                    Table population: All usual residents             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+2                                                                                       Geographic level: Northern Ireland             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+3                                                                                                      Source: Census 2021             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+4                                                     Some cells refer to notes which can be found on the notes worksheet.             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+5  This worksheet contains two tables presented vertically one above the other, with one blank row in between each table.              NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+6                                               Table MS-B19a presents counts and Table MS-B19b presents area percentages.             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+7                                                                                                MS-B19a: Religion (count)             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
+8                                                                                                                Geography  Geography code  All usual residents  Catholic \n[note 2]  Presbyterian Church in Ireland  Church of Ireland  Methodist Church in Ireland  Other Christian (including Christian related)  Other religions  No religion  Religion not stated
+9                                                                                                         Northern Ireland       N92000002              1903178               805151                          316103             219788                        44728                                         130377            25519       330983                30529
+                                    0          1        2         3         4         5         6         7         8         9         10
+2   Geographic level: Northern Ireland        NaN      NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN
+9                     Northern Ireland  N92000002  1903178    805151    316103    219788     44728    130377     25519    330983     30529
+13                    Northern Ireland  N92000002  1903178  0.423056  0.166092  0.115485  0.023502  0.068505  0.013409  0.173911  0.016041
+######### UC release
+['/government/statistics/universal-credit-statistics-29-april-2013-to-12-march-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-12-february-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-8-january-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-11-december-2025', '/government/statistics/universal-credit-statistics-29-april-2013-to-13-november-2025']
+https://www.gov.uk/government/statistics/universal-credit-statistics-29-april-2013-to-12-march-2026
 []
-DFC 404
-[]
-
-######### CRA social protection
-2024-25 England {'2. Defence': 1, '7. Health': 3462, '10. Social protection': 5322, 'Total Expenditure on Services': nan}
-2024-25 Scotland {'2. Defence': 1, '7. Health': 3539, '10. Social protection': 6123, 'Total Expenditure on Services': nan}
-2024-25 Wales {'2. Defence': 1, '7. Health': 3758, '10. Social protection': 6471, 'Total Expenditure on Services': nan}
-2024-25 Northern Ireland {'2. Defence': '-', '7. Health': 3659, '10. Social protection': 6628, 'Total Expenditure on Services': nan}
-2024-25 UK identifiable expenditure {'2. Defence': 1, '7. Health': 3487, '10. Social protection': 5475, 'Total Expenditure on Services': nan}
+['https://assets.publishing.service.gov.uk/media/69d8fdb3d3e08b8871b665b3/Ethnicity_ODS_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb3d3e08b8871b665b3/Ethnicity_ODS_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb4a1cd1c174934dc60/Ethnicity_ODS_Backseries_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb4a1cd1c174934dc60/Ethnicity_ODS_Backseries_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb3a1cd1c174934dc5f/Move_to_UC_by_Legacy_Benefits_ODS_Table_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb3a1cd1c174934dc5f/Move_to_UC_by_Legacy_Benefits_ODS_Table_2026_04.ods']
+######### DfC UC
+https://www.communities-ni.gov.uk/articles/universal-credit-statistics 200
+['https://www.communities-ni.gov.uk/articles/universal-credit-statistics', '/publications/universal-credit-statistics-may-2026', '/publications/universal-credit-statistics-february-2026', '/publications/universal-credit-statistics-november-2025', '/publications/universal-credit-statistics-august-2025', '/publications/universal-credit-statistics-may-2025', '/publications/universal-credit-statistics-february-2025', '/publications/universal-credit-statistics-august-2024', '/publications/universal-credit-statistics-may-2024', '/publications/universal-credit-statistics-february-2024']
+https://www.communities-ni.gov.uk/topics/universal-credit-statistics 404
+https://www.communities-ni.gov.uk/publications/topic/8182 404
