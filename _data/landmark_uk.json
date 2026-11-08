@@ -1401,7 +1401,50 @@
       "aviation_mt": 36.0,
       "shipping_mt": 4.7,
       "source": "DESNZ, 2025 UK greenhouse gas emissions: provisional figures (published 2 April 2026), data tables 1a and 5",
-      "url": "https://www.gov.uk/government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025"
+      "url": "https://www.gov.uk/government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025",
+      "year": 2025,
+      "total_incl_ias_mt": 407.3,
+      "targets": {
+        "budgets": [
+          {
+            "name": "4th carbon budget",
+            "years": "2023–27",
+            "limit_mt": 1950
+          },
+          {
+            "name": "5th carbon budget",
+            "years": "2028–32",
+            "limit_mt": 1725
+          },
+          {
+            "name": "6th carbon budget",
+            "years": "2033–37",
+            "limit_mt": 965,
+            "incl_ias": true
+          },
+          {
+            "name": "7th carbon budget",
+            "years": "2038–42",
+            "limit_mt": 535,
+            "incl_ias": true
+          }
+        ],
+        "budgets_source": "GOV.UK, Carbon budgets (updated 13 July 2026)",
+        "budgets_url": "https://www.gov.uk/guidance/carbon-budgets",
+        "ndc": [
+          {
+            "year": 2030,
+            "cut_pct": 68
+          },
+          {
+            "year": 2035,
+            "cut_pct": 81
+          }
+        ],
+        "ndc_source": "GOV.UK, UK's 2035 Nationally Determined Contribution",
+        "ndc_url": "https://www.gov.uk/government/publications/uks-2035-nationally-determined-contribution-ndc-emissions-reduction-target-under-the-paris-agreement",
+        "net_zero_year": 2050
+      }
     }
   }
 }
