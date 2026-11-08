@@ -1,16 +1,1 @@
-           0       1   2
-55  Sep 2025  242510 NaN
-56  Oct 2025  255090 NaN
-57  Nov 2025  263000 NaN
-58  Dec 2025  266510 NaN
-59  Jan 2026  271390 NaN
-60  Feb 2026  272380 NaN
-61  Mar 2026  272340 NaN
-62  Apr 2026  272170 NaN
-63  May 2026  271770 NaN
-SR Table 5.14: Ministry of Defence\u003c/h4\u003e\u003ctable class=\"financial-data source-tableeditor\"\u003e\n \u003ctbody\u003e\n \u003ctr class=\"total\"\u003e\n \u003ctd rowspan=\"2\" class=\"td1\"\u003e£ billion (current prices)\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003eOutturn\u003cbr\u003e2023-24\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans(\u003cspan class=\"s1\"\u003e1)\u003cbr\u003e\u003c/span\u003e2024-25\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans(\u003cspan class=\"s1\"\u003e2)\u003cbr\u003e\u003c/span\u003e2025-26\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2026-27\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2027-28\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2028-29\u003
-SR Table 5.14: Ministry of Defence £ billion (current prices) Outturn 2023-24 Plans( 1) 2024-25 Plans( 2) 2025-26 Plans 2026-27 Plans 2027-28 Plans 2028-29 Plans 2029-30 (3) Average annual real growth( 4) Phase 2 Period( 5) SR 2025 Period( 6) Resource DEL 34
-SRD Defence budget supports the ambition set out in the SDR
-SRD Defence spending will be weighted towards capital and will prioritise R\u0026amp;D and innovation
-SRD Defence budget supports the ambition set out in the SDR
-SRD Defence spending will be weighted towards capital and will prioritise R&D and innovation
+Table 5.14: Ministry of Defence\u003c/h4\u003e\u003ctable class=\"financial-data source-tableeditor\"\u003e\n \u003ctbody\u003e\n \u003ctr class=\"total\"\u003e\n \u003ctd rowspan=\"2\" class=\"td1\"\u003e£ billion (current prices)\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003eOutturn\u003cbr\u003e2023-24\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans(\u003cspan class=\"s1\"\u003e1)\u003cbr\u003e\u003c/span\u003e2024-25\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans(\u003cspan class=\"s1\"\u003e2)\u003cbr\u003e\u003c/span\u003e2025-26\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2026-27\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2027-28\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2028-29\u003c/td\u003e\n \u003ctd rowspan=\"2\" class=\"td1 numeric\"\u003ePlans\u003cbr\u003e2029-30\u003cspan class=\"s1\"\u003e(3)\u003c/span\u003e\n\u003c/td\u003e\n \u003ctd colspan=\"2\" class=\"td1 numeric\"\u003eAverage annual real growth(\u003cspan class=\"s1\"\u003e4)\u003c/span\u003e\n\u003c/td\u003e\n \u003c/tr\u003e\n \u003ctr class=\"total\"\u003e\n \u003ctd class=\"td1 numeric\"\u003ePhase 2 Period(\u003cspan class=\"s1\"\u003e5)\u003c/span\u003e\n\u003c/td\u003e\n \u003ctd class=\"td1 numeric\"\u003eSR 2025 Period(\u003cspan class=\"s1\"\u003e6)\u003c/span\u003e\n\u003c/td\u003e\n \u003c/tr\u003e\n \u003ctr\u003e\n \u003ctd class=\"td1\"\u003eResource DEL\u003c/td\u003e\n \u003ctd class=
