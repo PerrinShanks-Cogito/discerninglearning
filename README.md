@@ -122,7 +122,11 @@ combines the cost collection figures with curated figures in
 `_data/landmark_nhs.json` (budget, population, workforce, GP appointments and the
 waiting list), each with its period and source. Its per-day, per-person and
 "1 in" figures are calculated on the page. `_includes/thousands.html` formats
-numbers with commas.
+numbers with commas. The UK and its nations page,
+`/landmark-numbers/uk-and-nations/` (`_pages/landmark-numbers-uk-and-nations.html`),
+reads `_data/landmark_uk.json`: curated figures for the UK, England, Scotland,
+Wales and Northern Ireland (population, land, health, economy and public
+spending), each with its period and source. `_includes/fmt.html` formats them.
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run
 workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the
@@ -130,7 +134,8 @@ latest figures, commits the JSON files to main (it always updates the "last chec
 date) and the site redeploys. A quarterly Claude scheduled task starts it by
 pushing a change to that file on a `claude/landmark-refresh...` branch, then
 checks the result and reports what changed. Those branches can be deleted.
-The same task checks the curated figures in `_data/landmark_nhs.json` for newer
+The same task checks the curated figures in `_data/landmark_nhs.json` and
+`_data/landmark_uk.json` for newer
 releases and opens a pull request when it finds any, so you can review them before
 they go live.
 

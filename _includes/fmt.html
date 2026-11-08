@@ -1,0 +1,19 @@
+{%- comment -%}
+  Formats a landmark number. Usage: {% include fmt.html v=value f=format %}
+  Formats: int (12,345), km2 (12,345), money (£12,345), money2 (£766.60),
+  years1 (79.1), pct1 (75.3%), pct2 (0.33%, with a + sign when positive).
+{%- endcomment -%}
+{%- assign fv = include.v -%}
+{%- assign ff = include.f -%}
+{%- if fv == nil -%}–
+{%- elsif ff == "int" or ff == "km2" -%}{% include thousands.html n=fv %}
+{%- elsif ff == "money" -%}£{% include thousands.html n=fv %}
+{%- elsif ff == "money2" -%}
+  {%- assign pence = fv | times: 100 | round -%}
+  {%- assign pounds = pence | divided_by: 100 -%}
+  £{% include thousands.html n=pounds %}.{{ pence | modulo: 100 | prepend: "0" | slice: -2, 2 }}
+{%- elsif ff == "pct1" -%}{{ fv | round: 1 }}%
+{%- elsif ff == "pct2" -%}{% if fv > 0 %}+{% endif %}{{ fv | round: 2 }}%
+{%- elsif ff == "years1" -%}{{ fv | round: 1 }}
+{%- else -%}{{ fv }}
+{%- endif -%}

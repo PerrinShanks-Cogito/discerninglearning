@@ -1,0 +1,189 @@
+---
+title: The UK and its nations
+description: Landmark figures for the UK, England, Scotland, Wales and Northern Ireland, side by side.
+permalink: /landmark-numbers/uk-and-nations/
+---
+{%- assign uk = site.data.landmark_uk -%}
+{%- assign people = uk.groups | where: "key", "people" | first -%}
+{%- assign pop = people.measures | where: "key", "population" | first -%}
+{%- assign land = people.measures | where: "key", "land_km2" | first -%}
+{%- assign health = uk.groups | where: "key", "health" | first -%}
+{%- assign le_f = health.measures | where: "key", "le_female" | first -%}
+{%- assign le_m = health.measures | where: "key", "le_male" | first -%}
+{%- assign hle_f = health.measures | where: "key", "hle_female" | first -%}
+{%- assign hle_m = health.measures | where: "key", "hle_male" | first -%}
+{%- assign money = uk.groups | where: "key", "money" | first -%}
+{%- assign spend = money.measures | where: "key", "spend_per_head" | first -%}
+
+{%- assign uk_pop = pop.values.uk | times: 1.0 -%}
+{%- assign eng_share = pop.values.england | divided_by: uk_pop | times: 100 | round -%}
+{%- assign scot_pop_share = pop.values.scotland | divided_by: uk_pop | times: 100 | round -%}
+{%- assign scot_land_share = land.values.scotland | divided_by: land.values.uk | times: 100 | round -%}
+{%- assign eng_density = pop.values.england | divided_by: land.values.england | round -%}
+{%- assign scot_density = pop.values.scotland | divided_by: land.values.scotland | round -%}
+{%- assign natural = uk.uk_births | minus: uk.uk_deaths -%}
+{%- assign poor_health_f = le_f.values.uk | minus: hle_f.values.uk | round: 1 -%}
+{%- assign poor_health_m = le_m.values.uk | minus: hle_m.values.uk | round: 1 -%}
+{%- assign per_bn = 1000000000.0 | divided_by: uk_pop | round -%}
+{%- assign hle_avg = hle_f.values.uk | plus: hle_m.values.uk | divided_by: 2.0 | round -%}
+{%- assign low_n = "" -%}{%- assign high_n = "" -%}{%- assign low_v = 1000000000 -%}{%- assign high_v = 0 -%}
+{%- for n in uk.nations offset: 1 -%}
+  {%- assign v = spend.values[n.key] -%}
+  {%- if v < low_v -%}{%- assign low_v = v -%}{%- assign low_n = n.name -%}{%- endif -%}
+  {%- if v > high_v -%}{%- assign high_v = v -%}{%- assign high_n = n.name -%}{%- endif -%}
+{%- endfor -%}
+
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+
+<p class="landmark-meta">
+  Figures reviewed <strong>{{ uk.last_reviewed | date: "%-d %B %Y" }}</strong>. Each figure says which
+  period it covers, and they don't all cover the same one. I check for newer releases every quarter.
+</p>
+
+<p>
+  Many UK statistics are really English statistics, and many policies (health, education, transport) are
+  run separately in each nation. Knowing how the four nations compare helps you spot when a figure covers
+  only part of the UK, and whether a difference between them is big or small.
+</p>
+
+<h2 id="remember">Five to remember</h2>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ pop.period }}</p>
+    <p class="nhs-stat__figure">{{ uk_pop | divided_by: 100000 | round | divided_by: 10.0 }} million</p>
+    <h3 class="nhs-stat__label">People in the UK</h3>
+    <p class="nhs-stat__so"><strong>{{ eng_share }}% live in England</strong>, so a UK total is mostly an English one.
+      Every £1 billion of UK spending is about £{{ per_bn }} per person.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ uk.births_deaths_period }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=uk.uk_births %} births</p>
+    <h3 class="nhs-stat__label">and {% include thousands.html n=uk.uk_deaths %} deaths in the UK</h3>
+    <p class="nhs-stat__so">{% if natural > 0 %}Births only just outnumber deaths, by about {% include thousands.html n=natural %},
+      so almost all of the UK's population growth now comes from migration.{% else %}Deaths now outnumber births, so all of the
+      UK's population growth comes from migration.{% endif %}</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ land.period }}</p>
+    <p class="nhs-stat__figure">{{ scot_land_share }}% of the land</p>
+    <h3 class="nhs-stat__label">is in Scotland, but only {{ scot_pop_share }}% of the people</h3>
+    <p class="nhs-stat__so">England has about {% include thousands.html n=eng_density %} people per km²; Scotland about {{ scot_density }}.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ hle_f.period }}</p>
+    <p class="nhs-stat__figure">About {{ hle_avg }} years</p>
+    <h3 class="nhs-stat__label">of life in good health, on average</h3>
+    <p class="nhs-stat__so">Life expectancy is {{ le_f.values.uk }} for women and {{ le_m.values.uk }} for men, so the
+      average person spends about {{ poor_health_f | round }} (women) or {{ poor_health_m | round }} (men) years in poorer health.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ spend.period }}</p>
+    <p class="nhs-stat__figure">{% include fmt.html v=low_v f="money" %} to {% include fmt.html v=high_v f="money" %}</p>
+    <h3 class="nhs-stat__label">Public spending per person, {{ low_n }} to {{ high_n }}</h3>
+    <p class="nhs-stat__so">Identifiable public spending per person is lowest in {{ low_n }} and highest in {{ high_n }}.
+      The UK average is {% include fmt.html v=spend.values.uk f="money" %}.</p>
+  </section>
+</div>
+
+<h2 id="share">Share of the UK</h2>
+{%- assign bars = "population,land_km2" | split: "," %}
+<div class="uk-share">
+  {%- for bk in bars %}
+  {%- assign bm = people.measures | where: "key", bk | first %}
+  <div class="uk-share__row">
+    <p class="uk-share__label">{% if bk == "population" %}People{% else %}Land{% endif %}</p>
+    <div class="uk-share__bar" role="img" aria-label="{% if bk == 'population' %}Share of UK population{% else %}Share of UK land{% endif %}: {% for n in uk.nations offset: 1 %}{% assign sv = bm.values[n.key] | divided_by: bm.values.uk | times: 100 | round %}{{ n.name }} {{ sv }}%{% unless forloop.last %}, {% endunless %}{% endfor %}">
+      {%- for n in uk.nations offset: 1 %}
+      {%- assign sv = bm.values[n.key] | times: 100.0 | divided_by: bm.values.uk %}
+      <span class="uk-share__seg uk-share__seg--{{ n.key }}" style="width: {{ sv | round: 2 }}%">{% if sv >= 15 %}{{ sv | round }}%{% endif %}</span>
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endfor %}
+  <p class="uk-share__legend" aria-hidden="true">
+    {%- for n in uk.nations offset: 1 %}
+    {%- assign ps = pop.values[n.key] | times: 100.0 | divided_by: pop.values.uk | round %}
+    {%- assign ls = land.values[n.key] | times: 100.0 | divided_by: land.values.uk | round %}
+    <span><i class="uk-share__key uk-share__seg--{{ n.key }}"></i>{{ n.name }}: {{ ps }}% of people, {{ ls }}% of land</span>
+    {%- endfor %}
+  </p>
+</div>
+
+{%- for g in uk.groups %}
+<h2 id="{{ g.key }}">{{ g.title }}</h2>
+<table class="landmark-table uk-table">
+  <thead>
+    <tr>
+      <th scope="col">Measure</th>
+      {%- for n in uk.nations %}<th scope="col" class="num">{{ n.name }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {%- for m in g.measures %}
+    <tr>
+      <th scope="row">{{ m.label }}<span class="landmark-note">{{ m.period }} &middot; <a href="{{ m.url }}">source</a></span></th>
+      {%- for n in uk.nations %}
+      {%- assign cell = m.values[n.key] %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{% include fmt.html v=cell f=m.format %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endfor %}
+    {%- if g.key == "people" %}
+    <tr class="uk-table__derived">
+      <th scope="row">People per km²<span class="landmark-note">Population divided by land area</span></th>
+      {%- for n in uk.nations %}
+      {%- assign dv = pop.values[n.key] | divided_by: land.values[n.key] | round %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{% include thousands.html n=dv %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}
+    {%- if g.key == "money" %}
+    <tr class="uk-table__derived">
+      <th scope="row">Compared with the UK average<span class="landmark-note">UK = 100</span></th>
+      {%- for n in uk.nations %}
+      {%- assign iv = spend.values[n.key] | times: 100.0 | divided_by: spend.values.uk | round %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ iv }}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}
+  </tbody>
+</table>
+{%- endfor %}
+
+<h2 id="reading-these">Reading these numbers</h2>
+<ul>
+  <li>
+    <strong>Check which nation a figure covers.</strong> Many "UK" statistics, including most NHS figures, cover
+    England only. With {{ eng_share }}% of the population, England dominates any UK total.
+  </li>
+  <li>
+    <strong>Spending per person reflects need as well as choices.</strong> The devolved governments are funded
+    largely through a block grant (set using the Barnett formula), and older, more rural or poorer populations
+    cost more to serve. Higher spending per person is not by itself a sign of waste or generosity.
+  </li>
+  <li>
+    <strong>GDP per person can mislead for small economies.</strong> It counts output where it is produced, so
+    commuting, company headquarters and North Sea oil (allocated to the UK, not to Scotland) all affect it.
+    Median pay is a better guide to what people earn.
+  </li>
+  <li>
+    <strong>Healthy life expectancy is based on how people rate their own health,</strong> so it is less precise
+    than life expectancy, especially for the smaller nations.
+  </li>
+  <li>
+    <strong>The periods differ.</strong> Population is mid-2025, spending is 2024/25, employment is mid-2026.
+    Compare like with like before drawing conclusions.
+  </li>
+</ul>
+
+<details class="landmark-method">
+  <summary>Where these figures come from</summary>
+  <p>
+    Every row links to its source: the Office for National Statistics (population, land area, life expectancy,
+    healthy life expectancy, GDP, pay and employment) and HM Treasury's Country and regional analysis (public
+    spending). Median pay comes from the ONS Annual Survey of Hours and Earnings through its Nomis service.
+    People per km², the index and the shares are worked out from the figures shown. I check for newer releases
+    every quarter and update the page through a reviewed change.
+  </p>
+  <p>This is my personal site, so these are my reading of public data.</p>
+</details>
