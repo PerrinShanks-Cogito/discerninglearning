@@ -1,14 +1,19 @@
-import requests
+import requests, io
+import pandas as pd
+pd.set_option("display.width",400); pd.set_option("display.max_columns",40); pd.set_option("display.max_colwidth",50); pd.set_option("display.max_rows",400)
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (Discerning Learning landmark numbers)"})
-for p in ["/government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025","/government/statistics/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2024","/government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024"]:
-    try:
-        j=s.get("https://www.gov.uk/api/content"+p,timeout=60).json(); print("#####",p,j.get("public_updated_at"))
-        for a in j.get("details",{}).get("attachments",[]): print("  ",a.get("title"),"|",a.get("url"))
-    except Exception as e: print("ERR",p,e)
-import re
-for u in ["https://naei.energysecurity.gov.uk/reports/greenhouse-gas-inventories-england-scotland-wales-and-northern-ireland-1990-2024","https://naei.energysecurity.gov.uk/data/data-selector"]:
-    try:
-        t=s.get(u,timeout=60).text; print("#####",u,len(t))
-        for l in sorted(set(re.findall(r'href="([^"]+\.(?:xlsx|xls|csv|ods|pdf|zip))"',t))): print("  ",l)
-    except Exception as e: print("ERR",u,e)
-# 1794166393
+A="https://assets.publishing.service.gov.uk/media/"
+x=pd.ExcelFile(io.BytesIO(s.get(A+"69ccdb9ab50f8f8dfb8559b3/2025-provisional-greenhouse-gas-emissions-statistics-data-tables.xlsx",timeout=180).content))
+print("##### PROV",x.sheet_names)
+for sh in x.sheet_names:
+    d=pd.read_excel(x,sh,header=None).dropna(how="all",axis=1).dropna(how="all")
+    if d.shape[1]>8: d=pd.concat([d.iloc[:,:2],d.iloc[:,-4:]],axis=1)
+    print("=====",sh,d.shape); print(d.head(45).to_string()[:5000])
+x=pd.ExcelFile(io.BytesIO(s.get(A+"6a3bacc7eaee00074150f326/2005-24-uk-local-authority-ghg-emissions.xlsx",timeout=300).content))
+print("##### LA",x.sheet_names)
+for sh in x.sheet_names:
+    d=pd.read_excel(x,sh,header=None)
+    print("=====",sh,d.shape); print(d.head(8).to_string()[:2500])
+    m=d[d.astype(str).apply(lambda r: r.str.fullmatch(r"(England|Scotland|Wales|Northern Ireland|Unallocated.*|National Total|UK|United Kingdom)").any(),axis=1)]
+    if len(m): print("--- nation rows"); print(m.tail(30).to_string()[:9000])
+# 1794166431
