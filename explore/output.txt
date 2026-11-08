@@ -1,14 +1,101 @@
-<StringArray>
-['Local Areas', 'Region', 'Combined Authority', 'Integrated Care Board', 'Country', 'Scottish Health Board', 'Welsh Health Board']
-Length: 7, dtype: str
-              Period Area type         Area name     Sex Age group   HLE   LCI   UCI  Proportion (%)
-104600  2022 to 2024   Country           England    Male        <1  60.9  60.7  61.2              77
-104620  2022 to 2024   Country           England  Female        <1  61.3  61.0  61.6              74
-109040  2022 to 2024   Country  Northern Ireland    Male        <1  60.8  60.0  61.7              77
-109060  2022 to 2024   Country  Northern Ireland  Female        <1  60.7  59.8  61.6              74
-131600  2022 to 2024   Country          Scotland    Male        <1  59.1  58.4  59.8              77
-131620  2022 to 2024   Country          Scotland  Female        <1  59.4  58.6  60.2              73
-132080  2022 to 2024   Country    United Kingdom    Male        <1  60.7  60.5  60.9              77
-132100  2022 to 2024   Country    United Kingdom  Female        <1  60.9  60.7  61.2              73
-146480  2022 to 2024   Country             Wales    Male        <1  59.2  58.4  59.9              76
-146500  2022 to 2024   Country             Wales  Female        <1  58.5  57.6  59.4              71
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+/home/runner/work/discerninglearning/discerninglearning/explore/explore.py:21: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m=d.astype(str).apply(lambda r: r.str.contains(r"^(England|Wales|Scotland|Great Britain|United Kingdom|UK|GB)$").any(),axis=1)
+AGES [('All Ages', '200'), ('Aged 16\\u002B', '202'), ('Aged 16 to 64', '203'), ('Aged 16 to 24', '250'), ('Aged 16 to 17', '204'), ('Aged 50 to 64', '208'), ('Aged 65\\u002B', '209'), ('All Ages', '0'), ('Age 16', '117'), ('Aged 60-64', '14'), ('Age 64', '165'), ('Aged 65-69', '15'), ('Age 65', '166')]
+MYE date=latest 200
+"DATE_NAME","GEOGRAPHY_NAME","C_AGE_NAME","OBS_VALUE"
+"2025","United Kingdom","All Ages",69483939
+"2025","United Kingdom","Aged 16 to 64",43692781
+"2025","United Kingdom","Aged 65+",13460704
+"2025","Great Britain","All Ages",67555493
+"2025","Great Britain","Aged 16 to 64",42499587
+"2025","Great Britain","Aged 65+",13104219
+"2025","England","All Ages",58834812
+"2025","England","Aged 16 to 64",37060671
+"2025","England","Aged 65+",11234391
+"2025","Wales","All Ages",3175181
+"2025","Wales","Aged 16 to 64",1936178
+"2025","Wales","Aged 65+",705065
+"2025","Scotland","All Ages",5545500
+"2025","Scotland","Aged 16 to 64",3502738
+"2025","Scotland","Aged 65+",1164763
+"2025","Northern Ireland","All Ages",1928446
+"2025","Northern Ireland","Aged 16 to 64",1193194
+"2025","Northern Ireland","Aged 65+",356485
+"2025","England and Wales","All Ages",62009993
+"2025","England and Wales","Aged 16 to 64",38996849
+"2025","England and Wales","Aged 65+",11939456
+
+MYE date=2025 200
+"DATE_NAME","GEOGRAPHY_NAME","C_AGE_NAME","OBS_VALUE"
+"2025","United Kingdom","All Ages",69483939
+"2025","United Kingdom","Aged 16 to 64",43692781
+"2025","United Kingdom","Aged 65+",13460704
+"2025","Great Britain","All Ages",67555493
+"2025","Great Britain","Aged 16 to 64",42499587
+"2025","Great Britain","Aged 65+",13104219
+"2025","England","All Ages",58834812
+"2025","England","Aged 16 to 64",37060671
+"2025","England","Aged 65+",11234391
+"2025","Wales","All Ages",3175181
+"2025","Wales","Aged 16 to 64",1936178
+"2025","Wales","Aged 65+",705065
+"2025","Scotland","All Ages",5545500
+"2025","Scotland","Aged 16 to 64",3502738
+"2025","Scotland","Aged 65+",1164763
+"2025","Northern Ireland","All Ages",1928446
+"2025","Northern Ireland","Aged 16 to 64",1193194
+"2025","Northern Ireland","Aged 65+",356485
+"2025","England and Wales","All Ages",62009993
+"2025","England and Wales","Aged 16 to 64",38996849
+"2025","England and Wales","Aged 65+",11939456
+
+HHLINKS 200 ['/file?uri=/peoplepopulationandcommunity/birthsdeathsandmarriages/families/datasets/householdsbyhouseholdsizeregionsofenglandandgbconstituentcountries/2025/householdsizebyregionscountries2025.xlsx', '/file?uri=/peoplepopulationandcommunity/birthsdeathsandmarriages/families/datasets/householdsbyhouseholdsizeregionsofenglandandgbconstituentcountries/2024/householdsizebyregionscountries2024.xlsx', '/file?uri=/peoplepopulationandcommunity/birthsdeathsandmarriages/families/datasets/householdsbyhouseholdsizeregionsofenglandandgbconstituentcountries/2023/householdsizebyregionscountries2023.xlsx', '/file?uri=/peoplepopulationandcommunity/birthsdeathsandmarriages/families/datasets/householdsbyhouseholdsizeregionsofenglandandgbconstituentcountries/2022/householdsizebyregionstable1.xlsx']
+SHEETS ['Cover sheet', 'Notes', 'Statistical robustness', 'Covid-19 and LFS', 'North_East', 'North_West', 'Yorkshire_and_The_Humber', 'East_Midlands', 'West_Midlands', 'East', 'London', 'South_East', 'South_West', 'England', 'Wales', 'Scotland']
+--- SHEET Cover sheet (56, 2)
+                                                                                                                               0                         1
+0                                                                                                             Households by size                       NaN
+1                                                                                                  Date published: 17 April 2026                       NaN
+2                                                                                           This spreadsheet contains 12 tables.                       NaN
+3   All tables cover estimates of the number of households by the number of people living within the household, for 2015 to 2025                       NaN
+4                                                                   Tabs 1 to 9 cover estimates for the nine regions of England.                       NaN
+5                                                         Tabs 10 to 12 cover estimates for the three nations of Great Britain.                        NaN
+6                                                                                                              Table of Contents                       NaN
+7                                                                                                                    Table Title             Link to table
+8                                                                                    Households by size North East, 2015 to 2025                North East
+9                                                                                    Households by size North West, 2015 to 2025                North West
+10                                                                     Households by size Yorkshire and The Humber, 2015 to 2025  Yorkshire and The Humber
+11                                                                                Households by size East Midlands, 2015 to 2025             East Midlands
+                                            0         1
+17   Households by size England, 2015 to 2025   England
+18     Households by size Wales, 2015 to 2025     Wales
+19  Households by size Scotland, 2015 to 2025  Scotland
