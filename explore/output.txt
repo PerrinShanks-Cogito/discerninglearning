@@ -1,8 +1,67 @@
-294161 CONTEXT "link": "https://www.england.nhs.uk/publication/2025-26-national-cost-collection-data-publication/", "title": {"rendered": "2025/26 National Cost Collection Data Publication"}, "author": 2157, "template": "", "meta": {"_acf_changed": false, "ep_exclude_from_search": false, "_links_to": "", "_links_to_target": ""}, "categories": [], "publication-type": [2581], "coauthors": [3712], "class_list": ["post-294161", "document", "type-document", "status-publish", "hentry", "publication-type-data-statistics"], "acf": [], "custom_fields": {"field_57ed4101bec1c": "<p>The 2025/26 National Cost Collection data was published as Power BI dashboards.</p> <ul> <li><a class=\"external-link\" href=\"https://app.powerbi.com/view?r=eyJrIjoiNDk2ZTU1ODQtMjIzNi00OGNlLWE0ZmMtNjExY2U1NDAwZGUwIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9\" rel=\"external\">National schedule of NHS costs</a>\u00a0\
+NOMIS NM_30_1 200
+"DATE_NAME","GEOGRAPHY_NAME","GEOGRAPHY_CODE","SEX_NAME","ITEM_NAME","PAY_NAME","OBS_VALUE"
+"2025","United Kingdom","K02000001","Full Time Workers","Median","Weekly pay - gross",766.6
+"2025","Great Britain","K03000001","Full Time Workers","Median","Weekly pay - gross",766.6
+"2025","England","E92000001","Full Time Workers","Median","Weekly pay - gross",769.5
+"2025","Wales","W92000004","Full Time Workers","Median","Weekly pay - gross",719.3
+"2025","Scotland","S92000003","Full Time Workers","Median","Weekly pay - gross",775.6
+"2025","Northern Ireland","N92000002","Full Time Workers","Median","Weekly pay - gross",715.6
+"2025","England and Wales","K04000001","Full Time Workers","Median","Weekly pay - gross",766.6
 
-294161 CONTEXT ", "type-document", "status-publish", "hentry", "publication-type-data-statistics"], "acf": [], "custom_fields": {"field_57ed4101bec1c": "<p>The 2025/26 National Cost Collection data was published as Power BI dashboards.</p> <ul> <li><a class=\"external-link\" href=\"https://app.powerbi.com/view?r=eyJrIjoiNDk2ZTU1ODQtMjIzNi00OGNlLWE0ZmMtNjExY2U1NDAwZGUwIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9\" rel=\"external\">National schedule of NHS costs</a>\u00a0\u2013 The main schedule, showing data for the whole range of services provided by provider, including admitted patient care on a finished consultant episode (FCE) basis.</li> <li><a class=\"external-link\" href=\"https://app.powerbi.com/view?r=eyJrIjoiN2Y4MzhiYmQtZDM0My00YjJmLWE0YWEtMjg2MGFjMjNmZmEyIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9\" rel=\"external\">National Cost Collection Index</a>\u00a0\
+NOMIS NM_30_1 200
+"DATE_NAME","GEOGRAPHY_NAME","GEOGRAPHY_CODE","SEX_NAME","ITEM_NAME","PAY_NAME","OBS_VALUE"
+"2025","United Kingdom","K02000001","Total","Median","Weekly pay - gross",642.5
+"2025","Great Britain","K03000001","Total","Median","Weekly pay - gross",644.9
+"2025","England","E92000001","Total","Median","Weekly pay - gross",648.4
+"2025","Wales","W92000004","Total","Median","Weekly pay - gross",601.8
+"2025","Scotland","S92000003","Total","Median","Weekly pay - gross",642.9
+"2025","Northern Ireland","N92000002","Total","Median","Weekly pay - gross",594.1
+"2025","England and Wales","K04000001","Total","Median","Weekly pay - gross",645.2
 
-275980 CONTEXT ": "https://www.england.nhs.uk/publication/2024-25-national-cost-collection-data-publication/", "title": {"rendered": "2024/25 National Cost Collection Data Publication"}, "author": 2107, "template": "", "meta": {"_acf_changed": false, "ep_exclude_from_search": false, "_links_to": "", "_links_to_target": ""}, "categories": [2874], "publication-type": [2581], "coauthors": [3643], "class_list": ["post-275980", "document", "type-document", "status-publish", "hentry", "category-finance", "publication-type-data-statistics"], "acf": [], "custom_fields": {"field_57ed4101bec1c": "<p>The 2024/25 National Cost Collection data has been published as Power BI dashboards.</p> <ul> <li><a href=\"https://app.powerbi.com/view?r=eyJrIjoiMzU3ZmI4Y2UtOGYxZS00OGNlLTlkYjgtNTM3ZjViN2NhN2RkIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9\">National schedule of NHS costs</a>\u00a0\u2013 The main sc
+NOMIS NM_99_1 200
+"DATE_NAME","GEOGRAPHY_NAME","GEOGRAPHY_CODE","SEX_NAME","ITEM_NAME","PAY_NAME","OBS_VALUE"
+"2025","United Kingdom","K02000001","Full Time Workers","Median","Weekly pay - gross",766.6
+"2025","Great Britain","K03000001","Full Time Workers","Median","Weekly pay - gross",766.6
+"2025","England","E92000001","Full Time Workers","Median","Weekly pay - gross",770.7
+"2025","Wales","W92000004","Full Time Workers","Median","Weekly pay - gross",704.3
+"2025","Scotland","S92000003","Full Time Workers","Median","Weekly pay - gross",773.8
+"2025","Northern Ireland","N92000002","Full Time Workers","Median","Weekly pay - gross",713.1
+"2025","England and Wales","K04000001","Full Time Workers","Median","Weekly pay - gross",766.6
 
-275980 CONTEXT  "class_list": ["post-275980", "document", "type-document", "status-publish", "hentry", "category-finance", "publication-type-data-statistics"], "acf": [], "custom_fields": {"field_57ed4101bec1c": "<p>The 2024/25 National Cost Collection data has been published as Power BI dashboards.</p> <ul> <li><a href=\"https://app.powerbi.com/view?r=eyJrIjoiMzU3ZmI4Y2UtOGYxZS00OGNlLTlkYjgtNTM3ZjViN2NhN2RkIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9\">National schedule of NHS costs</a>\u00a0\u2013 The main schedule, showing data for the whole range of services provided by provider, including admitted patient care on a finished consultant episode (FCE) basis.</li> <li><a href=\"https://app.powerbi.com/view?r=eyJrIjoiYTRjY2E4MzEtZThmMC00YWMzLWIwZjgtNTc4NTdlMWViMGVmIiwidCI6IjM3YzM1NGIyLTg1YjAtNDdmNS1iMjIyLTA3YjQ4ZDc3NGVlMyJ9\">National Cost Collection Index</a>\u00a0\u2013 The Nationa
+NOMIS NM_99_1 200
+"DATE_NAME","GEOGRAPHY_NAME","GEOGRAPHY_CODE","SEX_NAME","ITEM_NAME","PAY_NAME","OBS_VALUE"
+"2025","United Kingdom","K02000001","Total","Median","Weekly pay - gross",642.5
+"2025","Great Britain","K03000001","Total","Median","Weekly pay - gross",644.4
+"2025","England","E92000001","Total","Median","Weekly pay - gross",649.8
+"2025","Wales","W92000004","Total","Median","Weekly pay - gross",589.5
+"2025","Scotland","S92000003","Total","Median","Weekly pay - gross",638.0
+"2025","Northern Ireland","N92000002","Total","Median","Weekly pay - gross",591.9
+"2025","England and Wales","K04000001","Total","Median","Weekly pay - gross",645.4
 
+GEO 200 {
+
+"structure" :{"codelists" :{"codelist" :[
+{"agencyid" :"NOMIS","id" :"CL_30_1_GEOGRAPHY","code" :[
+{"annotations" :{"annotation" :[
+{"annotationtext" :"countries","annotationtitle" :"TypeName"},{"annotationtext" :499,"annotationtitle" :"TypeCode"},{"annotationtext" :"K02000001","annotationtitle" :"GeogCode"}]},"description" :{"value" :"United Kingdom","lang" :"en"},"value" :2092957697},{"annotations" :{"annotation" :[
+{"annotationtext" :"countries","annotationtitle" :"TypeName"},{"annotationtext" :499,"annotationtitle" :"TypeCode"},{"annotationtext" :"K03000001","annotationtitle" :"GeogCode"}]},"description" :{"value" :"Great Britain","lang" :"en"},"value" :2092957698},{"annotations" :{"annotation" :[
+{"annotationtext" :"countries","annotationtitle" :"TypeName"},{"annotationtext" :499,"annotationtitle" :"TypeCode"},{"annotationtext" :"E92000001","annotationtitle" :"GeogCode"}]},"description" :{"value" :"England","lang" :"en"},"value" :2092957699},{"annotations" :{"annotation" :[
+{"annotationtext" :"countries","annotationtitle" :"TypeName"},{"annotationtext" :499,"annotationtitle" :"TypeCode"},{"annotationtext" :"W92000004","annotationtitle" :"GeogCode"}]},"parentcode" :2092957700,"description" :{"value" :"Wales","lang" :"en"},"value" :2092957700},{"annotations" :{"annotation" :[
+{"annotationtext" :"countries","annotationtitle" :"TypeName"},{"annotationtext" :499,"annotationtitle" :"TypeCode"},{"annotationtext" :"S92000003","annotationtitle" :"GeogCode"}]},"parentc
+LM november2026 404
+LM october2026 200
+    The highest employment rate in the UK was in the South West (79.
+   5%); the highest unemployment rate was in London (6.
+    headline estimate Table 1: Summary of latest headline estimates and quarterly changes, for regions of the UK, seasonally adjusted, June to August 2026 [Notes 1, 5 and 6] Employment rate (%) aged 16 to 64 years [Note 2] Change on March to May 2026 Unemployment rate (%) aged 16 years and over [Note 3] Change on March to May 2026 Inactivity rate (%) aged 16 to 64 years [Note 4] Change on March to May 2026 UK 75.
+    Calculation of headline employment rate: number of employed people aged 16 to 64 years, divided by the population aged 16 to 64 years.
+    Calculation of headline unemployment rate: number of unemployed people aged 16 years and over divided by the sum of employed people aged 16 years and over plus unemployed people aged 16 years and over.
+   csv Table 2: Summary of latest headline estimates and annual changes, for regions of the UK, seasonally adjusted, June to August 2026 [Notes 1, 5 and 6] Employment rate (%) aged 16 to 64 years [Note 2] Change on June to August 2025 Unemployment rate (%) aged 16 years and over [Note 3] Change on June to August 2025 Inactivity rate (%) aged 16 to 64 years [Note 4] Change on June to August 2025 UK 75.
+    Calculation of headline employment rate: number of employed people aged 16 to 64 years, divided by the population aged 16 to 64 years.
+    Calculation of headline unemployment rate: number of unemployed people aged 16 years and over divided by the sum of employed people aged 16 years and over plus unemployed people aged 16 years and over.
+    The employment rate is the proportion of people aged between 16 and 64 years who are in employment.
+    The unemployment rate is not the proportion of the total population who are unemployed.
+HLEREL 200
+['/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/inputsforcalculatinghealthylifeexpectancyuk', '/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/healthstatelifeexpectancyallagesuk']
+CRA 200
+['https://assets.publishing.service.gov.uk/media/691b09fe5a253e2c40d705d1/CRA_2025_Interactive_Table.xlsx', 'https://assets.publishing.service.gov.uk/media/691b09cae39a085bda43ee09/CRA2025_Methodology_Notes.xlsx', 'https://assets.publishing.service.gov.uk/media/691b09b184a267da57d705d1/CRA_2025_Chapter_B_tables.xlsx', 'https://assets.publishing.service.gov.uk/media/691b0990d140bbbaa59a28ad/CRA_2025_Chapter_A_tables.xlsx', 'https://assets.publishing.service.gov.uk/media/691b09e484a267da57d705d2/CRA_2025_Database_for_Publication.xlsx']
+['https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/uksecondestimateofgdpdatatables/quarter2aprtojune2025quarterlynationalaccounts/quarterlynationalaccountsdatatables.xlsx']
