@@ -1,7 +1,88 @@
-######### OBR databank
-https://obr.uk/data/ 200
-['#databank', '/monthly-public-finances-briefing', 'https://obr.uk/download/historical-public-finances-database/?tmstv=1793986700', 'https://obr.uk/download/public-finances-databank-october-2026-efo/?tmstv=1793986700', 'https://obr.uk/monthly-public-finances-briefing/', 'https://obr.uk/public-finances-databank-2019-20/', 'https://obr.uk/public-finances-databank-2020-21', 'https://obr.uk/public-finances-databank-2021-22/', 'https://obr.uk/public-finances-databank-2022-23/', 'https://obr.uk/public-finances-databank-2023-24/', 'https://obr.uk/public-finances-databank-2024-25/', 'https://obr.uk/public-finances-databank-2025-26/', 'https://obr.uk/public-finances-databank-2026-27/']
-https://obr.uk/public-finances-databank/ 200
-['/monthly-public-finances-briefing', 'https://obr.uk/download/public-finances-databank-april-2020/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-august-2019/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-december-2020/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-february-2020/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-january-2020/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-july-2019/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-june-2019/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-march-2020-2/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-march-2020/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-may-2019/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-november-2019/?tmstv=1793991348', 'https://obr.uk/download/public-finances-databank-september-2019/?tmstv=1793991348', 'https://obr.uk/public-finances-databank-2019-20/', 'https://obr.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fobr.uk%2Fpublic-finances-databank-2019-20%2F', 'https://obr.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fobr.uk%2Fpublic-finances-databank-2019-20%2F&#038;format=xml']
-######### ONS PSF appendix D
-404 []
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/openpyxl/worksheet/header_footer.py:48: UserWarning: Cannot parse header or footer so it will be ignored
+  warn("""Cannot parse header or footer so it will be ignored""")
+200 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet 395258 https://obr.uk/docs/sodugn2q20l901oy19v1cz5e/PSF_aggregates_databank_Oct_EFO.xlsx
+['Changes since last (OLD)', 'Aggregates (£bn)', 'Aggregates (per cent of GDP)', 'Aggregates (2025-26 prices)', 'Receipts (£bn)', 'Public finances since 1900', 'Glossary']
+-- Changes since last (OLD) (93, 90)
+    0           1                               2                          3                                  4                             5             6                               7
+0 NaN         NaN                       £ billion                        NaN                                NaN                           NaN           NaN                             NaN
+1 NaN         NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
+2 NaN         NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
+3 NaN         NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
+4 NaN    ONS code                            JW2O                       KX5Q                               JW2Q                         -JW2Z         -JW2S                             NaN
+5 NaN  Derivation                               a                       
+-- Aggregates (£bn) (97, 34)
+    0           1                               2                          3                                  4                             5             6                               7
+0 NaN         NaN                       £ billion                        NaN                                NaN                           NaN           NaN                             NaN
+1 NaN         NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
+2 NaN         NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
+3 NaN         NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
+4 NaN    ONS code                            JW2O                       KX5Q                               JW2Q                         -JW2Z         -JW2S                             NaN
+5 NaN  Derivation                               a                       
+-- Aggregates (per cent of GDP) (94, 71)
+    0        1                               2                          3                                  4                             5             6                               7
+0 NaN      NaN                Per cent of GDP1                        NaN                                NaN                           NaN           NaN                             NaN
+1 NaN      NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
+2 NaN      NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
+3 NaN      NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
+4 NaN  1948-49                       42.940919                  38.599562                          33.234136                      2.634573      2.730853                        5.365427
+5 NaN  1949-50                       43.298545                  38.474813                 
+-- Aggregates (2025-26 prices) (85, 31)
+    0        1                               2                          3                                  4                             5             6                               7
+0 NaN      NaN      £ billion (2024-25 prices)                        NaN                                NaN                           NaN           NaN                             NaN
+1 NaN      NaN                             NaN                        NaN                                NaN                           NaN           NaN                             NaN
+2 NaN      NaN        Receipts and expenditure                        NaN                                NaN                           NaN           NaN                             NaN
+3 NaN      NaN  Public sector current receipts  Total managed expenditure  Public sector current expenditure  Public sector net investment  Depreciation  Public sector gross investment
+4 NaN  1955-56                      229.885113                 228.644256                         183.222353                      27.56009     17.861812                       45.421902
+5 NaN  1956-57                      231.873078                 234.398794                 
+-- Receipts (£bn) (43, 34)
+    0    1                               2            3            4                                                      5                      6               7
+0 NaN  NaN  Public sector current receipts          NaN          NaN                                                    NaN                    NaN             NaN
+1 NaN  NaN                             NaN          NaN          NaN                                                    NaN                    NaN             NaN
+2 NaN  NaN                             NaN          NaN          NaN                                                    NaN                    NaN             NaN
+3 NaN  NaN        VAT (net of VAT refunds)  VAT refunds  Fuel duties  Stamp duty land tax (includes Scottish LBTT and ATED)  Stamp taxes on shares  Tobacco duties
+4 NaN  NaN                            CTRU         AHGO         CUDG                                                   MM9F                   BKST            GTAO
+5 NaN  NaN                             NaN          NaN          NaN                                                    NaN                    NaN             NaN
+-- Public finances since 1900 (148, 6)
+    0                                                                                                                                                                                                                                                                                                                                                                    1                       2                      3                                    4                               5
+0 NaN                                                                                                                                                                                                                                                                                                                                  Key public finances data since 1900                     NaN                    NaN                                  NaN                             NaN
+1 NaN                                                                                                                                       Forecast as of March 2026 Economic and fiscal outlook, latest outturns as of 21 July 2026 from ONS/HM 
+-- Glossary (23, 5)
+    0                               1                                                                                                                                                                                                                           2                                                                                            3         4
+0 NaN                             NaN                                                                                                                                                                                                                         NaN                                                                                          NaN       NaN
+1 NaN                        Glossary                                                                                                                                                                                                                         NaN                                                                                          NaN       NaN
+2 NaN                             NaN                                                                                
+== RECEIPTS Receipts (£bn) hdr 3 row 32
+    np.float64(nan) | nan
+    nan | 2025-26
+    'VAT (net of VAT refunds)' | 180.326
+    'VAT refunds' | 30.5
+    'Fuel duties' | 24.559
+    'Stamp duty land tax (includes Scottish LBTT and ATED)' | 16.627
+    'Stamp taxes on shares' | 4.735
+    'Tobacco duties' | 7.468
+    'Alcohol duties' | 12.432
+    'Vehicle excise duties1' | 9.031
+    'Air passenger duty' | 4.616
+    'Insurance premium tax' | 9.039
+    'Climate change levy and carbon price floor' | 1.74
+    'Environmental levies (Renewables Obligation and Contracts for Difference)2' | 11.796999999999999
+    'Emissions trading scheme' | 2.122
+    'Diverted profits tax' | 0.604
+    'Pay as your earn (PAYE) income tax' | 280.513
+    'Self assessed (SA) income tax' | 54.071
+    'Other income tax' | -5.246
+    'Capital gains tax' | 24.31
+    'Onshore corporation tax (includes Bank Surcharge and EGL)3' | 97.798
+    'Offshore corporation tax' | 1.794
+    'Petroleum revenue tax' | -0.443
+    'Energy profits levy' | 2.756
+    'Bank levy' | 1.515
+    'Licence fee receipts' | 3.91
+    'Inheritance tax' | 8.466
+    'National insurance contributions (NICs)' | 204.429
+    'Council tax' | 50.444
+    'Public sector interest and dividend receipts' | 40.646
+    'Public sector gross operating surplus (GOS)' | 82.91
+    'Other public sector taxes and receipts' | 67.84299999999985
+    'Public sector current receipts' | 1231.312
+    'National accounts taxes' | 1104.686
