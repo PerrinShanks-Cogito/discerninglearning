@@ -593,6 +593,114 @@
       "targets": "The 2025 Spending Review plans defence spending of 2.6% of GDP in 2027/28. At NATO's 2025 summit, the UK and other members agreed to spend 3.5% of GDP on core defence, plus 1.5% on related security, by 2035.",
       "targets_source": "Institute for Government, UK defence spending explainer",
       "targets_url": "https://www.instituteforgovernment.org.uk/explainer/uk-defence-spending"
+    },
+    "public_finances": {
+      "period": "2025/26",
+      "spending_total_bn": 1360.1,
+      "spending": [
+        {
+          "label": "Social protection",
+          "note": "State Pension, benefits, social care",
+          "bn": 407.3
+        },
+        {
+          "label": "Health",
+          "bn": 257.5
+        },
+        {
+          "label": "Debt interest",
+          "bn": 130.3
+        },
+        {
+          "label": "Education",
+          "bn": 125.7
+        },
+        {
+          "label": "Defence",
+          "bn": 65.4
+        },
+        {
+          "label": "Public order and safety",
+          "note": "Police, courts, prisons, fire",
+          "bn": 55.7
+        },
+        {
+          "label": "Transport",
+          "bn": 48.9
+        },
+        {
+          "label": "Other economic affairs",
+          "note": "Business, science, jobs, farming",
+          "bn": 45.0
+        },
+        {
+          "label": "Housing and environment",
+          "bn": 41.6
+        },
+        {
+          "label": "Other services",
+          "note": "Running government, culture, sport",
+          "bn": 50.1
+        },
+        {
+          "label": "Accounting adjustments",
+          "note": "Spending HM Treasury doesn't assign to a sector",
+          "bn": 132.5
+        }
+      ],
+      "spending_source": "HM Treasury, Public Expenditure Statistical Analyses 2026, table 5.2 (total managed expenditure by function, 2025/26 outturn, published July 2026)",
+      "spending_url": "https://assets.publishing.service.gov.uk/media/6a608addf869f6a53d0c89ef/PESA_2026_Accessible.pdf",
+      "receipts_total_bn": 1231.3,
+      "receipts": [
+        {
+          "label": "Income tax",
+          "bn": 329.3
+        },
+        {
+          "label": "National Insurance",
+          "bn": 204.4
+        },
+        {
+          "label": "VAT",
+          "bn": 180.3
+        },
+        {
+          "label": "Corporation tax",
+          "bn": 99.6
+        },
+        {
+          "label": "Capital taxes",
+          "note": "Capital gains, inheritance, stamp duties",
+          "bn": 54.1
+        },
+        {
+          "label": "Council tax",
+          "bn": 50.4
+        },
+        {
+          "label": "Fuel duties",
+          "bn": 24.6
+        },
+        {
+          "label": "Alcohol and tobacco duties",
+          "bn": 19.9
+        },
+        {
+          "label": "Interest, dividends and surpluses",
+          "note": "Earned by public bodies",
+          "bn": 123.6
+        },
+        {
+          "label": "Other taxes and receipts",
+          "note": "Business rates, vehicle and insurance taxes, levies, licence fee and more",
+          "bn": 145.0
+        }
+      ],
+      "receipts_source": "OBR, Public finances databank (October 2026), outturn consistent with ONS/HM Treasury Public sector finances, 22 September 2026",
+      "receipts_url": "https://obr.uk/data/",
+      "borrowing_bn": 134.3,
+      "borrowing_source": "OBR, Public finances databank (October 2026): public sector net borrowing, 2025/26 outturn",
+      "borrowing_url": "https://obr.uk/data/"
     }
   }
 }
