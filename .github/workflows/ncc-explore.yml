@@ -11,17 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
-        with: { ref: claude/uk-subpages, path: site }
+        with: { ref: claude/nhs-hub, path: site }
       - uses: ruby/setup-ruby@v1
         with: { ruby-version: "3.3", working-directory: site, bundler-cache: true }
       - run: |
           cd site
           (bundle exec jekyll build --strict_front_matter 2>&1 | tail -40) > ../explore/output.txt
-          for f in uk-and-nations uk-and-nations/people uk-and-nations/economy uk-and-nations/defence uk-and-nations/energy uk-and-nations/food uk-and-nations/law-and-order; do
+          echo "INDEX tiles: $(grep -o "card card--link" _site/landmark-numbers/index.html | wc -l)" >> ../explore/output.txt
+          for f in nhs nhs-in-numbers nhs-costs nhs-performance uk-and-nations uk-and-nations/energy; do
             p=_site/landmark-numbers/$f/index.html
             if [ -f "$p" ]; then echo "OK $f $(wc -c < $p) bytes, refs=$(grep -o 'class=\"src-ref\"' $p | wc -l), lists=$(grep -o 'class=\"src-list\"' $p | wc -l), leftovers=$(grep -c '{{\|{%' $p)"; else echo "MISSING $f"; fi
           done >> ../explore/output.txt
-          grep -o '<p class="uk-lead">[^<]*' _site/landmark-numbers/uk-and-nations/energy/index.html | head -3 >> ../explore/output.txt
+          grep -o '<p class="uk-lead">[^<]*' _site/landmark-numbers/nhs-costs/index.html | head -3 >> ../explore/output.txt
           grep -o 'Liquid Warning.*' -r . 2>/dev/null | head -5 >> ../explore/output.txt || true
       - run: |
           git config user.name "github-actions[bot]"
