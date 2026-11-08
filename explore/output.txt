@@ -1,136 +1,45 @@
-===== 1
-                                                   0                 1            2                 3           4                 5             6                 7             8                 9             10
-0        Worksheet 1: Vessels of the UK Armed Forces                NaN          NaN               NaN         NaN               NaN           NaN               NaN           NaN               NaN           NaN
-1   This worksheet contains one table. Some cells ...               NaN          NaN               NaN         NaN               NaN           NaN               NaN           NaN               NaN           NaN
-2   Table 1 shows the number of vessels in the Roy...               NaN          NaN               NaN         NaN               NaN           NaN               NaN           NaN               NaN           NaN
-3      This table is an Accredited Official Statistic               NaN          NaN               NaN         NaN               NaN           NaN               NaN           NaN               NaN           NaN
-4                                Source: Navy Command               NaN          NaN               NaN         NaN               NaN           NaN               NaN           NaN               NaN           NaN
-5                               Fleet and Vessel type  2022\nIn Service  2022\nTotal  2023\nIn Service  2023 Total  2024\nIn Service  2024 \nTotal  2025\nIn Service  2025 \nTotal  2026\nIn Service  2026 \nTotal
-6                        Royal Navy Submarine Service                10           10                10          10                10            10                 9             9                 9             9
-7                         Ballistic Nuclear Submarine                 4            4                 4           4                 4             4                 4             4                 4             4
-8                                   Nuclear Submarine                 6            6                 6           6                 6             6                 5             5                 5             5
-9                            Royal Navy Surface Fleet                62           62                59          59                57            57                52            57                52            52
-10                                  Aircraft Carriers                 2            2                 2           2                 2             2                 2             2                 2             2
-11                 Landing Platform Docks/Helicopters                 2            2                 2           2                 2             2                 0             2                 0             0
-12                                         Destroyers                 6            6                 6           6                 6             6                 6             6                 6             6
-13                                           Frigates                12           12                12          12                11            11                 8            11                 7             7
-14                Mine Countermeasures Vessels (MCMV)                11           11                 9           9                 7             7                 7             7                 7             7
-15                             Inshore Patrol Vessels                16           16                16          16                18            18                18            18                18            18
-16                            Offshore Patrol Vessels                 8            8                 8           8                 8             8                 8             8                 8             8
-17                                       Survey Ships                 4            4                 3           3                 2             2                 2             2                 2             2
-18                                    Ice Patrol Ship                 1            1                 1           1                 1             1                 1             1                 1             1
-19                   Offshore Support Vessel [Note 2]               [x]          [x]               [x]         [x]               [x]           [x]               [x]           [x]                 1             1
-20                              Royal Fleet Auxiliary                 9            9                11          13                13            13                11            13                 9            12
-21                                       Fleet Tanker                 4            4                 6           6                 6             6                 4             6                 4             4
-22                           Fleet Replenishment Ship                 1            1                 1           1                 1             1                 1             1                 1             1
-23                                  Landing Ship Dock                 3            3                 3           3                 3             3                 3             3                 3             3
-24                    Primary Casualty Receiving Ship                 1            1                 1           1                 1             1                 1             1                 0             1
-25                   Mine Hunting Capability [Note 2]                 0            0                 0           1                 1             1                 1             1                 0             2
-26                      Multi-Role Ocean Surveillance                 0            0                 0           1                 1             1                 1             1                 1             1
-===== 5
-                                                    0        1        2                        3
-0   Worksheet 5: Land Equipment of the UK Armed Fo...      NaN      NaN                      NaN
-1   This worksheet contains one table.  Some cells...      NaN      NaN                      NaN
-2   Some shorthand is used in this spreadsheet, [r...      NaN      NaN                      NaN
-3   Table 5 shows the numbers of land equipment in...      NaN      NaN                      NaN
-4   The data in this table have not been assessed ...      NaN      NaN                      NaN
-5                       Source: Army Equipment Dept.       NaN      NaN                      NaN
-6                          Platform type and platform   2025.0   2026.0                    Notes
-7                                    Combat Equipment   4050.0   4033.0                      NaN
-8                          Armoured Fighting Vehicles   1055.0   1024.0                      NaN
-9                                 Ajax (all variants)    142.0    185.0                      NaN
-10                                              Boxer     21.0     28.0                      NaN
-11                      Challenger 2 Main Battle Tank    288.0    285.0                      NaN
-12                                            Warrior    604.0    526.0                      NaN
-13                        Protected Mobility Vehicles   1998.0   2028.0  [r] applied to cell B14
-14                                             Coyote     72.0     72.0                      NaN
-15                                           Foxhound    390.0    389.0                      NaN
-16                                             Jackal    575.0    651.0  [r] applied to cell B17
-17                                            Mastiff    297.0    296.0                      NaN
-18                                            Panther    378.0    377.0                      NaN
-19                                          Ridgeback    164.0    162.0                      NaN
-20                                          Wolfhound    122.0     81.0                      NaN
-21                        Armoured Personnel Carriers    997.0    981.0                      NaN
-22                                            Bulldog    738.0    723.0                      NaN
-23                                             Bv-206    186.0    185.0                      NaN
-24                                             Viking     73.0     73.0                      NaN
-25                                          Artillery    236.0    219.0                      NaN
-26                                             Archer     14.0     14.0                      NaN
-27                      AS90 155mm Self-propelled Gun      0.0      0.0                      NaN
-28                               L118 105mm Light Gun    126.0    126.0                      NaN
-29                    Multiple Launcher Rocket System     43.0     26.0                      NaN
-30            Stormer (Ground Based Air Defence (G...     53.0     53.0                      NaN
-31                       Combat Engineering Equipment    299.0    295.0  [r] applied to cell B32
-32            Fuchs CBRN (Chemical, Biological, Ra...     10.0      8.0                      NaN
-33            General Support Bridges (GSB) (TB, T...    136.0    135.0  [r] applied to cell B34
-34                     M3 Amphibious Bridging Vehicle     28.0     27.0                      NaN
-35                                            Terrier     60.0     60.0                      NaN
-36                                              Titan     33.0     33.0                      NaN
-37                                             Trojan     32.0     32.0                      NaN
-38                           Combat Support Equipment  15180.0  14966.0  [r] applied to cell B39
-39            Challenger Armoured Repair and Recov...     72.0     72.0                      NaN
-40                                             Falcon     74.0     57.0                      NaN
-41                  Heavy Equipment Transporter (HET)    165.0    161.0                      NaN
-42                 Hippo Beach Recovery Vehicle (BRV)      4.0      4.0                      NaN
-43                                        Land Rovers   5842.0   5650.0                      NaN
-44                                          Pinzguaer    748.0    743.0                      NaN
-45                                               Quad    491.0    489.0  [r] applied to cell B46
-46                                            Reacher    100.0    100.0                      NaN
-47             Wheeled Support Vehicles (6T, 9T, 15T)   6901.0   6904.0                      NaN
-48                           Wheeled Tanker (Tractor)    353.0    354.0                      NaN
-49                           Wheeled Tanker (Trailer)    430.0    432.0                      NaN
-===== 7
-                                                   0                 1            2                 3            4                  5            6                 7            8                 9            10
-0   Worksheet 7: Aircraft: Fixed wing platforms an...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-1   This worksheet contains one table. Some cells ...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-2   Table 7 shows the numbers of fixed wing aircra...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-3   Some shorthand is used in this spreadsheet, [x...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-4      This table is an Accredited Official Statistic               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-5   Sources: Navy Command; Joint Aviation Command;...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-6                                       Platform Type  2022\nIn Service  2022\nTotal  2023\nIn Service  2023\nTotal  2024 \nIn Service  2024\nTotal  2025\nIn Service  2025\nTotal  2026\nIn Service  2026\nTotal
-7                                Fixed wing Platforms               278          551               308          559                297          551               304          504               323          507
-8                                              A400M                 20           20                21           21                 22           22                22           22                22           22
-9                                           Airseeker                 2            3                 3            3                  3            3                 3            3                 3            3
-10                                            Avenger                 4            4                 4            4                  2            4                 2            4                 2            4
-11                                   C-17 Globemaster                 8            8                 8            8                  8            8                 8            8                 8            8
-12                                           Envoy IV                 0            0                 2            2                  2            2                 2            2                 2            2
-13                           Hawk T1/T1A/T1W [Note 7]                14           67                14           67                 14           67                14           26                18           24
-14                                            Hawk T2                28           28                28           28                 28           28                28           28                28           28
-15                                     Hercules C130J                13           13                13           13                  0            0                 0            0                 0            0
-16                                    Phenom [Note 8]               [x]            5               [x]            5                [x]            5               [x]            5               [x]            5
-17                                           Poseidon                 9            9                 9            9                  9            9                 9            9                 9            9
-18                                   Prefect [Note 8]               [x]           23               [x]           23                [x]           23               [x]           23               [x]           23
-19                                          Lightning                26           26                30           31                 35           35                37           37                47           47
-20                                          Shadow R1                 5            8                 8            8                  6            8                 6            8                 5            8
-21                                     Texan [Note 8]               [x]           14               [x]           14                [x]           14               [x]           14               [x]           14
-22                       Tutor (Tri Service) [Note 8]               [x]           91               [x]           91                [x]           91               [x]           91               [x]           91
-23                                            Typhoon               102          137               102          137                102          137               107          129               111          124
-24                                             Viking                37           81                52           81                 52           81                52           81                54           81
-25                                            Voyager                10           14                14           14                 14           14                14           14                14           14
-26                 Uncrewed Aircraft Systems [note 9]               [x]          358               160          194                150          183               148          180               148          189
-27                                    Desert Hawk-III               [x]          228                 0            0     
-===== 8
-                                                   0                 1            2                 3            4                  5            6                 7            8                 9            10
-0   Worksheet 8: Aircraft: Rotary-wing platforms o...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-1   This worksheet contains one table. Some cells ...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-2   Table 8 shows the numbers of rotary-wing aircr...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-3   Some shorthand is used in this spreadsheet, [x...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-4      This table is an Accredited Official Statistic               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-5   Sources: Navy Command; Joint Aviation Command;...               NaN          NaN               NaN          NaN                NaN          NaN               NaN          NaN               NaN          NaN
-6                                       Platform Type  2022\nIn Service  2022\nTotal  2023\nIn Service  2023\nTotal  2024 \nIn Service  2024\nTotal  2025\nIn Service  2025\nTotal  2026\nIn Service  2026\nTotal
-7                               Rotary-wing Platforms               184          291               193          294                184          268               167          276               165          249
-8                                          Apache Mk1                18           20                14           16                  0            0                 0            0                 0            0
-9                                       Apache AH-64E                 4           16                27           31                 37           38                38           47                38           47
-10                                            AW109SP                 0            1                 1            1                  1            1                 0            0                 0            0
-11                                           Bell 212                 3            3                 0            0                  0            0                 0            0                 0            0
-12                                            Chinook                41           59                39           59                 39           54                36           50                36           45
-13                                   Dauphin[Note 12]                 2            2                 2            2                  2            2                 2            2                 0            0
-14                                            Gazelle                14           17                11           14                  0            0                 0            0                 0            0
-15                                            Griffin                 3            3                 0            0                  0            0                 0            0                 0            0
-16                                      Juno [Note 8]               [x]           29               [x]           29                [x]           29               [x]           29               [x]           29
-17                                   Jupiter [Note 8]               [x]            7               [x]            7                [x]            7               [x]            7               [x]            7
-18                               Merlin HM2 [Note 13]                18           30                19           30                 23           30                23           30                23           30
-19                            Merlin Mk3/3a/4/4a/iMk3                21           25                21           25                 20           25                21           29                21           29
-20                                               Puma                14           17                13           18                 17           20                 0           20                 0            0
-21                                     Wildcat AH Mk1                25           34                25           34                 24           34                25           34                25           34
-22                          Wildcat HMA Mk2 [Note 13]                21           28                21           28                 21           28                22           28                22           28
+##### /government/statistics/electricity-chapter-5-digest-of-united-kingdom-energy-statistics-dukes 2026-07-30T09:30:12+01:00
+   DUKES 2026 Chapter 5: Electricity | https://assets.publishing.service.gov.uk/media/6aba96e8997a4b2950ccf02c/DUKES_2026_Chapter_5.pdf
+   Electricity: commodity balances (DUKES 5.1) - Excel | https://assets.publishing.service.gov.uk/media/6a6a35d80ddb7e4831c629ef/DUKES_5.1.xlsx
+   Commodity balances, public distribution system and other generators (DUKES 5.2) - Excel | https://assets.publishing.service.gov.uk/media/6a6a35e4bf4a7aca8f8976c2/DUKES_5.2.xlsx
+   Fuel used in generation (DUKES 5.3) | https://assets.publishing.service.gov.uk/media/6a6a35ef0ddb7e4831c629f0/DUKES_5.3.xlsx
+   Fuels consumed for electricity generation (autogeneration) by main industrial groups (DUKES 5.4) | https://assets.publishing.service.gov.uk/media/6a6a35fc862aaf18d9c629ea/DUKES_5.4.xlsx
+   Electricity supply, electricity supplied (net), electricity available, electricity consumption and electricity sales (DUKES 5.5) | https://assets.publishing.service.gov.uk/media/6a6a36088319ab05f7caa1da/DUKES_5.5.xlsx
+   Electricity fuel use, generation and supply (DUKES 5.6) | https://assets.publishing.service.gov.uk/media/6a6a3616862aaf18d9c629eb/DUKES_5.6.xlsx
+   Plant capacity: United Kingdom (DUKES 5.7) | https://assets.publishing.service.gov.uk/media/6a6a3622cceb23e8678976bf/DUKES_5.7.xlsx
+   Major Power Producers Plant capacity: England and Wales, Scotland, and Northern Ireland (DUKES 5.8) | https://assets.publishing.service.gov.uk/media/6a6a3631862aaf18d9c629ec/DUKES_5.8.xlsx
+   Capacity of other generators (DUKES 5.9) | https://assets.publishing.service.gov.uk/media/6a6a363f0ddb7e4831c629f1/DUKES_5.9.xlsx
+   Plant loads, demand and efficiency (DUKES 5.10) | https://assets.publishing.service.gov.uk/media/6a6a364b0ddb7e4831c629f2/DUKES_5.10.xlsx
+   Power stations in the United Kingdom, May 2026 (DUKES 5.11) | https://assets.publishing.service.gov.uk/media/6a6a365b0ddb7e4831c629f3/DUKES_5.11.xlsx
+   Plant installed capacity, by connection - United Kingdom (DUKES 5.12) | https://assets.publishing.service.gov.uk/media/6a6a3668862aaf18d9c629ed/DUKES_5.12.xlsx
+   Capacity, net imports and utilisation of interconnectors (DUKES 5.13) | https://assets.publishing.service.gov.uk/media/6a6a3675bf4a7aca8f8976c3/DUKES_5.13.xlsx
+   Estimated carbon dioxide intensity of electricity supplied (DUKES 5.14) | https://assets.publishing.service.gov.uk/media/6a6a3684bf4a7aca8f8976c4/DUKES_5.14.xlsx
+   CHP generation and capacity overview (DUKES 5.15) | https://assets.publishing.service.gov.uk/media/6a6a3690bf4a7aca8f8976c5/DUKES_5.15.xlsx
+   Energy storage overview (DUKES 5.16) | https://assets.publishing.service.gov.uk/media/6a6a36a0bf4a7aca8f8976c6/DUKES_5.16.xlsx
+   Map of Major Power Producers (MPPs) in the United Kingdom (operational as at May 2026) | https://assets.publishing.service.gov.uk/media/6a6a36b98319ab05f7caa1db/Major_Power_Producers_map_2026.pdf
+   Fuel input for electricity generation, 1970 to 2025 (DUKES 5.1.1) | https://assets.publishing.service.gov.uk/media/6a6a36d1bf4a7aca8f8976c7/DUKES_5.1.1.xlsx
+   Electricity supply, availability and consumption, 1970 to 2025 (DUKES 5.1.2) | https://assets.publishing.service.gov.uk/media/6a6a36dfbf4a7aca8f8976c8/DUKES_5.1.2.xlsx
+   Electricity generated and supplied, 1970 to 2025 (DUKES 5.1.3) | https://assets.publishing.service.gov.uk/media/6a6a36ed0ddb7e4831c629f4/DUKES_5.1.3.xlsx
+##### /government/statistics/renewable-sources-of-energy-chapter-6-digest-of-united-kingdom-energy-statistics-dukes 2026-07-30T09:30:12+01:00
+   DUKES 2026 Chapter 6: Renewable sources of energy | https://assets.publishing.service.gov.uk/media/6a6a27478319ab05f7caa1ce/DUKES_2026_Chapter_6.pdf
+   Renewables and waste: commodity balances (DUKES 6.1) - Excel | https://assets.publishing.service.gov.uk/media/6a6a2756862aaf18d9c629e2/DUKES_6.1.xlsx
+   Capacity of, generation from renewable sources and shares of total generation (DUKES 6.2) | https://assets.publishing.service.gov.uk/media/6a6a27620c36759b5ccaa1d1/DUKES_6.2.xlsx
+   Load factors for renewable electricity generation (DUKES 6.3) | https://assets.publishing.service.gov.uk/media/6a6a276f8319ab05f7caa1cf/DUKES_6.3.xlsx
+   Renewable sources used to generate electricity and heat and for transport fuels (DUKES 6.4) | https://assets.publishing.service.gov.uk/media/6a6a277b862aaf18d9c629e3/DUKES_6.4.xlsx
+   Renewables' shares of aggregated energy balances and gross final consumption for electricity, heat, transport, and overall renewables (DUKES 6.5) | https://assets.publishing.service.gov.uk/media/6a6a2787bf4a7aca8f8976b9/DUKES_6.5.xlsx
+   Overseas trade of renewable fuels (DUKES 6.6) | https://assets.publishing.service.gov.uk/media/6a6a2793bf4a7aca8f8976ba/DUKES_6.6.xlsx
+   Number of renewable electricity generating stations, December 2025 (DUKES 6.7) | https://assets.publishing.service.gov.uk/media/6a6a27a0bf4a7aca8f8976bb/DUKES_6.7.xlsx
+   Map of UK onshore and offshore wind capacity | https://assets.publishing.service.gov.uk/media/6a6a27c98319ab05f7caa1d0/wind_map_2026.pdf
+##### /government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025 2026-09-29T09:30:05+01:00
+   Electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2004 to 2025 - data tables | https://assets.publishing.service.gov.uk/media/6aba6c4afe72ed1e2b02f14b/Regional_Electricity_Generation_and_Supply_Timeseries_2026.xlsx
+ERR /government/statistics/energy-trends-section-5-electricity Expecting value: line 2 column 1 (char 1)
+##### /government/statistics/energy-trends-section-6-renewables 2026-10-29T09:30:14+00:00
+   Energy Trends September 2026 | https://assets.publishing.service.gov.uk/media/6aba723b8cb3c0580e501297/Energy_Trends_September_2026.pdf
+   Renewable electricity capacity and generation (ET 6.1 - quarterly) | https://assets.publishing.service.gov.uk/media/6aba724dfceb6fb3a65012d2/ET_6.1_SEP_26.xlsx
+   Consumption of liquid biofuels (ET 6.2 - quarterly) | https://assets.publishing.service.gov.uk/media/6aba7259997a4b2950cceffb/ET_6.2_SEP_26.xlsx
+   Energy Trends renewables quarterly tables (ODS) | https://assets.publishing.service.gov.uk/media/6aba7264997a4b2950cceffc/Renewables_SEP_26.ods
+   Solar photovoltaics deployment (Excel) (ET 6.3 - monthly) | https://assets.publishing.service.gov.uk/media/6ae0cc0c16428df537606259/ET_6.3_SOLAR_PV_OCT_26.xlsx
+   Solar photovoltaics deployment (ODS) (ET 6.3 - monthly) | https://assets.publishing.service.gov.uk/media/6ae0cc1bee0b648ce3606261/ET_6.3_SOLAR_PV_OCT_26.ods
+   Renewables obligation: certificates and generation (monthly - Excel) | https://assets.publishing.service.gov.uk/media/6ac50c2ea4449136071df94c/ROCs_Oct_2026.xlsx
+   Renewables obligation: certificates and generation (monthly - ODS) | https://assets.publishing.service.gov.uk/media/6ac50db966673801262267fa/ROCs_Oct_2026.ods
+ERR /government/publications/interconnectors-electricity Expecting value: line 2 column 1 (char 1)
