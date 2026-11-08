@@ -7,14 +7,43 @@ permalink: /landmark-numbers/uk-and-nations/economy/
 {% include uk-page-head.html current="economy" %}
 
 {%- include uk-src-start.html sec="economy" %}
-{%- include uk-range.html group="economy" key="weekly_pay" %}
+{%- include uk-range.html group="economy" key="annual_pay_ft" %}
 {%- assign pay_lo_n = r_lo_n %}{% assign pay_lo_v = r_lo_v %}{% assign pay_hi_n = r_hi_n %}{% assign pay_hi_v = r_hi_v %}{% assign pay_uk = r_uk %}
+{%- assign eco_g = uk.groups | where: "key", "economy" | first %}{% assign eco_wk = eco_g.measures | where: "key", "weekly_pay" | first %}
 {%- include uk-range.html group="economy" key="gdp_per_head" %}
 <h2 id="economy">Economy and work</h2>
-<p class="uk-lead">The typical full-time worker earns {% include fmt.html v=pay_uk f="money2" %} a week, from {% include fmt.html v=pay_lo_v f="money2" %}
-  in {{ pay_lo_n }} to {% include fmt.html v=pay_hi_v f="money2" %} in {{ pay_hi_n }}. GDP per person ranges from {% include fmt.html v=r_lo_v f="money" %}
-  in {{ r_lo_n }} to {% include fmt.html v=r_hi_v f="money" %} in {{ r_hi_n }}.</p>
+<p class="uk-lead">The typical full-time worker earns {% include fmt.html v=pay_uk f="money" %} a year before tax ({% include fmt.html v=eco_wk.values.uk f="money2" %}
+  a week), from {% include fmt.html v=pay_lo_v f="money" %} in {{ pay_lo_n }} to {% include fmt.html v=pay_hi_v f="money" %} in {{ pay_hi_n }}.
+  GDP per person ranges from {% include fmt.html v=r_lo_v f="money" %} in {{ r_lo_n }} to {% include fmt.html v=r_hi_v f="money" %} in {{ r_hi_n }}.</p>
 {% include uk-table.html key="economy" %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="gdp" %}
+{%- assign gd0 = uk.uk_only.gdp %}
+{%- assign gd0_top = gd0.sectors.first %}
+{%- assign gd0_man = gd0.sectors | where: "label", "Manufacturing" | first %}
+<h2 id="gdp">GDP and industries</h2>
+<p class="uk-lead">The UK produced £{{ gd0.gdp_bn | divided_by: 1000.0 | round: 2 }} trillion of goods and services in {{ gd0.year }}.
+  The biggest sector is {{ gd0_top.label | downcase }}, at {{ gd0_top.pct }}% of output. Manufacturing is {{ gd0_man.pct }}%.</p>
+{% include uk-table.html key="gdp" %}
+{% include uk-gdp.html %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="growth" %}
+{%- assign gw0 = uk.uk_only.gdp.growth %}
+<h2 id="growth">Growth areas</h2>
+<p class="uk-lead">Since {{ gw0.from }}, the UK economy has grown {{ gw0.total_pct }}% after inflation. Technology and professional services
+  grew far faster, while finance, retail and North Sea energy shrank.</p>
+{% include uk-growth.html %}
+
+{%- include uk-src-list.html %}
+{%- include uk-src-start.html sec="companies" %}
+{%- assign co0 = uk.uk_only.gdp.companies %}
+{%- assign co0_top = co0.list.first %}
+<h2 id="companies">The biggest companies</h2>
+<p class="uk-lead">The ten most valuable companies make up {{ co0.top10_pct }}% of the FTSE 100. The largest, {{ co0_top.name }}, is
+  {{ co0_top.pct }}% on its own.</p>
+{% include uk-companies.html %}
 
 {%- include uk-src-list.html %}
 {%- include uk-src-start.html sec="benefits" %}

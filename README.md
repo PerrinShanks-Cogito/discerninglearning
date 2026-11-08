@@ -131,6 +131,10 @@ numbers with commas. The UK and its nations section is an overview page,
 under it (`_pages/landmark-numbers-uk-*.html`): people, economy, defence, energy, food, and law and order.
 All of them read `_data/landmark_uk.json`: curated figures for the UK, England, Scotland, Wales and
 Northern Ireland in `groups`, plus UK-wide figures in `uk_only`, each with its period and source.
+On the economy page, the `gdp` group holds each nation's GDP and the share of output from key
+sectors, and `uk_only.gdp` holds UK GDP, output by sector, growth by sector and industry since 2019,
+the Industrial Strategy's priority sectors and the ten largest FTSE 100 companies
+(`uk-gdp.html`, `uk-growth.html`, `uk-companies.html`).
 `_data/landmark_uk_pages.yml` lists the topic pages and their sections, which drive the jump menu
 (`_includes/uk-nav.html`) and the overview tiles. Each topic is built from includes: `uk-table.html`
 draws a nations table (shading the highest and lowest rate; measures marked `"count": true` aren't
