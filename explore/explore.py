@@ -1,24 +1,43 @@
-import requests, io, re
+import requests, io, re, json
 import pandas as pd
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (Discerning Learning landmark numbers)"})
-j=s.get("https://www.gov.uk/api/content/government/statistics/offender-management-statistics-quarterly-april-to-june-2026",timeout=60).json()
-att=j.get("details",{}).get("attachments",[])
-for a in att: print("ATT",a.get("title"),"|",a.get("url"))
-for a in att:
-    u=a.get("url") or ""
-    if "population" in (a.get("title") or "").lower() and u.endswith((".xlsx",".ods")):
-        x=pd.ExcelFile(io.BytesIO(s.get(u,timeout=300).content))
-        print("#####",u,x.sheet_names)
-        for sh in x.sheet_names:
-            if re.search(r"1\.?Q\.?7|ethnic",sh,re.I) or sh.startswith("1_Q_7") or sh in ("Table_1_Q_7","1.Q.7"):
-                d=pd.read_excel(x,sh,header=None).dropna(how="all",axis=1).dropna(how="all")
-                print("=====",sh); print(d.to_string(max_colwidth=40)[:6000])
-for p in ["https://www.justice-ni.gov.uk/node/421705","https://www.justice-ni.gov.uk/node/421708"]:
+def get(u,**k):
+    r=s.get(u,timeout=120,**k); print("GET",u[:140],r.status_code,len(r.content)); return r
+# A. ONS GDP time series
+for cdid,ds in [("ybha","ukea"),("abmi","ukea"),("ihyp","ukea")]:
     try:
-        t=s.get(p,timeout=60).text; t=re.sub(r"<[^>]+>"," ",t); t=re.sub(r"\s+"," ",t)
-        for m in re.finditer(r"[^.]{0,200}(reoffend|re-offend)[^.]{0,200}\.",t): print("NI:",m.group(0)[:400])
-    except Exception as e: print("ERR",p,e)
-# 1794168948
-# 1794170181
-# 1794170798
-# 1794173517
+        j=get(f"https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/{cdid}/{ds}/data").json()
+        print(cdid, j["description"]["title"], j["description"].get("releaseDate"), [(y["year"],y["value"]) for y in j["years"][-4:]])
+    except Exception as e: print("ERR",cdid,e)
+# B/C. dataset pages -> xlsx links
+for page in ["https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustryandallinternationalterritoriallevelsitlregions",
+             "https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions",
+             "https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallitlregions"]:
+    try:
+        t=get(page).text
+        print("PAGE",page.split('/')[-1], re.findall(r'Release date:\s*</span>\s*([^<]+)',t)[:1])
+        for l in sorted(set(re.findall(r'href="([^"]+\.xlsx)"',t)))[:6]: print("   ",l)
+    except Exception as e: print("ERR",page,e)
+# D. Nomis ASHE definitions and data
+for d in ["sex","item","pay"]:
+    try:
+        j=get(f"https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/{d}.def.sjson").json()
+        print(d,[(c["value"],c["description"]["value"]) for c in j["structure"]["codelists"]["codelist"][0]["code"]][:12])
+    except Exception as e: print("ERR",d,e)
+try:
+    r=get("https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1.data.csv?geography=K02000001,E92000001,W92000004,S92000003,N92000002&date=latestMINUS1,latest&sex=7,8&item=2&pay=1,7&measures=20100&select=date_name,geography_name,sex_name,pay_name,obs_value,obs_status_name")
+    print(r.text[:3000])
+except Exception as e: print("ERR nomis",e)
+# E. FTSE 100 factsheet
+for u in ["https://research.ftserussell.com/Analytics/FactSheets/Home/DownloadSingleIssue?issueName=UKX&IsManual=false",
+          "https://research.ftserussell.com/Analytics/FactSheets/temp/ukx.pdf"]:
+    try:
+        r=get(u)
+        if r.content[:4]==b"%PDF":
+            import pdfplumber
+            with pdfplumber.open(io.BytesIO(r.content)) as pdf:
+                txt="\n".join(p.extract_text() or "" for p in pdf.pages[:3])
+            i=txt.find("Top 10"); print("FACTSHEET", txt[:300].replace("\n"," | ")); print(txt[i:i+1500])
+            break
+    except Exception as e: print("ERR ftse",e)
+# 1794174702
