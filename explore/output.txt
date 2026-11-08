@@ -1,43 +1,21 @@
-[(0, 'Year'), (1, 'Production'), (2, 'Imports\n[note 2]'), (3, 'Exports'), (4, 'Total consumption'), (5, 'Domestic consumption'), (6, 'Industrial consumption\n[note 3]'), (7, 'Electricity generator consumption'), (8, 'Other energy industry consumption\n[note 4]'), (9, 'Services consumption\n[note 5]'), (10, 'Transport consumption ')]
-      0          1          2          3          4          5         6          7         8          9        10
-59  2023  383218.64  494918.74  175590.78  702464.05     241825  73206.38  208923.28  76859.64  100069.25   1580.5
-60  2024   343857.8  453300.88  118427.44   682677.5  252344.86  69445.79  179726.54  74364.06  104987.87  1808.38
-61  2025  332214.61  463691.92  133108.39  676602.01  250354.67  63798.26  192329.96  71017.31   96989.01   2112.8
-['Import/ export', 'Pipeline/ LNG', 'Country of origin/ destination', np.float64(2000.0), np.float64(2001.0), np.float64(2002.0), np.float64(2003.0), np.float64(2004.0), np.float64(2005.0), np.float64(2006.0), np.float64(2007.0), np.float64(2008.0), np.float64(2009.0), np.float64(2010.0), np.float64(2011.0), np.float64(2012.0), np.float64(2013.0), np.float64(2014.0), np.float64(2015.0), '2016\n[note 2]', np.float64(2017.0), np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0), np.float64(2024.0), np.float64(2025.0)]
-                0              1                               2         3          27         28
-5   Import/ export  Pipeline/ LNG  Country of origin/ destination    2000.0    2024.00    2025.00
-6           Import       Pipeline                Belgium [note 1]    2955.0    1101.05    4075.52
-7           Import       Pipeline                     Netherlands       0.0     439.14    2003.51
-8           Import       Pipeline                          Norway   11279.0  340605.51  320249.12
-9           Import       Pipeline                  Total pipeline   14234.0  342145.69  326328.15
-10          Import            LNG                         Algeria       0.0    5318.90    8303.29
-11          Import            LNG                          Angola       0.0    3863.77    2922.43
-12          Import            LNG                       Australia       0.0       0.00       0.00
-13          Import            LNG                         Belgium       0.0       0.00       0.00
-14          Import            LNG                        Cameroon       0.0       0.00       0.00
-15          Import            LNG                           Chile       0.0       0.00       0.00
-16          Import            LNG              Dominican Republic       0.0       0.00       0.00
-17          Import            LNG                           Egypt       0.0     985.48       0.00
-18          Import            LNG               Equatorial Guinea       0.0    1014.84    1071.77
-19          Import            LNG                          France       0.0       0.00       0.00
-20          Import            LNG                     Netherlands       0.0       0.00       0.00
-21          Import            LNG                         Nigeria       0.0    1778.65    2608.65
-22          Import            LNG                          Norway       0.0    2757.07    1817.85
-23          Import            LNG                            Oman       0.0       0.00       0.00
-24          Import            LNG                            Peru       0.0    3799.61    2065.31
-25          Import            LNG                           Qatar       0.0    8580.02    8216.34
-26          Import            LNG                          Russia       0.0       0.00       0.00
-27          Import            LNG                           Spain       0.0       0.00       0.00
-28          Import            LNG             Trinidad and Tobago       0.0    7356.05    4182.94
-29          Import            LNG                             USA       0.0   75700.80  106175.20
-30          Import            LNG                           Yemen       0.0       0.00       0.00
-31          Import            LNG                       Total LNG       0.0  111155.20  137363.77
-32          Import          Total                   Total imports   14234.0  453300.88  463691.92
-33          Export       Pipeline                         Belgium   94574.0   47096.33   58390.31
-34          Export       Pipeline                     Netherlands    7723.0   25209.83   27606.27
-35          Export       Pipeline                          Norway       0.0       0.00       0.00
-36          Export       Pipeline    Republic of Ireland [note 3]   32248.0   44882.39   45712.22
-37          Export       Pipeline            Isle of Man [note 3]       0.0    1238.89    1399.59
-38          Export            LNG                Reloads [note 4]       0.0       0.00       0.00
-39          Export       Pipeline                   Total exports  134545.0  118427.44  133108.39
-40             Net            Net            Net imports [note 5] -120311.0  334873.45  330583.52
+##### /government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025 2026-04-02T09:30:09+01:00
+   2025 UK greenhouse gas emissions: provisional figures - statistical release | /government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025/2025-uk-greenhouse-gas-emissions-provisional-figures-statistical-release
+   2025 UK greenhouse gas emissions: provisional figures - data tables | https://assets.publishing.service.gov.uk/media/69ccdb9ab50f8f8dfb8559b3/2025-provisional-greenhouse-gas-emissions-statistics-data-tables.xlsx
+   2025 UK greenhouse gas emissions: provisional figures - methodology summary | /government/statistics/provisional-uk-greenhouse-gas-emissions-statistics-2025/2025-uk-greenhouse-gas-emissions-provisional-figures-methodology-summary
+ERR /government/statistics/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2024 Expecting value: line 2 column 1 (char 1)
+##### /government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024 2026-06-30T16:18:04+01:00
+   2005 to 2024 UK local and regional greenhouse gas emissions: statistical release (PDF) | https://assets.publishing.service.gov.uk/media/6a3bacc6da47783d87723902/2024-local-and-regional-greenhouse-gas-emissions-statistics-statistical-release.pdf
+   2005 to 2024 UK local and regional greenhouse gas emissions: statistical release (web accessible) | /government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024/2005-to-2024-uk-local-and-regional-greenhouse-gas-emissions-statistical-release-web-accessible
+   2005 to 2024 UK local and regional greenhouse gas emissions – data tables (Excel) | https://assets.publishing.service.gov.uk/media/6a3bacc7eaee00074150f326/2005-24-uk-local-authority-ghg-emissions.xlsx
+   2005 to 2024 UK Protected Landscapes greenhouse gas emissions – data tables (Excel) | https://assets.publishing.service.gov.uk/media/6a3bacc6d52550a19950f2f3/2005-24-uk-protected-landscapes-ghg-emissions.xlsx
+   2005 to 2024 UK local and regional greenhouse gas emissions technical report (PDF) | https://assets.publishing.service.gov.uk/media/6a3bd771eaee00074150f389/local-authority-ghg-technical-report-2024.pdf
+    2005 to 2024 UK local and regional greenhouse gas emissions technical report (web accessible) | /government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024/2005-to-2024-uk-local-and-regional-greenhouse-gas-emissions-technical-report-web-accessible
+   Employment based energy consumption mapping in the UK (PDF) | https://assets.publishing.service.gov.uk/media/6a3bacc64c7605ab567238c8/employment-based-energy-consumption-local-authority-mapping-2024.pdf
+   Employment based energy consumption mapping in the UK (web accessible) | /government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024/employment-based-energy-consumption-mapping-in-the-uk-web-accessible
+   Mapping greenhouse gas emissions and removals for land use, land use change and forestry sector (LULUCF) (PDF) | https://assets.publishing.service.gov.uk/media/6a3bacc730b491f55b3c484d/LULUCF-local-authority-report-2024.pdf
+   Mapping greenhouse gas emissions and removals for the land use, land use change and forestry sector (LULUCF) (web accessible) | /government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024/mapping-greenhouse-gas-emissions-and-removals-for-the-land-use-land-use-change-and-forestry-sector-lulucf-web-accessible
+   2005 to 2024 local authority greenhouse gas emissions dataset (CSV) | https://assets.publishing.service.gov.uk/media/6a3bacc9d52550a19950f2f5/2005-24-local-authority-ghg-emissions-csv-dataset.csv
+##### https://naei.energysecurity.gov.uk/reports/greenhouse-gas-inventories-england-scotland-wales-and-northern-ireland-1990-2024 25248
+##### https://naei.energysecurity.gov.uk/data/data-selector 125219
+   /sites/default/files/2026-07/NAEI24_AQ_CSV_files.zip
+   /sites/default/files/2026-07/NAEI24_GHG_CSV_files.zip
