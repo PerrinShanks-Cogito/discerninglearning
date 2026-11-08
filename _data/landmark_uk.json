@@ -519,6 +519,178 @@
           "url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2025/country-and-regional-analysis-november-2025"
         }
       ]
+    },
+    {
+      "key": "energy",
+      "title": "Energy",
+      "measures": [
+        {
+          "key": "generated_twh",
+          "label": "Electricity generated (TWh)",
+          "format": "dec1",
+          "values": {
+            "uk": 293.6,
+            "england": 208.9,
+            "scotland": 54.0,
+            "wales": 22.5,
+            "ni": 8.2
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "used_twh",
+          "label": "Electricity used (TWh)",
+          "format": "dec1",
+          "values": {
+            "uk": 279.9,
+            "england": 231.6,
+            "scotland": 28.0,
+            "wales": 12.4,
+            "ni": 7.8
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "net_sent_twh",
+          "label": "Electricity sent out (+) or brought in (−), net (TWh)",
+          "format": "sdec1",
+          "values": {
+            "uk": -29.7,
+            "england": -57.0,
+            "scotland": 20.8,
+            "wales": 7.2,
+            "ni": -0.6
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "renewables_pct",
+          "label": "Share of generation from renewables",
+          "format": "pct1",
+          "values": {
+            "uk": 52.1,
+            "england": 48.7,
+            "scotland": 72.3,
+            "wales": 36.7,
+            "ni": 49.4
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "low_carbon_pct",
+          "label": "Share from low-carbon sources (renewables and nuclear)",
+          "format": "pct1",
+          "values": {
+            "uk": 64.3,
+            "england": 61.3,
+            "scotland": 89.7,
+            "wales": 36.7,
+            "ni": 49.4
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "wind_pct",
+          "label": "Wind",
+          "format": "pct1",
+          "values": {
+            "uk": 29.4,
+            "england": 22.8,
+            "scotland": 57.1,
+            "wales": 22.2,
+            "ni": 35.0
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "solar_pct",
+          "label": "Solar",
+          "format": "pct1",
+          "values": {
+            "uk": 6.9,
+            "england": 8.3,
+            "scotland": 1.4,
+            "wales": 7.2,
+            "ni": 4.0
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "bio_pct",
+          "label": "Bioenergy (biomass, biogas, waste)",
+          "format": "pct1",
+          "values": {
+            "uk": 14.0,
+            "england": 17.4,
+            "scotland": 4.6,
+            "wales": 5.9,
+            "ni": 10.0
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "hydro_pct",
+          "label": "Hydro, wave and tidal",
+          "format": "pct1",
+          "values": {
+            "uk": 1.8,
+            "england": 0.1,
+            "scotland": 9.1,
+            "wales": 1.5,
+            "ni": 0.4
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "nuclear_pct",
+          "label": "Nuclear",
+          "format": "pct1",
+          "values": {
+            "uk": 12.2,
+            "england": 12.7,
+            "scotland": 17.5,
+            "wales": 0.0,
+            "ni": 0.0
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        },
+        {
+          "key": "gas_pct",
+          "label": "Gas",
+          "format": "pct1",
+          "values": {
+            "uk": 31.7,
+            "england": 34.9,
+            "scotland": 6.0,
+            "wales": 57.2,
+            "ni": 50.2
+          },
+          "period": "2025",
+          "source": "DESNZ, Energy Trends September 2026: electricity generation and supply in Scotland, Wales, Northern Ireland and England, 2025 (published 29 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/energy-trends-september-2026-special-feature-article-electricity-generation-and-supply-in-scotland-wales-northern-ireland-and-england-2021-to-2025"
+        }
+      ],
+      "note": "Shares are of electricity generated in each nation. The grid is shared, so a nation can generate more than it uses and send the rest to the others or abroad (Northern Ireland shares a market with Ireland). The UK row of \"sent out or brought in\" is net imports through interconnectors."
     }
   ],
   "uk_only": {
@@ -858,6 +1030,278 @@
       "borrowing_bn": 134.3,
       "borrowing_source": "OBR, Public finances databank (October 2026): public sector net borrowing, 2025/26 outturn",
       "borrowing_url": "https://obr.uk/data/"
+    },
+    "energy": {
+      "period": "2025",
+      "generated_twh": 293.6,
+      "renewables_twh": 153.0,
+      "renewables_pct": 52.1,
+      "low_carbon_pct": 64.3,
+      "fossil_pct": 32.3,
+      "coal_twh": 0,
+      "carbon_g_kwh": 147.2,
+      "carbon_g_kwh_from": 521.3,
+      "carbon_from_year": 1996,
+      "mix": [
+        {
+          "label": "Gas",
+          "twh": 93.2,
+          "pct": 31.7,
+          "renewable": false
+        },
+        {
+          "label": "Offshore wind",
+          "twh": 52.0,
+          "pct": 17.7,
+          "renewable": true
+        },
+        {
+          "label": "Bioenergy",
+          "twh": 41.0,
+          "pct": 14.0,
+          "renewable": true
+        },
+        {
+          "label": "Nuclear",
+          "twh": 35.9,
+          "pct": 12.2,
+          "renewable": false
+        },
+        {
+          "label": "Onshore wind",
+          "twh": 34.4,
+          "pct": 11.7,
+          "renewable": true
+        },
+        {
+          "label": "Solar",
+          "twh": 20.1,
+          "pct": 6.9,
+          "renewable": true
+        },
+        {
+          "label": "Hydro, wave and tidal",
+          "twh": 5.4,
+          "pct": 1.8,
+          "renewable": true
+        },
+        {
+          "label": "Other",
+          "twh": 11.5,
+          "pct": 3.9,
+          "renewable": false,
+          "note": "Oil, non-renewable waste and electricity released from storage"
+        }
+      ],
+      "mix_source": "DESNZ, Digest of UK Energy Statistics (DUKES) 2026, table 5.6 (published 30 July 2026)",
+      "mix_url": "https://www.gov.uk/government/statistics/electricity-chapter-5-digest-of-united-kingdom-energy-statistics-dukes",
+      "renewables": [
+        {
+          "label": "Offshore wind",
+          "twh": 52.0,
+          "gw": 16.6,
+          "note": "Capacity includes 0.08 GW of floating turbines"
+        },
+        {
+          "label": "Bioenergy",
+          "twh": 41.0,
+          "gw": 8.4,
+          "note": "Plant biomass 27.8 TWh, biogas 7.2, energy from waste 5.3, other 0.6"
+        },
+        {
+          "label": "Onshore wind",
+          "twh": 34.4,
+          "gw": 16.4
+        },
+        {
+          "label": "Solar",
+          "twh": 20.1,
+          "gw": 21.9
+        },
+        {
+          "label": "Hydro",
+          "twh": 5.4,
+          "gw": 1.9
+        },
+        {
+          "label": "Wave and tidal",
+          "twh": 0.02,
+          "gw": 0.01
+        }
+      ],
+      "renewables_total_gw": 65.3,
+      "renewables_source": "DESNZ, DUKES 2026, table 6.2: installed capacity at the end of 2025 and generation in 2025",
+      "renewables_url": "https://www.gov.uk/government/statistics/renewable-sources-of-energy-chapter-6-digest-of-united-kingdom-energy-statistics-dukes",
+      "infrastructure": {
+        "date": "end of 2025",
+        "groups": [
+          {
+            "title": "Generating capacity",
+            "items": [
+              {
+                "label": "Gas-fired power stations",
+                "gw": 36.5
+              },
+              {
+                "label": "Wind",
+                "gw": 33.1
+              },
+              {
+                "label": "Solar",
+                "gw": 21.9
+              },
+              {
+                "label": "Bioenergy and waste",
+                "gw": 8.4
+              },
+              {
+                "label": "Nuclear",
+                "gw": 5.9
+              },
+              {
+                "label": "Hydro",
+                "gw": 1.9
+              }
+            ]
+          },
+          {
+            "title": "Storage",
+            "items": [
+              {
+                "label": "Grid-scale batteries",
+                "gw": 7.5
+              },
+              {
+                "label": "Pumped hydro",
+                "gw": 2.7,
+                "note": "Dinorwig, Ffestiniog, Cruachan, Foyers"
+              }
+            ]
+          },
+          {
+            "title": "Interconnectors to other countries",
+            "items": [
+              {
+                "label": "France",
+                "gw": 4.0,
+                "note": "3 links"
+              },
+              {
+                "label": "Ireland",
+                "gw": 1.5,
+                "note": "3 links"
+              },
+              {
+                "label": "Norway",
+                "gw": 1.4
+              },
+              {
+                "label": "Denmark",
+                "gw": 1.4
+              },
+              {
+                "label": "Netherlands",
+                "gw": 1.0
+              },
+              {
+                "label": "Belgium",
+                "gw": 1.0
+              }
+            ]
+          }
+        ],
+        "interconnector_gw": 10.3,
+        "interconnector_links": 10,
+        "imports_twh": 43.9,
+        "exports_twh": 14.2,
+        "net_imports_twh": 29.7,
+        "net_from_france_twh": 21.9,
+        "net_from_norway_twh": 9.0,
+        "note": "Gas-fired capacity is from DUKES table 5.7, renewables from table 6.2, storage from table 5.16 and interconnectors from table 5.13A (excluding Moyle, which links Scotland and Northern Ireland).",
+        "source": "DESNZ, DUKES 2026, chapter 5 tables 5.7, 5.13, 5.13A and 5.16, and chapter 6 table 6.2",
+        "url": "https://www.gov.uk/government/statistics/electricity-chapter-5-digest-of-united-kingdom-energy-statistics-dukes"
+      },
+      "nuclear_stations": {
+        "date": "May 2026",
+        "total_mw": 5883,
+        "stations": [
+          {
+            "name": "Heysham 2",
+            "nation": "England",
+            "mw": 1240,
+            "opened": 1988,
+            "type": "AGR"
+          },
+          {
+            "name": "Torness",
+            "nation": "Scotland",
+            "mw": 1200,
+            "opened": 1988,
+            "type": "AGR"
+          },
+          {
+            "name": "Sizewell B",
+            "nation": "England",
+            "mw": 1198,
+            "opened": 1995,
+            "type": "PWR"
+          },
+          {
+            "name": "Hartlepool",
+            "nation": "England",
+            "mw": 1185,
+            "opened": 1983,
+            "type": "AGR"
+          },
+          {
+            "name": "Heysham 1",
+            "nation": "England",
+            "mw": 1060,
+            "opened": 1983,
+            "type": "AGR"
+          }
+        ],
+        "source": "DESNZ, DUKES 2026, table 5.11: power stations in the UK, May 2026",
+        "url": "https://www.gov.uk/government/statistics/electricity-chapter-5-digest-of-united-kingdom-energy-statistics-dukes"
+      },
+      "gas": {
+        "period": "2025",
+        "used_twh": 676.6,
+        "production_twh": 332.2,
+        "imports_twh": 463.7,
+        "exports_twh": 133.1,
+        "imports": [
+          {
+            "label": "Norway, by pipeline",
+            "twh": 320.2
+          },
+          {
+            "label": "LNG by ship",
+            "twh": 137.4,
+            "note": "106.2 TWh from the USA"
+          },
+          {
+            "label": "Belgium and the Netherlands, by pipeline",
+            "twh": 6.1
+          }
+        ],
+        "uses": [
+          {
+            "label": "Homes",
+            "twh": 250.4
+          },
+          {
+            "label": "Power stations",
+            "twh": 192.3
+          },
+          {
+            "label": "Industry",
+            "twh": 63.8
+          }
+        ],
+        "source": "DESNZ, DUKES 2026, tables 4.1.1 and 4.5 (published 30 July and 29 September 2026)",
+        "url": "https://www.gov.uk/government/statistics/natural-gas-chapter-4-digest-of-united-kingdom-energy-statistics-dukes"
+      }
     }
   }
 }

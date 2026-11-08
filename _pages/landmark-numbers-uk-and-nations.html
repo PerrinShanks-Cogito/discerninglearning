@@ -359,6 +359,136 @@ permalink: /landmark-numbers/uk-and-nations/
 </div>
 <p class="uk-note">As at {{ eq.date }}. {{ eq.note }} <a href="{{ eq.url }}">{{ eq.source }}</a>.</p>
 {%- endif %}
+{%- if g.key == "energy" %}
+{%- assign en = uk.uk_only.energy %}
+{%- assign en_kwh_pp = en.generated_twh | times: 1000000000.0 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ en.period }}</p>
+    <p class="nhs-stat__figure">{{ en.renewables_pct }}%</p>
+    <h3 class="nhs-stat__label">of the UK's electricity came from renewables</h3>
+    <p class="nhs-stat__so">{{ en.renewables_twh }} TWh out of {{ en.generated_twh }} TWh generated. Adding nuclear, {{ en.low_carbon_pct }}%
+      came from low-carbon sources; fossil fuels supplied {{ en.fossil_pct }}%. No electricity was generated from coal.
+      That's about {% include thousands.html n=en_kwh_pp %} kWh generated per person.</p>
+    <p class="nhs-stat__source"><a href="{{ en.mix_url }}">{{ en.mix_source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ en.carbon_from_year }} to {{ en.period }}</p>
+    <p class="nhs-stat__figure">{{ en.carbon_g_kwh | round }}g</p>
+    <h3 class="nhs-stat__label">of carbon dioxide per kWh of electricity supplied</h3>
+    <p class="nhs-stat__so">Down from {{ en.carbon_g_kwh_from | round }}g in {{ en.carbon_from_year }}, the first year of this series,
+      as coal generation fell to nothing and wind and solar grew.</p>
+    <p class="nhs-stat__source"><a href="{{ en.mix_url }}">DESNZ, DUKES 2026, table 5.14</a></p>
+  </section>
+</div>
+
+<h3 id="electricity-mix">Where the UK's electricity came from, {{ en.period }}</h3>
+<div class="en-mix" role="img" aria-label="Electricity generated in {{ en.period }}: {% for r in en.mix %}{{ r.label }} {{ r.pct }}%{% unless forloop.last %}, {% endunless %}{% endfor %}">
+  {%- for r in en.mix %}
+  <span class="en-mix__seg en-mix__seg--{{ forloop.index }}" style="flex-basis: {{ r.pct }}%" title="{{ r.label }}: {{ r.pct }}%">{% if r.pct >= 10 %}{{ r.pct | round }}%{% endif %}</span>
+  {%- endfor %}
+</div>
+<ul class="en-legend">
+  {%- for r in en.mix %}
+  <li><i class="en-mix__seg--{{ forloop.index }}" aria-hidden="true"></i>{{ r.label }}{% if r.renewable %}<sup title="Renewable">R</sup>{% endif %} <strong>{{ r.pct }}%</strong> <span>{{ r.twh }} TWh</span></li>
+  {%- endfor %}
+</ul>
+<p class="uk-note"><sup>R</sup> renewable. "Other" is {{ en.mix.last.note | downcase }}. <a href="{{ en.mix_url }}">{{ en.mix_source }}</a>.</p>
+
+<h3 id="renewables">The renewables mix</h3>
+<p>
+  Renewables generated {{ en.renewables_twh }} TWh from {{ en.renewables_total_gw }} GW of capacity. Capacity is how much a plant can
+  produce at full power; generation is what it actually produced. Solar has the most capacity but produces far less than offshore wind,
+  because the sun shines for only part of the day and weakly in winter, while offshore wind blows more steadily.
+</p>
+<div class="pf-grid">
+  {%- assign lists = "twh,gw" | split: "," %}
+  {%- for lk in lists %}
+  {%- assign rn_max = 0 %}
+  {%- for r in en.renewables %}{% if lk == "twh" %}{% assign v = r.twh %}{% else %}{% assign v = r.gw %}{% endif %}{% if v > rn_max %}{% assign rn_max = v %}{% endif %}{% endfor %}
+  <section class="pf-list{% if lk == 'gw' %} pf-list--receipts{% endif %}">
+    <h4>{% if lk == "twh" %}Electricity generated, {{ en.period }}<span>{{ en.renewables_twh }} TWh</span>{% else %}Capacity, end of {{ en.period }}<span>{{ en.renewables_total_gw }} GW</span>{% endif %}</h4>
+    <ul>
+      {%- for r in en.renewables %}
+      {%- if lk == "twh" %}{% assign v = r.twh %}{% assign tot = en.renewables_twh %}{% else %}{% assign v = r.gw %}{% assign tot = en.renewables_total_gw %}{% endif %}
+      {%- assign w = v | times: 100.0 | divided_by: rn_max | round: 1 %}
+      {%- assign share = v | times: 100.0 | divided_by: tot | round %}
+      <li>
+        <span class="pf-label">{{ r.label }}{% if lk == "twh" and r.note %}<small>{{ r.note }}</small>{% endif %}</span>
+        <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span>
+        <span class="pf-val">{% if v < 0.1 %}&lt;0.1{% else %}{{ v }}{% endif %} {% if lk == "twh" %}TWh{% else %}GW{% endif %}<small>{% if share < 1 %}&lt;1{% else %}{{ share }}{% endif %}%</small></span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
+<p class="uk-note">Each list has its own scale. 1 GW running at full power for a whole year would make 8.8 TWh. <a href="{{ en.renewables_url }}">{{ en.renewables_source }}</a>.</p>
+
+{%- assign inf = en.infrastructure %}
+<h3 id="energy-infrastructure">Power stations, storage and links abroad</h3>
+<div class="pf-grid def-equipment">
+  {%- for grp in inf.groups %}
+  <section class="pf-list">
+    <h4>{{ grp.title }}</h4>
+    <ul>
+      {%- for it in grp.items %}
+      <li><span class="pf-label">{{ it.label }}{% if it.note %}<small>{{ it.note }}</small>{% endif %}</span><span class="pf-val">{{ it.gw }} GW</span></li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
+<p class="uk-note">
+  Capacity at the {{ inf.date }}. The UK's {{ inf.interconnector_links }} interconnectors ({{ inf.interconnector_gw }} GW) brought in
+  {{ inf.imports_twh }} TWh and sent out {{ inf.exports_twh }} TWh in {{ en.period }}: net imports of {{ inf.net_imports_twh }} TWh,
+  mostly from France ({{ inf.net_from_france_twh }} TWh) and Norway ({{ inf.net_from_norway_twh }} TWh).
+  {{ inf.note }} <a href="{{ inf.url }}">{{ inf.source }}</a>.
+</p>
+
+{%- assign ns = en.nuclear_stations %}
+{%- assign gas = en.gas %}
+{%- assign gas_home_pct = gas.production_twh | times: 100.0 | divided_by: gas.used_twh | round %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ ns.date }}</p>
+    <p class="nhs-stat__figure">{{ ns.stations.size }} nuclear power stations</p>
+    <h3 class="nhs-stat__label">{% include thousands.html n=ns.total_mw %} MW between them</h3>
+    <table class="def-table">
+      <thead><tr><th scope="col">Station</th><th scope="col">Opened</th><th scope="col" class="num">MW</th></tr></thead>
+      <tbody>
+        {%- for st in ns.stations %}
+        <tr><th scope="row">{{ st.name }}<small>{{ st.nation }}</small></th><td>{{ st.opened }}</td><td class="num">{% include thousands.html n=st.mw %}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="nhs-stat__source"><a href="{{ ns.url }}">{{ ns.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ gas.period }}</p>
+    <p class="nhs-stat__figure">{{ gas.used_twh | round }} TWh of gas used</p>
+    <h3 class="nhs-stat__label">UK gas fields produced the equivalent of {{ gas_home_pct }}%</h3>
+    <p class="nhs-stat__so">The UK produced {{ gas.production_twh }} TWh, imported {{ gas.imports_twh }} TWh and exported {{ gas.exports_twh }} TWh (by pipeline to Belgium, the Netherlands and Ireland).</p>
+    <table class="def-table">
+      <thead><tr><th scope="col">Imports from</th><th scope="col" class="num">TWh</th></tr></thead>
+      <tbody>
+        {%- for r in gas.imports %}
+        <tr><th scope="row">{{ r.label }}{% if r.note %}<small>{{ r.note }}</small>{% endif %}</th><td class="num">{{ r.twh }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <table class="def-table">
+      <thead><tr><th scope="col">Main uses</th><th scope="col" class="num">TWh</th></tr></thead>
+      <tbody>
+        {%- for r in gas.uses %}
+        <tr><th scope="row">{{ r.label }}</th><td class="num">{{ r.twh }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="nhs-stat__source"><a href="{{ gas.url }}">{{ gas.source }}</a></p>
+  </section>
+</div>
+{%- endif %}
 {%- endfor %}
 
 <h2 id="reading-these">Reading these numbers</h2>

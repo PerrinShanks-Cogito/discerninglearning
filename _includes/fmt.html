@@ -2,7 +2,7 @@
   Formats a landmark number. Usage: {% include fmt.html v=value f=format %}
   Formats: int (12,345), km2 (12,345), money (£12,345), money2 (£766.60),
   years1 (79.1), pct1 (75.3%), pct2 (0.33%, with a + sign when positive),
-  m1 (millions: 24.3m, or 2.52m below 10 million), dec2 (2.36).
+  m1 (millions: 24.3m, or 2.52m below 10 million), dec1 (293.6), sdec1 (+20.8 / −0.6), dec2 (2.36).
 {%- endcomment -%}
 {%- assign fv = include.v -%}
 {%- assign ff = include.f -%}
@@ -24,6 +24,11 @@
     {%- assign tenth = fv | times: 10 | round -%}
     {{ tenth | divided_by: 10 }}.{{ tenth | modulo: 10 }}m
   {%- endif -%}
+{%- elsif ff == "dec1" or ff == "sdec1" -%}
+  {%- if fv < 0 -%}−{%- assign fa = fv | abs -%}{%- else -%}{%- if ff == "sdec1" and fv > 0 -%}+{%- endif -%}{%- assign fa = fv -%}{%- endif -%}
+  {%- assign tenth = fa | times: 10 | round -%}
+  {%- assign whole = tenth | divided_by: 10 -%}
+  {% include thousands.html n=whole %}.{{ tenth | modulo: 10 }}
 {%- elsif ff == "dec2" -%}
   {%- assign hund = fv | times: 100 | round -%}
   {{ hund | divided_by: 100 }}.{{ hund | modulo: 100 | prepend: "0" | slice: -2, 2 }}
