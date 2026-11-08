@@ -1,88 +1,167 @@
-Traceback (most recent call last):
-  File "/home/runner/work/discerninglearning/discerninglearning/explore/explore.py", line 26, in <module>
-    d=pd.read_excel(x,"NI",header=None); print(d.iloc[7:11].T.to_string())
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 526, in read_excel
-    data = io._reader.parse(
-           ^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 787, in parse
-    sheet = self.get_sheet_by_name(asheetname)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 706, in get_sheet_by_name
-    self.raise_if_bad_sheet_by_name(name)
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 637, in raise_if_bad_sheet_by_name
-    raise ValueError(f"Worksheet named '{name}' not found")
-ValueError: Worksheet named 'NI' not found
-######### Claimant count
-200
-"DATE_NAME","GEOGRAPHY_NAME","MEASURE_NAME","OBS_VALUE"
-"September 2026","United Kingdom","Claimant count",1702905
-"September 2026","United Kingdom","Claimants as a proportion of residents aged 16-64",3.9
-"September 2026","Great Britain","Claimant count",1668680
-"September 2026","Great Britain","Claimants as a proportion of residents aged 16-64",3.9
-"September 2026","England","Claimant count",1493875
-"September 2026","England","Claimants as a proportion of residents aged 16-64",4.1
-"September 2026","Wales","Claimant count",66045
-"September 2026","Wales","Claimants as a proportion of residents aged 16-64",3.4
-"September 2026","Scotland","Claimant count",108760
-"September 2026","Scotland","Claimants as a proportion of residents aged 16-64",3.1
-"September 2026","Northern Ireland","Claimant count",34225
-"September 2026","Northern Ireland","Claimants as a proportion of residents aged 16-64",2.9
-"September 2026","England and Wales","Claimant count",1559915
-"September 2026","England and Wales","Claimants as a proportion of residents aged 16-64",4.0
-
-######### NI UC May 2026
-200
-   — Slovenčina Spanish — Español Ukrainian — Українська Universal Credit Statistics - May 2026 Topics: Benefits and pensions ,  Statistics and research ,  Benefits statistics Date published: 26 August 2026 Universal Credit is a payment to help support households that are out of work or are on a low income.
-['https://www.communities-ni.gov.uk/system/files/2026-08/dfc-ni-uc-stats-supp-tables-may-2026.ods']
-######### GB UC May 2026 headline
-    Main stories The main stories for this statistical release are: there were 8.4 million people on Universal Credit in May 2026 which is the highest number on record.
-   7 million people on Universal Credit in May 2025, and a small increase from last quarter where, in February 2026, there were 8.3 million people on Universal Credit Move to Universal Credit claimants made up 73.
-   7 million and has remained stable ever since between December 2023 and December 2025, the number of people on Universal Credit increased by 2.
-   3% of this increase between January 2026 and May 2026, the number of people on Universal Credit increased by 37,000.
-   1 million people on Universal Credit in any employment ( PAYE employment or self-employment) in April 2026, which was 37.
-   7% of all people on Universal Credit.
-   2 million people on Universal Credit in any employment, which was 41.
-   4 million people on Universal Credit in May 2026 Figure 1: People on Universal Credit, Great Britain, May 2021 to May 2026 Source: DWP Stat-Xplore, People on Universal Credit The number of people on Universal Credit in May 2026 was 8.
-    During the most active period between December 2023 and December 2025, the number of people on Universal Credit increased by 2.
-    In May 2026, there were 8.4 million people on Universal Credit.
-    Of those 8.4 million people, 1.
-   9%) people on Universal Credit were not part of the managed migration process, so were either new claims to Universal Credit or people who had naturally or voluntarily moved over to Universal Credit from other legacy benefits.
-    Between December 2023 and December 2025, the number of people on Universal Credit increased by 2.
-    Between January 2026 and May 2026, the number of people on Universal Credit increased by 37,000.
-    As such, ‘Other Universal Credit claimants’ primarily contributed to the increase in the number of people on Universal Credit during this period.
-    Between May 2024 and December 2025, the number of people on Universal Credit increased by 1.
-    Between January 2026 and May 2026, the number of people on Universal Credit increased by 37,000.
-    As such, ‘Other Universal Credit claimants’ primarily contributed to the increase in the number of people on Universal Credit during this period.
-   3 million people on Universal Credit in the ‘no work requirements’ conditionality regime.
-   1%) people on Universal Credit in the ‘no work requirements’ conditionality regime were not part of the managed migration process.
-    Between December 2023 and December 2025, the number of people on Universal Credit in the ‘no work requirements’ conditionality regime increased by 1.
-    Between January 2026 and May 2026, the number of people on Universal Credit in the ‘no work requirements’ conditionality regime increased by 87,000 people.
-    The number of people on Universal Credit in the ‘No work requirements’ conditionality regime continues to increase Claimants are required to do certain work-related activities to receive Universal Credit.
-   tionality regime, Great Britain, May 2021 to May 2026 Source: DWP Stat-Xplore, People on Universal Credit by conditionality regime As people have moved across from legacy benefits, the composition of people on Universal Credit has changed.
-    The number of people on Universal Credit in the ‘Searching for work’ conditionality regime had a peak of 2.
-    The latest number of people on Universal Credit in the ‘Searching for work’ conditionality regime was 1.
-    The number of people on Universal Credit in the ‘No work requirements’ conditionality regime has been rising, reaching 4.
-    57% of the people on Universal Credit in May 2026 were women Women made up 57% of the people on Universal Credit in May 2026, which is similar to the 58% seen in May 2025.
-    The average (median) age of people on Universal Credit is slowly rising.
-    Figure 7: People on Universal Credit by age, Great Britain, May 2026 compared to May 2025 Source: DWP Stat-Xplore, People on Universal Credit by age The median age of people on Universal Credit has increased from 40 in May 2025 to 41 as of May 2026.
-   7% of the people on Universal Credit were in any employment in April 2026 Universal Credit is available to people on a low income as well as those who are out of work.
-   1 million people on Universal Credit in any employment ( PAYE employment or self-employment) in April 2026, which was 37.
-   7% of all people on Universal Credit.
-   9% of all people on Universal Credit) were in PAYE employment only, 0.
-   5% of all people on Universal Credit) were in self-employment only, and the remaining 0.
-   3% of all people on Universal Credit) were in both PAYE employment and self-employment.
-    Percentage of people on Universal Credit by Immigration status, Great Britain, May 2026 Immigration status May 2026 (%) CTA – UK , Ireland, Right of Abode 84.
-   5% of people on Universal Credit were in the “ CTA – UK , Ireland, Right of Abode” group.
-   9% of people on Universal Credit were in the “ EU Settlement Scheme” group.
-   8% of people on Universal Credit were in the “Indefinite Leave to Remain” group.
-   6% of people on Universal Credit were in the “Refugee” group.
-   9% of people on Universal Credit were in the “Limited Leave to Remain including family reunion” group.
-   4% of people on Universal Credit were in the “Other” group.
-   4% of people on Universal Credit in the “ EU Settlement Scheme” immigration status were in employment in April 2026 Figure 12: Proportion of people on Universal Credit in each immigration status who are in employment, Great Britain, April 2026 Source: UC Collection Page – Latest Release, UC Immigration status Statistics.
-    Universal Credit Work Capability Assessments provides statistics that cover the number of people on Universal Credit with a health condition or disability restricting their ability to work.
-    It includes people on Universal Credit in the searching for work conditionality regime for the United Kingdom.
-    Conditionality Regimes All people on Universal Credit are placed into one of six conditionality groups, depending on their personal circumstances.
-######### NI MS-B20
-######### Scotland religion
-['https://www.scotlandscensus.gov.uk/2022-reports/scotland-s-census-2022-ethnic-group-national-identity-language-and-religion/', '/documents/scotlands-census-2022-ethnic-group-national-identity-language-and-religion-chart-data/', 'https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/2022/list-of-data-tables#section3', '/documents/2022-output-area-data/', 'https://www.nrscotland.gov.uk/statistics-and-data/geography/our-products/census-datasets/2022-census', '/2022-reports/scotlands-census-2022-quality-assurance-reports/quality-assurance-report-unrounded-population-estimates-and-ethnic-group-national-identity-language-and-religion-topic-data/', 'https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/key-definitions/what-is-personal-data/']
+######### NI UC ods
+['User_Feedback', 'UC_General_Info', 'Ben_Cap_General_Info', 'Notes', 'Contents', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+-- User_Feedback (14, 1)
+                                                                                                                                                                    0
+0                                                                                                                                           Request for User Feedback
+1                             Analytics Division (AD) are continuing to reach out to users of this publication to better understand how the statistics are being used
+2                                                                                                            and whether there are any improvements that can be made.
+3                                        Statisticians in AD are committed to following best practice when producing statistics. These statistics have been developed
+4                            using guidelines set out by the UK Statistics Authority and are new official statistics undergoing development. The methodology used and
+5   definitions of the statistics may be updated within subsequent releases, along with information on the impact of any changes to the time series already released.
+6                  As part of our responsibilities under the Code of Practice, we want to hear from people who use the figures within the Universal Credit statistics
+7                 publication.  We would like to find out what people use the statistics for and to make sure that the publication is as useful as it can be. AD also
+8                                                                                                 wishes to assess how we communicate with users on an ongoing basis.
+9                                                                We would appreciate if you completed a short questionnaire to give us your views on the publication.
+10                                                                                                       Northern Ireland Universal Credit statistics feedback survey
+11                                                                                                           Alternatively, a hard copy can be requested by emailing:
+12                                                                                                                            analyticsdivision@communities-ni.gov.uk
+13                                                                                                                                         Many thanks for your time.
+-- UC_General_Info (25, 2)
+                                                                                                                                                                        0                                                                                                                                                 1
+0                                                                                                                   General information about Universal Credit Statistics                                                                                                                                               NaN
+1                This summary contains experimental statistics on Households and Claimants on Universal Credit (UC) in Northern Ireland. UC began rolling out on a phased                                                                                                                                               NaN
+2                                   geographical basis in Northern Ireland on 27 September 2017. Roll out for new claims in Northern Ireland completed on 5 December 2018                                                                                                                                               NaN
+3          UC provides a single award per household based upon the circumstances of the household. Support for housing costs, children and childcare costs are integrated                                                                                                                                               NaN
+4      into UC via additional elements. It also provides additions for disabled people and carers. UC is available to people who are in work and on a low income, as well                                                                                                                                               NaN
+5            as to those who are out of work. UC replaces six existing benefits and tax credits; Income-based Jobseekers Allowance, Income-related Employment and Support                                                                                                                                               NaN
+6                                                                                    Allowance, Income Support, Working Tax Credit, Child Tax Credit and Housing Benefit.                                                                                                                       
+-- Ben_Cap_General_Info (24, 3)
+                                                                                                                                                                         0    1    2
+0                                                                                                                         General information about Benefit Cap Statistics  NaN  NaN
+1                  This summary contains experimental statistics on the number of households capped since the introduction of the Benefit Cap. It examines key features of  NaN  NaN
+2          these households in terms of amount capped, number of children, family type and location, broken down by local government district and parliament constituency.  NaN  NaN
+3                  The two main sources of Benefit Cap data published here are the NIHE Single Housing Benefit Extract (SHBE) and the Universal Credit Full Service system  NaN  NaN
+4                     (UCFS). The SHBE is merged with DfC benefit scans to determine the age and number of dependents of capped households. This data is available on UCFS  NaN  NaN
+5                                                                                                                                         for Universal Credit households.  NaN  NaN
+6                                                                                                                                                   Data quality statement  NaN  NaN
+7   These statistics are in an experimental stage and as such are subject to retrospective revision in any future releases. The methodology for gathering these statistics  NaN  NaN
+8          is still in development and is also in the process of being quality assured. The methodology may change, leading to a revision of the figures contained within.  NaN  NaN
+9           Since the Universal Credit Full Service system (UCFS) is a live system, the UC figures and the combined HB and UC figures contained within the publication and  NaN  NaN
+10    supplementary tables are subject to revisions. This is to account for retrospective actions on the UCFS system. The August 2020 publication underwent a streamlining  NaN  NaN
+11                                                                  exercise as feedback suggested too much data was presented and this detracted from the key statistics.  NaN  NaN
+12                                                                                                                                                B
+-- Notes (11, 2)
+                                    0                                                                                                                                                                                                                                                                                                                                                                                                                                                                      1
+0                               Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    NaN
+1   This worksheet contains one table                                                                                                                                                                                                                                                                                                                                                                                                                                                                    NaN
+2                         Note number                                                                                                                                                                                                                                                                                                                                                                                                                                                              Note text
+3                                   1                                                                                                                                                                                                                              The methodology used to calculate the number of households receiving Universal Credit with no additional elements has been revised to improve accuracy. As a result, the estimates presented here better reflect the underlying position.
+4                                  
+-- Contents (56, 3)
+                                         0                 1                                             2
+0                                      NaN               NaN                                           NaN
+1   Universal Credit Statistics - May 2026               NaN                                           NaN
+2                               Published:    26 August 2026                                           NaN
+3                                Coverage:  Northern Ireland                                           NaN
+4                                 Contents               NaN                                           NaN
+5                                 Category             Table                             Table Description
+6                       UC Characteristics           Table 1                 Claimants on Universal Credit
+7                                      NaN           Table 2       Claimants by Age and Gender at May 2026
+8                                      NaN           Table 3                              Claimants by Age
+9                                      NaN           Table 4                           Claimants by Gender
+10                                     NaN           Table 5        Claimants by Jobs and Benefits Offices
+11                                     NaN           Table 6     Claimants by Parliamentary Constituencies
+12                                     NaN           Table 7       Claimants by Local Government Districts
+13                                     NaN           Table 8  Number of Claimants by Conditionality Regime
+-- 01 (64, 9)
+                                                                               0          1   2   3   4   5   6   7         8
+0   Table 01 - Claimants on Universal Credit at Each Month, May 2021 to May 2026        NaN NaN NaN NaN NaN NaN NaN  Contents
+1                                                                            NaN        NaN NaN NaN NaN NaN NaN NaN       NaN
+2                                                                          Month  Claimants NaN NaN NaN NaN NaN NaN       NaN
+3                                                                       May 2021     136350 NaN NaN NaN NaN NaN NaN       NaN
+4                                                                       Jun 2021     136070 NaN NaN NaN NaN NaN NaN       NaN
+5                                                                       Jul 2021     135920 NaN NaN NaN NaN NaN NaN       NaN
+6                                                                       Aug 2021     135540 NaN NaN NaN NaN NaN NaN       NaN
+7                                                                       Sep 2021     135070 NaN NaN NaN NaN NaN NaN       NaN
+8                                                                       Oct 2021     134610 NaN NaN NaN NaN NaN NaN       NaN
+9                                                                       Nov 2021     134390 NaN NaN NaN NaN NaN NaN       NaN
+10                                                                      Dec 2021     134140 NaN NaN NaN NaN NaN NaN       NaN
+11                                                                      Jan 2022     134360 NaN NaN NaN NaN NaN NaN       NaN
+12                                                                      Feb 2022     135150 NaN NaN NaN NaN NaN NaN       NaN
+13                                                                      Mar 2022     135970 NaN NaN NaN NaN NaN NaN       NaN
+######### Scotland chart data
+['/media/1ioiuhvx/scotland-s-census-2022-ethnic-group-national-identity-language-and-religion-chart-data_new-1.xlsx']
+['Cover Sheet', 'Table of Contents', 'Notes', 'Figure 1', 'Figure 2', 'Figure 3', 'Figure 4', 'Figure 5', 'Figure 6', 'Figure 7', 'Figure 8', 'Figure 9', 'Figure 10']
+-- Cover Sheet
+                                                                                                                                                                                                                                                                                                                                                                                                              0
+0                                                                                                                                                                                                                                                                                                                                                                                        Scotland's Census 2022
+1                                                                                                                                                                                                                                                                                This spreadsheet contains the main data tables for the topic release on Ethnic group, national identity, language and religion
+2                                                                                                                                                                                                                                                                                                                                                                    Source: National Records of Scotland (NRS)
+3                                                                                                                                                                                                                                                                                                                                                                                              Publication date
+4                                                                                                                                                                                                                                                                                                                                                               The data was published at 9:30am on 21 May 2024
+5                                                                                                                                                                                                                                                                                                                                                                                           Geographic coverage
+6                                                                                                                                                                                                                                                                                                                                                                             Scotland and its 32 council areas
+7                                                                                                                                                                                                                                                                                                           
+-- Table of Contents
+                    0                                                                                                                    1
+0   Table of contents                                                                                                                  NaN
+1           Worksheet                                                                                                          Information
+2         Cover sheet                                                                                   Information about this spreadsheet
+3               Notes                                                                             Notes about the data in this spreadsheet
+4            Figure 1                                  Data for figure 1: Percentage of population with no religion, 2001 - 2022, Scotland
+5            Figure 2                               Data for figure 2: Percentage of population by religious groups, 2011 - 2022, Scotland
+6            Figure 3                                  Data for figure 3: Percentage of population with no religion by age, 2022, Scotland
+7            Figure 4                 Data for figure 4: Percentage of population with a minority ethnic background, 2001 - 2022, Scotland
+8            Figure 5                          Data for figure 5: Percentage of population by minority ethnic group, 2011 - 2022, Scotland
+9            Figure 6         Data for figure 6: Percentage of population with a Polish ethnic background, 2022, council areas in Scotland
+10           Figure 7  Data for figure 7: Percentage of population with a Polish ethnic background, 2022, electoral wards in Aberdeen City
+11           Figure 8                                      Data for figure 8: Number of people by country of birth and age, 2022, Scotland
+12           Figure 9         Data for figure 9: Percentage of population by three largest national identity groups, 2011 - 2022, Scotland
+13          Figure 10                        Data for figure 10: Percentage change in population, 2011 - 2022, electoral wards in Highland
+-- Figure 1
+                                                                                     0               1
+0  Data for figure 1: Percentage of population with no religion, 2001 - 2022, Scotland             NaN
+1                                                   This worksheet contains one table.             NaN
+2                                                       Source: Scotland's Census 2022             NaN
+3                                                            Back to table of contents             NaN
+4                                                                                 Year  Percentage (%)
+5                                                                                 2022            51.1
+6                                                                                 2011            36.7
+7                                                                                 2001            27.5
+-- Figure 2
+                                                                                                0                   1               2
+0   Data for figure 2: Percentage of population by religious group, 2011 - 2022, Scotland [Note1]                 NaN             NaN
+1       This worksheet contains one table. This table contains a blank cell showing missing data.                 NaN             NaN
+2                                                                  Source: Scotland's Census 2022                 NaN             NaN
+3                                                                       Back to table of contents                 NaN             NaN
+4                                                                                            Year            Religion  Percentage (%)
+5                                                                                            2022         No religion           51.12
+6                                                                                            2022  Church of Scotland           20.36
+7                                                                                            2022      Roman Catholic            13.3
+8                                                                                            2022     Other Christian            5.13
+9                                                                                            2022              Muslim             2.2
+10                                                                                           2022               Hindu            0.55
+11                                                                                           2022            Buddhist            0.28
+12                                                                                           2022                Sikh             0.2
+13                                                                                           2022              Jewish            0.11
+14                                                                                           2022               Pagan            0.35
+15                                                                                           2022    Another religion            0.23
+16                                                                                           2022          Not stated            6.16
+17                                                                                           2011         No religion           36.66
+18                                                                                           2011  Church of Scotland           32.44
+19                                                                                           2011      Roman Catholic           15.88
+20                                                                                           2011     Other Christian             5.5
+21                                                                                           2011              Muslim            1.45
+22                                                                                           2011               Hindu            0.31
+23                                                                                           2011            Buddhist            0.24
+24                                                                                           2011                Sikh            0.17
+25              
+-- Figure 3
+                                                                                      0                  1               2
+0   Data for figure 3: Percentage of population with no religion by age, 2022, Scotland                NaN             NaN
+1                                                    This worksheet contains one table.                NaN             NaN
+2                                                        Source: Scotland's Census 2022                NaN             NaN
+3                                                             Back to table of contents                NaN             NaN
+4                                                                                  Year  Age group [Note2]  Percentage (%)
+5                                                                                  2022            0 to 15            62.3
+6                                                                                  2022           16 to 24            62.8
+7                                                                                  2022           25 to 49            60.3
+8                                                                                  2022           50 to 64            44.3
+9                                                                                  2022        65 and over            28.6
+10                                                                                 2011            0 to 15            47.9
+11                                                                                 2011           16 to 24            48.2
+12                                                                                 2011           25 to 49            43.3
+13                                                                                 2011           50 to 64            27.5
+14                                                                                 2011        65 and over            14.1
+######### NI MS-B20 sheets
+['Cover_sheet', 'MS-B20', 'Notes']
