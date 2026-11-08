@@ -128,7 +128,7 @@ reads `_data/landmark_uk.json`: curated figures for the UK, England, Scotland,
 Wales and Northern Ireland (population, age groups, households, land,
 migration, health, religion, economy, benefits, public spending, electricity
 generation, emissions and farming, plus UK-wide migration, Universal Credit, defence and energy
-(generation mix, renewables, power stations, storage, interconnectors, gas), greenhouse gas emissions and food (self-sufficiency, origins, trade, farming) figures in `uk_only`), each with its period and source. `_includes/fmt.html` formats them.
+(generation mix, renewables, power stations, storage, interconnectors, gas), greenhouse gas emissions, food (self-sufficiency, origins, trade, farming) and law and order (police, prisons and homicides for the three legal systems, plus crime, courts and prisons in England and Wales) figures in `uk_only`), each with its period and source. `_includes/fmt.html` formats them.
 
 To refresh the figures, go to **Actions → Refresh landmark numbers → Run
 workflow**, or change `_data/landmark_refresh.txt`. The Action fetches the

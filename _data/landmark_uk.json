@@ -1744,6 +1744,181 @@
         "source": "Defra, Agriculture in the United Kingdom 2025, chapters 2 and 8 (June 2025 survey)",
         "url": "https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025"
       }
+    },
+    "justice": {
+      "systems": [
+        {
+          "key": "ew",
+          "name": "England and Wales"
+        },
+        {
+          "key": "scotland",
+          "name": "Scotland"
+        },
+        {
+          "key": "ni",
+          "name": "Northern Ireland"
+        }
+      ],
+      "population_note": "Rates use ONS mid-2025 population estimates.",
+      "measures": [
+        {
+          "key": "police",
+          "label": "Police officers (full-time equivalent)",
+          "format": "int",
+          "values": {
+            "ew": 145886,
+            "scotland": 16402,
+            "ni": 6192
+          },
+          "periods": {
+            "ew": "31 March 2026",
+            "scotland": "30 June 2026",
+            "ni": "30 September 2025"
+          },
+          "sources": [
+            {
+              "name": "Home Office, Police workforce, England and Wales: 31 March 2026 (43 territorial forces)",
+              "url": "https://www.gov.uk/government/statistics/police-workforce-england-and-wales-31-march-2026/police-workforce-england-and-wales-31-march-2026"
+            },
+            {
+              "name": "Scottish Government, Police officer quarterly strength statistics: 30 June 2026",
+              "url": "https://www.gov.scot/publications/police-officer-quarterly-strength-statistics-30-june-2026/"
+            },
+            {
+              "name": "PSNI, freedom of information disclosure on officer numbers (18 December 2025)",
+              "url": "https://www.psni.police.uk/foi-disclosure-log/total-officer-numbers"
+            }
+          ]
+        },
+        {
+          "key": "police_rate",
+          "label": "Police officers per 100,000 people",
+          "format": "int",
+          "values": {
+            "ew": 235,
+            "scotland": 296,
+            "ni": 321
+          },
+          "derived": true
+        },
+        {
+          "key": "prison",
+          "label": "People in prison",
+          "format": "int",
+          "values": {
+            "ew": 87712,
+            "scotland": 8466,
+            "ni": 2283
+          },
+          "periods": {
+            "ew": "30 September 2026",
+            "scotland": "1 July 2026",
+            "ni": "week ending 30 October 2026"
+          },
+          "sources": [
+            {
+              "name": "Ministry of Justice, Offender management statistics quarterly: April to June 2026 (population at 30 September 2026)",
+              "url": "https://www.gov.uk/government/statistics/offender-management-statistics-quarterly-april-to-june-2026/offender-management-statistics-quarterly-april-to-june-2026"
+            },
+            {
+              "name": "Scottish Government, Scottish prison population projections: July 2026",
+              "url": "https://www.gov.scot/publications/scottish-prison-population-projections-july-2026/pages/overview-of-scottish-prison-population-and-court-demand-trends/"
+            },
+            {
+              "name": "Department of Justice NI, weekly prison population",
+              "url": "https://www.justice-ni.gov.uk/articles/weekly-situation-reports-202420252026"
+            }
+          ]
+        },
+        {
+          "key": "prison_rate",
+          "label": "People in prison per 100,000 people",
+          "format": "int",
+          "values": {
+            "ew": 141,
+            "scotland": 153,
+            "ni": 118
+          },
+          "derived": true
+        },
+        {
+          "key": "homicide",
+          "label": "Homicides in a year",
+          "format": "int",
+          "values": {
+            "ew": 512,
+            "scotland": 45,
+            "ni": 19
+          },
+          "periods": {
+            "ew": "year ending June 2026",
+            "scotland": "2024-25",
+            "ni": "2025-26"
+          },
+          "sources": [
+            {
+              "name": "ONS, Crime in England and Wales: year ending June 2026 (police recorded homicide offences)",
+              "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/yearendingjune2026"
+            },
+            {
+              "name": "Scottish Government, Homicide in Scotland 2024-25 (victims)",
+              "url": "https://www.gov.scot/publications/homicide-scotland-2024-25/"
+            },
+            {
+              "name": "PSNI, Police recorded crime in Northern Ireland, period ending 31 March 2026 (homicide offences)",
+              "url": "https://www.psni.police.uk/system/files/2026-05/525903612/Police%20Recorded%20Crime%20Bulletin%20Period%20Ending%2031st%20March%202026.pdf"
+            }
+          ]
+        },
+        {
+          "key": "homicide_rate",
+          "label": "Homicides per million people",
+          "format": "dec1",
+          "values": {
+            "ew": 8.3,
+            "scotland": 8.1,
+            "ni": 9.9
+          },
+          "derived": true
+        }
+      ],
+      "note": "The three systems count differently and publish at different times, so each figure shows its own date. Scotland counts homicide victims; England and Wales and Northern Ireland count offences. With small numbers, homicide rates can swing from year to year. Recorded crime isn't shown because each system uses different counting rules.",
+      "ew": {
+        "csew": {
+          "period": "year ending June 2026",
+          "incidents_m": 9.7,
+          "fraud_m": 4.5,
+          "source": "ONS, Crime in England and Wales: year ending June 2026 (Crime Survey for England and Wales)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/yearendingjune2026"
+        },
+        "knife": {
+          "period": "year ending June 2026",
+          "offences": 48615,
+          "change_pct": -6
+        },
+        "homicide_rate_published": 8.3,
+        "courts": {
+          "date": "end of June 2026",
+          "crown_open": 80829,
+          "crown_open_prev": 78226,
+          "crown_over_year": 23706,
+          "mags_open": 380230,
+          "source": "Ministry of Justice, Criminal court statistics quarterly: April to June 2026 (published 24 September 2026)",
+          "url": "https://www.gov.uk/government/statistics/criminal-court-statistics-quarterly-april-to-june-2026/criminal-court-statistics-quarterly-april-to-june-2026"
+        },
+        "prisons": {
+          "date": "30 September 2026",
+          "total": 87712,
+          "sentenced": 71341,
+          "remand": 15921,
+          "probation": 241119,
+          "probation_date": "30 June 2026",
+          "source": "Ministry of Justice, Offender management statistics quarterly: April to June 2026 (published 29 October 2026)",
+          "url": "https://www.gov.uk/government/statistics/offender-management-statistics-quarterly-april-to-june-2026/offender-management-statistics-quarterly-april-to-june-2026"
+        },
+        "police_workforce": 234441
+      }
     }
   }
 }

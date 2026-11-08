@@ -733,6 +733,77 @@ permalink: /landmark-numbers/uk-and-nations/
 {%- endif %}
 {%- endfor %}
 
+{%- assign ju = uk.uk_only.justice %}
+{%- assign ew = ju.ew %}
+<h2 id="law-and-order">Law and order</h2>
+<p>
+  The UK has three separate legal systems: one for England and Wales, one for Scotland and one for Northern Ireland, each with its own
+  police, courts and prisons. So these figures compare the three systems rather than the four nations.
+</p>
+<table class="landmark-table uk-table ju-table">
+  <thead>
+    <tr>
+      <th scope="col">Measure</th>
+      {%- for sy in ju.systems %}<th scope="col" class="num">{{ sy.name }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {%- for m in ju.measures %}
+    <tr{% if m.derived %} class="uk-table__derived"{% endif %}>
+      <th scope="row">{{ m.label }}{% if m.derived %}<span class="landmark-note">{{ ju.population_note }}</span>{% endif %}</th>
+      {%- for sy in ju.systems %}
+      {%- assign cell = m.values[sy.key] %}
+      <td class="num" data-label="{{ sy.name }}">{% include fmt.html v=cell f=m.format %}{% unless m.derived %}<span class="landmark-note">{{ m.periods[sy.key] }}</span>{% endunless %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+{%- assign ju_links = "" %}
+{%- for m in ju.measures %}{% unless m.derived %}{% for src in m.sources %}
+{%- capture one %}<a href="{{ src.url }}">{{ src.name }}</a>{% endcapture %}
+{%- if ju_links == "" %}{% assign ju_links = one %}{% else %}{% assign ju_links = ju_links | append: "; " | append: one %}{% endif %}
+{%- endfor %}{% endunless %}{% endfor %}
+<p class="uk-note">{{ ju.note }} Sources: {{ ju_links }}.</p>
+
+{%- assign co = ew.courts %}
+{%- assign pr = ew.prisons %}
+{%- assign cs = ew.csew %}
+{%- assign crown_rise = co.crown_open | minus: co.crown_open_prev %}
+{%- assign remand_pct = pr.remand | times: 100.0 | divided_by: pr.total | round %}
+<h3 id="england-and-wales-justice">England and Wales</h3>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ cs.period }}</p>
+    <p class="nhs-stat__figure">{{ cs.incidents_m }} million</p>
+    <h3 class="nhs-stat__label">crimes experienced by adults, according to the Crime Survey</h3>
+    <p class="nhs-stat__so">{{ cs.fraud_m }} million of them were fraud or computer misuse. The survey asks people about crimes they've
+      experienced, so it includes crimes never reported to the police. Police recorded {{ ew.homicide_rate_published }} homicides per million
+      people and {% include thousands.html n=ew.knife.offences %} knife-enabled offences ({{ ew.knife.change_pct | abs }}% {% if ew.knife.change_pct < 0 %}down{% else %}up{% endif %} on the year before).</p>
+    <p class="nhs-stat__source"><a href="{{ cs.url }}">{{ cs.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ co.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=co.crown_open %}</p>
+    <h3 class="nhs-stat__label">cases waiting to be dealt with by the Crown Court</h3>
+    <p class="nhs-stat__so">Up {% include thousands.html n=crown_rise %} on a year earlier. {% include thousands.html n=co.crown_over_year %} of them
+      had been open for a year or more. Magistrates' courts had {% include thousands.html n=co.mags_open %} open cases.</p>
+    <p class="nhs-stat__source"><a href="{{ co.url }}">{{ co.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">England and Wales &middot; {{ pr.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=pr.total %}</p>
+    <h3 class="nhs-stat__label">people in prison</h3>
+    <ul class="em-pace">
+      <li><span>Sentenced</span><strong>{% include thousands.html n=pr.sentenced %}</strong></li>
+      <li><span>On remand, awaiting trial or sentence</span><strong>{% include thousands.html n=pr.remand %} ({{ remand_pct }}%)</strong></li>
+    </ul>
+    <p class="nhs-stat__so">A further {% include thousands.html n=pr.probation %} people were supervised by the Probation Service on
+      {{ pr.probation_date }}.</p>
+    <p class="nhs-stat__source"><a href="{{ pr.url }}">{{ pr.source }}</a></p>
+  </section>
+</div>
+
 <h2 id="reading-these">Reading these numbers</h2>
 <ul>
   <li>
