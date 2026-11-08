@@ -1,28 +1,88 @@
-######### NISRA B19
-['Cover_sheet', 'Settlement', 'Ward', 'LGD', 'NI', 'Notes']
--- NI (14, 11)
-                                                                                                                        0               1                    2                    3                               4                  5                            6                                              7                8            9                    10
-0                                                                                                MS-B19: Religion [note 1]             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-1                                                                                    Table population: All usual residents             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-2                                                                                       Geographic level: Northern Ireland             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-3                                                                                                      Source: Census 2021             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-4                                                     Some cells refer to notes which can be found on the notes worksheet.             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-5  This worksheet contains two tables presented vertically one above the other, with one blank row in between each table.              NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-6                                               Table MS-B19a presents counts and Table MS-B19b presents area percentages.             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-7                                                                                                MS-B19a: Religion (count)             NaN                  NaN                  NaN                             NaN                NaN                          NaN                                            NaN              NaN          NaN                  NaN
-8                                                                                                                Geography  Geography code  All usual residents  Catholic \n[note 2]  Presbyterian Church in Ireland  Church of Ireland  Methodist Church in Ireland  Other Christian (including Christian related)  Other religions  No religion  Religion not stated
-9                                                                                                         Northern Ireland       N92000002              1903178               805151                          316103             219788                        44728                                         130377            25519       330983                30529
-                                    0          1        2         3         4         5         6         7         8         9         10
-2   Geographic level: Northern Ireland        NaN      NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN
-9                     Northern Ireland  N92000002  1903178    805151    316103    219788     44728    130377     25519    330983     30529
-13                    Northern Ireland  N92000002  1903178  0.423056  0.166092  0.115485  0.023502  0.068505  0.013409  0.173911  0.016041
-######### UC release
-['/government/statistics/universal-credit-statistics-29-april-2013-to-12-march-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-12-february-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-8-january-2026', '/government/statistics/universal-credit-statistics-29-april-2013-to-11-december-2025', '/government/statistics/universal-credit-statistics-29-april-2013-to-13-november-2025']
-https://www.gov.uk/government/statistics/universal-credit-statistics-29-april-2013-to-12-march-2026
-[]
-['https://assets.publishing.service.gov.uk/media/69d8fdb3d3e08b8871b665b3/Ethnicity_ODS_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb3d3e08b8871b665b3/Ethnicity_ODS_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb4a1cd1c174934dc60/Ethnicity_ODS_Backseries_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb4a1cd1c174934dc60/Ethnicity_ODS_Backseries_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb3a1cd1c174934dc5f/Move_to_UC_by_Legacy_Benefits_ODS_Table_2026_04.ods', 'https://assets.publishing.service.gov.uk/media/69d8fdb3a1cd1c174934dc5f/Move_to_UC_by_Legacy_Benefits_ODS_Table_2026_04.ods']
-######### DfC UC
-https://www.communities-ni.gov.uk/articles/universal-credit-statistics 200
-['https://www.communities-ni.gov.uk/articles/universal-credit-statistics', '/publications/universal-credit-statistics-may-2026', '/publications/universal-credit-statistics-february-2026', '/publications/universal-credit-statistics-november-2025', '/publications/universal-credit-statistics-august-2025', '/publications/universal-credit-statistics-may-2025', '/publications/universal-credit-statistics-february-2025', '/publications/universal-credit-statistics-august-2024', '/publications/universal-credit-statistics-may-2024', '/publications/universal-credit-statistics-february-2024']
-https://www.communities-ni.gov.uk/topics/universal-credit-statistics 404
-https://www.communities-ni.gov.uk/publications/topic/8182 404
+Traceback (most recent call last):
+  File "/home/runner/work/discerninglearning/discerninglearning/explore/explore.py", line 26, in <module>
+    d=pd.read_excel(x,"NI",header=None); print(d.iloc[7:11].T.to_string())
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 526, in read_excel
+    data = io._reader.parse(
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 787, in parse
+    sheet = self.get_sheet_by_name(asheetname)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 706, in get_sheet_by_name
+    self.raise_if_bad_sheet_by_name(name)
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 637, in raise_if_bad_sheet_by_name
+    raise ValueError(f"Worksheet named '{name}' not found")
+ValueError: Worksheet named 'NI' not found
+######### Claimant count
+200
+"DATE_NAME","GEOGRAPHY_NAME","MEASURE_NAME","OBS_VALUE"
+"September 2026","United Kingdom","Claimant count",1702905
+"September 2026","United Kingdom","Claimants as a proportion of residents aged 16-64",3.9
+"September 2026","Great Britain","Claimant count",1668680
+"September 2026","Great Britain","Claimants as a proportion of residents aged 16-64",3.9
+"September 2026","England","Claimant count",1493875
+"September 2026","England","Claimants as a proportion of residents aged 16-64",4.1
+"September 2026","Wales","Claimant count",66045
+"September 2026","Wales","Claimants as a proportion of residents aged 16-64",3.4
+"September 2026","Scotland","Claimant count",108760
+"September 2026","Scotland","Claimants as a proportion of residents aged 16-64",3.1
+"September 2026","Northern Ireland","Claimant count",34225
+"September 2026","Northern Ireland","Claimants as a proportion of residents aged 16-64",2.9
+"September 2026","England and Wales","Claimant count",1559915
+"September 2026","England and Wales","Claimants as a proportion of residents aged 16-64",4.0
+
+######### NI UC May 2026
+200
+   — Slovenčina Spanish — Español Ukrainian — Українська Universal Credit Statistics - May 2026 Topics: Benefits and pensions ,  Statistics and research ,  Benefits statistics Date published: 26 August 2026 Universal Credit is a payment to help support households that are out of work or are on a low income.
+['https://www.communities-ni.gov.uk/system/files/2026-08/dfc-ni-uc-stats-supp-tables-may-2026.ods']
+######### GB UC May 2026 headline
+    Main stories The main stories for this statistical release are: there were 8.4 million people on Universal Credit in May 2026 which is the highest number on record.
+   7 million people on Universal Credit in May 2025, and a small increase from last quarter where, in February 2026, there were 8.3 million people on Universal Credit Move to Universal Credit claimants made up 73.
+   7 million and has remained stable ever since between December 2023 and December 2025, the number of people on Universal Credit increased by 2.
+   3% of this increase between January 2026 and May 2026, the number of people on Universal Credit increased by 37,000.
+   1 million people on Universal Credit in any employment ( PAYE employment or self-employment) in April 2026, which was 37.
+   7% of all people on Universal Credit.
+   2 million people on Universal Credit in any employment, which was 41.
+   4 million people on Universal Credit in May 2026 Figure 1: People on Universal Credit, Great Britain, May 2021 to May 2026 Source: DWP Stat-Xplore, People on Universal Credit The number of people on Universal Credit in May 2026 was 8.
+    During the most active period between December 2023 and December 2025, the number of people on Universal Credit increased by 2.
+    In May 2026, there were 8.4 million people on Universal Credit.
+    Of those 8.4 million people, 1.
+   9%) people on Universal Credit were not part of the managed migration process, so were either new claims to Universal Credit or people who had naturally or voluntarily moved over to Universal Credit from other legacy benefits.
+    Between December 2023 and December 2025, the number of people on Universal Credit increased by 2.
+    Between January 2026 and May 2026, the number of people on Universal Credit increased by 37,000.
+    As such, ‘Other Universal Credit claimants’ primarily contributed to the increase in the number of people on Universal Credit during this period.
+    Between May 2024 and December 2025, the number of people on Universal Credit increased by 1.
+    Between January 2026 and May 2026, the number of people on Universal Credit increased by 37,000.
+    As such, ‘Other Universal Credit claimants’ primarily contributed to the increase in the number of people on Universal Credit during this period.
+   3 million people on Universal Credit in the ‘no work requirements’ conditionality regime.
+   1%) people on Universal Credit in the ‘no work requirements’ conditionality regime were not part of the managed migration process.
+    Between December 2023 and December 2025, the number of people on Universal Credit in the ‘no work requirements’ conditionality regime increased by 1.
+    Between January 2026 and May 2026, the number of people on Universal Credit in the ‘no work requirements’ conditionality regime increased by 87,000 people.
+    The number of people on Universal Credit in the ‘No work requirements’ conditionality regime continues to increase Claimants are required to do certain work-related activities to receive Universal Credit.
+   tionality regime, Great Britain, May 2021 to May 2026 Source: DWP Stat-Xplore, People on Universal Credit by conditionality regime As people have moved across from legacy benefits, the composition of people on Universal Credit has changed.
+    The number of people on Universal Credit in the ‘Searching for work’ conditionality regime had a peak of 2.
+    The latest number of people on Universal Credit in the ‘Searching for work’ conditionality regime was 1.
+    The number of people on Universal Credit in the ‘No work requirements’ conditionality regime has been rising, reaching 4.
+    57% of the people on Universal Credit in May 2026 were women Women made up 57% of the people on Universal Credit in May 2026, which is similar to the 58% seen in May 2025.
+    The average (median) age of people on Universal Credit is slowly rising.
+    Figure 7: People on Universal Credit by age, Great Britain, May 2026 compared to May 2025 Source: DWP Stat-Xplore, People on Universal Credit by age The median age of people on Universal Credit has increased from 40 in May 2025 to 41 as of May 2026.
+   7% of the people on Universal Credit were in any employment in April 2026 Universal Credit is available to people on a low income as well as those who are out of work.
+   1 million people on Universal Credit in any employment ( PAYE employment or self-employment) in April 2026, which was 37.
+   7% of all people on Universal Credit.
+   9% of all people on Universal Credit) were in PAYE employment only, 0.
+   5% of all people on Universal Credit) were in self-employment only, and the remaining 0.
+   3% of all people on Universal Credit) were in both PAYE employment and self-employment.
+    Percentage of people on Universal Credit by Immigration status, Great Britain, May 2026 Immigration status May 2026 (%) CTA – UK , Ireland, Right of Abode 84.
+   5% of people on Universal Credit were in the “ CTA – UK , Ireland, Right of Abode” group.
+   9% of people on Universal Credit were in the “ EU Settlement Scheme” group.
+   8% of people on Universal Credit were in the “Indefinite Leave to Remain” group.
+   6% of people on Universal Credit were in the “Refugee” group.
+   9% of people on Universal Credit were in the “Limited Leave to Remain including family reunion” group.
+   4% of people on Universal Credit were in the “Other” group.
+   4% of people on Universal Credit in the “ EU Settlement Scheme” immigration status were in employment in April 2026 Figure 12: Proportion of people on Universal Credit in each immigration status who are in employment, Great Britain, April 2026 Source: UC Collection Page – Latest Release, UC Immigration status Statistics.
+    Universal Credit Work Capability Assessments provides statistics that cover the number of people on Universal Credit with a health condition or disability restricting their ability to work.
+    It includes people on Universal Credit in the searching for work conditionality regime for the United Kingdom.
+    Conditionality Regimes All people on Universal Credit are placed into one of six conditionality groups, depending on their personal circumstances.
+######### NI MS-B20
+######### Scotland religion
+['https://www.scotlandscensus.gov.uk/2022-reports/scotland-s-census-2022-ethnic-group-national-identity-language-and-religion/', '/documents/scotlands-census-2022-ethnic-group-national-identity-language-and-religion-chart-data/', 'https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/2022/list-of-data-tables#section3', '/documents/2022-output-area-data/', 'https://www.nrscotland.gov.uk/statistics-and-data/geography/our-products/census-datasets/2022-census', '/2022-reports/scotlands-census-2022-quality-assurance-reports/quality-assurance-report-unrounded-population-estimates-and-ethnic-group-national-identity-language-and-religion-topic-data/', 'https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/key-definitions/what-is-personal-data/']
