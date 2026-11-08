@@ -360,6 +360,41 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 2rem 0 0.75rem; }
 .prose .def-table td.num, .prose .def-table th.num { text-align: right; }
 .prose .def-table__total th, .prose .def-table__total td { font-weight: 700; border-bottom: 0; }
 
+.prose .def-table th small { display: block; font-weight: 400; color: var(--muted); font-size: 0.75rem; }
+
+// Electricity mix bar (energy section).
+.en-mix { display: flex; height: 2.2rem; border-radius: 3px; overflow: hidden; margin: 0.75rem 0 0.5rem; }
+.en-mix__seg { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem; font-weight: 600; white-space: nowrap; overflow: hidden; min-width: 2px; }
+.en-mix__seg + .en-mix__seg { box-shadow: inset 2px 0 0 var(--bg); }
+.en-mix__seg--1 { background: #5f636e; }  /* gas */
+.en-mix__seg--2 { background: #1f5a91; }  /* offshore wind */
+.en-mix__seg--3 { background: #7a5a28; }  /* bioenergy */
+.en-mix__seg--4 { background: #74408a; }  /* nuclear */
+.en-mix__seg--5 { background: #2e78b0; }  /* onshore wind */
+.en-mix__seg--6 { background: #d4a514; }  /* solar */
+.en-mix__seg--7 { background: #2a8578; }  /* hydro */
+.en-mix__seg--8 { background: #a0a0a0; }  /* other */
+.en-legend { list-style: none; padding: 0; margin: 0 0 1rem !important; display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: 0.25rem 1rem; font-size: 0.88rem; }
+.en-legend li { display: flex; align-items: baseline; gap: 0.4rem; margin: 0; white-space: nowrap; }
+.en-legend i { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; flex: none; align-self: center; }
+.en-legend strong { font-variant-numeric: tabular-nums; }
+.en-legend span { color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.en-legend sup, .uk-note sup { font-size: 0.65rem; color: var(--nat-wales); font-weight: 700; }
+
+/* Emissions against targets. */
+.em-progress { height: 0.9rem; background: var(--border); border-radius: 3px; overflow: hidden; margin: 0.4rem 0 0.2rem; }
+.em-progress span { display: block; height: 100%; background: var(--nat-wales); }
+.em-progress__ends { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin: 0 0 0.6rem !important; }
+.em-pace { list-style: none; padding: 0; margin: 0.2rem 0 0.6rem !important; font-size: 0.9rem; }
+.em-pace li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.3rem 0; border-bottom: 1px solid var(--border); margin: 0; }
+.em-pace strong { font-variant-numeric: tabular-nums; }
+.em-path { margin: 1rem 0; }
+.em-path li.is-target .pf-bar i { background: var(--nat-wales); }
+.em-path li.is-actual .pf-label { font-weight: 600; }
+.em-key { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 2px; vertical-align: -0.05rem; }
+.em-key--actual { background: var(--accent); }
+.em-key--target { background: var(--nat-wales); }
+
 // On phones each cost row becomes a small card: the label on top, three figures below.
 @media (max-width: 600px) {
   .prose .uk-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
