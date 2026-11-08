@@ -1,16 +1,82 @@
-Configuration file: /home/runner/work/discerninglearning/discerninglearning/site/_config.yml
-            Source: /home/runner/work/discerninglearning/discerninglearning/site
-       Destination: /home/runner/work/discerninglearning/discerninglearning/site/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-       Jekyll Feed: Generating feed for posts
-                    done in 0.431 seconds.
- Auto-regeneration: disabled. Use --watch to enable.
-INDEX tiles: 3
-OK fixed-anchors 15201 bytes, refs=0, lists=0, leftovers=0
-OK nhs 9796 bytes, refs=0, lists=0, leftovers=0
-OK uk-and-nations 12972 bytes, refs=0, lists=0, leftovers=0
-<p class="uk-lead">A million seconds is under two weeks. A billion seconds is more than 31 years.
-<p class="uk-lead">If you earned £1 every second, it would take 11.6 days to make a million and nearly 32 years to make a billion.
-<p class="uk-lead">Light from the Sun takes 8 minutes 19 seconds to reach us, and just 1.3 seconds from the Moon.
-./vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:Liquid Warning:",
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/ybha/ukea/data 200 63857
+ybha Gross Domestic Product at market prices: Current price: Seasonally adjusted £m 2026-09-29T23:00:00.000Z [('2022', '2590757'), ('2023', '2766446'), ('2024', '2904950'), ('2025', '3044594')]
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/abmi/ukea/data 200 64200
+abmi Gross Domestic Product: chained volume measures: Seasonally adjusted £m 2026-09-29T23:00:00.000Z [('2022', '2860259'), ('2023', '2872948'), ('2024', '2904950'), ('2025', '2940195')]
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/ihyp/ukea/data 200 16909
+ihyp Gross Domestic Product: Year on Year growth: CVM SA % 2026-09-29T23:00:00.000Z [('2022', '5.0'), ('2023', '0.4'), ('2024', '1.1'), ('2025', '1.2')]
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustryandallinternationalterritoriallevel 404 27237
+PAGE regionalgrossvalueaddedbalancedbyindustryandallinternationalterritoriallevelsitlregions []
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions 200 54594
+PAGE regionalgrossdomesticproductallnutslevelregions []
+    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2018/regionalgrossdomesticproductgdpallnutslevelregions.xlsx
+    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2019/regionalgrossdomesticproductallitlregions.xlsx
+    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2020/regionalgrossdomesticproductgdpallitlregions.xlsx
+    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2021/regionalgrossdomesticproductgdpallitlregions.xlsx
+    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2022/regionalgrossdomesticproductgdpbyallitlregions.xlsx
+    /file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2023/regionalgrossdomesticproductgdpbyallinternationalterritoriallevelitlregions.xlsx
+GET https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallitlregions 404 27237
+PAGE regionalgrossdomesticproductallitlregions []
+GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/sex.def.sjson 200 24968
+ERR sex Expecting value: line 1 column 1 (char 0)
+GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/item.def.sjson 200 25280
+ERR item Expecting value: line 1 column 1 (char 0)
+GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1/pay.def.sjson 200 25136
+ERR pay Expecting value: line 1 column 1 (char 0)
+GET https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1.data.csv?geography=K02000001,E92000001,W92000004,S92000003,N92000002&date=latestMINUS1,la 200 3121
+"DATE_NAME","GEOGRAPHY_NAME","SEX_NAME","PAY_NAME","OBS_VALUE","OBS_STATUS_NAME"
+"2024","United Kingdom","Total","Weekly pay - gross",613.5,"Normal Value"
+"2024","United Kingdom","Total","Annual pay - gross",31600,"Normal Value"
+"2024","United Kingdom","Full Time Workers","Weekly pay - gross",728.3,"Normal Value"
+"2024","United Kingdom","Full Time Workers","Annual pay - gross",37439,"Normal Value"
+"2024","England","Total","Weekly pay - gross",619.6,"Normal Value"
+"2024","England","Total","Annual pay - gross",31850,"Normal Value"
+"2024","England","Full Time Workers","Weekly pay - gross",732.5,"Normal Value"
+"2024","England","Full Time Workers","Annual pay - gross",37636,"Normal Value"
+"2024","Wales","Total","Weekly pay - gross",575.0,"Normal Value"
+"2024","Wales","Total","Annual pay - gross",29592,"Normal Value"
+"2024","Wales","Full Time Workers","Weekly pay - gross",685.3,"Normal Value"
+"2024","Wales","Full Time Workers","Annual pay - gross",34898,"Normal Value"
+"2024","Scotland","Total","Weekly pay - gross",614.1,"Normal Value"
+"2024","Scotland","Total","Annual pay - gross",31871,"Normal Value"
+"2024","Scotland","Full Time Workers","Weekly pay - gross",740.1,"Normal Value"
+"2024","Scotland","Full Time Workers","Annual pay - gross",38321,"Normal Value"
+"2024","Northern Ireland","Total","Weekly pay - gross",559.8,"Normal Value"
+"2024","Northern Ireland","Total","Annual pay - gross",28788,"Normal Value"
+"2024","Northern Ireland","Full Time Workers","Weekly pay - gross",664.6,"Normal Value"
+"2024","Northern Ireland","Full Time Workers","Annual pay - gross",34249,"Normal Value"
+"2025","United Kingdom","Total","Weekly pay - gross",642.5,"Normal Value"
+"2025","United Kingdom","Total","Annual pay - gross",32890,"Normal Value"
+"2025","United Kingdom","Full Time Workers","Weekly pay - gross",766.6,"Normal Value"
+"2025","United Kingdom","Full Time Workers","Annual pay - gross",39039,"Normal Value"
+"2025","England","Total","Weekly pay - gross",648.4,"Normal Value"
+"2025","England","Total","Annual pay - gross",33080,"Normal Value"
+"2025","England","Full Time Workers","Weekly pay - gross",769.5,"Normal Value"
+"2025","England","Full Time Workers","Annual pay - gross",39243,"Normal Value"
+"2025","Wales","Total","Weekly pay - gross",601.8,"Normal Value"
+"2025","Wales","Total","Annual pay - gross",30732,"Normal Value"
+"2025","Wales","Full Time Workers","Weekly pay - gross",719.3,"Normal Value"
+"2025","Wales","Full Time Workers","Annual pay - gross",36354,"Normal Value"
+"2025","Scotland","Total","Weekly pay - gross",642.9,"Normal Value"
+"2025","Scotland","Total","Annual pay - gross",33061,"Normal Value"
+"2025","Scotland","Full Time Workers","Weekly pay - gross",775.6,"Normal Value"
+"2025","Scotland","Full Time Workers","Annual pay - gross",39905,"Normal Value"
+"2025","Northern Ireland","Total","Weekly pay - gross",594.1,"Normal Value"
+"2025","Northern Ireland","Total","Annual pay - gross",31252,"Normal Value"
+"2025","Northern Ireland","Full Time Workers","Weekly p
+GET https://research.ftserussell.com/Analytics/FactSheets/Home/DownloadSingleIssue?issueName=UKX&IsManual=false 200 378903
+FACTSHEET FTSE Russell Factsheet | FTSE 100 Index | bmkTitle1 | The FTSE 100 is a market-capitalisation weighted index of UK-listed blue chip companies. The | index is part of the FTSE UK Series and is designed to measure the performance of the 100 | largest companies traded on the London Stock Exchange that pass scree
+Top 10 Holdings (% Index MCap) 49.50
+3 0 October 2026
+bmkImage1 bmkImage2 bmkImage3
+© 2026 London Stock Exchange Group plc and its applicable group undertakings (“LSEG”). LSEG includes (1) FTSE International Limited (“FTSE”), (2)
+Frank Russell Company (“Russell”), (3) FTSE Global Debt Capital Markets Inc. “FTSE Canada”, (4) FTSE Fixed Income LLC (“FTSE FI”), (5) FTSE (Beijing)
+Consulting Limited (“WOFE”). All rights reserved.
+FTSE Russell® is a trading name of FTSE, Russell, FTSE Canada, FTSE FI, WOFE, and other LSEG entities providing LSEG Benchmark and Index
+services. “FTSE®”, “Russell®”, “FTSE Russell®”, “FTSE4Good®”, “ICB®”, “Refinitiv” , “Beyond Ratings®”, “WMR™” , “FR™” and all other trademarks and
+service marks used herein (whether registered or unregistered) are trademarks and/or service marks owned or licensed by the applicable member of LSEG
+or their respective licensors.
+FTSE International Limited is authorised and regulated by the Financial Conduct Authority as a benchmark administrator.
+All information is provided for information purposes only. All information and data contained in this publication is obtained by LSEG, from sources believed by
+it to be accurate and reliable. Because of the possibility of human and mechanical inaccuracy as well as other factors, however, such information and data is
+provided "as is" without warranty of any kind. No member of LSEG nor their respective directors, officers, employees, partners or licensors make any claim,
+prediction,
