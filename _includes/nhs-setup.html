@@ -1,0 +1,26 @@
+{%- comment -%} Figures shared by the NHS pages under Landmark Numbers. {%- endcomment -%}
+{%- assign nhs = site.data.landmark_nhs -%}
+{%- assign ncc = site.data.landmark_ncc -%}
+{%- assign b = nhs.budget -%}
+{%- assign pop = nhs.population.value | times: 1.0 -%}
+{%- assign wl = nhs.waiting_list -%}
+{%- assign gp = nhs.gp_appointments -%}
+{%- assign wf = nhs.workforce -%}
+{%- assign ae_all = ncc.unit_costs | where: "key", "ae_all" | first -%}
+{%- assign ae_major = ncc.unit_costs | where: "key", "ae_major" | first -%}
+{%- assign elective = ncc.unit_costs | where: "key", "elective" | first -%}
+{%- assign day_case = ncc.unit_costs | where: "key", "day_case" | first -%}
+{%- assign op = ncc.unit_costs | where: "key", "op_consultant" | first -%}
+
+{%- assign per_day_m = b.value_bn | times: 1000 | divided_by: 365 | round -%}
+{%- assign per_hour_m = b.value_bn | times: 1000 | divided_by: 8760 | round -%}
+{%- assign per_person = b.value_bn | times: 1000000000 | divided_by: pop | divided_by: 10 | round | times: 10 -%}
+{%- assign ae_per_day = ae_all.national_activity | times: 1.0 | divided_by: 365 | divided_by: 100 | round | times: 100 -%}
+{%- assign ae_major_per_day = ae_major.national_activity | times: 1.0 | divided_by: 365 | divided_by: 100 | round | times: 100 -%}
+{%- assign gp_per_day = gp.month_m | divided_by: gp.days_in_month | round: 2 -%}
+{%- assign staff_ratio = pop | divided_by: wf.headcount | round -%}
+{%- assign wl_ratio = wl.patients_m | times: 1000000 | divided_by: pop -%}
+{%- assign wl_one_in = 1 | divided_by: wl_ratio | round -%}
+{%- assign nurse_pct = 10000.0 | divided_by: wf.nurses_midwives | times: 100 | round: 1 -%}
+{%- assign announce_hours = 50.0 | divided_by: per_hour_m | round: 1 -%}
+{%- assign perf = site.data.landmark_performance -%}

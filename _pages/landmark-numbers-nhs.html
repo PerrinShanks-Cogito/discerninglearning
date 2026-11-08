@@ -1,0 +1,93 @@
+---
+title: The NHS
+description: "Landmark numbers for the NHS in England: its size, what care costs and how it is performing, with Guy's and St Thomas' alongside."
+permalink: /landmark-numbers/nhs/
+---
+{% include nhs-setup.html %}
+{%- assign ae_row = ncc.unit_costs | first -%}
+{%- assign ae4 = perf.metrics | where: "code", "ae_4_hour" | first -%}
+
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+
+<p class="landmark-meta">
+  Size figures reviewed <strong>{{ nhs.last_reviewed | date: "%-d %B %Y" }}</strong>; costs and performance last
+  checked {{ perf.last_checked | date: "%-d %B %Y" }}. Each figure says which period it covers. I check for newer
+  figures every quarter.
+</p>
+
+<p>
+  These figures are for the <strong>NHS in England</strong>. Scotland, Wales and Northern Ireland run their own health
+  services, so a "UK" NHS figure is usually an English one; health spending for each nation is on the
+  <a href="{{ '/landmark-numbers/uk-and-nations/people/#health' | relative_url }}">UK and its nations</a> pages.
+  Where it helps, Guy's and St Thomas' is shown alongside England, and compared with the other large teaching
+  hospitals in the Shelford Group.
+</p>
+
+{% include landmark-nav.html set="nhs" current="overview" %}
+
+<h2 id="remember">Five to remember</h2>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ b.period }}</p>
+    <p class="nhs-stat__figure">£{{ per_day_m }} million a day</p>
+    <h3 class="nhs-stat__label">NHS England's day-to-day budget</h3>
+    <p class="nhs-stat__so">£{{ b.value_bn | round }} billion a year, or about £{% include thousands.html n=per_person %} for each person in England.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ wf.period }}</p>
+    <p class="nhs-stat__figure">1 in {{ staff_ratio }}</p>
+    <h3 class="nhs-stat__label">people in England works for the NHS</h3>
+    <p class="nhs-stat__so">{{ wf.headcount | divided_by: 100000.0 | round | divided_by: 10.0 }} million staff, including about
+      {{ wf.nurses_midwives | divided_by: 1000 }},000 nurses and midwives.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ wl.period }}</p>
+    <p class="nhs-stat__figure">1 in {{ wl_one_in }}</p>
+    <h3 class="nhs-stat__label">people in England is waiting for planned treatment</h3>
+    <p class="nhs-stat__so">About {{ wl.patients_m }} million people, waiting for {{ wl.pathways_m }} million treatments.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ ncc.costs_financial_year }} costs</p>
+    <p class="nhs-stat__figure">{{ ae_row.national_remember }}</p>
+    <h3 class="nhs-stat__label">for a major A&amp;E attendance in England</h3>
+    <p class="nhs-stat__so">{% if ae_row.trust_remember %}{{ ae_row.trust_remember }} at Guy's and St Thomas', a specialist London teaching hospital.{% endif %}
+      There are about {% include thousands.html n=ae_major_per_day %} major A&amp;E attendances a day.</p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">{{ ae4.month_text }}</p>
+    <p class="nhs-stat__figure">{{ ae4.national }}%</p>
+    <h3 class="nhs-stat__label">of A&amp;E patients in England seen within 4 hours</h3>
+    <p class="nhs-stat__so">Against a standard of {{ ae4.standard }}. Guy's and St Thomas': {{ ae4.trust }}%.</p>
+  </section>
+</div>
+
+<h2 id="topics">Explore</h2>
+<div class="grid landmark-tiles uk-topics">
+  {%- for tp in site.data.landmark_nhs_pages %}
+  <a class="card card--link" href="{{ tp.url | relative_url }}">
+    <h3 class="card__title">{{ tp.title }}</h3>
+    <p class="landmark-tile__figure">
+      {%- case tp.slug %}
+      {%- when "in-numbers" %}<strong>£{{ per_day_m }} million</strong> <span>a day: NHS England's budget, {{ b.period }}</span>
+      {%- when "costs" %}<strong>{{ ae_row.national_remember }}</strong> <span>a major A&amp;E attendance in England, {{ ncc.costs_financial_year }}</span>
+      {%- when "performance" %}<strong>{{ ae4.national }}%</strong> <span>seen within 4 hours in A&amp;E, {{ ae4.month_text }}</span>
+      {%- endcase %}
+    </p>
+    <p class="uk-topics__list">{% for s in tp.sections %}{{ s.title }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}</p>
+  </a>
+  {%- endfor %}
+</div>
+
+<details class="landmark-method">
+  <summary>Reading these numbers</summary>
+  <ul>
+    <li><strong>Check it's England.</strong> Most "NHS" figures cover England only. Scotland, Wales and Northern Ireland
+      publish their own.</li>
+    <li><strong>Check the period.</strong> Budgets are for a financial year, costs for the year the collection covers, and
+      waiting times for a single month. They don't all line up.</li>
+    <li><strong>Guy's and St Thomas' is not an average hospital.</strong> It runs specialist services most trusts don't,
+      so the cost index and the Shelford comparison are fairer than the raw figures.</li>
+  </ul>
+  <p>This is my personal site, so these are my reading of public data, not an official view of the NHS or of Guy's and
+    St Thomas' NHS Foundation Trust.</p>
+</details>

@@ -1,0 +1,25 @@
+# NHS pages under Landmark Numbers. Used for the jump menu and the NHS overview tiles.
+- slug: in-numbers
+  title: The NHS in numbers
+  short: In numbers
+  url: /landmark-numbers/nhs-in-numbers/
+  sections:
+    - { id: money, title: Money }
+    - { id: activity, title: Activity }
+    - { id: people, title: People }
+    - { id: pressure, title: Pressure }
+    - { id: rules-of-thumb, title: Rules of thumb }
+- slug: costs
+  title: What NHS care costs
+  short: Costs
+  url: /landmark-numbers/nhs-costs/
+  sections:
+    - { id: unit-costs, title: Cost per unit }
+    - { id: cost-index, title: Allowing for case mix }
+- slug: performance
+  title: How the NHS is performing
+  short: Performance
+  url: /landmark-numbers/nhs-performance/
+  sections:
+    - { id: measures, title: The eight measures }
+    - { id: shelford-table, title: All ten Shelford trusts }
