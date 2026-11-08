@@ -1,7 +1,8 @@
 {%- comment -%}
   Formats a landmark number. Usage: {% include fmt.html v=value f=format %}
   Formats: int (12,345), km2 (12,345), money (£12,345), money2 (£766.60),
-  years1 (79.1), pct1 (75.3%), pct2 (0.33%, with a + sign when positive).
+  years1 (79.1), pct1 (75.3%), pct2 (0.33%, with a + sign when positive),
+  m1 (millions: 24.3m, or 2.52m below 10 million), dec2 (2.36).
 {%- endcomment -%}
 {%- assign fv = include.v -%}
 {%- assign ff = include.f -%}
@@ -15,5 +16,16 @@
 {%- elsif ff == "pct1" -%}{{ fv | round: 1 }}%
 {%- elsif ff == "pct2" -%}{% if fv > 0 %}+{% endif %}{{ fv | round: 2 }}%
 {%- elsif ff == "years1" -%}{{ fv | round: 1 }}
+{%- elsif ff == "m1" -%}
+  {%- if fv < 10 -%}
+    {%- assign hund = fv | times: 100 | round -%}
+    {{ hund | divided_by: 100 }}.{{ hund | modulo: 100 | prepend: "0" | slice: -2, 2 }}m
+  {%- else -%}
+    {%- assign tenth = fv | times: 10 | round -%}
+    {{ tenth | divided_by: 10 }}.{{ tenth | modulo: 10 }}m
+  {%- endif -%}
+{%- elsif ff == "dec2" -%}
+  {%- assign hund = fv | times: 100 | round -%}
+  {{ hund | divided_by: 100 }}.{{ hund | modulo: 100 | prepend: "0" | slice: -2, 2 }}
 {%- else -%}{{ fv }}
 {%- endif -%}

@@ -7,6 +7,8 @@ permalink: /landmark-numbers/uk-and-nations/
 {%- assign people = uk.groups | where: "key", "people" | first -%}
 {%- assign pop = people.measures | where: "key", "population" | first -%}
 {%- assign land = people.measures | where: "key", "land_km2" | first -%}
+{%- assign working = people.measures | where: "key", "working_age" | first -%}
+{%- assign older = people.measures | where: "key", "over_65" | first -%}
 {%- assign health = uk.groups | where: "key", "health" | first -%}
 {%- assign le_f = health.measures | where: "key", "le_female" | first -%}
 {%- assign le_m = health.measures | where: "key", "le_male" | first -%}
@@ -130,10 +132,41 @@ permalink: /landmark-numbers/uk-and-nations/
     {%- endfor %}
     {%- if g.key == "people" %}
     <tr class="uk-table__derived">
+      <th scope="row">Share of people of working age<span class="landmark-note">Ages 16 to 64, as a % of the population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign wv = working.values[n.key] | times: 100.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ wv }}%</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">Share aged 65 and over<span class="landmark-note">As a % of the population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign ov = older.values[n.key] | times: 100.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ ov }}%</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
+      <th scope="row">People of working age for each person 65 and over<span class="landmark-note">Working age divided by 65 and over</span></th>
+      {%- for n in uk.nations %}
+      {%- assign rv = working.values[n.key] | times: 1.0 | divided_by: older.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ rv }}</td>
+      {%- endfor %}
+    </tr>
+    <tr class="uk-table__derived">
       <th scope="row">People per km²<span class="landmark-note">Population divided by land area</span></th>
       {%- for n in uk.nations %}
       {%- assign dv = pop.values[n.key] | divided_by: land.values[n.key] | round %}
       <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{% include thousands.html n=dv %}</td>
+      {%- endfor %}
+    </tr>
+    {%- endif %}
+    {%- if g.key == "migration" %}
+    {%- assign netint = g.measures | where: "key", "net_international" | first %}
+    <tr class="uk-table__derived">
+      <th scope="row">Net international migration per 1,000 people<span class="landmark-note">Divided by the mid-2025 population</span></th>
+      {%- for n in uk.nations %}
+      {%- assign nv = netint.values[n.key] | times: 1000.0 | divided_by: pop.values[n.key] | round: 1 %}
+      <td class="num{% if n.key == 'uk' %} uk-table__uk{% endif %}" data-label="{{ n.name }}">{{ nv }}</td>
       {%- endfor %}
     </tr>
     {%- endif %}
@@ -148,6 +181,118 @@ permalink: /landmark-numbers/uk-and-nations/
     {%- endif %}
   </tbody>
 </table>
+{%- if g.note %}<p class="uk-note">{{ g.note }}</p>{% endif %}
+{%- if g.key == "migration" %}
+{%- assign lt = uk.uk_only.migration_ltim %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ lt.period }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=lt.net %}</p>
+    <h3 class="nhs-stat__label">Net migration to the UK, latest estimate</h3>
+    <p class="nhs-stat__so">{% include thousands.html n=lt.immigration %} people arrived to live in the UK for at least a year and
+      {% include thousands.html n=lt.emigration %} left. That's down from {% include thousands.html n=lt.net_previous %} in the {{ lt.previous_period }}.
+      This is a later, provisional estimate, so it differs from the mid-year table above.</p>
+    <p class="nhs-stat__source"><a href="{{ lt.url }}">{{ lt.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ lt.period }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=lt.non_eu_immigration %}</p>
+    <h3 class="nhs-stat__label">Non-EU+ nationals arriving, by main reason</h3>
+    <p class="nhs-stat__so">EU+ is the EU plus Iceland, Liechtenstein, Norway and Switzerland.</p>
+    <ul class="uk-reasons">
+      {%- for r in lt.non_eu_reasons %}
+      <li><span>{{ r.reason }}</span><span class="uk-reasons__bar" style="--w: {{ r.pct }}" aria-hidden="true"></span><strong>{{ r.pct }}%</strong></li>
+      {%- endfor %}
+    </ul>
+    <p class="nhs-stat__source"><a href="{{ lt.url }}">{{ lt.source }}</a></p>
+  </section>
+</div>
+{%- endif %}
+{%- if g.key == "benefits" %}
+{%- assign uc = uk.uk_only.universal_credit %}
+{%- assign uc_total = uc.gb_m | times: 1000000 | plus: uc.ni | divided_by: 100000.0 | round | divided_by: 10.0 %}
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ uc.period }}</p>
+    <p class="nhs-stat__figure">{{ uc_total }} million</p>
+    <h3 class="nhs-stat__label">People on Universal Credit</h3>
+    <p class="nhs-stat__so">{{ uc.gb_m }} million in Great Britain and {% include thousands.html n=uc.ni %} in Northern Ireland, where it is
+      run separately. Universal Credit goes to people in work on low incomes as well as those out of work, so it is much broader
+      than the claimant count.</p>
+    <p class="nhs-stat__source"><a href="{{ uc.gb_url }}">{{ uc.gb_source }}</a>; <a href="{{ uc.ni_url }}">{{ uc.ni_source }}</a></p>
+  </section>
+</div>
+{%- endif %}
+{%- if g.key == "money" %}
+{%- assign pf = uk.uk_only.public_finances %}
+{%- assign pf_max = 0 %}
+{%- for r in pf.spending %}{% if r.bn > pf_max %}{% assign pf_max = r.bn %}{% endif %}{% endfor %}
+{%- for r in pf.receipts %}{% if r.bn > pf_max %}{% assign pf_max = r.bn %}{% endif %}{% endfor %}
+{%- assign hh = people.measures | where: "key", "households" | first %}
+{%- assign sp_pp = pf.spending_total_bn | times: 1000000000 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+{%- assign rc_pp = pf.receipts_total_bn | times: 1000000000 | divided_by: uk_pop | divided_by: 10 | round | times: 10 %}
+{%- assign sp_hh = pf.spending_total_bn | times: 1000.0 | divided_by: hh.values.uk | divided_by: 100 | round | times: 100 %}
+{%- assign rc_hh = pf.receipts_total_bn | times: 1000.0 | divided_by: hh.values.uk | divided_by: 100 | round | times: 100 %}
+<h3 id="spending-and-income">Spending and income, UK {{ pf.period }}</h3>
+<p>
+  In {{ pf.period }} the UK public sector spent <strong>£{% include thousands.html n=pf.spending_total_bn %} billion</strong> and
+  raised <strong>£{% include thousands.html n=pf.receipts_total_bn %} billion</strong>, borrowing
+  <strong>£{{ pf.borrowing_bn }} billion</strong> to cover the gap. That's about £{% include thousands.html n=sp_pp %} spent and
+  £{% include thousands.html n=rc_pp %} raised per person, or £{% include thousands.html n=sp_hh %} and £{% include thousands.html n=rc_hh %}
+  per household. The bars below share one scale, so you can compare them across both lists.
+</p>
+<div class="pf-grid">
+  {%- assign lists = "spending,receipts" | split: "," %}
+  {%- for lk in lists %}
+  {%- if lk == "spending" %}{% assign rows = pf.spending %}{% assign tot = pf.spending_total_bn %}{% else %}{% assign rows = pf.receipts %}{% assign tot = pf.receipts_total_bn %}{% endif %}
+  <section class="pf-list pf-list--{{ lk }}">
+    <h4>{% if lk == "spending" %}Where it goes{% else %}Where it comes from{% endif %}
+      <span>£{% include thousands.html n=tot %}bn</span></h4>
+    <ul>
+      {%- for r in rows %}
+      {%- assign w = r.bn | times: 100.0 | divided_by: pf_max | round: 1 %}
+      {%- assign share = r.bn | times: 100.0 | divided_by: tot | round %}
+      <li>
+        <span class="pf-label">{{ r.label }}{% if r.note %}<small>{{ r.note }}</small>{% endif %}</span>
+        <span class="pf-bar" aria-hidden="true"><i style="width: {{ w }}%"></i></span>
+        <span class="pf-val">£{{ r.bn | round }}bn<small>{{ share }}%</small></span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p class="nhs-stat__source">{% if lk == "spending" %}<a href="{{ pf.spending_url }}">{{ pf.spending_source }}</a>{% else %}<a href="{{ pf.receipts_url }}">{{ pf.receipts_source }}</a>{% endif %}</p>
+  </section>
+  {%- endfor %}
+</div>
+<p class="uk-note">
+  Spending is HM Treasury's total managed expenditure; income is public sector current receipts. They come from releases
+  a couple of months apart, so spending minus income doesn't exactly equal the
+  <a href="{{ pf.borrowing_url }}">£{{ pf.borrowing_bn }} billion borrowed</a>. Rows may not add up exactly because of rounding.
+</p>
+{%- assign df = uk.uk_only.defence %}
+{%- assign df_now = df.mod_budget | first %}
+{%- assign df_last = df.mod_budget | last %}
+{%- assign df_pp = df.nato_bn | times: 1000000000 | divided_by: uk_pop | round %}
+<h3 id="defence">Defence (UK-wide)</h3>
+<p>Defence is run for the whole UK, so there are no figures for each nation.</p>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ df.nato_period }}</p>
+    <p class="nhs-stat__figure">£{{ df.nato_bn }} billion</p>
+    <h3 class="nhs-stat__label">Defence spending, NATO definition</h3>
+    <p class="nhs-stat__so">That's {{ df.nato_pct_gdp }}% of GDP, or about £{% include thousands.html n=df_pp %} per person in the UK.
+      NATO's definition is broader than the Ministry of Defence budget (it includes items such as military pensions).</p>
+    <p class="nhs-stat__source"><a href="{{ df.nato_url }}">{{ df.nato_source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ df_now.period }} to {{ df_last.period }}</p>
+    <p class="nhs-stat__figure">£{{ df_now.bn }} billion</p>
+    <h3 class="nhs-stat__label">Ministry of Defence budget, {{ df_now.period }}</h3>
+    <p class="nhs-stat__so">Planned to rise to {% for b in df.mod_budget offset: 1 %}£{{ b.bn }} billion in {{ b.period }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+      {{ df.targets }}</p>
+    <p class="nhs-stat__source"><a href="{{ df.mod_url }}">{{ df.mod_source }}</a>; <a href="{{ df.targets_url }}">{{ df.targets_source }}</a></p>
+  </section>
+</div>
+{%- endif %}
 {%- endfor %}
 
 <h2 id="reading-these">Reading these numbers</h2>
@@ -169,6 +314,21 @@ permalink: /landmark-numbers/uk-and-nations/
   <li>
     <strong>Healthy life expectancy is based on how people rate their own health,</strong> so it is less precise
     than life expectancy, especially for the smaller nations.
+  </li>
+  <li>
+    <strong>"Working age" here means 16 to 64,</strong> the standard statistical definition. The State Pension age is
+    now 66, and plenty of people work beyond it or don't work before it, so it's a measure of age, not of jobs.
+    Household figures come from the Labour Force Survey, which no longer covers Northern Ireland.
+  </li>
+  <li>
+    <strong>Migration figures come in two versions.</strong> The table uses the mid-year population estimates, which
+    split migration by nation. The UK headline uses the ONS's later, provisional migration estimates, which are revised
+    as more data arrives. "Migration within the UK" is people moving between the four nations.
+  </li>
+  <li>
+    <strong>There is no single count of "people on benefits".</strong> The claimant count covers people who claim because
+    they are unemployed. Universal Credit is wider, and the State Pension and disability benefits are separate again.
+    Social protection spending covers all of these, plus social care.
   </li>
   <li>
     <strong>The periods differ.</strong> Population is mid-2025, spending is 2024/25, employment is mid-2026.

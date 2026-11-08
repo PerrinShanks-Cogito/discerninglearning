@@ -1,12 +1,27 @@
 {
-  "_about": "Curated figures for /landmark-numbers/uk-and-nations/. Each measure gives a value for the UK and each nation, with its period and source. Formats: int, km2, years1, pct1, money, money2. The quarterly Claude scheduled task checks these and opens a pull request when newer figures are published.",
+  "_about": "Curated figures for /landmark-numbers/uk-and-nations/. Each measure gives a value for the UK and each nation, with its period and source. Formats: int, km2, years1, pct1, pct2, money, money2, m1 (millions), dec2. A null value shows as a dash. The quarterly Claude scheduled task checks these and opens a pull request when newer figures are published.",
   "last_reviewed": "2026-11-08",
   "nations": [
-    { "key": "uk", "name": "UK" },
-    { "key": "england", "name": "England" },
-    { "key": "scotland", "name": "Scotland" },
-    { "key": "wales", "name": "Wales" },
-    { "key": "ni", "name": "Northern Ireland" }
+    {
+      "key": "uk",
+      "name": "UK"
+    },
+    {
+      "key": "england",
+      "name": "England"
+    },
+    {
+      "key": "scotland",
+      "name": "Scotland"
+    },
+    {
+      "key": "wales",
+      "name": "Wales"
+    },
+    {
+      "key": "ni",
+      "name": "Northern Ireland"
+    }
   ],
   "uk_births": 652400,
   "uk_deaths": 647500,
@@ -17,32 +32,205 @@
       "title": "People and place",
       "measures": [
         {
-          "key": "population", "label": "Population", "format": "int",
-          "values": { "uk": 69483900, "england": 58834800, "scotland": 5545500, "wales": 3175200, "ni": 1928400 },
+          "key": "population",
+          "label": "Population",
+          "format": "int",
+          "values": {
+            "uk": 69483900,
+            "england": 58834800,
+            "scotland": 5545500,
+            "wales": 3175200,
+            "ni": 1928400
+          },
           "period": "mid-2025",
           "source": "ONS, population estimates for the UK and its countries, mid-2025 (published 1 October 2026)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
         },
         {
-          "key": "growth", "label": "Population growth in a year (%)", "format": "pct2",
-          "values": { "uk": 0.33, "england": 0.39, "scotland": 0.04, "wales": -0.09, "ni": 0.03 },
+          "key": "growth",
+          "label": "Population growth in a year (%)",
+          "format": "pct2",
+          "values": {
+            "uk": 0.33,
+            "england": 0.39,
+            "scotland": 0.04,
+            "wales": -0.09,
+            "ni": 0.03
+          },
           "period": "mid-2024 to mid-2025",
           "source": "ONS, population estimates for the UK and its countries, mid-2025 (published 1 October 2026)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
         },
         {
-          "key": "median_age", "label": "Median age (years)", "format": "years1",
-          "values": { "uk": 40.9, "england": 40.6, "scotland": 43.1, "wales": 43.2, "ni": 40.6 },
+          "key": "median_age",
+          "label": "Median age (years)",
+          "format": "years1",
+          "values": {
+            "uk": 40.9,
+            "england": 40.6,
+            "scotland": 43.1,
+            "wales": 43.2,
+            "ni": 40.6
+          },
           "period": "mid-2025",
           "source": "ONS, population estimates for the UK and its countries, mid-2025 (published 1 October 2026)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
         },
         {
-          "key": "land_km2", "label": "Land area (km²)", "format": "km2",
-          "values": { "uk": 242742.5, "england": 130312.6, "scotland": 77900.3, "wales": 20736.7, "ni": 13793.0 },
+          "key": "working_age",
+          "label": "People of working age (16 to 64)",
+          "format": "int",
+          "values": {
+            "uk": 43692781,
+            "england": 37060671,
+            "scotland": 3502738,
+            "wales": 1936178,
+            "ni": 1193194
+          },
+          "period": "mid-2025",
+          "source": "ONS, mid-year population estimates by age, mid-2025 (via Nomis)",
+          "url": "https://www.nomisweb.co.uk/datasets/pestsyoala"
+        },
+        {
+          "key": "over_65",
+          "label": "People aged 65 and over",
+          "format": "int",
+          "values": {
+            "uk": 13460704,
+            "england": 11234391,
+            "scotland": 1164763,
+            "wales": 705065,
+            "ni": 356485
+          },
+          "period": "mid-2025",
+          "source": "ONS, mid-year population estimates by age, mid-2025 (via Nomis)",
+          "url": "https://www.nomisweb.co.uk/datasets/pestsyoala"
+        },
+        {
+          "key": "households",
+          "label": "Households",
+          "format": "m1",
+          "values": {
+            "uk": 29.0,
+            "england": 24.329,
+            "scotland": 2.52,
+            "wales": 1.404,
+            "ni": null
+          },
+          "period": "2025 (Northern Ireland not estimated)",
+          "source": "ONS, Families and households in the UK: 2025, households by household size (published 17 April 2026). The Labour Force Survey no longer covers Northern Ireland",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds/2025"
+        },
+        {
+          "key": "household_size",
+          "label": "Average people per household",
+          "format": "dec2",
+          "values": {
+            "uk": 2.36,
+            "england": 2.38,
+            "scotland": 2.14,
+            "wales": 2.25,
+            "ni": null
+          },
+          "period": "2025 (Northern Ireland not estimated)",
+          "source": "ONS, Families and households in the UK: 2025, households by household size (published 17 April 2026). The Labour Force Survey no longer covers Northern Ireland",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds/2025"
+        },
+        {
+          "key": "land_km2",
+          "label": "Land area (km²)",
+          "format": "km2",
+          "values": {
+            "uk": 242742.5,
+            "england": 130312.6,
+            "scotland": 77900.3,
+            "wales": 20736.7,
+            "ni": 13793.0
+          },
           "period": "December 2024 boundaries",
           "source": "ONS, Standard Area Measurements for the countries (December 2024), land to mean high water excluding inland water; UK is the sum of the four",
           "url": "https://www.data.gov.uk/dataset/standard-area-measurements-for-the-countries-december-2024-in-the-uk"
+        }
+      ]
+    },
+    {
+      "key": "migration",
+      "title": "Migration",
+      "measures": [
+        {
+          "key": "immigration",
+          "label": "International immigration",
+          "format": "int",
+          "values": {
+            "uk": 886222,
+            "england": 791404,
+            "scotland": 57600,
+            "wales": 25131,
+            "ni": 12087
+          },
+          "period": "year to mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025, components of change (table MYE3, published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "emigration",
+          "label": "International emigration",
+          "format": "int",
+          "values": {
+            "uk": 663361,
+            "england": 581370,
+            "scotland": 48300,
+            "wales": 23474,
+            "ni": 10217
+          },
+          "period": "year to mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025, components of change (table MYE3, published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "net_international",
+          "label": "Net international migration",
+          "format": "int",
+          "values": {
+            "uk": 222861,
+            "england": 210034,
+            "scotland": 9300,
+            "wales": 1657,
+            "ni": 1870
+          },
+          "period": "year to mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025, components of change (table MYE3, published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "net_internal",
+          "label": "Net migration within the UK",
+          "format": "int",
+          "values": {
+            "uk": null,
+            "england": -10816,
+            "scotland": 8600,
+            "wales": 4876,
+            "ni": -2634
+          },
+          "period": "year to mid-2025 (nets to zero for the UK)",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025, components of change (table MYE3, published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
+        },
+        {
+          "key": "natural_change",
+          "label": "Births minus deaths",
+          "format": "int",
+          "values": {
+            "uk": 4909,
+            "england": 28792,
+            "scotland": -16156,
+            "wales": -9168,
+            "ni": 1441
+          },
+          "period": "year to mid-2025",
+          "source": "ONS, population estimates for the UK and its countries, mid-2025, components of change (table MYE3, published 1 October 2026)",
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2025"
         }
       ]
     },
@@ -51,36 +239,76 @@
       "title": "Health",
       "measures": [
         {
-          "key": "le_female", "label": "Life expectancy at birth, women (years)", "format": "years1",
-          "values": { "uk": 83.0, "england": 83.3, "scotland": 81.1, "wales": 82.2, "ni": 82.6 },
+          "key": "le_female",
+          "label": "Life expectancy at birth, women (years)",
+          "format": "years1",
+          "values": {
+            "uk": 83.0,
+            "england": 83.3,
+            "scotland": 81.1,
+            "wales": 82.2,
+            "ni": 82.6
+          },
           "period": "2022 to 2024",
           "source": "ONS, National life tables, life expectancy in the UK: 2022 to 2024 (published 10 December 2025)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/bulletins/nationallifetablesunitedkingdom/latest"
         },
         {
-          "key": "le_male", "label": "Life expectancy at birth, men (years)", "format": "years1",
-          "values": { "uk": 79.1, "england": 79.4, "scotland": 77.1, "wales": 78.3, "ni": 78.8 },
+          "key": "le_male",
+          "label": "Life expectancy at birth, men (years)",
+          "format": "years1",
+          "values": {
+            "uk": 79.1,
+            "england": 79.4,
+            "scotland": 77.1,
+            "wales": 78.3,
+            "ni": 78.8
+          },
           "period": "2022 to 2024",
           "source": "ONS, National life tables, life expectancy in the UK: 2022 to 2024 (published 10 December 2025)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/bulletins/nationallifetablesunitedkingdom/latest"
         },
         {
-          "key": "hle_female", "label": "Healthy life expectancy at birth, women (years)", "format": "years1",
-          "values": { "uk": 60.9, "england": 61.3, "scotland": 59.4, "wales": 58.5, "ni": 60.7 },
+          "key": "hle_female",
+          "label": "Healthy life expectancy at birth, women (years)",
+          "format": "years1",
+          "values": {
+            "uk": 60.9,
+            "england": 61.3,
+            "scotland": 59.4,
+            "wales": 58.5,
+            "ni": 60.7
+          },
           "period": "2022 to 2024",
           "source": "ONS, Healthy life expectancy, UK: between 2011 to 2013 and 2022 to 2024 (published 19 February 2026)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/bulletins/healthstatelifeexpectanciesuk/between2011to2013and2022to2024"
         },
         {
-          "key": "hle_male", "label": "Healthy life expectancy at birth, men (years)", "format": "years1",
-          "values": { "uk": 60.7, "england": 60.9, "scotland": 59.1, "wales": 59.2, "ni": 60.8 },
+          "key": "hle_male",
+          "label": "Healthy life expectancy at birth, men (years)",
+          "format": "years1",
+          "values": {
+            "uk": 60.7,
+            "england": 60.9,
+            "scotland": 59.1,
+            "wales": 59.2,
+            "ni": 60.8
+          },
           "period": "2022 to 2024",
           "source": "ONS, Healthy life expectancy, UK: between 2011 to 2013 and 2022 to 2024 (published 19 February 2026)",
           "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/bulletins/healthstatelifeexpectanciesuk/between2011to2013and2022to2024"
         },
         {
-          "key": "health_per_head", "label": "Public spending on health per person", "format": "money",
-          "values": { "uk": 3487, "england": 3462, "scotland": 3539, "wales": 3758, "ni": 3659 },
+          "key": "health_per_head",
+          "label": "Public spending on health per person",
+          "format": "money",
+          "values": {
+            "uk": 3487,
+            "england": 3462,
+            "scotland": 3539,
+            "wales": 3758,
+            "ni": 3659
+          },
           "period": "2024/25",
           "source": "HM Treasury, Country and regional analysis 2025, table A.15 (published 19 November 2025)",
           "url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2025"
@@ -88,29 +316,186 @@
       ]
     },
     {
+      "key": "religion",
+      "title": "Religion",
+      "measures": [
+        {
+          "key": "christian",
+          "label": "Christian (%)",
+          "format": "pct1",
+          "values": {
+            "uk": null,
+            "england": 46.3,
+            "scotland": 38.8,
+            "wales": 43.6,
+            "ni": 79.7
+          },
+          "period": "Census 2021 (Scotland 2022)",
+          "source": "ONS Census 2021 (England and Wales, table TS030), Scotland's Census 2022 (NRS) and NISRA Census 2021 (table MS-B19)",
+          "url": "https://www.nomisweb.co.uk/datasets/c2021ts030"
+        },
+        {
+          "key": "no_religion",
+          "label": "No religion (%)",
+          "format": "pct1",
+          "values": {
+            "uk": null,
+            "england": 36.7,
+            "scotland": 51.1,
+            "wales": 46.5,
+            "ni": 17.4
+          },
+          "period": "Census 2021 (Scotland 2022)",
+          "source": "ONS Census 2021 (England and Wales, table TS030), Scotland's Census 2022 (NRS) and NISRA Census 2021 (table MS-B19)",
+          "url": "https://www.nomisweb.co.uk/datasets/c2021ts030"
+        },
+        {
+          "key": "other_religions",
+          "label": "Other religions (%)",
+          "format": "pct1",
+          "values": {
+            "uk": null,
+            "england": 11.0,
+            "scotland": 3.9,
+            "wales": 3.6,
+            "ni": 1.3
+          },
+          "period": "Census 2021 (Scotland 2022)",
+          "source": "ONS Census 2021 (England and Wales, table TS030), Scotland's Census 2022 (NRS) and NISRA Census 2021 (table MS-B19)",
+          "url": "https://www.nomisweb.co.uk/datasets/c2021ts030"
+        },
+        {
+          "key": "muslim",
+          "label": "of which Muslim (%)",
+          "format": "pct1",
+          "values": {
+            "uk": null,
+            "england": 6.7,
+            "scotland": 2.2,
+            "wales": 2.2,
+            "ni": null
+          },
+          "period": "Census 2021 (Scotland 2022); not published separately for Northern Ireland in table MS-B19",
+          "source": "ONS Census 2021 (England and Wales, table TS030), Scotland's Census 2022 (NRS) and NISRA Census 2021 (table MS-B19)",
+          "url": "https://www.nomisweb.co.uk/datasets/c2021ts030"
+        },
+        {
+          "key": "religion_not_stated",
+          "label": "Not stated (%)",
+          "format": "pct1",
+          "values": {
+            "uk": null,
+            "england": 6.0,
+            "scotland": 6.2,
+            "wales": 6.3,
+            "ni": 1.6
+          },
+          "period": "Census 2021 (Scotland 2022)",
+          "source": "ONS Census 2021 (England and Wales, table TS030), Scotland's Census 2022 (NRS) and NISRA Census 2021 (table MS-B19)",
+          "url": "https://www.nomisweb.co.uk/datasets/c2021ts030"
+        }
+      ],
+      "note": "Each nation ran its own census: England, Wales and Northern Ireland in 2021, Scotland in 2022, so there is no single UK figure. The question was voluntary. Northern Ireland's figures are for current religion; its census also asks the religion people were brought up in."
+    },
+    {
       "key": "economy",
       "title": "Economy and work",
       "measures": [
         {
-          "key": "gdp_per_head", "label": "GDP per person", "format": "money",
-          "values": { "uk": 41627, "england": 42171, "scotland": 39441, "wales": 31484, "ni": 35108 },
+          "key": "gdp_per_head",
+          "label": "GDP per person",
+          "format": "money",
+          "values": {
+            "uk": 41627,
+            "england": 42171,
+            "scotland": 39441,
+            "wales": 31484,
+            "ni": 35108
+          },
           "period": "2024",
           "source": "ONS, Regional economic activity by gross domestic product, UK: 1998 to 2024 (published 23 September 2026)",
           "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2024"
         },
         {
-          "key": "weekly_pay", "label": "Median weekly pay, full-time (before tax)", "format": "money2",
-          "values": { "uk": 766.6, "england": 769.5, "scotland": 775.6, "wales": 719.3, "ni": 715.6 },
+          "key": "weekly_pay",
+          "label": "Median weekly pay, full-time (before tax)",
+          "format": "money2",
+          "values": {
+            "uk": 766.6,
+            "england": 769.5,
+            "scotland": 775.6,
+            "wales": 719.3,
+            "ni": 715.6
+          },
           "period": "April 2025, by where people live",
           "source": "ONS, Annual Survey of Hours and Earnings, resident analysis (via Nomis)",
           "url": "https://www.nomisweb.co.uk/datasets/asher"
         },
         {
-          "key": "employment_rate", "label": "Employment rate, ages 16 to 64 (%)", "format": "pct1",
-          "values": { "uk": 75.3, "england": 75.6, "scotland": 74.0, "wales": 73.3, "ni": 72.5 },
+          "key": "employment_rate",
+          "label": "Employment rate, ages 16 to 64 (%)",
+          "format": "pct1",
+          "values": {
+            "uk": 75.3,
+            "england": 75.6,
+            "scotland": 74.0,
+            "wales": 73.3,
+            "ni": 72.5
+          },
           "period": "June to August 2026",
           "source": "ONS, Labour market in the regions of the UK: October 2026 (published 20 October 2026)",
           "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/regionallabourmarket/october2026"
+        }
+      ]
+    },
+    {
+      "key": "benefits",
+      "title": "Benefits",
+      "measures": [
+        {
+          "key": "claimant_count",
+          "label": "People claiming unemployment-related benefits (claimant count)",
+          "format": "int",
+          "values": {
+            "uk": 1702905,
+            "england": 1493875,
+            "scotland": 108760,
+            "wales": 66045,
+            "ni": 34225
+          },
+          "period": "September 2026",
+          "source": "ONS, claimant count (Jobseeker's Allowance and Universal Credit claimants required to look for work), via Nomis",
+          "url": "https://www.nomisweb.co.uk/sources/cc"
+        },
+        {
+          "key": "claimant_rate",
+          "label": "Claimant count as a % of people aged 16 to 64",
+          "format": "pct1",
+          "values": {
+            "uk": 3.9,
+            "england": 4.1,
+            "scotland": 3.1,
+            "wales": 3.4,
+            "ni": 2.9
+          },
+          "period": "September 2026",
+          "source": "ONS, claimant count, via Nomis",
+          "url": "https://www.nomisweb.co.uk/sources/cc"
+        },
+        {
+          "key": "social_protection_per_head",
+          "label": "Public spending on social protection per person",
+          "format": "money",
+          "values": {
+            "uk": 5475,
+            "england": 5322,
+            "scotland": 6123,
+            "wales": 6471,
+            "ni": 6628
+          },
+          "period": "2024/25",
+          "source": "HM Treasury, Country and regional analysis 2025, table A.15 (social protection includes benefits, State Pension and social care)",
+          "url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2025"
         }
       ]
     },
@@ -119,13 +504,203 @@
       "title": "Public money",
       "measures": [
         {
-          "key": "spend_per_head", "label": "Public spending per person (identifiable)", "format": "money",
-          "values": { "uk": 13504, "england": 13134, "scotland": 15563, "wales": 15155, "ni": 16116 },
+          "key": "spend_per_head",
+          "label": "Public spending per person (identifiable)",
+          "format": "money",
+          "values": {
+            "uk": 13504,
+            "england": 13134,
+            "scotland": 15563,
+            "wales": 15155,
+            "ni": 16116
+          },
           "period": "2024/25",
           "source": "HM Treasury, Country and regional analysis: November 2025 (published 19 November 2025)",
           "url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2025/country-and-regional-analysis-november-2025"
         }
       ]
     }
-  ]
+  ],
+  "uk_only": {
+    "migration_ltim": {
+      "immigration": 813000,
+      "emigration": 642000,
+      "net": 171000,
+      "net_previous": 331000,
+      "period": "year ending December 2025",
+      "previous_period": "year ending December 2024",
+      "non_eu_immigration": 627000,
+      "non_eu_reasons": [
+        {
+          "reason": "Study",
+          "pct": 47
+        },
+        {
+          "reason": "Work",
+          "pct": 23
+        },
+        {
+          "reason": "Asylum",
+          "pct": 14
+        },
+        {
+          "reason": "Family",
+          "pct": 7
+        },
+        {
+          "reason": "Humanitarian",
+          "pct": 6
+        }
+      ],
+      "source": "ONS, Long-term international migration, provisional: year ending December 2025 (published 21 May 2026)",
+      "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/longterminternationalmigrationprovisional/yearendingdecember2025"
+    },
+    "universal_credit": {
+      "gb_m": 8.4,
+      "ni": 271770,
+      "period": "May 2026",
+      "gb_source": "DWP, Universal Credit statistics to 14 May 2026 (published 18 August 2026)",
+      "gb_url": "https://www.gov.uk/government/statistics/universal-credit-quarterly-statistics-29-april-2013-to-14-may-2026/universal-credit-quarterly-statistics-29-april-2013-to-14-may-2026",
+      "ni_source": "Department for Communities, Universal Credit statistics, May 2026 (published 26 August 2026)",
+      "ni_url": "https://www.communities-ni.gov.uk/publications/universal-credit-statistics-may-2026"
+    },
+    "defence": {
+      "mod_budget": [
+        {
+          "period": "2025/26",
+          "bn": 62.2
+        },
+        {
+          "period": "2026/27",
+          "bn": 65.5
+        },
+        {
+          "period": "2027/28",
+          "bn": 71.0
+        },
+        {
+          "period": "2028/29",
+          "bn": 73.5
+        }
+      ],
+      "mod_source": "HM Treasury, Spending Review 2025, table 5.14 (Ministry of Defence total budget, current prices)",
+      "mod_url": "https://www.gov.uk/government/publications/spending-review-2025-document/spending-review-2025-html",
+      "nato_bn": 70.2,
+      "nato_pct_gdp": 2.4,
+      "nato_period": "2025 (NATO estimate)",
+      "nato_source": "NATO, Defence expenditure of NATO countries (2014–2025)",
+      "nato_url": "https://nato.int/content/dam/nato/webready/documents/finance/def-exp-2025-en.pdf",
+      "targets": "The 2025 Spending Review plans defence spending of 2.6% of GDP in 2027/28. At NATO's 2025 summit, the UK and other members agreed to spend 3.5% of GDP on core defence, plus 1.5% on related security, by 2035.",
+      "targets_source": "Institute for Government, UK defence spending explainer",
+      "targets_url": "https://www.instituteforgovernment.org.uk/explainer/uk-defence-spending"
+    },
+    "public_finances": {
+      "period": "2025/26",
+      "spending_total_bn": 1360.1,
+      "spending": [
+        {
+          "label": "Social protection",
+          "note": "State Pension, benefits, social care",
+          "bn": 407.3
+        },
+        {
+          "label": "Health",
+          "bn": 257.5
+        },
+        {
+          "label": "Debt interest",
+          "bn": 130.3
+        },
+        {
+          "label": "Education",
+          "bn": 125.7
+        },
+        {
+          "label": "Defence",
+          "bn": 65.4
+        },
+        {
+          "label": "Public order and safety",
+          "note": "Police, courts, prisons, fire",
+          "bn": 55.7
+        },
+        {
+          "label": "Transport",
+          "bn": 48.9
+        },
+        {
+          "label": "Other economic affairs",
+          "note": "Business, science, jobs, farming",
+          "bn": 45.0
+        },
+        {
+          "label": "Housing and environment",
+          "bn": 41.6
+        },
+        {
+          "label": "Other services",
+          "note": "Running government, culture, sport",
+          "bn": 50.1
+        },
+        {
+          "label": "Accounting adjustments",
+          "note": "Spending HM Treasury doesn't assign to a sector",
+          "bn": 132.5
+        }
+      ],
+      "spending_source": "HM Treasury, Public Expenditure Statistical Analyses 2026, table 5.2 (total managed expenditure by function, 2025/26 outturn, published July 2026)",
+      "spending_url": "https://assets.publishing.service.gov.uk/media/6a608addf869f6a53d0c89ef/PESA_2026_Accessible.pdf",
+      "receipts_total_bn": 1231.3,
+      "receipts": [
+        {
+          "label": "Income tax",
+          "bn": 329.3
+        },
+        {
+          "label": "National Insurance",
+          "bn": 204.4
+        },
+        {
+          "label": "VAT",
+          "bn": 180.3
+        },
+        {
+          "label": "Corporation tax",
+          "bn": 99.6
+        },
+        {
+          "label": "Capital taxes",
+          "note": "Capital gains, inheritance, stamp duties",
+          "bn": 54.1
+        },
+        {
+          "label": "Council tax",
+          "bn": 50.4
+        },
+        {
+          "label": "Fuel duties",
+          "bn": 24.6
+        },
+        {
+          "label": "Alcohol and tobacco duties",
+          "bn": 19.9
+        },
+        {
+          "label": "Interest, dividends and surpluses",
+          "note": "Earned by public bodies",
+          "bn": 123.6
+        },
+        {
+          "label": "Other taxes and receipts",
+          "note": "Business rates, vehicle and insurance taxes, levies, licence fee and more",
+          "bn": 145.0
+        }
+      ],
+      "receipts_source": "OBR, Public finances databank (October 2026), outturn consistent with ONS/HM Treasury Public sector finances, 22 September 2026",
+      "receipts_url": "https://obr.uk/data/",
+      "borrowing_bn": 134.3,
+      "borrowing_source": "OBR, Public finances databank (October 2026): public sector net borrowing, 2025/26 outturn",
+      "borrowing_url": "https://obr.uk/data/"
+    }
+  }
 }
