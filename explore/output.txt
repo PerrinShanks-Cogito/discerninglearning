@@ -4,16 +4,15 @@ Configuration file: /home/runner/work/discerninglearning/discerninglearning/site
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 0.602 seconds.
+                    done in 0.572 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
-OK uk-and-nations 12971 bytes, refs=0, lists=0, leftovers=0
-OK uk-and-nations/people 29219 bytes, refs=25, lists=4, leftovers=0
-OK uk-and-nations/economy 23834 bytes, refs=11, lists=4, leftovers=0
-OK uk-and-nations/defence 16541 bytes, refs=7, lists=4, leftovers=0
-OK uk-and-nations/energy 41263 bytes, refs=27, lists=6, leftovers=0
-OK uk-and-nations/food 23391 bytes, refs=12, lists=5, leftovers=0
-OK uk-and-nations/law-and-order 21789 bytes, refs=18, lists=2, leftovers=0
-<p class="uk-lead">Scotland gets 72.3% of its electricity from renewables and sends a net 20.8 TWh
-<p class="uk-lead">Renewables supplied 52.1% of the UK's electricity in 2025 and gas 31.7%. No coal was burned to make electricity.
-<p class="uk-lead">Offshore wind is the biggest renewable source, at 52.0 TWh a year.
+INDEX tiles: 2
+OK nhs 9796 bytes, refs=0, lists=0, leftovers=0
+OK nhs-in-numbers 13904 bytes, refs=0, lists=0, leftovers=0
+OK nhs-costs 16402 bytes, refs=0, lists=0, leftovers=0
+OK nhs-performance 35606 bytes, refs=0, lists=0, leftovers=0
+OK uk-and-nations 12972 bytes, refs=0, lists=0, leftovers=0
+OK uk-and-nations/energy 41264 bytes, refs=27, lists=6, leftovers=0
+<p class="uk-lead">A major A&amp;E attendance costs about £350 on average in England, and £480 at Guy's and St Thomas'.
+<p class="uk-lead">Allowing for its patients and London costs, Guy's and St Thomas' costs 18% more than NHS England's index would expect.
 ./vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:Liquid Warning:",
