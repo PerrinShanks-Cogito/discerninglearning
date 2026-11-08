@@ -1,23 +1,8 @@
-import requests, re, io, traceback
+import requests, io
 import pandas as pd
-pd.set_option("display.width",300); pd.set_option("display.max_columns",30); pd.set_option("display.max_colwidth",60); pd.set_option("display.max_rows",400)
+pd.set_option("display.width",300); pd.set_option("display.max_columns",30); pd.set_option("display.max_colwidth",50); pd.set_option("display.max_rows",100)
 s=requests.Session(); s.headers.update({"User-Agent":"Mozilla/5.0 (Discerning Learning landmark numbers)"})
-try:
-    r=s.get("https://www.gov.uk/government/statistics/uk-armed-forces-equipment-and-formations-2026",timeout=90)
-    ls=sorted(set(a for a in re.findall(r'href="([^"]+)"',r.text) if re.search(r"\.(ods|xlsx|csv)$",a))); print(ls)
-    for u in ls:
-        b=s.get(u,timeout=180).content
-        x=pd.ExcelFile(io.BytesIO(b),engine="odf" if u.endswith(".ods") else None); print("FILE",u,x.sheet_names)
-        for sh in x.sheet_names:
-            d=pd.read_excel(x,sh,header=None)
-            txt=d.astype(str)
-            hit=txt.apply(lambda r: r.str.contains(r"F-35|Lightning|Challenger|Type 45|Type 23|Type 26|Queen Elizabeth|Carrier|Destroyer|Frigate|Astute|Vanguard|Apache|Wildcat|Merlin|A400M|Voyager|C-17|Poseidon|P-8|Archer|AS90|MLRS|Boxer|Ajax|Typhoon|Chinook",case=False).any(),axis=1)
-            if hit.any():
-                print("--",sh,d.shape)
-                sub=d[hit]
-                # print label col(s) and last non-null value
-                for i,row in sub.iterrows():
-                    vals=[v for v in row.tolist() if pd.notna(v)]
-                    print("   ",[str(v)[:45] for v in vals][:12])
-except Exception: traceback.print_exc()
-# 1794164839
+x=pd.ExcelFile(io.BytesIO(s.get("https://assets.publishing.service.gov.uk/media/6a7afefb423b0bdba0290eb1/UK_armed_forces_equipment_and_formations_2026.xlsx",timeout=180).content))
+for sh in ["1","5","7","8"]:
+    d=pd.read_excel(x,sh,header=None); print("=====",sh); print(d.to_string(max_colwidth=50)[:6000])
+# 1794164882
