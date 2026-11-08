@@ -3,15 +3,18 @@ title: What NHS care costs
 description: England's average cost of common hospital activity, compared with Guy's and St Thomas'.
 permalink: /landmark-numbers/nhs-costs/
 ---
-{%- assign ncc = site.data.landmark_ncc -%}
+{% include nhs-setup.html %}
+{%- assign ae_row = ncc.unit_costs | first -%}
 
-<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a> &middot; <a href="{{ '/landmark-numbers/nhs/' | relative_url }}">The NHS</a></p>
 
 <p class="landmark-meta">
   Last checked <strong>{{ ncc.last_checked | date: "%-d %B %Y" }}</strong>.
   The figures last changed on {{ ncc.last_updated | date: "%-d %B %Y" }}.
   I check for new editions every quarter.
 </p>
+
+{% include landmark-nav.html set="nhs" current="costs" %}
 
 <p>
   These are average costs per unit of hospital activity in {{ ncc.costs_financial_year }}, from
@@ -30,6 +33,8 @@ permalink: /landmark-numbers/nhs-costs/
 </p>
 {%- endif %}
 
+<h2 id="unit-costs">Cost per unit of care</h2>
+<p class="uk-lead">A major A&amp;E attendance costs about {{ ae_row.national_remember }} on average in England{% if ae_row.trust_remember %}, and {{ ae_row.trust_remember }} at Guy's and St Thomas'{% endif %}.</p>
 <table class="landmark-table landmark-table--costs">
   <thead>
     <tr>
@@ -69,6 +74,8 @@ permalink: /landmark-numbers/nhs-costs/
 
 {%- if ncc.ncci_total %}
 <h2 id="cost-index">Allowing for case mix and London costs</h2>
+{%- assign ncci_diff = ncc.ncci_total | minus: 100 %}
+<p class="uk-lead">Allowing for its patients and London costs, Guy's and St Thomas' costs {% if ncci_diff > 0 %}{{ ncci_diff }}% more{% elsif ncci_diff < 0 %}{{ ncci_diff | abs }}% less{% else %}exactly what{% endif %}{% if ncci_diff != 0 %} than{% endif %} NHS England's index would expect.</p>
 
 <p>
   A specialist teaching hospital in central London would cost more than average even if it were
@@ -87,6 +94,8 @@ permalink: /landmark-numbers/nhs-costs/
   Guy's and St Thomas' overall: <strong>{{ ncc.ncci_total }}</strong>
 </p>
 
+<details class="uk-more">
+  <summary>Show the index for each area of care</summary>
 <table class="landmark-table landmark-table--index">
   <thead>
     <tr><th scope="col">Area of care</th><th scope="col">Index (100 = as expected)</th></tr>
@@ -100,9 +109,11 @@ permalink: /landmark-numbers/nhs-costs/
     {%- endfor %}
   </tbody>
 </table>
+</details>
 {%- endif %}
 
-<h2 id="reading-these">Reading these numbers</h2>
+<details class="landmark-method">
+  <summary>Reading these numbers</summary>
 <ul>
   <li>
     <strong>These are average costs, not savings.</strong> Each figure includes a share of
@@ -127,6 +138,7 @@ permalink: /landmark-numbers/nhs-costs/
     little difference to the averages.
   </li>
 </ul>
+</details>
 
 <details class="landmark-method">
   <summary>How these figures are calculated</summary>

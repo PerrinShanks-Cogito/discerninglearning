@@ -33,34 +33,13 @@ permalink: /landmark-numbers/
       <strong>{{ ukpop.values.england | times: 100.0 | divided_by: ukpop.values.uk | round }}%</strong> in England
     </p>
   </a>
-  <a class="card card--link" href="{{ '/landmark-numbers/nhs-in-numbers/' | relative_url }}">
-    <p class="card__meta">England &middot; reviewed {{ nhs.last_reviewed | date: "%-d %B %Y" }}</p>
-    <h3 class="card__title">The NHS in numbers</h3>
-    <p>The size of the NHS: its budget, staff, appointments and waiting list, with per-day and per-person versions you can use to judge a headline.</p>
+  <a class="card card--link" href="{{ '/landmark-numbers/nhs/' | relative_url }}">
+    <p class="card__meta">England &middot; reviewed {{ nhs.last_reviewed | date: "%-d %B %Y" }} &middot; data to {{ perf.latest_month_text }}</p>
+    <h3 class="card__title">The NHS</h3>
+    <p>The size of the NHS in England, what common care costs and how waiting times compare, with Guy's and St Thomas' and the Shelford Group teaching hospitals alongside.</p>
     <p class="landmark-tile__figure">
       <span>NHS England's budget ({{ nhs.budget.period }})</span>
       <strong>£{{ nhs.budget.value_bn | times: 1000 | divided_by: 365 | round }} million</strong> a day
-    </p>
-  </a>
-  <a class="card card--link" href="{{ '/landmark-numbers/nhs-costs/' | relative_url }}">
-    <p class="card__meta">{{ ncc.costs_financial_year }} costs &middot; checked {{ ncc.last_checked | date: "%-d %B %Y" }}</p>
-    <h3 class="card__title">What NHS care costs</h3>
-    <p>England's average cost of an A&amp;E attendance, outpatient appointment, hospital stay and more, compared with Guy's and St Thomas'.</p>
-    <p class="landmark-tile__figure">
-      <span>A major A&amp;E attendance</span>
-      <strong>{{ ncc.unit_costs[0].national_remember }}</strong> in England,
-      <strong>{{ ncc.unit_costs[0].trust_remember }}</strong> at GSTT
-    </p>
-  </a>
-  {%- assign ae = perf.metrics[0] %}
-  <a class="card card--link" href="{{ '/landmark-numbers/nhs-performance/' | relative_url }}">
-    <p class="card__meta">Data to {{ perf.latest_month_text }} &middot; checked {{ perf.last_checked | date: "%-d %B %Y" }}</p>
-    <h3 class="card__title">How the NHS is performing</h3>
-    <p>The eight headline waiting-time measures for A&amp;E, planned care, cancer and diagnostics: England, Guy's and St Thomas' and the ten Shelford Group teaching hospitals.</p>
-    <p class="landmark-tile__figure">
-      <span>A&amp;E patients seen within 4 hours ({{ ae.month_text }})</span>
-      <strong>{{ ae.national }}%</strong> in England,
-      <strong>{{ ae.trust }}%</strong> at GSTT
     </p>
   </a>
 </div>

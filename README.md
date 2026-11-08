@@ -106,7 +106,11 @@ new commit). Watch progress on the repo's **Actions** tab.
 
 `/landmark-numbers/` (`_pages/landmark-numbers.html`) introduces reference
 numbers for putting other figures in context, an idea from Tim Harford's *How
-to Make the World Add Up*, with a tile for each set of numbers. The NHS costs
+to Make the World Add Up*, with two tiles: the UK and its nations, and the NHS.
+The NHS overview, `/landmark-numbers/nhs/` (`_pages/landmark-numbers-nhs.html`),
+leads to the three NHS pages below; `_data/landmark_nhs_pages.yml` lists them and
+their sections for the jump menu (`_includes/landmark-nav.html`, shared with the
+UK pages), and `_includes/nhs-setup.html` holds the figures they share. The NHS costs
 page, `/landmark-numbers/nhs-costs/` (`_pages/landmark-numbers-nhs-costs.html`),
 reads `_data/landmark_ncc.json`, which
 `scripts/landmark_numbers/update_ncc.py` builds from NHS England's latest

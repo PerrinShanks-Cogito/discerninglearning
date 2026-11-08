@@ -1,0 +1,29 @@
+{%- comment -%}
+  Sticky jump menu shared by the Landmark Numbers sections. Usage:
+  {% include landmark-nav.html set="nhs" current="costs" %}
+  "set" picks _data/landmark_<set>_pages.yml and its overview page; current="overview" on the overview.
+{%- endcomment -%}
+{%- assign nav_key = "landmark_" | append: include.set | append: "_pages" -%}
+{%- assign nav_pages = site.data[nav_key] -%}
+{%- if include.set == "nhs" -%}
+  {%- assign nav_home = "/landmark-numbers/nhs/" -%}{%- assign nav_label = "The NHS" -%}
+{%- else -%}
+  {%- assign nav_home = "/landmark-numbers/uk-and-nations/" -%}{%- assign nav_label = "UK and its nations" -%}
+{%- endif -%}
+{%- assign nav_here = nav_pages | where: "slug", include.current | first -%}
+<nav class="uk-nav" aria-label="{{ nav_label }}">
+  <p class="uk-nav__row uk-nav__topics">
+    <a href="{{ nav_home | relative_url }}"{% if include.current == "overview" %} aria-current="page"{% endif %}>Overview</a>
+    {%- for p in nav_pages %}
+    <a href="{{ p.url | relative_url }}"{% if p.slug == include.current %} aria-current="page"{% endif %}>{{ p.short }}</a>
+    {%- endfor %}
+  </p>
+  {%- if nav_here %}
+  <p class="uk-nav__row uk-nav__sections">
+    <span>On this page:</span>
+    {%- for s in nav_here.sections %}
+    <a href="#{{ s.id }}">{{ s.title }}</a>
+    {%- endfor %}
+  </p>
+  {%- endif %}
+</nav>

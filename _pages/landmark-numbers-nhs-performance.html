@@ -3,9 +3,9 @@ title: How the NHS is performing
 description: Headline waiting times for England, Guy's and St Thomas' and the Shelford Group of teaching hospitals.
 permalink: /landmark-numbers/nhs-performance/
 ---
-{%- assign perf = site.data.landmark_performance -%}
+{% include nhs-setup.html %}
 
-<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a></p>
+<p class="landmark-back"><a href="{{ '/landmark-numbers/' | relative_url }}">&larr; Landmark Numbers</a> &middot; <a href="{{ '/landmark-numbers/nhs/' | relative_url }}">The NHS</a></p>
 
 <p class="landmark-meta">
   Last checked <strong>{{ perf.last_checked | date: "%-d %B %Y" }}</strong>.
@@ -20,6 +20,14 @@ permalink: /landmark-numbers/nhs-performance/
   <a href="{{ perf.shelford_source }}">Shelford Group</a>: the ten largest NHS teaching hospital trusts
   in England, which are fairer peers for a big specialist hospital than the average trust.
 </p>
+
+{% include landmark-nav.html set="nhs" current="performance" %}
+
+{%- assign top3 = 0 %}{% assign bottom3 = 0 %}
+{%- for m in perf.metrics %}{% if m.shelford_position <= 3 %}{% assign top3 = top3 | plus: 1 %}{% endif %}{% assign from_bottom = m.shelford_count | minus: m.shelford_position %}{% if from_bottom < 3 %}{% assign bottom3 = bottom3 | plus: 1 %}{% endif %}{% endfor %}
+<h2 id="measures">The eight measures</h2>
+<p class="uk-lead">In the latest month, Guy's and St Thomas' was in the top three of the ten Shelford trusts on {{ top3 }} of the
+  {{ perf.metrics.size }} measures, and in the bottom three on {{ bottom3 }}.</p>
 
 <div class="perf-legend" aria-hidden="true">
   <span><i class="perf-dot perf-dot--trust"></i> Guy's and St Thomas'</span>
@@ -39,7 +47,7 @@ permalink: /landmark-numbers/nhs-performance/
   {%- endcase %}
   <section class="card perf-card" aria-labelledby="perf-{{ m.code }}">
     <p class="card__meta">{{ m.group }} &middot; {{ m.month_text }}</p>
-    <h2 class="perf-card__title" id="perf-{{ m.code }}">{{ m.label }}</h2>
+    <h3 class="perf-card__title" id="perf-{{ m.code }}">{{ m.label }}</h3>
 
     <p class="perf-card__figure"><strong>{{ m.trust }}%</strong> at GSTT</p>
     <dl class="perf-card__compare">
@@ -80,7 +88,9 @@ permalink: /landmark-numbers/nhs-performance/
 </div>
 
 <h2 id="shelford-table">All ten Shelford trusts</h2>
-<p>The latest month for each measure. Guy's and St Thomas' is highlighted.</p>
+<p class="uk-lead">Every Shelford trust's latest figure on each measure, with Guy's and St Thomas' highlighted.</p>
+<details class="uk-more">
+  <summary>Show the table</summary>
 
 <table class="landmark-table perf-table">
   <thead>
@@ -110,8 +120,10 @@ permalink: /landmark-numbers/nhs-performance/
     </tr>
   </tbody>
 </table>
+</details>
 
-<h2 id="reading-these">Reading these numbers</h2>
+<details class="landmark-method">
+  <summary>Reading these numbers</summary>
 <ul>
   <li>
     <strong>Look at the gaps, not just the positions.</strong> With ten trusts, coming 4th rather than 6th
@@ -139,6 +151,7 @@ permalink: /landmark-numbers/nhs-performance/
     acute trust's whole area.
   </li>
 </ul>
+</details>
 
 <details class="landmark-method">
   <summary>Where these figures come from</summary>
