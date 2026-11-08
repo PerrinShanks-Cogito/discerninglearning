@@ -4,15 +4,13 @@ Configuration file: /home/runner/work/discerninglearning/discerninglearning/site
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 0.572 seconds.
+                    done in 0.431 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
-INDEX tiles: 2
+INDEX tiles: 3
+OK fixed-anchors 15201 bytes, refs=0, lists=0, leftovers=0
 OK nhs 9796 bytes, refs=0, lists=0, leftovers=0
-OK nhs-in-numbers 13904 bytes, refs=0, lists=0, leftovers=0
-OK nhs-costs 16402 bytes, refs=0, lists=0, leftovers=0
-OK nhs-performance 35606 bytes, refs=0, lists=0, leftovers=0
 OK uk-and-nations 12972 bytes, refs=0, lists=0, leftovers=0
-OK uk-and-nations/energy 41264 bytes, refs=27, lists=6, leftovers=0
-<p class="uk-lead">A major A&amp;E attendance costs about £350 on average in England, and £480 at Guy's and St Thomas'.
-<p class="uk-lead">Allowing for its patients and London costs, Guy's and St Thomas' costs 18% more than NHS England's index would expect.
+<p class="uk-lead">A million seconds is under two weeks. A billion seconds is more than 31 years.
+<p class="uk-lead">If you earned £1 every second, it would take 11.6 days to make a million and nearly 32 years to make a billion.
+<p class="uk-lead">Light from the Sun takes 8 minutes 19 seconds to reach us, and just 1.3 seconds from the Moon.
 ./vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:Liquid Warning:",
