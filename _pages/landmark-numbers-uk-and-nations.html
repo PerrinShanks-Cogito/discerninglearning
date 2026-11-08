@@ -292,6 +292,72 @@ permalink: /landmark-numbers/uk-and-nations/
     <p class="nhs-stat__source"><a href="{{ df.mod_url }}">{{ df.mod_source }}</a>; <a href="{{ df.targets_url }}">{{ df.targets_source }}</a></p>
   </section>
 </div>
+
+{%- assign pe = df.personnel %}
+{%- assign per_k = pe.regulars.total | times: 1000.0 | divided_by: uk_pop | round: 1 %}
+<h4 id="armed-forces">Armed forces personnel</h4>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ pe.date }}</p>
+    <p class="nhs-stat__figure">{% include thousands.html n=pe.total %}</p>
+    <h3 class="nhs-stat__label">People serving in the UK armed forces</h3>
+    <p class="nhs-stat__so">{% include thousands.html n=pe.regulars.total %} full-time regulars (about {{ per_k }} for every 1,000 people in the UK),
+      {% include thousands.html n=pe.reserves.total %} volunteer reservists, {% include thousands.html n=pe.gurkhas %} Gurkhas and
+      {% include thousands.html n=pe.other %} others. In the year to June 2026, {% include thousands.html n=pe.intake_12m %} regulars joined
+      and {% include thousands.html n=pe.outflow_12m %} left.</p>
+    <p class="nhs-stat__source"><a href="{{ pe.url }}">{{ pe.source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; {{ pe.date }}</p>
+    <table class="def-table">
+      <thead><tr><th scope="col"></th><th scope="col" class="num">Regulars</th><th scope="col" class="num">Reserves</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Royal Navy and Royal Marines</th><td class="num">{% include thousands.html n=pe.regulars.navy %}</td><td class="num">{% include thousands.html n=pe.reserves.navy %}</td></tr>
+        <tr><th scope="row">Army</th><td class="num">{% include thousands.html n=pe.regulars.army %}</td><td class="num">{% include thousands.html n=pe.reserves.army %}</td></tr>
+        <tr><th scope="row">Royal Air Force</th><td class="num">{% include thousands.html n=pe.regulars.raf %}</td><td class="num">{% include thousands.html n=pe.reserves.raf %}</td></tr>
+        <tr class="def-table__total"><th scope="row">Total</th><td class="num">{% include thousands.html n=pe.regulars.total %}</td><td class="num">{% include thousands.html n=pe.reserves.total %}</td></tr>
+      </tbody>
+    </table>
+    <p class="nhs-stat__source">Rounded to the nearest 10, so rows may not add up exactly. "Others" are groups such as sponsored reserves that the MoD counts separately.</p>
+  </section>
+</div>
+
+{%- assign nu = df.nuclear %}
+<h4 id="nuclear">Nuclear deterrent</h4>
+<div class="nhs-grid">
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; government ceiling</p>
+    <p class="nhs-stat__figure">Up to {{ nu.warhead_cap }} warheads</p>
+    <h3 class="nhs-stat__label">The UK's nuclear stockpile limit</h3>
+    <p class="nhs-stat__so">{{ nu.warhead_cap_note }}. An independent estimate put the stockpile at about {{ nu.estimate }}
+      in {{ nu.estimate_period }}.</p>
+    <p class="nhs-stat__source"><a href="{{ nu.estimate_url }}">{{ nu.estimate_source }}</a></p>
+  </section>
+  <section class="card nhs-stat">
+    <p class="card__meta">UK &middot; since {{ nu.casd_since }}</p>
+    <p class="nhs-stat__figure">{{ nu.submarines }} submarines</p>
+    <h3 class="nhs-stat__label">Vanguard-class submarines carrying {{ nu.missile }} missiles</h3>
+    <p class="nhs-stat__so">A UK ballistic missile submarine has been on patrol at all times since {{ nu.casd_since }}: the continuous
+      at-sea deterrent. Trident is the UK's only nuclear weapons system. {{ nu.replacement }}.</p>
+    <p class="nhs-stat__source"><a href="{{ nu.url }}">{{ nu.source }}</a></p>
+  </section>
+</div>
+
+{%- assign eq = df.equipment %}
+<h4 id="equipment">Ships, aircraft and vehicles</h4>
+<div class="pf-grid def-equipment">
+  {%- for grp in eq.groups %}
+  <section class="pf-list">
+    <h4>{{ grp.title }}</h4>
+    <ul>
+      {%- for it in grp.items %}
+      <li><span class="pf-label">{{ it.label }}</span><span class="pf-val">{% include thousands.html n=it.n %}{% if it.in_service and it.in_service != it.n %}<small>({{ it.in_service }} in service)</small>{% endif %}</span></li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
+<p class="uk-note">As at {{ eq.date }}. {{ eq.note }} <a href="{{ eq.url }}">{{ eq.source }}</a>.</p>
 {%- endif %}
 {%- endfor %}
 

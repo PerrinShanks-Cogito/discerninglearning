@@ -592,7 +592,164 @@
       "nato_url": "https://nato.int/content/dam/nato/webready/documents/finance/def-exp-2025-en.pdf",
       "targets": "The 2025 Spending Review plans defence spending of 2.6% of GDP in 2027/28. At NATO's 2025 summit, the UK and other members agreed to spend 3.5% of GDP on core defence, plus 1.5% on related security, by 2035.",
       "targets_source": "Institute for Government, UK defence spending explainer",
-      "targets_url": "https://www.instituteforgovernment.org.uk/explainer/uk-defence-spending"
+      "targets_url": "https://www.instituteforgovernment.org.uk/explainer/uk-defence-spending",
+      "personnel": {
+        "date": "1 July 2026",
+        "total": 182980,
+        "regulars": {
+          "total": 137480,
+          "navy": 32430,
+          "army": 73660,
+          "raf": 31390
+        },
+        "gurkhas": 4420,
+        "reserves": {
+          "total": 32130,
+          "navy": 3260,
+          "army": 25780,
+          "raf": 3100
+        },
+        "other": 8950,
+        "intake_12m": 14500,
+        "outflow_12m": 13050,
+        "source": "Ministry of Defence, Quarterly service personnel statistics: 1 July 2026 (published 3 September 2026); figures rounded to the nearest 10",
+        "url": "https://www.gov.uk/government/statistics/quarterly-service-personnel-statistics-2026/quarterly-service-personnel-statistics-1-july-2026"
+      },
+      "nuclear": {
+        "warhead_cap": 260,
+        "warhead_cap_note": "The government's ceiling on the stockpile, set in the 2021 Integrated Review; it no longer publishes the exact number",
+        "estimate": 225,
+        "estimate_period": "January 2024",
+        "estimate_source": "SIPRI, as reported by the Arms Control Association (independent estimate)",
+        "estimate_url": "https://www.armscontrol.org/factsheets/arms-control-and-proliferation-profile-united-kingdom",
+        "submarines": 4,
+        "missile": "Trident II D5",
+        "casd_since": "April 1969",
+        "replacement": "Four Dreadnought-class submarines, expected to enter service in the 2030s, at an estimated £31 billion plus a £10 billion contingency",
+        "source": "Ministry of Defence, Successor submarine programme factsheet; submarine count from the equipment and formations statistics",
+        "url": "https://www.gov.uk/government/publications/successor-submarine-programme-factsheet/successor-submarine-programme-factsheet"
+      },
+      "equipment": {
+        "date": "1 April 2026",
+        "source": "Ministry of Defence, UK armed forces equipment and formations 2026 (as at 1 April 2026, published 20 August 2026)",
+        "url": "https://www.gov.uk/government/statistics/uk-armed-forces-equipment-and-formations-2026",
+        "note": "Numbers are the total fleet; where fewer are in service, that's shown in brackets.",
+        "groups": [
+          {
+            "title": "Royal Navy",
+            "items": [
+              {
+                "label": "Ballistic missile submarines (Vanguard class)",
+                "n": 4
+              },
+              {
+                "label": "Attack submarines",
+                "n": 5
+              },
+              {
+                "label": "Aircraft carriers",
+                "n": 2
+              },
+              {
+                "label": "Destroyers",
+                "n": 6
+              },
+              {
+                "label": "Frigates",
+                "n": 7
+              },
+              {
+                "label": "Mine countermeasures vessels",
+                "n": 7
+              },
+              {
+                "label": "Offshore and inshore patrol vessels",
+                "n": 26
+              },
+              {
+                "label": "Royal Fleet Auxiliary support ships",
+                "n": 12,
+                "in_service": 9
+              }
+            ]
+          },
+          {
+            "title": "Aircraft",
+            "items": [
+              {
+                "label": "F-35B Lightning",
+                "n": 47,
+                "in_service": 47
+              },
+              {
+                "label": "Typhoon",
+                "n": 124,
+                "in_service": 111
+              },
+              {
+                "label": "P-8 Poseidon maritime patrol",
+                "n": 9
+              },
+              {
+                "label": "A400M, C-17 and Voyager transport and tankers",
+                "n": 44
+              },
+              {
+                "label": "Apache attack helicopters",
+                "n": 47,
+                "in_service": 38
+              },
+              {
+                "label": "Chinook heavy-lift helicopters",
+                "n": 45,
+                "in_service": 36
+              },
+              {
+                "label": "Wildcat and Merlin helicopters",
+                "n": 121,
+                "in_service": 91
+              },
+              {
+                "label": "Uncrewed aircraft systems (drones)",
+                "n": 189
+              }
+            ]
+          },
+          {
+            "title": "Army",
+            "items": [
+              {
+                "label": "Challenger 2 main battle tanks",
+                "n": 285
+              },
+              {
+                "label": "Warrior armoured fighting vehicles",
+                "n": 526
+              },
+              {
+                "label": "Ajax armoured vehicles",
+                "n": 185
+              },
+              {
+                "label": "Boxer armoured vehicles",
+                "n": 28
+              },
+              {
+                "label": "Archer self-propelled guns",
+                "n": 14
+              },
+              {
+                "label": "Multiple launch rocket systems",
+                "n": 26
+              },
+              {
+                "label": "L118 light guns",
+                "n": 126
+              }
+            ]
+          }
+        ]
+      }
     },
     "public_finances": {
       "period": "2025/26",
