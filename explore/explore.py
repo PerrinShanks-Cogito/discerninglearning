@@ -19,3 +19,4 @@ for p in ["https://www.justice-ni.gov.uk/node/421705","https://www.justice-ni.go
         for m in re.finditer(r"[^.]{0,200}(reoffend|re-offend)[^.]{0,200}\.",t): print("NI:",m.group(0)[:400])
     except Exception as e: print("ERR",p,e)
 # 1794168948
+# 1794170181
