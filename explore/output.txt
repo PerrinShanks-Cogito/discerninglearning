@@ -1,310 +1,108 @@
 GET https://research.ftserussell.com/analytics/factsheets/Home/DownloadConstituentsWeights/?indexdetails=UKX 200 345431
-2
-CORPORATE
-FTSE Russell Publications
-FTSE 100
-19 August 2026
-Indicative Index Weight Data as at Closing on 30 June 2026
-Index weight Index weight Index weight
-Constituent
-(%)
-Country/Market Constituent
-(%)
-Country/Market Constituent
-(%)
-Country/Market
-3i Group 0.99 UNITED KINGDOM F&C Investment Trust 0.27 UNITED KINGDOM Pearson 0.29 UNITED KINGDOM
-Aberdeen Group 0.17 UNITED KINGDOM Fresnillo 0.2 UNITED KINGDOM Pershing Square Holdings 0.19 UNITED KINGDOM
-Admiral Group 0.36 UNITED KINGDOM Games Workshop Group 0.28 UNITED KINGDOM Persimmon 0.13 UNITED KINGDOM
-Airtel Africa 0.08 UNITED KINGDOM Glencore 2.09 UNITED KINGDOM Polar Capital Technology Trust 0.31 UNITED KINGDOM
-Alliance Witan 0.2 UNITED KINGDOM GSK 3.17 UNITED KINGDOM Prudential 1.01 UNITED KINGDOM
-Anglo American 1.62 UNITED KINGDOM Haleon 1.24 UNITED KINGDOM Reckitt Benckiser Group 1.26 UNITED KINGDOM
-Antofagasta 0.52 UNITED KINGDOM Halma 0.59 UNITED KINGDOM RELX 1.68 UNITED KINGDOM
-Associated British Foods 0.22 UNITED KINGDOM Hiscox 0.24 UNITED KINGDOM Rentokil Initial 0.42 UNITED KINGDOM
-AstraZeneca 8.47 UNITED KINGDOM Howden Joinery Group 0.18 UNITED KINGDOM Rio Tinto 2.95 UNITED KINGDOM
-Autotrader Group PLC 0.16 UNITED KINGDOM HSBC Hldgs 9.84 UNITED KINGDOM Rolls-Royce Holdings 4.86 UNITED KINGDOM
-Aviva 0.78 UNITED KINGDOM ICG 0.18 UNITED KINGDOM Sage Group 0.3 UNITED KINGDOM
-Babcock International Group 0.19 UNITED KINGDOM IG Group Holdings 0.23 UNITED KINGDOM Sainsbury (J) 0.25 UNITED KINGDOM
-BAE Systems 2.17 UNITED KINGDOM IMI 0.29 UNITED KINGDOM Schroders 0.18 UNITED KINGDOM
-Barclays 2.77 UNITED KINGDOM Imperial Brands 0.83 UNITED KINGDOM Scottish Mortgage Inv Tst 0.64 UNITED KINGDOM
-Barratt Redrow 0.15 UNITED KINGDOM Informa 0.46 UNITED KINGDOM Segro 0.47 UNITED KINGDOM
-Beazley 0.3 UNITED KINGDOM InterContinental Hotels Group 0.73 UNITED KINGDOM Severn Trent 0.31 UNITED KINGDOM
-BP 2.94 UNITED KINGDOM International Consolidated Airlines 0.63 UNITED KINGDOM Shell 6.6 UNITED KINGDOM
-British American Tobacco 3.8 UNITED KINGDOM Group Smith & Nephew 0.37 UNITED KINGDOM
-British Land Co 0.17 UNITED KINGDOM Intertek Group 0.36 UNITED KINGDOM Smiths Group 0.31 UNITED KINGDOM
-BT Group 0.42 UNITED KINGDOM Investec 0.14 UNITED KINGDOM Spirax Group 0.2 UNITED KINGDOM
-Bunzl 0.34 UNITED KINGDOM JD Sports Fashion 0.07 UNITED KINGDOM SSE 1.18 UNITED KINGDOM
-Burberry Group 0.15 UNITED KINGDOM Kingfisher 0.19 UNITED KINGDOM St. James's Place 0.24 UNITED KINGDOM
-Centrica 0.32 UNITED KINGDOM Land Securities Group 0.19 UNITED KINGDOM Standard Chartered 1.46 UNITED KINGDOM
-Coca-Cola Europacific Partners 0.61 UNITED KINGDOM Legal & General Group 0.63 UNITED KINGDOM Standard Life 0.25 UNITED KINGDOM
-Coca-Cola HBC AG 0.39 UNITED KINGDOM Lion Finance Group 0.16 UNITED KINGDOM Tesco 1.15 UNITED KINGDOM
-Compass Group 1.66 UNITED KINGDOM Lloyds Banking Group 2.61 UNITED KINGDOM Tritax Big Box REIT 0.16 UNITED KINGDOM
-Computacenter 0.1 UNITED KINGDOM London Stock Exchange Group 1.54 UNITED KINGDOM Unilever 3.83 UNITED KINGDOM
-ConvaTec Group 0.17 UNITED KINGDOM LondonMetric Property 0.17 UNITED KINGDOM United Utilities Group 0.39 UNITED KINGDOM
-Croda International 0.17 UNITED KINGDOM M&G 0.27 UNITED KINGDOM Vodafone Group 0.73 UNITED KINGDOM
-DCC 0.21 UNITED KINGDOM Marks & Spencer Group 0.3 UNITED KINGDOM Weir Group 0.25 UNITED KINGDOM
-Diageo 1.36 UNITED KINGDOM Melrose Industries 0.24 UNITED KINGDOM Whitbread 0.16 UNITED KINGDOM
-Diploma 0.38 UNITED KINGDOM Metlen Energy & Metals 0.16 UNITED KINGDOM
-E
-GET https://www.ons.gov.uk/file?uri=/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindustry/current/regionalgrossvalu 200 12322149
-sheets ['Notice', 'Information', 'Contents', 'Notes', 'Table 1a', 'Table 1b', 'Table 1c', 'Table 1d', 'Table 2a', 'Table 2b', 'Table 2c', 'Table 2d', 'Table 3a', 'Table 3b', 'Table 3c', 'Table 3d']
-               0                                                                                           1
-0       Contents                                                                                            
-1   Table number                                                                                  Table name
-2       Table 1a                 Table 1a: ITL1 & UK chained volume measures index, 2023 equals 100 [note 1]
-3       Table 1b  Table 1b: ITL1 & UK chained volume measures in 2023 money value, pounds million [note 1,2]
-4       Table 1c                        Table 1c: ITL1 & UK current price estimates, pounds million [note 1]
-5       Table 1d                           Table 1d: ITL1 & UK implied deflators, 2023 equals 100 [note 1,3]
-6       Table 2a                      Table 2a: ITL2 chained volume measures index, 2023 equals 100 [note 4]
-7       Table 2b     Table 2b: ITL2 chained volume measures in 2023 money value, pounds million [notes 2, 4]
-8       Table 2c                             Table 2c: ITL2 current price estimates, pounds million [note 4]
-9       Table 2d                              Table 2d: ITL2 implied deflators, 2023 equals 100 [notes 3, 4]
-10      Table 3a                      Table 3a: ITL3 chained volume measures index, 2023 equals 100 [note 4]
-11      Table 3b     Table 3b: ITL3 chained volume measures in 2023 money value, pounds million [notes 2, 4]
-12      Table 3c                             Table 3c: ITL3 current price estimates, pounds million [note 4]
-13      Table 3d                              Table 3d: ITL3 implied deflators, 2023 equals 100 [notes 3, 4]
-===== Table 1a Table 1a: ITL1 & UK chained volume measures index, 2023 equals 100 [note 1]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', np.float64(1998.0), np.float64(1999.0)] [np.float64(2021.0), np.float64(2022.0), np.float64(2023.0), np.float64(2024.0)]
-   0               1        2                                  3     4     5      25     29     30
-2  UK  United Kingdom    Total                     All industries  64.7  66.7   96.8  100.0  101.2
-3  UK  United Kingdom      A-E                  Production sector  88.0  91.9  103.9  100.0   98.6
-4  UK  United Kingdom  A (1-3)  Agriculture, forestry and fishing  57.6  65.8   96.7  100.0  100.2
--- UK rows
-     0               1              2                                                           3      4      5      25     29     30
-2    UK  United Kingdom          Total                                              All industries   64.7   66.7   96.8  100.0  101.2
-3    UK  United Kingdom            A-E                                           Production sector   88.0   91.9  103.9  100.0   98.6
-4    UK  United Kingdom        A (1-3)                           Agriculture, forestry and fishing   57.6   65.8   96.7  100.0  100.2
-5    UK  United Kingdom              1                                     Agriculture and hunting   58.4   66.7   98.8  100.0   99.6
-6    UK  United Kingdom              2                                        Forestry and logging   92.0  125.0   90.9  100.0  104.5
-7    UK  United Kingdom              3                                     Fishing and aquaculture   58.9   55.9  100.9  100.0  104.7
-8    UK  United Kingdom        B (5-9)                                        Mining and quarrying  536.8  531.5  141.8  100.0   89.1
-9    UK  United Kingdom            5-8          Mining and quarrying, excluding support activities  615.1  616.3  145.0  100.0   88.5
-10   UK  United Kingdom              9                           Mining support service activities   93.9   82.8  104.0  100.0   99.1
-11   UK  United Kingdom      C (10-33)                                               Manufacturing   62.2   65.1   96.5  100.0  100.6
-12   UK  United Kingdom     CA (10-12)                  Manufacture of food, beverages and tobacco   71.1   71.8   88.9  100.0  105.7
-13   UK  United Kingdom             10                                Manufacture of food products   67.1   67.1   87.0  100.0  106.7
-14   UK  United Kingdom          11-12               Manufacture of beverages and tobacco products   87.8   91.7   95.5  100.0  102.6
-15   UK  United Kingdom     CB (13-15)        Manufacture of textiles, wearing apparel and leather   49.2   50.2  116.0  100.0   95.4
-16   UK  United Kingdom             13                                     Manufacture of textiles   34.6   36.4  124.3  100.0   95.5
-17   UK  United Kingdom             14                              Manufacture of wearing apparel   65.3   64.9  111.1  100.0   93.2
-18   UK  United Kingdom             15                             Manufacture of leather products  111.1  111.8   85.6  100.0  103.3
-19   UK  United Kingdom     CC (16-18)         Manufacture of wood and paper products and printing   66.7   71.6  121.0  100.0   98.1
-20   UK  United Kingdom             16              Manufacture of wood products, except furniture   68.8   74.7  122.3  100.0   96.4
-21   UK  United Kingdom             17                               Manufacture of paper products   47.2   55.0  116.2  100.0  102.5
-22   UK  United Kingdom             18                 Printing and reproduction of recorded media   89.0   89.9  125.3  100.0   95.8
-23   UK  United Kingdom  CD-CE (19-20)        Manufacture of coke, refined petroleum and chemicals   62.2   64.0  127.2  100.0  101.0
-24   UK  United Kingdom        CF (21)                      Manufacture of pharmaceutical products   44.4   50.7   83.5  100.0  102.2
-25   UK  United Kingdom     CG (22-23)   Manufacture of rubber, plastic and non-metallic minerals    93.3  100.7  109.8  100.0   95.6
-26   UK  United Kingdom             22                  Manufacture of rubber and plastic products   82.8   93.0  102.6  100.0   98.7
-27   UK  United Kingdom             23          Manufacture of other non-metallic mineral products  111.4  112.5  121.4  100.0   91.6
-28   UK  United Kingdom     CH (24-25)          Manufacture of basic and fabricated metal products   94.4   98.5  103.7  100.0  101.2
-29   UK  United Kingdom             24                                 Manufacture of basic metals   99.9  118.2   88.7  100.0   96.1
-30   UK  United Kingdom             25                    Manufacture of fabricated metal products   98.7   97.3  111.2  100.0  102.8
-31   UK  United Kingdom        CI (26)    Manufacture of computer, electronic and optical products   20.1   21.1   94.9  100.0   98.8
-32   UK  United Kingdom        CJ (27)                         Manufacture of electrical equipment   78.4   79.6   96.8  100.0   92.6
-33   UK  United Kingdom        CK (28)                      Manufacture of machinery and equipment   86.0   87.0   98.3  100.0   91.6
-34   UK  United Kingdom     CL (29-30)                          Manufacture of transport equipment   53.5   55.8   80.8  100.0  105.4
-35   UK  United Kingdom             29                               Manufacture of motor vehicles   48.5   43.8   75.2  100.0  109.0
-36   UK  United Kingdom             30                    Manufacture of other transport equipment   54.1   66.0   86.7  100.0  101.9
-37   UK  United Kingdom     CM (31-33)                Other manufacturing, repair and installation   75.7   83.0   95.7  100.0   99.1
-38   UK  United Kingdom             31    
-===== Table 1b Table 1b: ITL1 & UK chained volume measures in 2023 money value, pounds million [note 1,2]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', np.float64(1998.0), np.float64(1999.0)] [np.float64(2021.0), np.float64(2022.0), np.float64(2023.0), np.float64(2024.0)]
-   0               1        2                                  3          4          5          25         29         30
-2  UK  United Kingdom    Total                     All industries  1616506.0  1665467.0  2417901.0  2497390.0  2527146.0
-3  UK  United Kingdom      A-E                  Production sector   313084.0   326854.0   369770.0   355728.0   350848.0
-4  UK  United Kingdom  A (1-3)  Agriculture, forestry and fishing    10277.0    11735.0    17242.0    17839.0    17868.0
--- UK rows
-     0               1              2                                                           3          4          5          25         29         30
-2    UK  United Kingdom          Total                                              All industries  1616506.0  1665467.0  2417901.0  2497390.0  2527146.0
-3    UK  United Kingdom            A-E                                           Production sector   313084.0   326854.0   369770.0   355728.0   350848.0
-4    UK  United Kingdom        A (1-3)                           Agriculture, forestry and fishing    10277.0    11735.0    17242.0    17839.0    17868.0
-5    UK  United Kingdom              1                                     Agriculture and hunting     9281.0    10610.0    15705.0    15902.0    15841.0
-6    UK  United Kingdom              2                                        Forestry and logging      986.0     1340.0      974.0     1072.0     1121.0
-7    UK  United Kingdom              3                                     Fishing and aquaculture      509.0      484.0      873.0      865.0      906.0
-8    UK  United Kingdom        B (5-9)                                        Mining and quarrying   167895.0   166229.0    44356.0    31278.0    27884.0
-9    UK  United Kingdom            5-8          Mining and quarrying, excluding support activities   180991.0   181367.0    42656.0    29426.0    26049.0
-10   UK  United Kingdom              9                           Mining support service activities     1740.0     1534.0     1925.0     1852.0     1835.0
-11   UK  United Kingdom      C (10-33)                                               Manufacturing   140868.0   147432.0   218340.0   226336.0   227639.0
-12   UK  United Kingdom     CA (10-12)                  Manufacture of food, beverages and tobacco    27167.0    27426.0    33976.0    38209.0    40369.0
-13   UK  United Kingdom             10                                Manufacture of food products    18976.0    18971.0    24597.0    28280.0    30179.0
-14   UK  United Kingdom          11-12               Manufacture of beverages and tobacco products     8714.0     9108.0     9478.0     9929.0    10190.0
-15   UK  United Kingdom     CB (13-15)        Manufacture of textiles, wearing apparel and leather     3043.0     3105.0     7175.0     6183.0     5898.0
-16   UK  United Kingdom             13                                     Manufacture of textiles     1299.0     1367.0     4671.0     3759.0     3589.0
-17   UK  United Kingdom             14                              Manufacture of wearing apparel     1260.0     1252.0     2142.0     1929.0     1798.0
-18   UK  United Kingdom             15                             Manufacture of leather products      550.0      554.0      424.0      495.0      511.0
-19   UK  United Kingdom     CC (16-18)         Manufacture of wood and paper products and printing     8904.0     9559.0    16162.0    13359.0    13107.0
-20   UK  United Kingdom             16              Manufacture of wood products, except furniture     3106.0     3372.0     5522.0     4514.0     4352.0
-21   UK  United Kingdom             17                               Manufacture of paper products     1991.0     2324.0     4908.0     4223.0     4327.0
-22   UK  United Kingdom             18                 Printing and reproduction of recorded media     4113.0     4154.0     5793.0     4622.0     4428.0
-23   UK  United Kingdom  CD-CE (19-20)        Manufacture of coke, refined petroleum and chemicals     8996.0     9267.0    18400.0    14470.0    14618.0
-24   UK  United Kingdom        CF (21)                      Manufacture of pharmaceutical products    10556.0    12041.0    19827.0    23758.0    24285.0
-25   UK  United Kingdom     CG (22-23)   Manufacture of rubber, plastic and non-metallic minerals     15617.0    16842.0    18376.0    16732.0    15998.0
-26   UK  United Kingdom             22                  Manufacture of rubber and plastic products     7802.0     8766.0     9665.0     9423.0     9304.0
-27   UK  United Kingdom             23          Manufacture of other non-metallic mineral products     8145.0     8219.0     8874.0     7309.0     6694.0
-28   UK  United Kingdom     CH (24-25)          Manufacture of basic and fabricated metal products    23965.0    25013.0    26333.0    25387.0    25697.0
-29   UK  United Kingdom             24                                 Manufacture of basic metals     5869.0     6940.0     5211.0     5872.0     5643.0
-30   UK  United Kingdom             25                    Manufacture of fabricated metal products    19270.0    18996.0    21705.0    19515.0    20054.0
-31   UK  United Kingdom        CI (26)    Manufacture of computer, electronic and optical products     3291.0     3445.0    15495.0    16336.0    16148.0
-32   UK  United Kingdom        CJ (27)                         Manufacture of electrical equipment     5003.0     5082.0     6177.0     6383.0     5910.0
-33   UK  United Kingdom        CK (28)                      Manufacture 
-===== Table 1c Table 1c: ITL1 & UK current price estimates, pounds million [note 1]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', np.float64(1998.0), np.float64(1999.0)] [np.float64(2021.0), np.float64(2022.0), np.float64(2023.0), np.float64(2024.0)]
-   0               1        2                                  3         4         5          25         29         30
-2  UK  United Kingdom    Total                     All industries  904094.0  939664.0  2014747.0  2497390.0  2601632.0
-3  UK  United Kingdom      A-E                  Production sector  193480.0  192862.0   289905.0   355728.0   359039.0
-4  UK  United Kingdom  A (1-3)  Agriculture, forestry and fishing    9375.0    8968.0    12998.0    17839.0    18402.0
--- UK rows
-     0               1              2                                                           3         4         5          25         29         30
-2    UK  United Kingdom          Total                                              All industries  904094.0  939664.0  2014747.0  2497390.0  2601632.0
-3    UK  United Kingdom            A-E                                           Production sector  193480.0  192862.0   289905.0   355728.0   359039.0
-4    UK  United Kingdom        A (1-3)                           Agriculture, forestry and fishing    9375.0    8968.0    12998.0    17839.0    18402.0
-5    UK  United Kingdom              1                                     Agriculture and hunting    8760.0    8332.0    11224.0    15902.0    16509.0
-6    UK  United Kingdom              2                                        Forestry and logging     259.0     254.0      878.0     1072.0     1011.0
-7    UK  United Kingdom              3                                     Fishing and aquaculture     356.0     382.0      896.0      865.0      882.0
-8    UK  United Kingdom        B (5-9)                                        Mining and quarrying   13395.0   14147.0    20435.0    31278.0    27677.0
-9    UK  United Kingdom            5-8          Mining and quarrying, excluding support activities   12061.0   12969.0    19002.0    29426.0    25930.0
-10   UK  United Kingdom              9                           Mining support service activities    1334.0    1178.0     1433.0     1852.0     1747.0
-11   UK  United Kingdom      C (10-33)                                               Manufacturing  144881.0  144898.0   202350.0   226336.0   230289.0
-12   UK  United Kingdom     CA (10-12)                  Manufacture of food, beverages and tobacco   22199.0   22783.0    32160.0    38209.0    40250.0
-13   UK  United Kingdom             10                                Manufacture of food products   17408.0   17501.0    24164.0    28280.0    29754.0
-14   UK  United Kingdom          11-12               Manufacture of beverages and tobacco products    4791.0    5282.0     7996.0     9929.0    10496.0
-15   UK  United Kingdom     CB (13-15)        Manufacture of textiles, wearing apparel and leather    7616.0    7316.0     6770.0     6183.0     6039.0
-16   UK  United Kingdom             13                                     Manufacture of textiles    3323.0    3226.0     4092.0     3759.0     3677.0
-17   UK  United Kingdom             14                              Manufacture of wearing apparel    3559.0    3343.0     2231.0     1929.0     1841.0
-18   UK  United Kingdom             15                             Manufacture of leather products     734.0     747.0      447.0      495.0      521.0
-19   UK  United Kingdom     CC (16-18)         Manufacture of wood and paper products and printing   10309.0   10298.0    13181.0    13359.0    13184.0
-20   UK  United Kingdom             16              Manufacture of wood products, except furniture    2061.0    2090.0     3726.0     4514.0     4462.0
-21   UK  United Kingdom             17                               Manufacture of paper products    3186.0    3304.0     4516.0     4223.0     4259.0
-22   UK  United Kingdom             18                 Printing and reproduction of recorded media    5062.0    4904.0     4939.0     4622.0     4463.0
-23   UK  United Kingdom  CD-CE (19-20)        Manufacture of coke, refined petroleum and chemicals   12653.0   11923.0    15352.0    14470.0    14877.0
-24   UK  United Kingdom        CF (21)                      Manufacture of pharmaceutical products    6676.0    7728.0    18005.0    23758.0    24752.0
-25   UK  United Kingdom     CG (22-23)   Manufacture of rubber, plastic and non-metallic minerals    11632.0   12048.0    14559.0    16732.0    16540.0
-26   UK  United Kingdom             22                  Manufacture of rubber and plastic products    7038.0    7567.0     8080.0     9423.0     9574.0
-27   UK  United Kingdom             23          Manufacture of other non-metallic mineral products    4594.0    4481.0     6479.0     7309.0     6966.0
-28   UK  United Kingdom     CH (24-25)          Manufacture of basic and fabricated metal products   17041.0   17141.0    22837.0    25387.0    25971.0
-29   UK  United Kingdom             24                                 Manufacture of basic metals    5018.0    5265.0     4866.0     5872.0     5470.0
-30   UK  United Kingdom             25                    Manufacture of fabricated metal products   12023.0   11876.0    17971.0    19515.0    20501.0
-31   UK  United Kingdom        CI (26)    Manufacture of computer, electronic and optical products   11724.0   10192.0    15172.0    16336.0    16390.0
-32   UK  United Kingdom        CJ (27)                         Manufacture of electrical equipment    5289.0    5189.0     5166.0     6383.0     6143.0
-33   UK  United Kingdom        CK (28)                      Manufacture of machinery and equipment   11910.0   11528.0    14652.0    158
-===== Table 1d Table 1d: ITL1 & UK implied deflators, 2023 equals 100 [note 1,3]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', np.float64(1998.0), np.float64(1999.0)] [np.float64(2021.0), np.float64(2022.0), np.float64(2023.0), np.float64(2024.0)]
-   0               1        2                                  3     4     5     25     29     30
-2  UK  United Kingdom    Total                     All industries  55.9  56.4  83.3  100.0  102.9
-3  UK  United Kingdom      A-E                  Production sector  61.8  59.0  78.4  100.0  102.3
-4  UK  United Kingdom  A (1-3)  Agriculture, forestry and fishing  91.2  76.4  75.4  100.0  103.0
--- UK rows
-     0               1              2                                                           3       4       5      25     29     30
-2    UK  United Kingdom          Total                                              All industries    55.9    56.4   83.3  100.0  102.9
-3    UK  United Kingdom            A-E                                           Production sector    61.8    59.0   78.4  100.0  102.3
-4    UK  United Kingdom        A (1-3)                           Agriculture, forestry and fishing    91.2    76.4   75.4  100.0  103.0
-5    UK  United Kingdom              1                                     Agriculture and hunting    94.4    78.5   71.5  100.0  104.2
-6    UK  United Kingdom              2                                        Forestry and logging    26.3    19.0   90.1  100.0   90.2
-7    UK  United Kingdom              3                                     Fishing and aquaculture    69.9    79.0  102.6  100.0   97.4
-8    UK  United Kingdom        B (5-9)                                        Mining and quarrying     8.0     8.5   46.1  100.0   99.3
-9    UK  United Kingdom            5-8          Mining and quarrying, excluding support activities     6.7     7.2   44.5  100.0   99.5
-10   UK  United Kingdom              9                           Mining support service activities    76.7    76.8   74.4  100.0   95.2
-11   UK  United Kingdom      C (10-33)                                               Manufacturing   102.8    98.3   92.7  100.0  101.2
-12   UK  United Kingdom     CA (10-12)                  Manufacture of food, beverages and tobacco    81.7    83.1   94.7  100.0   99.7
-13   UK  United Kingdom             10                                Manufacture of food products    91.7    92.3   98.2  100.0   98.6
-14   UK  United Kingdom          11-12               Manufacture of beverages and tobacco products    55.0    58.0   84.4  100.0  103.0
-15   UK  United Kingdom     CB (13-15)        Manufacture of textiles, wearing apparel and leather   250.3   235.6   94.4  100.0  102.4
-16   UK  United Kingdom             13                                     Manufacture of textiles   255.8   236.1   87.6  100.0  102.4
-17   UK  United Kingdom             14                              Manufacture of wearing apparel   282.5   266.9  104.1  100.0  102.4
-18   UK  United Kingdom             15                             Manufacture of leather products   133.5   135.0  105.5  100.0  101.9
-19   UK  United Kingdom     CC (16-18)         Manufacture of wood and paper products and printing   115.8   107.7   81.6  100.0  100.6
-20   UK  United Kingdom             16              Manufacture of wood products, except furniture    66.3    62.0   67.5  100.0  102.5
-21   UK  United Kingdom             17                               Manufacture of paper products   160.0   142.2   92.0  100.0   98.4
-22   UK  United Kingdom             18                 Printing and reproduction of recorded media   123.1   118.1   85.3  100.0  100.8
-23   UK  United Kingdom  CD-CE (19-20)        Manufacture of coke, refined petroleum and chemicals   140.7   128.7   83.4  100.0  101.8
-24   UK  United Kingdom        CF (21)                      Manufacture of pharmaceutical products    63.2    64.2   90.8  100.0  101.9
-25   UK  United Kingdom     CG (22-23)   Manufacture of rubber, plastic and non-metallic minerals     74.5    71.5   79.2  100.0  103.4
-26   UK  United Kingdom             22                  Manufacture of rubber and plastic products    90.2    86.3   83.6  100.0  102.9
-27   UK  United Kingdom             23          Manufacture of other non-metallic mineral products    56.4    54.5   73.0  100.0  104.1
-28   UK  United Kingdom     CH (24-25)          Manufacture of basic and fabricated metal products    71.1    68.5   86.7  100.0  101.1
-29   UK  United Kingdom             24                                 Manufacture of basic metals    85.5    75.9   93.4  100.0   96.9
-30   UK  United Kingdom             25                    Manufacture of fabricated metal products    62.4    62.5   82.8  100.0  102.2
-31   UK  United Kingdom        CI (26)    Manufacture of computer, electronic and optical products   356.2   295.9   97.9  100.0  101.5
-32   UK  United Kingdom        CJ (27)                         Manufacture of electrical equipment   105.7   102.1   83.6  100.0  104.0
-33   UK  United Kingdom        CK (28)                      Manufacture of machinery and equipment    87.3    83.6   94.0  100.0  103.7
-34   UK  United Kingdom     CL (29-30)                          Manufacture of transport equipment    96.1    91.4  109.8  100.0   98.6
-35   UK  United Kingdom             29                               Manufacture of motor vehicles   119.0   115.6  127.4  100.0   97.5
-36   UK  United Kingdom             30                    Manufacture of other transport equipment    83.3    77.7   94.2  100.0   99.6
-37   UK  United Kingdom     CM (31-33)                Other manufacturing, repair and installation    83
-===== Table 2a Table 2a: ITL2 chained volume measures index, 2023 equals 100 [note 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-        0                 1        2                                  3     4     5      25   29     30
-4457  TLN0  Northern Ireland    Total                     All industries  66.1  68.7   94.7  100  101.2
-4458  TLN0  Northern Ireland      A-E                  Production sector  73.9  77.8  102.5  100  100.5
-4459  TLN0  Northern Ireland  A (1-3)  Agriculture, forestry and fishing  63.1  72.8   88.3  100  112.3
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 2b Table 2b: ITL2 chained volume measures in 2023 money value, pounds million [notes 2, 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-        0                 1        2                                  3      4      5      25     29     30
-4457  TLN0  Northern Ireland    Total                     All industries  37965  39440  54391  57431  58099
-4458  TLN0  Northern Ireland      A-E                  Production sector   7330   7711  10159   9915   9968
-4459  TLN0  Northern Ireland  A (1-3)  Agriculture, forestry and fishing    697    805    976   1105   1241
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 2c Table 2c: ITL2 current price estimates, pounds million [note 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-        0                 1        2                                  3      4      5      25     29     30
-4457  TLN0  Northern Ireland    Total                     All industries  19755  20874  44332  57431  59810
-4458  TLN0  Northern Ireland      A-E                  Production sector   4943   5102   8370   9915  10204
-4459  TLN0  Northern Ireland  A (1-3)  Agriculture, forestry and fishing    659    635    717   1105   1288
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 2d Table 2d: ITL2 implied deflators, 2023 equals 100 [notes 3, 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-        0                 1        2                                  3     4     5     25   29     30
-4457  TLN0  Northern Ireland    Total                     All industries    52  52.9  81.5  100  102.9
-4458  TLN0  Northern Ireland      A-E                  Production sector  67.4  66.2  82.4  100  102.4
-4459  TLN0  Northern Ireland  A (1-3)  Agriculture, forestry and fishing  94.4  78.9  73.5  100  103.8
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 3a Table 3a: ITL3 chained volume measures index, 2023 equals 100 [note 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 3b Table 3b: ITL3 chained volume measures in 2023 money value, pounds million [notes 2, 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 3c Table 3c: ITL3 current price estimates, pounds million [note 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
-===== Table 3d Table 3d: ITL3 implied deflators, 2023 equals 100 [notes 3, 4]
-cols ['ITL code', 'Region name', 'SIC07 code', 'SIC07 description', '1998', '1999'] ['2021', '2022', '2023', '2024']
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
--- UK rows
-Empty DataFrame
-Columns: [0, 1, 2, 3, 4, 5, 25, 29, 30]
-Index: []
+constituents parsed 100
+TOP12 [(9.84, 'HSBC Hldgs'), (8.47, 'AstraZeneca'), (6.6, 'Shell'), (4.86, 'Rolls-Royce Holdings'), (3.83, 'Unilever'), (3.8, 'British American Tobacco'), (3.17, 'GSK'), (2.95, 'Rio Tinto'), (2.94, 'BP'), (2.77, 'Barclays'), (2.61, 'Lloyds Banking Group'), (2.48, 'National Grid')]
+sum 99.99
+GET https://www.ons.gov.uk/file?uri=/economy/grossvalueaddedgva/datasets/nominalandrealregionalgrossvalueaddedbalancedbyindu 200 12322149
+== current prices 2024, £m, sections
+Region name                                                      England  Northern Ireland  Scotland  United Kingdom  Wales
+SIC07 code SIC07 description                                                                                               
+A (1-3)    Agriculture, forestry and fishing                       12605              1288      3567           18402    943
+B (5-9)    Mining and quarrying                                     2715               194      1834           27677    240
+C (10-33)  Manufacturing                                          192090              6812     18643          230289  12744
+D (35)     Electricity, gas, steam and air conditioning supply     39858              1220      8225           51855   2551
+E (36-39)  Water supply; sewerage and waste management             25751               690      2794           30816   1581
+F (41-43)  Construction                                           132701              4438     10636          153239   5464
+G (45-47)  Wholesale and retail trade; repair of motor vehicles   215563              8484     14225          245498   7227
+H (49-53)  Transportation and storage                              80454              2162      6688           91512   2208
+I (55-56)  Accommodation and food service activities               62752              1685      5835           72989   2717
+J (58-63)  Information and communication                          148116              2224      7007          159966   2619
+K (64-66)  Financial and insurance activities                     184289              2510     15776          207317   4742
+L (68)     Real estate activities                                 330781              8085     27226          377538  11446
+M (69-75)  Professional, scientific and technical activities      203882              2904     14222          224707   3698
+N (77-82)  Administrative and support service activities          118823              1832      7420          131128   3053
+O (84)     Public administration and defence                      103743              3680     13296          130604   7438
+P (85)     Education                                              129884              2964     12199          150386   5339
+Q (86-88)  Human health and social work activities                181661              7293     21234          221078  10891
+R (90-93)  Arts, entertainment and recreation                      31319               564      2586           35517   1048
+S (94-96)  Other service activities                                33511               723      2485           37995   1277
+T (97-98)  Activities of households                                 2616                58       237            3118    207
+Total      All industries                                        2233113             59810    196136         2601632  87432
+== UK CVM index 2014, 2019, 2024
+    SIC07 code                                     SIC07 description   2014   2019   2024
+0        Total                                        All industries   87.5   96.8  101.2
+2      A (1-3)                     Agriculture, forestry and fishing  105.4   96.7  100.2
+6      B (5-9)                                  Mining and quarrying  112.0  141.8   89.1
+9    C (10-33)                                         Manufacturing   88.3   96.5  100.6
+39      D (35)   Electricity, gas, steam and air conditioning supply  201.1  182.9   95.0
+40   E (36-39)           Water supply; sewerage and waste management   82.3   90.5   99.0
+45   F (41-43)                                          Construction   88.5   98.1  100.7
+50   G (45-47)  Wholesale and retail trade; repair of motor vehicles  105.1  109.0  100.1
+54   H (49-53)                            Transportation and storage   96.1   99.8  104.9
+60   I (55-56)             Accommodation and food service activities   95.3  105.6  100.3
+63   J (58-63)                         Information and communication   50.8   77.5  103.8
+70   K (64-66)                    Financial and insurance activities  102.5  106.8   97.9
+74      L (68)                                Real estate activities   87.3   95.3  100.8
+77   M (69-75)     Professional, scientific and technical activities   73.6   82.7  103.0
+85   N (77-82)         Administrative and support service activities   83.2   94.4  101.7
+92      O (84)                     Public administration and defence   84.3   91.4  104.2
+93      P (85)                                             Education   88.7   96.4  100.9
+94   Q (86-88)               Human health and social work activities   95.4  103.4  105.2
+98   R (90-93)                    Arts, entertainment and recreation   95.8   98.0   98.3
+103  S (94-96)                              Other service activities   89.7  102.4   99.1
+107  T (97-98)                             Activities of households   115.8  151.1  102.7
+== fastest real growth 2019-24 (industries with >= £10bn GVA in 2024)
+    SIC07 code                                      SIC07 description  2019   2024          g  cp2024
+67          61                                     Telecommunications  57.5   97.1  68.869565   34018
+81          72                    Scientific research and development  75.3  115.8  53.784861   31024
+69          63                         Information service activities  68.5  102.5  49.635036   13321
+33          29                          Manufacture of motor vehicles  75.2  109.0  44.946809   15643
+91          82  Office administration and business support activities  78.2  108.1  38.235294   33704
+79          70                Head offices and management consultancy  72.9   98.1  34.567901   38558
+63   J (58-63)                          Information and communication  77.5  103.8  33.935484  159966
+82          73                        Advertising and market research  77.8  103.9  33.547558   26540
+32  CL (29-30)                     Manufacture of transport equipment  80.8  105.4  30.445545   30659
+43          38    Waste collection, treatment and disposal activities  78.4  100.7  28.443878   11383
+68          62                   Computer programming and consultancy  85.2  109.1  28.051643   74878
+77   M (69-75)      Professional, scientific and technical activities  82.7  103.0  24.546554  224707
+80          71               Architectural and engineering activities  86.3  107.0  23.986095   34741
+11          10                           Manufacture of food products  87.0  106.7  22.643678   29754
+22     CF (21)                 Manufacture of pharmaceutical products  83.5  102.2  22.395210   24752
+GET https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregion 200 620678
+               0                                                                                                                              1
+0       Contents                                                                                                                            NaN
+1   Table Number                                                                                                                     Table name
+2        Table 1                                         Table 1: Gross value added (Balanced) at current basic prices, pounds million [note 6]
+3        Table 2                                                            Table 2: Value Added Tax (VAT) on products, pounds million [note 6]
+4        Table 3                                                                      Table 3: Other taxes on products, pounds million [note 6]
+5        Table 4                                                                        Table 4: Subsidies on products, pounds million [note 6]
+6        Table 5                                        Table 5: Gross domestic product (GDP) at current market prices, pounds million [note 6]
+7        Table 6                                                                   Table 6: Total resident population numbers, persons [note 4]
+8        Table 7                                   Table 7: Gross domestic product (GDP) per head at current market prices, pounds [notes 5, 6]
+9        Table 8                                          Table 8: Gross domestic product (GDP) implied deflators, 2023 equals 100 [notes 2, 6]
+10       Table 9                        Table 9: Gross domestic product (GDP) chained volume measures (CVM) index, 2023 equals 100 [notes 1, 6]
+11      Table 10       Table 10: Gross domestic product (GDP) chained volume measures (CVM) in 2023 money value, pounds million [notes 1, 3, 6]
+12      Table 11     Table 11: Gross domestic product (GDP) chained volume measures (CVM) in 2023 money value, per head, pounds 
+== Table 5
+       ITL ITL code       Region name     2023     2024
+0       UK       UK    United Kingdom  2752164  2884006
+1    Other      TLB           England  2355428  2472078
+188   ITL1      TLL             Wales    96098   100327
+204   ITL1      TLM          Scotland   208199   218777
+229   ITL1      TLN  Northern Ireland    64762    67683
+230   ITL2     TLN0  Northern Ireland    64762    67683
+== Table 6
+       ITL ITL code       Region name      2023      2024
+0       UK       UK    United Kingdom  68526183  69281437
+1    Other      TLB           England  57932470  58620101
+188   ITL1      TLL             Wales   3167331   3186581
+204   ITL1      TLM          Scotland   5506000   5546900
+229   ITL1      TLN  Northern Ireland   1920382   1927855
+230   ITL2     TLN0  Northern Ireland   1920382   1927855
+== Table 7
+       ITL ITL code       Region name   2023   2024
+0       UK       UK    United Kingdom  40162  41627
+1    Other      TLB           England  40658  42171
+188   ITL1      TLL             Wales  30340  31484
+204   ITL1      TLM          Scotland  37813  39441
+229   ITL1      TLN  Northern Ireland  33724  35108
+230   ITL2     TLN0  Northern Ireland  33724  35108
